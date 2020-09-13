@@ -1,0 +1,52 @@
+<div class="subscripprices scrollbar-cyan p-5">
+  <section *ngIf=pricepackage>
+    <div class="container">
+      <h2 class="maintitle m-2 font-weight-bold">
+        Monthly Subscription,<br>Cancel Anytime
+      </h2>
+      <div class="row">
+        <div *ngFor="let item of pricescard" class="col-xl-4 col-lg-4 col-md-4 col-12">
+          <div class="cardouter">
+            <h3 class="cardtitle">{{item.title1}}<br>{{item.title2}}</h3>
+            <div class="p-1">
+              <small class="cardtext">{{item.text |uppercase}}</small>
+            </div>
+            <div class="p-1">
+              <em class="cardprice">{{item.price}}€</em>
+            </div>
+            <div class="p-1">
+              <a class="cardbutton m-3 text-white" (click)="dataservice.stepsFunction(item).fromPrice()">{{item.buttontext}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <app-name></app-name>
+  </section>
+  <section>
+    <app-address></app-address>
+  </section>
+  <section>
+    <app-typehome></app-typehome>
+  </section>
+  <section>
+    <app-homesize></app-homesize>
+  </section>
+  <section>
+    <app-sequrity></app-sequrity>
+  </section>
+  <section>
+    <app-memberinhome></app-memberinhome>
+  </section>
+  <section>
+    <app-insurance></app-insurance>
+  </section>
+  <section>
+    <app-assetspurchase></app-assetspurchase>
+  </section>
+  <section>
+    <app-getquote></app-getquote>
+  </section>
+</div>

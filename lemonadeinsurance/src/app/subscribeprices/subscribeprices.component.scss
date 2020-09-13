@@ -1,0 +1,17 @@
+
+.subscripprices{
+    position:relative;
+    overflow-y: auto;
+    height:100vh; /* 100% screen height  */
+    width:100vw;  /* 100% screen width */
+    scroll-snap-type: y proximity;
+  }
+  .scrollbar-cyan::-webkit-scrollbar {
+    width: 0.3em;
+    background-color: #f5f5f5;
+  }
+  .scrollbar-cyan::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #ec407a!important;
+    
+  }

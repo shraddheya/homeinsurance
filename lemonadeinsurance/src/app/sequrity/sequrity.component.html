@@ -1,0 +1,28 @@
+<div class="p-3 text-center" *ngIf=sequreview>
+  <span class="backtoCpmponent">
+    <a (click)="dataservice.backComponent('homesize')">
+      <mdb-icon fas icon="chevron-left"></mdb-icon>
+    </a>
+  </span>
+
+  <h2 class="p-2 maintitle font-weight-bold">Do you have any of the following in your<br> home?</h2>
+  <div class="container mt-3 p-3">
+    <div class="row justify-content-center">
+      <div class="col-2 text-center" *ngFor='let items of sequritytype'>
+        <div class="iconsize">
+          <img class="iconimg" *ngIf=!items.selectedview  src='{{items.img}}'>
+          <img class="iconimg" *ngIf=items.selectedview src='{{items.imgactive}}'>
+        </div>
+        <div>
+          <h6>{{items.title | uppercase}}</h6>
+        </div>
+        <div>
+          <input type="checkbox" (click)="sequrityCheck($event)" id={{items.type}} value={{items.type}}>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mt-5">
+    <button mdbBtn class="buttoneffect m-3 text-white" (click)="dataservice.stepsFunction(sequritydata).sequrity()" [disabled]=disabled_btn>Next</button>
+  </div>
+</div>

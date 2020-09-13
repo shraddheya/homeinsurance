@@ -1,0 +1,28 @@
+<div class="text-center p-5" *ngIf=namesection>
+  <span class="backtoCpmponent">
+    <a (click)="dataservice.backComponent('pricepanel')">
+      <mdb-icon fas icon="chevron-left"></mdb-icon>
+    </a>
+  </span>
+
+  <h2 class="p-3 maintitle font-weight-bold">Hey! I'm Maya. I'll get you an awesome<br> price in seconds. Ready to go?</h2>
+  <div class="row justify-content-center p-5">
+    <div class="col-5">
+      <form [formGroup]="profileForm">
+        <div class="form-row">
+          <div class="col">
+            <input mdbInput type="text" class="form-control p-4 inputtexthover" formControlName="firstName"
+              placeholder="First name">
+          </div>
+          <div class="col">
+            <input mdbInput type="text" (keyup)="activeButton()" class="form-control p-4 inputtexthover" formControlName="lastName"
+              placeholder="Last name">
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="whitetext p-3">
+    <button mdbBtn class="buttoneffect m-3 text-white" (click)="dataservice.stepsFunction(profileForm.value).nameForm()" [disabled]=disabledbutton>LETS DO THIS</button>
+  </div>
+</div>

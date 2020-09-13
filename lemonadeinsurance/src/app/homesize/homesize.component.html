@@ -1,0 +1,23 @@
+<div class="text-center p-5" *ngIf=hsizeview>
+  <span class="backtoCpmponent">
+    <a (click)="dataservice.backComponent('describehome')">
+      <mdb-icon fas icon="chevron-left"></mdb-icon>
+    </a>
+  </span>
+
+  <h2 class="p-2 mt-2 maintitle font-weight-bold">How big is your home?</h2>
+  <h6 class="p-2 mt-2 maintitle font-weight-bold">If you don't remember the exact size, an approximation is ok</h6>
+  <div class="row justify-content-center p-2 mt-2">
+    <div class="col-3">
+      <div class="form-row">
+        <div class="col">
+          <input mdbInput type="number" class="form-control p-4" (keyup)="activeBtnhomesize($event.target.value)" min=10 max=999 placeholder="SQUARE METERS">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-2 mt-2">
+    <button mdbBtn class="buttoneffect m-3 text-white" mdbWavesEffect
+      (click)="dataservice.stepsFunction(home_size).homeSize()" [disabled]=disabled_btn>Next</button>
+  </div>
+</div>

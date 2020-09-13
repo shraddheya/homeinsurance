@@ -1,0 +1,36 @@
+<div class="p-3 text-center" *ngIf=thomeview>
+  <span class="backtoCpmponent">
+    <a (click)="dataservice.backComponent('address')">
+      <mdb-icon fas icon="chevron-left"></mdb-icon>
+    </a>
+  </span>
+
+  
+
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <h2 class="p-1 maintitle title_background text-white">What best describes your home?</h2>
+    </div>
+  </div>
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-2 text-center" *ngFor='let items of hometype'>
+        <div>
+          <img class="iconimg" *ngIf=!items.selectedview  src='{{items.img}}'>
+          <img class="iconimg" *ngIf=items.selectedview src='{{items.imgactive}}'>
+          <!-- <mdb-icon far icon={{items.icon}} class="textcolor"></mdb-icon> -->
+        </div>
+        <div>
+          <span style="font-size:0.7em">{{items.title | uppercase}}</span> 
+        </div>
+        <div class="form-check form-check-inline p-3">
+          <input class="form-check-input" type="radio" (click)="homeType($event.target)" name="typeHomeoption" id={{items.type}} value={{items.type}}>
+          <label class="form-check-label" for={{items.type}}></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-2 mt-5">
+    <button mdbBtn class="buttoneffect m-3 text-white" (click)='dataservice.stepsFunction(home_type).homesType()' [disabled]=disabledbtn>Next</button>
+  </div>
+</div>
