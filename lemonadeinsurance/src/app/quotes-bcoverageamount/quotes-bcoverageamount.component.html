@@ -1,1 +1,27 @@
-<p>quotes-bcoverageamount works!</p>
+<section>
+  <div class="coverageouter p-4">
+    <h3 class="test-center textdata text-bold p-4">Coverage Amount</h3>
+    <div class="row p-5">
+      <div class="col-xl-4 col-lg-4 col-sm-12 col-xs-12 mb-4" *ngFor="let item of coverageAmount">
+        <div class="card">
+          <div class="card-img-top"></div>
+
+          <div class="card-body">
+            <h5 class="card-title text-center"><a>{{item.title}}</a></h5>
+            <h6 class="card-text text-center p-2">
+              {{item.text}}
+            </h6>
+          </div>
+          <hr>
+          <div class="mt-2 p-2">
+            <div class="row pl-4 pb-3 pr-4">
+              <div class="col-2 text-center"><mdb-icon class="circlemainupulate" fas icon="plus"></mdb-icon></div>
+              <div class="col-8 text-center">{{item.price}}</div>
+              <div class="col-2 text-center"><mdb-icon class="circlemainupulate" fas icon="minus"></mdb-icon></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

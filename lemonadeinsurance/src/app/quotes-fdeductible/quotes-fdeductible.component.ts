@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuotesFdeductibleComponent implements OnInit {
 
+  deductileArray:any=[];
   constructor() { }
 
   ngOnInit(): void {

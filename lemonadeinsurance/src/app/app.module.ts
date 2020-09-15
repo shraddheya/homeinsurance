@@ -22,6 +22,9 @@ import { QuotesChighvalueitemComponent } from './quotes-chighvalueitem/quotes-ch
 import { QuotesDcoveragesuperpowersComponent } from './quotes-dcoveragesuperpowers/quotes-dcoveragesuperpowers.component';
 import { QuotesEwhatscoverdComponent } from './quotes-ewhatscoverd/quotes-ewhatscoverd.component';
 import { QuotesFdeductibleComponent } from './quotes-fdeductible/quotes-fdeductible.component';
+import { QuotesGnotcoveredComponent } from './quotes-gnotcovered/quotes-gnotcovered.component';
+import { QuotesHlinkpolicyComponent } from './quotes-hlinkpolicy/quotes-hlinkpolicy.component';
+import { QuotesIactiveinsuranceComponent } from './quotes-iactiveinsurance/quotes-iactiveinsurance.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { QuotesFdeductibleComponent } from './quotes-fdeductible/quotes-fdeducti
     QuotesChighvalueitemComponent,
     QuotesDcoveragesuperpowersComponent,
     QuotesEwhatscoverdComponent,
-    QuotesFdeductibleComponent
+    QuotesFdeductibleComponent,
+    QuotesGnotcoveredComponent,
+    QuotesHlinkpolicyComponent,
+    QuotesIactiveinsuranceComponent
   ],
   imports: [
     BrowserModule,

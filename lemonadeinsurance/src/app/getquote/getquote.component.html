@@ -5,12 +5,62 @@
     </a>
   </span>
 
-  <h5 class="p-3 graytitlecolor">Alright! Let's get you a quote</h5>
+  <h2 class="p-3 maintitle">Alright! Let's get you a quote</h2>
   <div class="row justify-content-center p-3">
-    <div class="col-6">
+    <div class="col-4">
+      <div class="form-row justify-content-center">
+        <div class="col-auto">
+          <label class="sr-only" for="inlineFormInputGroup">Username</label>
+          <div class="input-group mb-2 p-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text bg-white">
+                <mdb-icon far icon="envelope"></mdb-icon>
+              </div>
+            </div>
+            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+          </div>
+        </div>
+        <div class="col-auto">
+          <label class="sr-only" for="inlineFormInputGroup">Username</label>
+          <div class="input-group mb-2 p-3">
+            <div class="input-group-prepend">
+              <div class="input-group-text bg-white">
+                <mdb-icon fas icon="birthday-cake"></mdb-icon>&nbsp;Date of birth
+              </div>
+            </div>
+            <input type="month" class="form-control" placeholder="">
+            <input type="year" class="form-control" placeholder="">
+            <input type="month" class="form-control" placeholder="">
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div>
-    <button mdbBtn class="buttoneffect m-3 text-white" mdbWavesEffect>Next</button>
+
+ <div class="container ml-5 mb-5">
+  <div class="row justify-content-center ml-5">
+    <div class="col-6 ml-5">
+      <div id="listResults">
+        <!-- <div class="col-6 text-center">
+          <div class="checkbox  checkbox-red">
+            <input mdbInput id="checkbox2" type="checkbox" checked>
+            <label>I agree to receive updates and discount offers</label>
+          </div>
+        </div>
+        <div class="col-6 text-center">
+          <div class="checkbox  checkbox-red">
+            <input mdbInput id="checkbox2" type="checkbox" checked>
+            <label>
+              I agree to the <a class="anchorlink">privacy policy</a> & <a class="anchorlink">terms of service</a>
+            </label>
+          </div>
+        </div> -->
+      </div>
+    </div>
   </div>
+</div>
+
+<div>
+  <button mdbBtn class="buttoneffect m-3 text-white" mdbWavesEffect>Next</button>
+</div>
 </div>
