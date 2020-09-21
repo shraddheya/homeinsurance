@@ -63,6 +63,8 @@ export class DataterminalService {
       },
 
       getQuote: () => { //next
+        this.allData.viewinfo = 'quotesview'
+        this.datatransfer.next(this.allData)
       }
     }
   }

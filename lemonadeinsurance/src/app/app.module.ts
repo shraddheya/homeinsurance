@@ -25,6 +25,9 @@ import { QuotesFdeductibleComponent } from './quotes-fdeductible/quotes-fdeducti
 import { QuotesGnotcoveredComponent } from './quotes-gnotcovered/quotes-gnotcovered.component';
 import { QuotesHlinkpolicyComponent } from './quotes-hlinkpolicy/quotes-hlinkpolicy.component';
 import { QuotesIactiveinsuranceComponent } from './quotes-iactiveinsurance/quotes-iactiveinsurance.component';
+import { TopbarComponent } from './topbar/topbar.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -48,13 +51,19 @@ import { QuotesIactiveinsuranceComponent } from './quotes-iactiveinsurance/quote
     QuotesFdeductibleComponent,
     QuotesGnotcoveredComponent,
     QuotesHlinkpolicyComponent,
-    QuotesIactiveinsuranceComponent
+    QuotesIactiveinsuranceComponent,
+    TopbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    GoogleMapsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDt1YJIwwZRjt3wI1xyH8bdY3sBf7PbR8s',
+      libraries:["places"]
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

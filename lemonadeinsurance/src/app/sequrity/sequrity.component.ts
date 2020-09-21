@@ -6,7 +6,7 @@ import { DataterminalService } from '../dataterminal.service';
   styleUrls: ['./sequrity.component.scss']
 })
 export class SequrityComponent implements OnInit {
-  
+
   sequreview:any = false;
   sequritytype:any = [
     {
@@ -26,7 +26,7 @@ export class SequrityComponent implements OnInit {
   ];
   sequritydata:any = [];
   disabled_btn:any = true
-  constructor(public dataservice:DataterminalService) { 
+  constructor(public dataservice:DataterminalService) {
     dataservice.datatransferShared.subscribe((el:any)=>{
       this.sequreview = el.viewinfo === "sequrity"
     })
@@ -44,9 +44,9 @@ export class SequrityComponent implements OnInit {
       this.sequritydata.push(data.target.value);
     }
     else{
-      for( var i = 0; i < this.sequritydata.length; i++){ 
-        if ( this.sequritydata[i] === data.target.value) { 
-          this.sequritydata.splice(i, 1) 
+      for( var i = 0; i < this.sequritydata.length; i++){
+        if ( this.sequritydata[i] === data.target.value) {
+          this.sequritydata.splice(i, 1)
         }
       }
     }

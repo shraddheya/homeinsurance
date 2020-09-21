@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    overflow   : hidden;
     box-sizing : content-box;
 }
 .backtoCpmponent{
@@ -164,7 +163,8 @@ input[type='checkbox']:checked:after {
 
 .iconimg{
     height:6em;
-    width:6em
+    width:6em;
+    z-index: 1;
 }
 
 .buttoneffect{

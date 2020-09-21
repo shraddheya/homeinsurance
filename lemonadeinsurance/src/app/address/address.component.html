@@ -12,18 +12,19 @@
         <form [formGroup]="addressForm" class="p-2">
           <div class="form-row">
             <div class="col-6">
-              <select class="form-control p-4 browser-default custom-select" formControlName="address" (change)="setPincode($event)">
+              <!-- <select class="form-control p-4 browser-default custom-select" formControlName="address" (change)="setPincode($event)">
                 <option value=true selected>Street, City</option>
                 <option *ngFor='let item of citystatelist' value={{item.data}}>
                   {{item.data}}
                 </option>
-              </select>
+              </select> -->
+              <input type="text" #search class="form-control p-3" (keyup)="setAddressdata()" id="search_location"  placeholder="Search address">
             </div>
             <div class="col-3">
-              <input type="text" class="form-control p-4" formControlName="housenumber" placeholder="Housenumber">
+              <input type="text" class="form-control p-3" formControlName="housenumber" placeholder="Housenumber">
             </div>
             <div class="col-3">
-              <input type="text" class="form-control p-4" formControlName="pincodedata" placeholder="{{pincodeset}}" [readonly]=true>
+              <input type="text" class="form-control p-3" formControlName="pincodedata" placeholder="{{pincodeset}}" [readonly]=true>
             </div>
           </div>
         </form>

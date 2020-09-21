@@ -20,7 +20,7 @@ export class QuotesBcoverageamountComponent implements OnInit {
       price:'100.000 €',
       style:"col-4 p-0",
       title: 'CONTENTS',
-      text: 'Try to estimate the total value of your stuff as new, such as electronics, clothing, furniture, bikes etc.For any single items worth more than 5.000 € each, add them to your policy here',
+      text: 'Try to estimate the total value of your stuff as new, such as electronics, clothing, furniture, bikes etc. For any single items worth more than 5.000 € each, add them to your policy here',
     },
     {
       icon: '',
