@@ -6,7 +6,7 @@ import { DataterminalService } from '../dataterminal.service';
   styleUrls: ['./sequrity.component.scss']
 })
 export class SequrityComponent implements OnInit {
-  
+
   sequreview:any = false;
   securitytype: any = {
     burglaralarm: {
@@ -24,7 +24,7 @@ export class SequrityComponent implements OnInit {
   };
   sequritydata:any = [];
   disabled_btn:any = true
-  constructor(public dataservice:DataterminalService) { 
+  constructor(public dataservice:DataterminalService) {
     dataservice.datatransferShared.subscribe((el:any)=>{
       this.sequreview = el.viewinfo === "sequrity"
     })
@@ -33,7 +33,20 @@ export class SequrityComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  securityCheck(evt: any, itemid: any) {
-    this.securitytype[itemid].selectedview = evt.currentTarget.checked;
+  sequrityCheck(data){
+    this.disabled_btn = (!data.target.checked);
+    this.sequritytype.forEach(el => {
+      el.selectedview = (el.type === data.target.id)
+    });
+    if(data.target.checked){
+      this.sequritydata.push(data.target.value);
+    }
+    else{
+      for( var i = 0; i < this.sequritydata.length; i++){
+        if ( this.sequritydata[i] === data.target.value) {
+          this.sequritydata.splice(i, 1)
+        }
+      }
+    }
   }
 }

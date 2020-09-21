@@ -7,7 +7,7 @@
 
   <h2 class="p-3 maintitle">Alright! Let's get you a quote</h2>
   <div class="row justify-content-center p-3">
-    <div class="col-4">
+    <div class="col-3">
       <div class="form-row justify-content-center">
         <div class="col-auto">
           <label class="sr-only" for="inlineFormInputGroup">Username</label>
@@ -17,7 +17,7 @@
                 <mdb-icon far icon="envelope"></mdb-icon>
               </div>
             </div>
-            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Username">
+            <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Email">
           </div>
         </div>
         <div class="col-auto">
@@ -61,6 +61,6 @@
 </div>
 
 <div>
-  <button mdbBtn class="buttoneffect m-3 text-white" mdbWavesEffect>Next</button>
+  <button mdbBtn class="buttoneffect m-3 text-white" (click)="dataservice.stepsFunction({}).getQuote()" mdbWavesEffect>Next</button>
 </div>
 </div>
