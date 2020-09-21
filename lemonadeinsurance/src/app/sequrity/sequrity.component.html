@@ -8,16 +8,15 @@
   <h2 class="p-2 maintitle font-weight-bold">Do you have any of the following in your<br> home?</h2>
   <div class="container mt-3 p-3">
     <div class="row justify-content-center">
-      <div class="col-2 text-center" *ngFor='let items of sequritytype'>
+      <div class="col-2 text-center" *ngFor='let item of securitytype | keyvalue'>
         <div class="iconsize">
-          <img class="iconimg" *ngIf=!items.selectedview  src='{{items.img}}'>
-          <img class="iconimg" *ngIf=items.selectedview src='{{items.imgactive}}'>
+          <img class="iconimg" src="{{item.value.selectedview ? item.value.imgactive : item.value.img}}">
         </div>
         <div>
-          <h6>{{items.title | uppercase}}</h6>
+          <h6>{{item.value.title | uppercase}}</h6>
         </div>
         <div>
-          <input type="checkbox" (click)="sequrityCheck($event)" id={{items.type}} value={{items.type}}>
+          <input type="checkbox" (change)="securityCheck($event, item.key)">
         </div>
       </div>
     </div>
