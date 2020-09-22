@@ -10,7 +10,7 @@ export class DataterminalService {
 
   datatransferShared = this.datatransfer.asObservable();
   constructor() {
-    // this.testFunction()
+    this.testFunction()
   }
 
   stepsFunction(record) {

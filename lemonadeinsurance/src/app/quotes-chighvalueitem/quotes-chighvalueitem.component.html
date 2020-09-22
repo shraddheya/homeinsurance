@@ -20,7 +20,7 @@
               <div class="item-details pt-2">
               <h6 class="text-center">{{item.title | uppercase}}</h6>
               </div>
-              <a id="item-main-action" href="#" class="btn-standard btn-pink text-center">+</a>
+              <a id="item-main-action" (click)="openModal(item)" class="btn-standard btn-pink text-white text-center">+</a>
             </div>
           </div>
         </div>

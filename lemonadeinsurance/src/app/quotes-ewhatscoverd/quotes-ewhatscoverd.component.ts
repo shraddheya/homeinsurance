@@ -30,8 +30,13 @@ export class QuotesEwhatscoverdComponent implements OnInit {
     },
     {
       icon:"",
-      text:"KEY LOSS LIABILITY",
-      description:"If you lose the keys to the apartment you’re renting, we’ll cover the cost of replacing the locks. You aren’t covered if you lose your office keys though."
+      text:"THEFT OUTSIDE YOUR HOME",
+      description:"Whether you're at home, a cofee shop, or hanginout on Sylt we'll cover you if someone steals your stuff"
+    },
+    {
+      icon:"",
+      text:"Extereme weather",
+      description:"Floods, lightning earthquakes and snow pressure are no fun. You're covered for all of them"
     }
   ]
   constructor() { }

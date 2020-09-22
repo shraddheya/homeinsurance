@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit} from '@angular/core';
+declare var Swal:any;
 @Component({
   selector: 'app-quotes-chighvalueitem',
   templateUrl: './quotes-chighvalueitem.component.html',
@@ -39,6 +39,11 @@ export class QuotesChighvalueitemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  openModal(data){
+
+    console.log(data)
   }
 
 }
