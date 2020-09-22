@@ -9,6 +9,7 @@ export class GetquoteComponent implements OnInit {
 
   quotsview: any = false;
   testjson:any;
+  getQuotesnext:any = true;
   constructor(public dataservice: DataterminalService) {
     dataservice.datatransferShared.subscribe((el: any) => {
       this.testjson = el.insuracevisiter_info;
@@ -18,5 +19,9 @@ export class GetquoteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  quotesCheck(evt: any){
+    if (evt.target.id === "privacyterm") {
+      this.getQuotesnext = (!evt.target.checked)
+    }
+  }
 }

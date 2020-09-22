@@ -69,10 +69,10 @@ export class DataterminalService {
     }
   }
 
-  // testFunction() {
-  //   this.allData.viewinfo = "quotesview";
-  //   this.datatransfer.next(this.allData)
-  // }
+  testFunction() {
+    this.allData.viewinfo = "quotesview";
+    this.datatransfer.next(this.allData)
+  }
 
   backComponent(component) {
     this.allData.viewinfo = component;

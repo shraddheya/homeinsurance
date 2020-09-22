@@ -28,9 +28,7 @@
                 <mdb-icon fas icon="birthday-cake"></mdb-icon>&nbsp;Date of birth
               </div>
             </div>
-            <input type="month" class="form-control" placeholder="">
-            <input type="year" class="form-control" placeholder="">
-            <input type="month" class="form-control" placeholder="">
+            <input type="date" class="form-control" placeholder="">
           </div>
         </div>
       </div>
@@ -41,26 +39,24 @@
   <div class="row justify-content-center ml-5">
     <div class="col-6 ml-5">
       <div id="listResults">
-        <!-- <div class="col-6 text-center">
-          <div class="checkbox  checkbox-red">
-            <input mdbInput id="checkbox2" type="checkbox" checked>
-            <label>I agree to receive updates and discount offers</label>
+        <div class="col-10 text-center mb-4">
+          <div>
+            <input type="checkbox" class="mr-3" id="receivediscount" (change)="quotesCheck($event)">
+            I agree to receive updates and discount offers
           </div>
         </div>
-        <div class="col-6 text-center">
-          <div class="checkbox  checkbox-red">
-            <input mdbInput id="checkbox2" type="checkbox" checked>
-            <label>
-              I agree to the <a class="anchorlink">privacy policy</a> & <a class="anchorlink">terms of service</a>
-            </label>
+        <div class="col-10 text-center">
+          <div>
+            <input type="checkbox" class="mr-3" id="privacyterm" (change)="quotesCheck($event)">
+            I agree to the <a class="anchorlink">privacy policy</a> & <a class="anchorlink">terms of service</a>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
 </div>
 
 <div>
-  <button mdbBtn class="buttoneffect m-3 text-white" (click)="dataservice.stepsFunction({}).getQuote()" mdbWavesEffect>Next</button>
+  <button mdbBtn class="buttoneffect m-3 text-white" (click)="dataservice.stepsFunction({}).getQuote()" mdbWavesEffect [disabled]=getQuotesnext>Next</button>
 </div>
 </div>

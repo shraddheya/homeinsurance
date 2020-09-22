@@ -1,1 +1,18 @@
-<p>quotes-ewhatscoverd works!</p>
+<section class="p-5">
+  <div class="mb-5">
+    <h1 class="maintitle text-center">What's Covered</h1>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-6 p-5" *ngFor="let item of whatscovered">
+      <div class="">
+        <i class="icn-peril"></i>
+      </div>
+      <div class="pt-2">
+        <h5 class="cardtitle">{{item.text | uppercase}}</h5>
+      </div>
+      <div class="pt-2">
+        <h4 class="cardtext text-center">{{item.description}}</h4>
+      </div>
+    </div>
+  </div>
+</section>

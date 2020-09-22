@@ -9,21 +9,21 @@ export class QuotesBcoverageamountComponent implements OnInit {
 
   coverageAmount: any = [
     {
-      icon: '',
+      icon: 'https://www.lemonade.com/assets/desktop-onboarding/icn-sprite-coverages-100.png',
       price:'5.000.000 €',
       style:"col-4 pl-5",
       title: 'PERSONAL LIABILITY',
       text: "If you accidentally cause damage to others or their property, this is the maximum we’ll pay.For example, if you break someone’s window while playing golf in your backyard we'll cover it.",
     },
     {
-      icon:'',
+      icon:'https://www.lemonade.com/assets/desktop-onboarding/icn-sprite-coverages-100.png',
       price:'100.000 €',
       style:"col-4 p-0",
       title: 'CONTENTS',
       text: 'Try to estimate the total value of your stuff as new, such as electronics, clothing, furniture, bikes etc. For any single items worth more than 5.000 € each, add them to your policy here',
     },
     {
-      icon: '',
+      icon: 'https://www.lemonade.com/assets/desktop-onboarding/icn-sprite-coverages-100.png',
       price:'20.000 €',
       style:"col-4 pr-5",
       title: 'TEMP ACCOMMODATION',
