@@ -19,7 +19,8 @@ export class AddressComponent implements OnInit {
   pincodeset:any = '';
   addressForm = new FormGroup({
     housenumber: new FormControl(''),
-    pincodedata: new FormControl('')
+    pincodedata: new FormControl(''),
+    address: new FormControl('')
   });
   record: any;
   addressview: any = false;
@@ -41,8 +42,7 @@ export class AddressComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  setAddressdata() {
-    console.log(this.mapsapiLoader)
+  setPincode(data) {
     // this.autocomplete = new google.maps.places.Autocomplete((data.target),{
     //   types: ['geocode'],
     // });
@@ -50,12 +50,12 @@ export class AddressComponent implements OnInit {
     //   this.near_place = this.autocomplete.getPlace();
     //   console.log(this.near_place)
     // });
-    // this.citystatelist.forEach(el => {
-    //   if (el.data === data.target.value) {
-    //     this.pincodeset = el.pincode;
-    //     this.addressForm.controls.pincodedata.setValue(el.pincode);
-    //   }
-    // });
+    this.citystatelist.forEach(el => {
+      if (el.data === data.target.value) {
+        this.pincodeset = el.pincode;
+        this.addressForm.controls.pincodedata.setValue(el.pincode);
+      }
+    });
     this.disabledaddress_btn = false;
   }
 }

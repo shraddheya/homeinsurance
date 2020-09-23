@@ -10,7 +10,7 @@ export class DataterminalService {
 
   datatransferShared = this.datatransfer.asObservable();
   constructor() {
-    this.testFunction()
+    // this.testFunction()
   }
 
   stepsFunction(record) {
@@ -70,7 +70,7 @@ export class DataterminalService {
   }
 
   testFunction() {
-    this.allData.viewinfo = "quotesview";
+    this.allData.viewinfo = "address";
     this.datatransfer.next(this.allData)
   }
 
