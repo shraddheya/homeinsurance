@@ -32,19 +32,14 @@
                   </p>
                 </div>
               </div>
-              <div class="col-2 text-right" style="top:3.6em;">
-                <span class="{{item.value.showchecked ? 'coverageitemtextactive' : 'coverageitemtext'}}">{{item.value.price}}</span>
+              <div class="col-2 text-right" style="top:3.6em;color:rgb(183, 183, 183);">
+                <span class="font-weight-bold {{item.value.showchecked ? 'coverageitemtextactive' : 'coverageitemtext'}}">{{item.value.price}}</span>
               </div>
               <div class="col-2" style="top:3.6em;">
                 <div class="md-switch">
                   <input type="checkbox" class="md-toggle md-toggle-round" name={{item.value.title}} id={{item.value.id}} (change)="buttonCheck($event, item.key)">
                   <label for={{item.value.id}}></label>
                 </div>
-
-                <!-- <div class="custom-control custom-switch">
-                  <input type="checkbox" class="custom-control-input {{item.value.showchecked ? 'activeswitch' : 'normalswitch'}}" >
-                  <label class="custom-control-label" for={{item.value.id}}></label>
-                </div> -->
               </div>
             </div>
           </div>
