@@ -18,11 +18,93 @@
                 <img src={{item.img}} alt="" class="imagesize">
               </div>
               <div class="item-details pt-2">
-              <h6 class="text-center">{{item.title | uppercase}}</h6>
+                <h6 class="text-center">{{item.title | uppercase}}</h6>
               </div>
-              <a id="item-main-action" (click)="openModal(item)" class="btn-standard btn-pink text-white text-center">+</a>
+              <a id="item-main-action" (click)="openModal(item)"
+                class="btn-standard btn-pink text-white text-center">+</a>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div mdbModal #highvaluemodal="mdbModal" class="modal fade" tabindex="-1" role="dialog"
+    aria-labelledby="myBasicModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered {{!noticeModal ? 'modal-sm':'modal-md'}}" role="document">
+      <div class="modal-content">
+        <div class="modal-header border border-white">
+          <button *ngIf=!noticeModal type="button" class="close pull-right" aria-label="Close" (click)="highvaluemodal.hide()">
+            <span aria-hidden="true" class="modalcolor">×</span>
+          </button>
+          <a *ngIf=noticeModal class="text-left" style="color:silver;" (click)="noticeModal = false">
+            <mdb-icon fas icon="chevron-left"></mdb-icon>
+          </a>
+        </div>
+        <div class="modal-body">
+          <div *ngIf=!noticeModal>
+            <div class="row justify-content-center">
+            <div class="col-5">
+              <img src={{modalObject.img}} alt="" height="60em" width="80em">
+            </div>
+            </div>
+            <div class="pt-4">
+            <h5 class="cardtitle">
+              {{modalObject.title}}
+            </h5>
+            </div>
+            <div class="pt-2">
+            <h6 class="cardtext text-center">
+              {{modalObject.text}}
+            </h6>
+            </div>
+            <div class="row p-2">
+            <div class="col-2">
+              <a (click)="worthFunction(minus,modalObject)" #minus name="minus">
+                <mdb-icon fas icon="minus" class="btneffect"></mdb-icon>
+              </a>
+            </div>
+            <div class="col-8">
+              <div style="border:0.1em solid silver;border-radius: 0.6em;" class="p-1">
+                <div class="row">
+                  <div class="col-8">
+                    <input type="text" class="form-control border border-white" placeholder={{modalObject.max}}>
+                  </div>
+                  <div class="col-4">
+                    <span class="text-center font-weight-bold" style="top:0.4em;position:absolute;color:silver">€</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <a (click)="worthFunction(plus,modalObject)" #plus name="plus">
+                <mdb-icon fas icon="plus" class="btneffect"></mdb-icon>
+              </a>
+            </div>
+            </div>
+          </div>
+          <div *ngIf=noticeModal>
+            <h6 class="importtitle text-center">
+              IMPORTANT
+            </h6>
+            <div class="pt-2">
+              <div class="row pt-2" *ngFor="let item of importantArray">
+                <div class="col-1">
+                  <div class="row justify-content-right">
+                    <div class="col-4">
+                      <img src={{item.img}} alt="" height="30em" width="30em">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-11 importanttext pr-5 text-left">
+                  <h6 class="pl-5 pr-5">{{item.text}}</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer {{!noticeModal ? footerbtnshow ? 'footerbutton':'footerbuttonactive':'footerbuttonactive'}}">
+          <a *ngIf=!noticeModal class="text-white {{footerbtnshow ? 'footercss':'footercssactive'}}" (click)="noticeModal = true">ADD</a>
+          <a *ngIf=noticeModal class="text-white footercssactive">GOT IT</a>
         </div>
       </div>
     </div>

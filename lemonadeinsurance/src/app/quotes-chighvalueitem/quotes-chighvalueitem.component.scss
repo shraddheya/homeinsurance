@@ -38,3 +38,50 @@
   height:4.3em;
   width:5em
 }
+.modalcolor{
+  color:silver
+}
+.titlefont{
+  color:#4A4A4A;
+}
+
+.footercss{
+  background-color: silver;
+    position: relative;
+    margin: auto;
+    width: 20em;
+    text-align: center;
+    font-weight: 740;
+}
+.footercssactive{
+  background-color: #ff0083;
+    position: relative;
+    margin: auto;
+    width: 20em;
+    text-align: center;
+    font-weight: 740;
+}
+.footerbuttonactive{
+  background-color: #ff0083;
+}
+.footerbutton{
+  background-color: silver;
+}
+.btneffect{
+  border-radius: 5em;
+  border:0.1em solid silver;
+  padding: 0.4em;
+  color:#4A4A4A;
+}
+.importtitle{
+  position: relative;
+  line-height: 0em;
+  font-family: 40px Lato, "Helvetica Neue", Arial, sans-serif;
+  color: #4A4A4A;
+  top: -1em;
+  font-weight: 600;
+}
+.importanttext{
+  color: #4A4A4A;
+  font-size: 0.3em;
+}
