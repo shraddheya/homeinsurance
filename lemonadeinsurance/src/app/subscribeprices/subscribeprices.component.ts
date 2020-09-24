@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { DataterminalService } from '../dataterminal.service';
-
+import { ModalDirective } from 'angular-bootstrap-md';
 @Component({
   selector: 'app-subscribeprices',
   templateUrl: './subscribeprices.component.html',
@@ -32,10 +32,17 @@ export class SubscribepricesComponent implements OnInit {
     },
 
   ];
+  @ViewChild('resetmodal', { static: true }) private resetmodal: ModalDirective
+
   constructor(public dataservice: DataterminalService) {
     dataservice.datatransferShared.subscribe((el: any) => {
       if (Object.keys(el).length !== 0) {
         this.pricepackage = el.viewinfo === "pricepanel";
+      }
+    });
+    dataservice.domEffectShared.subscribe((el: any) => {
+      if (el.mode === "reset") {
+        this.resetmodal.show()
       }
     })
   }

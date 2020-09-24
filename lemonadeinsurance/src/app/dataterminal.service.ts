@@ -7,8 +7,10 @@ export class DataterminalService {
 
   allData: any = { insuracevisiter_info: {}, viewinfo: "" };
   private datatransfer = new BehaviorSubject({});
+  private domEffect = new BehaviorSubject({});
 
   datatransferShared = this.datatransfer.asObservable();
+  domEffectShared = this.domEffect.asObservable();
   constructor() {
     // this.testFunction()
   }
@@ -83,5 +85,9 @@ export class DataterminalService {
   testFunction() {
     this.allData.viewinfo = "quotesview";
     this.datatransfer.next(this.allData)
+  }
+
+  domFunction(data){
+    this.domEffect.next({mode:data});
   }
 }
