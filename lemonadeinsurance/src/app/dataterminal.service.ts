@@ -66,7 +66,6 @@ export class DataterminalService {
       getQuote: () => {
         this.allData.viewinfo = 'quotesview'
         this.datatransfer.next(this.allData)
-        console.log(this.allData)
       }
     }
   }
@@ -79,6 +78,7 @@ export class DataterminalService {
   resetFunction(){
     this.allData.viewinfo = "pricepanel";
     this.allData.insuracevisiter_info = {}
+    console.log(this.allData)
     this.datatransfer.next(this.allData)
   }
 

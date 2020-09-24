@@ -10,9 +10,7 @@ export class QuotesdetailComponent implements OnInit {
   quotesdetailView: any = false;
   constructor(public dataservice: DataterminalService) {
     dataservice.datatransferShared.subscribe((el: any) => {
-      if (el.viewinfo === "quotesview") {
-        this.quotesdetailView = true
-      }
+      this.quotesdetailView = el.viewinfo === "quotesview"
     })
   }
 
