@@ -1,13 +1,14 @@
-<div class="p-5" *ngIf=assetspurchaseview>
-  <span class="backtoCpmponent">
+<div class="pt-5" *ngIf=assetspurchaseview>
+  <div class="mt-4">
+    <span class="backtoCpmponent">
     <a (click)="dataservice.backComponent('insurance')">
       <mdb-icon fas icon="chevron-left"></mdb-icon>
     </a>
-  </span>
+    </span>
 
-  <h2 class="text-center  p-2 maintitle font-weight-bold">Do you own any single item worth more<br> than 5,000 €?</h2>
-  <h6 class="text-center  p-2 maintitle font-weight-bold">Things like bikes, cameras, jewelry, electronic and fashion items</h6>
-  <div class="row justify-content-center p-2">
+    <h2 class="text-center  p-2 maintitle font-weight-bold">Do you own any single item worth more<br> than 5,000 €?</h2>
+    <h6 class="text-center  p-2 maintitle font-weight-bold">Things like bikes, cameras, jewelry, electronic and fashion items</h6>
+    <div class="row justify-content-center p-2">
     <div class="col-3 p-3">
       <div style="text-align: center;">
         <mdb-card>
@@ -27,22 +28,23 @@
           </mdb-card-body>
         </mdb-card>
 
-        
+
       </div>
     </div>
-  </div>
-  <div class="container p-2">
+    </div>
+    <div class="container p-2">
     <div class="row justify-content-center">
       <div class="col-6">
         <div class="messagepart messagetitle" *ngIf=showmessage>
           <span>
-            “OK. I'll show you how to add it to your policy later” 
+            “OK. I'll show you how to add it to your policy later”
           </span>
         </div>
       </div>
     </div>
-  </div>
-  <div class="p-2 text-center">
+    </div>
+    <div class="p-2 text-center">
     <button mdbBtn class="buttoneffect m-3 text-white" mdbWavesEffect [disabled]=disabled_btn (click)="dataservice.stepsFunction(assetsRange).assetspurchase()">Next</button>
+    </div>
   </div>
 </div>

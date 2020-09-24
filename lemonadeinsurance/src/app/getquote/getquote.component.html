@@ -1,12 +1,13 @@
-<div class="text-center p-5" *ngIf=quotsview>
-  <span class="backtoCpmponent">
+<div class="text-center pt-5" *ngIf=quotsview>
+  <div class="mt-3">
+    <span class="backtoCpmponent">
     <a (click)="dataservice.backComponent('assetspurchase')">
       <mdb-icon fas icon="chevron-left"></mdb-icon>
     </a>
-  </span>
+    </span>
 
-  <h2 class="p-3 maintitle">Alright! Let's get you a quote</h2>
-  <div class="row justify-content-center p-3">
+    <h2 class="p-3 maintitle">Alright! Let's get you a quote</h2>
+    <div class="row justify-content-center p-3">
     <div class="col-3">
       <div class="form-row justify-content-center">
         <div class="col-auto">
@@ -33,30 +34,32 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
 
- <div class="container ml-5 mb-5">
-  <div class="row justify-content-center ml-5">
-    <div class="col-6 ml-5">
-      <div id="listResults">
-        <div class="col-10 text-center mb-4">
-          <div>
-            <input type="checkbox" class="mr-3" id="receivediscount" (change)="quotesCheck($event)">
-            I agree to receive updates and discount offers
+    <div class="container ml-5 mb-5">
+    <div class="row justify-content-center ml-5">
+      <div class="col-6 ml-5">
+        <div id="listResults">
+          <div class="col-10 text-center mb-4">
+            <div>
+              <input type="checkbox" class="mr-3" id="receivediscount" (change)="quotesCheck($event)">
+              I agree to receive updates and discount offers
+            </div>
           </div>
-        </div>
-        <div class="col-10 text-center">
-          <div>
-            <input type="checkbox" class="mr-3" id="privacyterm" (change)="quotesCheck($event)">
-            I agree to the <a class="anchorlink">privacy policy</a> & <a class="anchorlink">terms of service</a>
+          <div class="col-10 text-center">
+            <div>
+              <input type="checkbox" class="mr-3" id="privacyterm" (change)="quotesCheck($event)">
+              I agree to the <a class="anchorlink">privacy policy</a> & <a class="anchorlink">terms of service</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
+    </div>
 
-<div>
-  <button mdbBtn class="buttoneffect m-3 text-white" (click)="dataservice.stepsFunction({}).getQuote()" mdbWavesEffect [disabled]=getQuotesnext>Next</button>
-</div>
+    <div>
+    <button mdbBtn class="buttoneffect m-3 text-white" (click)="dataservice.stepsFunction({}).getQuote()" mdbWavesEffect
+      [disabled]=getQuotesnext>Next</button>
+    </div>
+  </div>
 </div>
