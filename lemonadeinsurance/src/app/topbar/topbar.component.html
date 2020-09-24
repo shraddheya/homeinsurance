@@ -1,5 +1,5 @@
-<div>
-  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark white p-3 border border-grey darken-3 border-bottom" [containerInside]="false" mdbStickyHeader>
+<div class="fixedheader">
+  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark white p-3 border border-grey darken-3 border-bottom" [containerInside]="false">
     <mdb-navbar-brand>
       <a class="navbar-brand text-dark" href="#">
         <mdb-icon fas icon="bars"></mdb-icon>
@@ -11,7 +11,7 @@
     <links>
       <ul class="navbar-nav ml-auto nav-flex-icons">
         <li class="nav-item">
-          <a class="nav-link text-dark">
+          <a class="nav-link text-dark" (click)="dataservice.resetFunction()">
             <mdb-icon fas icon="undo"></mdb-icon>
           </a>
         </li>
@@ -24,13 +24,11 @@
     </links>
     <!-- Collapsible content -->
   </mdb-navbar>
-  <div class="row justify-content-center" style="position: static;top:1.8em;">
+  <div class="row justify-content-center" style="position: relative;top:-4.7em;">
     <div class="col-1">
-
       <img class="iconimgtop"
         src="https://www.lemonade.com/assets/web_chat/Maya-79af77d3c1e0abe54a4a8f349950ec6b23457716b5361568851546d1cb5c3643.jpg"
         alt="">
-
     </div>
   </div>
 </div>

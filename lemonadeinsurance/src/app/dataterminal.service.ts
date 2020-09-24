@@ -10,7 +10,7 @@ export class DataterminalService {
 
   datatransferShared = this.datatransfer.asObservable();
   constructor() {
-    this.testFunction()
+    // this.testFunction()
   }
 
   stepsFunction(record) {
@@ -69,13 +69,20 @@ export class DataterminalService {
     }
   }
 
-  testFunction() {
-    this.allData.viewinfo = "quotesview";
+  backComponent(component) {
+    this.allData.viewinfo = component;
     this.datatransfer.next(this.allData)
   }
 
-  backComponent(component) {
-    this.allData.viewinfo = component;
+  resetFunction(){
+    this.allData.viewinfo = "pricepanel";
+    this.allData.insuracevisiter_info = {}
+    console.log(this.allData)
+    this.datatransfer.next(this.allData)
+  }
+
+  testFunction() {
+    this.allData.viewinfo = "quotesview";
     this.datatransfer.next(this.allData)
   }
 }
