@@ -46,5 +46,5 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SOURCE: "dist/"
+          SOURCE: "deploy_dist/*"
           TARGET: ${{ secrets.TARGET }}
