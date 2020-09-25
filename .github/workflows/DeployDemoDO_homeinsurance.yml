@@ -1,0 +1,20 @@
+name: DeployDemoDO_homeinsurance
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v2
+        
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v1.4.3
+        with:
+          node-version: '12'
+      - run: npm install
+      - run: npm test
