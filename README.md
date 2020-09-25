@@ -1,3 +1,5 @@
+[![build status](https://github.com/coryrylan/angular-github-actions/workflows/Build/badge.svg)](https://github.com/coryrylan/angular-github-actions/actions)
+
 # Lemonadeinsurance
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
