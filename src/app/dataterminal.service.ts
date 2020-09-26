@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import opimjson from '../oipmodel';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,12 +15,16 @@ export class DataterminalService {
   domEffectShared = this.domEffect.asObservable();
   constructor() {
     // this.testFunction()
+    const arr = opimjson.content_lowvalue;
+    arr.forEach(element => {
+      console.log(element.price_month * 12 , element.per_year)
+    });
   }
 
   stepsFunction(record) {
     return {
       fromPrice: () => {
-        this.allData.insuracevisiter_info["package"] = { name: record.title1 + ' ' + record.title2, price: record.price }
+        this.allData.insuracevisiter_info["fromprice"] = { name: record.title1 + ' ' + record.title2, price: record.price }
         this.allData.viewinfo = "name";
         this.datatransfer.next(this.allData)
       },
@@ -64,8 +70,10 @@ export class DataterminalService {
         this.datatransfer.next(this.allData)
       },
       getQuote: () => {
+        this.allData.insuracevisiter_info['getQuotes'] = record;
         this.allData.viewinfo = 'quotesview'
         this.datatransfer.next(this.allData)
+        console.log(this.allData)
       }
     }
   }

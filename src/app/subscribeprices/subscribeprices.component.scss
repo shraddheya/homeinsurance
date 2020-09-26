@@ -25,3 +25,12 @@
     font-weight: 700;
     border-radius: 0.5em;
   }
+  .environmentdiv{
+    position: absolute;
+    left:0.9em;
+    height:0.8em;
+    width:0.8em;
+    z-index: 1;
+    border-radius: 5em;
+    background-color: green;
+  }

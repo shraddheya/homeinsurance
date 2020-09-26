@@ -1,0 +1,1012 @@
+[
+  {
+    "insurance_value": 0,
+    "po_event": 0,
+    "lg_event": 0,
+    "el_event": 0,
+    "curvature": 0,
+    "price_month": 0.00,
+    "per_year": 0.00,
+    "yearly_policy_event": 0
+  },
+  {
+    "insurance_value": 10000,
+    "po_event": 5,
+    "lg_event": 10,
+    "el_event": 50,
+    "curvature": 45,
+    "price_month": 2.00,
+    "per_year": 24.00,
+    "yearly_policy_event": 2.1
+  },
+  {
+    "insurance_value": 20000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 200,
+    "curvature": 40,
+    "price_month": 2.80,
+    "per_year": 33.60,
+    "yearly_policy_event": 6.0
+  },
+  {
+    "insurance_value": 30000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 300,
+    "curvature": 30,
+    "price_month": 3.64,
+    "per_year": 43.68,
+    "yearly_policy_event": 6.9
+  },
+  {
+    "insurance_value": 40000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 400,
+    "curvature": 35,
+    "price_month": 4.91,
+    "per_year": 58.97,
+    "yearly_policy_event": 6.8
+  },
+  {
+    "insurance_value": 50000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 500,
+    "curvature": 25,
+    "price_month": 6.14,
+    "per_year": 73.71,
+    "yearly_policy_event": 6.8
+  },
+  {
+    "insurance_value": 60000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 600,
+    "curvature": 20,
+    "price_month": 7.37,
+    "per_year": 88.45,
+    "yearly_policy_event": 6.8
+  },
+  {
+    "insurance_value": 70000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 700,
+    "curvature": 15,
+    "price_month": 8.48,
+    "per_year": 101.72,
+    "yearly_policy_event": 6.9
+  },
+  {
+    "insurance_value": 80000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 800,
+    "curvature": 10,
+    "price_month": 9.32,
+    "per_year": 111.89,
+    "yearly_policy_event": 7.1
+  },
+  {
+    "insurance_value": 90000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 900,
+    "curvature": 5,
+    "price_month": 9.79,
+    "per_year": 117.49,
+    "yearly_policy_event": 7.7
+  },
+  {
+    "insurance_value": 100000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 1000,
+    "curvature": 5,
+    "price_month": 10.28,
+    "per_year": 123.36,
+    "yearly_policy_event": 8.1
+  },
+  {
+    "insurance_value": 110000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 1100,
+    "curvature": 5,
+    "price_month": 10.79,
+    "per_year": 129.53,
+    "yearly_policy_event": 8.5
+  },
+  {
+    "insurance_value": 120000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 1200,
+    "curvature": 5,
+    "price_month": 11.33,
+    "per_year": 136.01,
+    "yearly_policy_event": 8.8
+  },
+  {
+    "insurance_value": 130000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 1300,
+    "curvature": 5,
+    "price_month": 11.90,
+    "per_year": 142.81,
+    "yearly_policy_event": 9.1
+  },
+  {
+    "insurance_value": 140000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 1400,
+    "curvature": 6,
+    "price_month": 12.61,
+    "per_year": 151.37,
+    "yearly_policy_event": 9.2
+  },
+  {
+    "insurance_value": 150000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 1500,
+    "curvature": 7,
+    "price_month": 13.50,
+    "per_year": 161.97,
+    "yearly_policy_event": 9.3
+  },
+  {
+    "insurance_value": 160000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 1600,
+    "curvature": 8,
+    "price_month": 14.58,
+    "per_year": 174.93,
+    "yearly_policy_event": 9.1
+  },
+  {
+    "insurance_value": 170000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 1700,
+    "curvature": 9,
+    "price_month": 15.89,
+    "per_year": 190.67,
+    "yearly_policy_event": 8.9
+  },
+  {
+    "insurance_value": 180000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 1800,
+    "curvature": 10,
+    "price_month": 17.48,
+    "per_year": 209.74,
+    "yearly_policy_event": 8.6
+  },
+  {
+    "insurance_value": 190000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 1900,
+    "curvature": 11,
+    "price_month": 19.40,
+    "per_year": 232.81,
+    "yearly_policy_event": 8.2
+  },
+  {
+    "insurance_value": 200000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 2000,
+    "curvature": 12,
+    "price_month": 21.73,
+    "per_year": 260.75,
+    "yearly_policy_event": 7.7
+  },
+  {
+    "insurance_value": 210000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 2100,
+    "curvature": 15,
+    "price_month": 24.99,
+    "per_year": 299.86,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 220000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 2200,
+    "curvature": 14,
+    "price_month": 28.49,
+    "per_year": 341.84,
+    "yearly_policy_event": 6.4
+  },
+  {
+    "insurance_value": 230000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 2300,
+    "curvature": 13,
+    "price_month": 32.19,
+    "per_year": 386.28,
+    "yearly_policy_event": 6.0
+  },
+  {
+    "insurance_value": 240000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 2400,
+    "curvature": 12,
+    "price_month": 36.05,
+    "per_year": 432.63,
+    "yearly_policy_event": 5.5
+  },
+  {
+    "insurance_value": 250000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 2500,
+    "curvature": 10,
+    "price_month": 39.66,
+    "per_year": 475.89,
+    "yearly_policy_event": 5.3
+  },
+  {
+    "insurance_value": 260000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 2600,
+    "curvature": 9,
+    "price_month": 43.23,
+    "per_year": 518.72,
+    "yearly_policy_event": 5.0
+  },
+  {
+    "insurance_value": 270000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 2700,
+    "curvature": 8,
+    "price_month": 46.69,
+    "per_year": 560.22,
+    "yearly_policy_event": 4.8
+  },
+  {
+    "insurance_value": 280000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 2800,
+    "curvature": 7,
+    "price_month": 49.95,
+    "per_year": 599.44,
+    "yearly_policy_event": 4.7
+  },
+  {
+    "insurance_value": 290000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 2900,
+    "curvature": 6,
+    "price_month": 52.95,
+    "per_year": 635.40,
+    "yearly_policy_event": 4.6
+  },
+  {
+    "insurance_value": 300000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 3000,
+    "curvature": 5,
+    "price_month": 55.60,
+    "per_year": 667.17,
+    "yearly_policy_event": 4.5
+  },
+  {
+    "insurance_value": 310000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 3100,
+    "curvature": 4,
+    "price_month": 57.82,
+    "per_year": 693.86,
+    "yearly_policy_event": 4.5
+  },
+  {
+    "insurance_value": 320000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 3200,
+    "curvature": 3,
+    "price_month": 59.56,
+    "per_year": 714.68,
+    "yearly_policy_event": 4.5
+  },
+  {
+    "insurance_value": 330000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 3300,
+    "curvature": 2,
+    "price_month": 60.75,
+    "per_year": 728.97,
+    "yearly_policy_event": 4.5
+  },
+  {
+    "insurance_value": 340000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 3400,
+    "curvature": 1,
+    "price_month": 61.36,
+    "per_year": 736.26,
+    "yearly_policy_event": 4.6
+  },
+  {
+    "insurance_value": 350000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 3500,
+    "curvature": 1,
+    "price_month": 61.97,
+    "per_year": 743.62,
+    "yearly_policy_event": 4.7
+  },
+  {
+    "insurance_value": 360000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 3600,
+    "curvature": 1,
+    "price_month": 62.59,
+    "per_year": 751.06,
+    "yearly_policy_event": 4.8
+  },
+  {
+    "insurance_value": 370000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 3700,
+    "curvature": 1,
+    "price_month": 63.21,
+    "per_year": 758.57,
+    "yearly_policy_event": 4.9
+  },
+  {
+    "insurance_value": 380000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 3800,
+    "curvature": 1,
+    "price_month": 63.85,
+    "per_year": 766.16,
+    "yearly_policy_event": 5.0
+  },
+  {
+    "insurance_value": 390000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 3900,
+    "curvature": 1,
+    "price_month": 64.48,
+    "per_year": 773.82,
+    "yearly_policy_event": 5.0
+  },
+  {
+    "insurance_value": 400000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 4000,
+    "curvature": 1,
+    "price_month": 65.13,
+    "per_year": 781.56,
+    "yearly_policy_event": 5.1
+  },
+  {
+    "insurance_value": 410000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 4100,
+    "curvature": 1,
+    "price_month": 65.78,
+    "per_year": 789.37,
+    "yearly_policy_event": 5.2
+  },
+  {
+    "insurance_value": 420000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 4200,
+    "curvature": 1,
+    "price_month": 66.44,
+    "per_year": 797.26,
+    "yearly_policy_event": 5.3
+  },
+  {
+    "insurance_value": 430000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 4300,
+    "curvature": 1,
+    "price_month": 67.10,
+    "per_year": 805.24,
+    "yearly_policy_event": 5.3
+  },
+  {
+    "insurance_value": 440000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 4400,
+    "curvature": 1,
+    "price_month": 67.77,
+    "per_year": 813.29,
+    "yearly_policy_event": 5.4
+  },
+  {
+    "insurance_value": 450000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 4500,
+    "curvature": 1,
+    "price_month": 68.45,
+    "per_year": 821.42,
+    "yearly_policy_event": 5.5
+  },
+  {
+    "insurance_value": 460000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 4600,
+    "curvature": 1,
+    "price_month": 69.14,
+    "per_year": 829.64,
+    "yearly_policy_event": 5.5
+  },
+  {
+    "insurance_value": 470000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 4700,
+    "curvature": 1,
+    "price_month": 69.83,
+    "per_year": 837.93,
+    "yearly_policy_event": 5.6
+  },
+  {
+    "insurance_value": 480000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 4800,
+    "curvature": 1,
+    "price_month": 70.53,
+    "per_year": 846.31,
+    "yearly_policy_event": 5.7
+  },
+  {
+    "insurance_value": 490000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 4900,
+    "curvature": 1,
+    "price_month": 71.23,
+    "per_year": 854.78,
+    "yearly_policy_event": 5.7
+  },
+  {
+    "insurance_value": 500000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 5000,
+    "curvature": 1,
+    "price_month": 71.94,
+    "per_year": 863.32,
+    "yearly_policy_event": 5.8
+  },
+  {
+    "insurance_value": 510000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 5100,
+    "curvature": 1,
+    "price_month": 72.66,
+    "per_year": 871.96,
+    "yearly_policy_event": 5.8
+  },
+  {
+    "insurance_value": 520000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 5200,
+    "curvature": 1,
+    "price_month": 73.39,
+    "per_year": 880.68,
+    "yearly_policy_event": 5.9
+  },
+  {
+    "insurance_value": 530000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 5300,
+    "curvature": 1,
+    "price_month": 74.12,
+    "per_year": 889.48,
+    "yearly_policy_event": 6.0
+  },
+  {
+    "insurance_value": 540000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 5400,
+    "curvature": 1,
+    "price_month": 74.86,
+    "per_year": 898.38,
+    "yearly_policy_event": 6.0
+  },
+  {
+    "insurance_value": 550000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 5500,
+    "curvature": 1,
+    "price_month": 75.61,
+    "per_year": 907.36,
+    "yearly_policy_event": 6.1
+  },
+  {
+    "insurance_value": 560000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 5600,
+    "curvature": 1,
+    "price_month": 76.37,
+    "per_year": 916.43,
+    "yearly_policy_event": 6.1
+  },
+  {
+    "insurance_value": 570000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 5700,
+    "curvature": 1,
+    "price_month": 77.13,
+    "per_year": 925.60,
+    "yearly_policy_event": 6.2
+  },
+  {
+    "insurance_value": 580000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 5800,
+    "curvature": 1,
+    "price_month": 77.90,
+    "per_year": 934.86,
+    "yearly_policy_event": 6.2
+  },
+  {
+    "insurance_value": 590000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 5900,
+    "curvature": 1,
+    "price_month": 78.68,
+    "per_year": 944.20,
+    "yearly_policy_event": 6.2
+  },
+  {
+    "insurance_value": 600000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 6000,
+    "curvature": 1,
+    "price_month": 79.47,
+    "per_year": 953.65,
+    "yearly_policy_event": 6.3
+  },
+  {
+    "insurance_value": 610000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 6100,
+    "curvature": 1,
+    "price_month": 80.27,
+    "per_year": 963.18,
+    "yearly_policy_event": 6.3
+  },
+  {
+    "insurance_value": 620000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 6200,
+    "curvature": 1,
+    "price_month": 81.07,
+    "per_year": 972.81,
+    "yearly_policy_event": 6.4
+  },
+  {
+    "insurance_value": 630000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 6300,
+    "curvature": 1,
+    "price_month": 81.88,
+    "per_year": 982.54,
+    "yearly_policy_event": 6.4
+  },
+  {
+    "insurance_value": 640000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 6400,
+    "curvature": 1,
+    "price_month": 82.70,
+    "per_year": 992.37,
+    "yearly_policy_event": 6.4
+  },
+  {
+    "insurance_value": 650000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 6500,
+    "curvature": 1,
+    "price_month": 83.52,
+    "per_year": 1002.29,
+    "yearly_policy_event": 6.5
+  },
+  {
+    "insurance_value": 660000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 6600,
+    "curvature": 1,
+    "price_month": 84.36,
+    "per_year": 1012.31,
+    "yearly_policy_event": 6.5
+  },
+  {
+    "insurance_value": 670000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 6700,
+    "curvature": 1,
+    "price_month": 85.20,
+    "per_year": 1022.44,
+    "yearly_policy_event": 6.6
+  },
+  {
+    "insurance_value": 680000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 6800,
+    "curvature": 1,
+    "price_month": 86.06,
+    "per_year": 1032.66,
+    "yearly_policy_event": 6.6
+  },
+  {
+    "insurance_value": 690000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 6900,
+    "curvature": 1,
+    "price_month": 86.92,
+    "per_year": 1042.99,
+    "yearly_policy_event": 6.6
+  },
+  {
+    "insurance_value": 700000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 7000,
+    "curvature": 1,
+    "price_month": 87.78,
+    "per_year": 1053.42,
+    "yearly_policy_event": 6.6
+  },
+  {
+    "insurance_value": 710000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 7100,
+    "curvature": 1,
+    "price_month": 88.66,
+    "per_year": 1063.95,
+    "yearly_policy_event": 6.7
+  },
+  {
+    "insurance_value": 720000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 7200,
+    "curvature": 1,
+    "price_month": 89.55,
+    "per_year": 1074.59,
+    "yearly_policy_event": 6.7
+  },
+  {
+    "insurance_value": 730000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 7300,
+    "curvature": 1,
+    "price_month": 90.44,
+    "per_year": 1085.34,
+    "yearly_policy_event": 6.7
+  },
+  {
+    "insurance_value": 740000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 7400,
+    "curvature": 1,
+    "price_month": 91.35,
+    "per_year": 1096.19,
+    "yearly_policy_event": 6.8
+  },
+  {
+    "insurance_value": 750000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 7500,
+    "curvature": 1,
+    "price_month": 92.26,
+    "per_year": 1107.15,
+    "yearly_policy_event": 6.8
+  },
+  {
+    "insurance_value": 760000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 7600,
+    "curvature": 1,
+    "price_month": 93.19,
+    "per_year": 1118.22,
+    "yearly_policy_event": 6.8
+  },
+  {
+    "insurance_value": 770000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 7700,
+    "curvature": 1,
+    "price_month": 94.12,
+    "per_year": 1129.41,
+    "yearly_policy_event": 6.8
+  },
+  {
+    "insurance_value": 780000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 7800,
+    "curvature": 1,
+    "price_month": 95.06,
+    "per_year": 1140.70,
+    "yearly_policy_event": 6.8
+  },
+  {
+    "insurance_value": 790000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 7900,
+    "curvature": 1,
+    "price_month": 96.01,
+    "per_year": 1152.11,
+    "yearly_policy_event": 6.9
+  },
+  {
+    "insurance_value": 800000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 8000,
+    "curvature": 1,
+    "price_month": 96.97,
+    "per_year": 1163.63,
+    "yearly_policy_event": 6.9
+  },
+  {
+    "insurance_value": 810000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 8100,
+    "curvature": 1,
+    "price_month": 97.94,
+    "per_year": 1175.27,
+    "yearly_policy_event": 6.9
+  },
+  {
+    "insurance_value": 820000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 8200,
+    "curvature": 1,
+    "price_month": 98.92,
+    "per_year": 1187.02,
+    "yearly_policy_event": 6.9
+  },
+  {
+    "insurance_value": 830000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 8300,
+    "curvature": 1,
+    "price_month": 99.91,
+    "per_year": 1198.89,
+    "yearly_policy_event": 6.9
+  },
+  {
+    "insurance_value": 840000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 8400,
+    "curvature": 1,
+    "price_month": 100.91,
+    "per_year": 1210.88,
+    "yearly_policy_event": 6.9
+  },
+  {
+    "insurance_value": 850000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 8500,
+    "curvature": 1,
+    "price_month": 101.92,
+    "per_year": 1222.99,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 860000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 8600,
+    "curvature": 1,
+    "price_month": 102.93,
+    "per_year": 1235.22,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 870000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 8700,
+    "curvature": 1,
+    "price_month": 103.96,
+    "per_year": 1247.57,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 880000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 8800,
+    "curvature": 1,
+    "price_month": 105.00,
+    "per_year": 1260.04,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 890000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 8900,
+    "curvature": 1,
+    "price_month": 106.05,
+    "per_year": 1272.64,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 900000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 9000,
+    "curvature": 1,
+    "price_month": 107.11,
+    "per_year": 1285.37,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 910000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 9100,
+    "curvature": 1,
+    "price_month": 108.19,
+    "per_year": 1298.22,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 920000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 9200,
+    "curvature": 1,
+    "price_month": 109.27,
+    "per_year": 1311.21,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 930000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 9300,
+    "curvature": 1,
+    "price_month": 110.36,
+    "per_year": 1324.32,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 940000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 9400,
+    "curvature": 1,
+    "price_month": 111.46,
+    "per_year": 1337.56,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 950000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 9500,
+    "curvature": 1,
+    "price_month": 112.58,
+    "per_year": 1350.94,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 960000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 9600,
+    "curvature": 1,
+    "price_month": 113.70,
+    "per_year": 1364.45,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 970000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 9700,
+    "curvature": 1,
+    "price_month": 114.84,
+    "per_year": 1378.09,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 980000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 9800,
+    "curvature": 1,
+    "price_month": 115.99,
+    "per_year": 1391.87,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 990000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 9900,
+    "curvature": 1,
+    "price_month": 117.15,
+    "per_year": 1405.79,
+    "yearly_policy_event": 7.0
+  },
+  {
+    "insurance_value": 1000000,
+    "po_event": 5,
+    "lg_event": 20,
+    "el_event": 10000,
+    "curvature": 1,
+    "price_month": 118.32,
+    "per_year": 1419.85,
+    "yearly_policy_event": 7.0
+  }
+]

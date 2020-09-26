@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DataterminalService } from '../dataterminal.service';
 import { ModalDirective } from 'angular-bootstrap-md';
+import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-subscribeprices',
   templateUrl: './subscribeprices.component.html',
@@ -32,6 +33,7 @@ export class SubscribepricesComponent implements OnInit {
     },
 
   ];
+  projEnvironment:any = environment
   @ViewChild('resetmodal', { static: true }) private resetmodal: ModalDirective
 
   constructor(public dataservice: DataterminalService) {
