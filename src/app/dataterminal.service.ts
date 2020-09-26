@@ -14,11 +14,7 @@ export class DataterminalService {
   datatransferShared = this.datatransfer.asObservable();
   domEffectShared = this.domEffect.asObservable();
   constructor() {
-    // this.testFunction()
-    const arr = opimjson.content_lowvalue;
-    arr.forEach(element => {
-      console.log(element.price_month * 12 , element.per_year)
-    });
+    console.log(opimjson)
   }
 
   stepsFunction(record) {
