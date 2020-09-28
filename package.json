@@ -9,9 +9,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:prod": "ng build --prod --baseHref=\"./\"",
-    "gitproc": "git add .",
-    "postgitproc": "git commit -m \"AUTO CI CD\"",
-    "postpostgitproc": "git push"
+    "pregitproc": "git add .",
+    "gitproc": "git commit -m \"AUTO CI CD\"",
+    "postgitproc": "git push"
   },
   "private": true,
   "dependencies": {
