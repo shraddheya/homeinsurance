@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "build:prod": "ng build --prod --baseHref=\"./\"",
+    "gitproc": "git commit -m \"AUTO CI CD\"",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:prod": "ng build --prod --baseHref=\"./\"",
     "pregitproc": "git add .",
-    "gitproc": "git commit -m \"AUTO CI CD\"",
     "postgitproc": "git push"
   },
   "private": true,
