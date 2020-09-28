@@ -20,11 +20,6 @@ jobs:
         run: |
           npm ci
           npm run build:prod
-        
-      - name: testing code
-        run: |
-          ls -la
-          cat dist/lemonadeinsurance/index.html
 
       - name: Archive build
         if: success()
@@ -51,5 +46,5 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          SOURCE: "deploy_dist/"
+          SOURCE: "deploy_dist/lemonadeinsurance/"
           TARGET: ${{ secrets.TARGET }}
