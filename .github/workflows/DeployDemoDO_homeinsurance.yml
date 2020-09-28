@@ -20,8 +20,11 @@ jobs:
         run: |
           npm ci
           npm run build:prod
+        
+      - name: testing code
+        run: |
           ls -la
-          cat lemonadeinsurance/dist/lemonadeinsurance/index.html
+          cat dist/lemonadeinsurance/index.html
 
       - name: Archive build
         if: success()
