@@ -3,4 +3,3 @@
 
 # Lemonadeinsurance
 ## `ng build --prod --baseHref="./"`
-`ng build --prod --deployUrl="lemonadeinsurance/"` not working
