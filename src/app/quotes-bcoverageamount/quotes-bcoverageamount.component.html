@@ -18,11 +18,13 @@
           <div class="mt-2 p-2">
             <div class="row pl-4 pb-3 pr-4">
               <div class="col-2 text-center">
-                <a #decrbtn name='decreament' (click)="cvrgCalculation(item, decrbtn)">
+                <a #decrbtn name='decreament' (click)="cvrgCalculation(item,decrbtn)">
                   <mdb-icon class="circlemainupulate btn_hover" fas icon="minus"></mdb-icon>
                 </a>
               </div>
-              <div class="col-8 text-center">{{item.price}}</div>
+              <div class="col-8 text-center">
+                <input type="number" #quotesprice class="form-control border border-white text-center" placeholder="{{quotesprice.value}} €" min="{{item.minvalue}}" max="{{item.maxvalue}}" step="{{item.incrtoggle}}">
+              </div>
               <div class="col-2 text-center">
                 <a #incrbtn name='increament' (click)="cvrgCalculation(item,incrbtn)">
                   <mdb-icon class="circlemainupulate btn_hover" fas icon="plus"></mdb-icon>

@@ -15,7 +15,7 @@ export class DataterminalService {
   domEffectShared = this.domEffect.asObservable();
   constructor() {
     console.log(opimjson);
-    this.testFunction()
+    // this.testFunction()
   }
 
   stepsFunction(record) {
@@ -70,7 +70,6 @@ export class DataterminalService {
         this.allData.insuracevisiter_info['getQuotes'] = record;
         this.allData.viewinfo = 'quotesview'
         this.datatransfer.next(this.allData)
-        console.log(this.allData)
       }
     }
   }
