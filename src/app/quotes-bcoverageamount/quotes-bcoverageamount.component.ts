@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-quotes-bcoverageamount',
@@ -16,6 +16,7 @@ export class QuotesBcoverageamountComponent implements OnInit {
       minvalue: 0,
       maxvalue: 1000000,
       incrtoggle: 10000,
+      domid:'personalliability',
       text: "If you accidentally cause damage to others or their property, this is the maximum we’ll pay.For example, if you break someone’s window while playing golf in your backyard we'll cover it.",
     },
     {
@@ -26,6 +27,7 @@ export class QuotesBcoverageamountComponent implements OnInit {
       minvalue: 10000,
       maxvalue: 200000,
       incrtoggle: 5000,
+      domid:'contents',
       text: 'Try to estimate the total value of your stuff as new, such as electronics, clothing, furniture, bikes etc. For any single items worth more than 5.000 € each, add them to your policy here',
     },
     {
@@ -36,22 +38,24 @@ export class QuotesBcoverageamountComponent implements OnInit {
       minvalue: 0,
       maxvalue: 50000,
       incrtoggle: 5000,
+      domid:'tempaccommodation',
       text: "If your place becomes unlivable, we'll put you up in a nice hotel or Airbnb. We'll also include living expenses to get you back on your feet. This is the max that we'll pay in such an event."
-    }]
+  }]
+  @ViewChild('covrgamtinput') covrgamtinput: ElementRef;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   cvrgCalculation(data: any, caid: any) {
-    var x = data.minvalue;
-    var result;
-    if (caid.name === 'increament') {
-      console.log('Before Increament' , result)
-      for (x = data.minvalue; x < data.maxvalue; x+=data.incrtoggle) {
-        result = x
-      }
-      console.log('After Increament', result)
+    console.log(this.covrgamtinput+'_personalliability')
+    var oldValue = this.covrgamtinput.nativeElement.value;
+    if (caid.name === "+") {
+      this.covrgamtinput.nativeElement.value = parseFloat(oldValue) + data.incrtoggle
+    }
+    if (caid.name === "-") {
+      this.covrgamtinput.nativeElement.value = parseFloat(oldValue) - data.incrtoggle
     }
   }
 

@@ -15,7 +15,7 @@ export class DataterminalService {
   domEffectShared = this.domEffect.asObservable();
   constructor() {
     console.log(opimjson);
-    // this.testFunction()
+    //this.testFunction()
   }
 
   stepsFunction(record) {
