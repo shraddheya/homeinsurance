@@ -18,15 +18,15 @@
           <div class="mt-2 p-2">
             <div class="row pl-4 pb-3 pr-4">
               <div class="col-2 text-center">
-                <a #decrbtn name='-' (click)="cvrgCalculation(item,decrbtn)">
+                <a #decrbtn name='-' id="{{item.domid}}" (click)="cvrgCalculation(item,decrbtn)">
                   <mdb-icon class="circlemainupulate btn_hover" fas icon="minus"></mdb-icon>
                 </a>
               </div>
               <div class="col-8">
-                <input type="text" #covrgamtinput class="border border-white text-center" value="{{item.minvalue}}" readonly>
+                <input type="text" class="border border-white text-center" value="{{item.price}}" readonly>
               </div>
               <div class="col-2 text-center">
-                <a #incrbtn name='+' (click)="cvrgCalculation(item,incrbtn)">
+                <a #incrbtn name='+' id="{{item.domid}}" (click)="cvrgCalculation(item,incrbtn)">
                   <mdb-icon class="circlemainupulate btn_hover" fas icon="plus"></mdb-icon>
                 </a>
               </div>

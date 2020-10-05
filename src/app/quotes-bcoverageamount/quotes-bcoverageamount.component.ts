@@ -10,37 +10,37 @@ export class QuotesBcoverageamountComponent implements OnInit {
   coverageAmount: any = [
     {
       icon: 'https://www.lemonade.com/assets/desktop-onboarding/icn-sprite-coverages-100.png',
-      price: '5.000.000 €',
+      price: 0,
       style: "col-4 pl-5",
       title: 'PERSONAL LIABILITY',
       minvalue: 0,
       maxvalue: 1000000,
       incrtoggle: 10000,
-      domid:'personalliability',
+      domid: 'personalliability',
       text: "If you accidentally cause damage to others or their property, this is the maximum we’ll pay.For example, if you break someone’s window while playing golf in your backyard we'll cover it.",
     },
     {
       icon: 'https://www.lemonade.com/assets/desktop-onboarding/icn-sprite-coverages-100.png',
-      price: '100.000 €',
+      price: 10000,
       style: "col-4 p-0",
       title: 'CONTENTS',
       minvalue: 10000,
       maxvalue: 200000,
       incrtoggle: 5000,
-      domid:'contents',
+      domid: 'contents',
       text: 'Try to estimate the total value of your stuff as new, such as electronics, clothing, furniture, bikes etc. For any single items worth more than 5.000 € each, add them to your policy here',
     },
     {
       icon: 'https://www.lemonade.com/assets/desktop-onboarding/icn-sprite-coverages-100.png',
-      price: '20.000 €',
+      price: 0,
       style: "col-4 pr-5",
       title: 'TEMP ACCOMMODATION',
       minvalue: 0,
       maxvalue: 50000,
       incrtoggle: 5000,
-      domid:'tempaccommodation',
+      domid: 'tempaccommodation',
       text: "If your place becomes unlivable, we'll put you up in a nice hotel or Airbnb. We'll also include living expenses to get you back on your feet. This is the max that we'll pay in such an event."
-  }]
+    }]
   @ViewChild('covrgamtinput') covrgamtinput: ElementRef;
 
   constructor() { }
@@ -49,14 +49,25 @@ export class QuotesBcoverageamountComponent implements OnInit {
   }
 
   cvrgCalculation(data: any, caid: any) {
-    console.log(this.covrgamtinput+'_personalliability')
-    var oldValue = this.covrgamtinput.nativeElement.value;
+    var oldValue = data.price;
     if (caid.name === "+") {
-      this.covrgamtinput.nativeElement.value = parseFloat(oldValue) + data.incrtoggle
+      if (parseFloat(oldValue) !== data.maxvalue) {
+        this.coverageAmount.forEach(el => {
+          if(el.domid === caid.id){
+            el.price = parseFloat(oldValue) + data.incrtoggle
+          }
+        });
+      }
     }
     if (caid.name === "-") {
-      this.covrgamtinput.nativeElement.value = parseFloat(oldValue) - data.incrtoggle
+      if (parseFloat(oldValue) !== data.minvalue) {
+        this.coverageAmount.forEach(el => {
+          if(el.domid === caid.id){
+            el.price = parseFloat(oldValue) - data.incrtoggle
+          }
+        });
+      }
     }
+    console.log(data.price)
   }
-
 }

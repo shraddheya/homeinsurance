@@ -33,7 +33,8 @@
     <div class="modal-dialog modal-dialog-centered {{!noticeModal ? 'modal-sm':'modal-md'}}" role="document">
       <div class="modal-content">
         <div class="modal-header border border-white">
-          <button *ngIf=!noticeModal type="button" class="close pull-right" aria-label="Close" (click)="highvaluemodal.hide()">
+          <button *ngIf=!noticeModal type="button" class="close pull-right" aria-label="Close"
+            (click)="highvaluemodal.hide()">
             <span aria-hidden="true" class="modalcolor">×</span>
           </button>
           <a *ngIf=noticeModal class="text-left" style="color:silver;" (click)="noticeModal = false">
@@ -43,43 +44,60 @@
         <div class="modal-body">
           <div *ngIf=!noticeModal>
             <div class="row justify-content-center">
-            <div class="col-5">
-              <img src={{modalObject.img}} alt="" height="60em" width="80em">
-            </div>
+              <div class="col-5">
+                <img src={{modalObject.img}} alt="" height="60em" width="80em">
+              </div>
             </div>
             <div class="pt-4">
-            <h5 class="cardtitle">
-              {{modalObject.title}}
-            </h5>
+              <h5 class="cardtitle">
+                {{modalObject.title}}
+              </h5>
             </div>
             <div class="pt-2">
-            <h6 class="cardtext text-center">
-              {{modalObject.text}}
-            </h6>
+              <h6 class="cardtext text-center">
+                {{modalObject.text}}
+              </h6>
             </div>
-            <div class="row p-2">
-            <div class="col-2">
-              <a (click)="worthFunction(minus,modalObject)" #minus name="minus">
-                <mdb-icon fas icon="minus" class="btneffect"></mdb-icon>
-              </a>
-            </div>
-            <div class="col-8">
-              <div style="border:0.1em solid silver;border-radius: 0.6em;" class="p-1">
-                <div class="row">
-                  <div class="col-8">
-                    <input type="text" class="form-control border border-white" placeholder={{modalObject.max}}>
-                  </div>
-                  <div class="col-4">
-                    <span class="text-center font-weight-bold" style="top:0.4em;position:absolute;color:silver">€</span>
+            <!-- <div class="row p-2">
+              <div class="col-2">
+                <a (click)="worthFunction(minus,modalObject)" #minus name="minus">
+                  <mdb-icon fas icon="minus" class="btneffect"></mdb-icon>
+                </a>
+              </div>
+              <div class="col-8">
+                <div style="border:0.1em solid silver;border-radius: 0.6em;" class="p-1">
+                  <div class="row">
+                    <div class="col-8">
+                      <input type="text" class="form-control border border-white" placeholder={{modalObject.max}}>
+                    </div>
+                    <div class="col-4">
+                      <span class="text-center font-weight-bold"
+                        style="top:0.4em;position:absolute;color:silver">€</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-2">
-              <a (click)="worthFunction(plus,modalObject)" #plus name="plus">
-                <mdb-icon fas icon="plus" class="btneffect"></mdb-icon>
-              </a>
-            </div>
+              <div class="col-2">
+                <a (click)="worthFunction(plus,modalObject)" #plus name="plus">
+                  <mdb-icon fas icon="plus" class="btneffect"></mdb-icon>
+                </a>
+              </div>
+            </div> -->
+
+            <div class="row pl-4 pb-3 pr-4">
+              <div class="col-2 text-center">
+                <a #decrbtn name='-' id="{{modalObject.domid}}" (click)="hvalueFunction(modalObject,decrbtn)">
+                  <mdb-icon class="circlemainupulate btn_hover" fas icon="minus"></mdb-icon>
+                </a>
+              </div>
+              <div class="col-8">
+                <input type="text" class="border border-white text-center" value="{{modalObject.price}}" readonly>
+              </div>
+              <div class="col-2 text-center">
+                <a #incrbtn name='+' id="{{modalObject.domid}}" (click)="hvalueFunction(modalObject,incrbtn)">
+                  <mdb-icon class="circlemainupulate btn_hover" fas icon="plus"></mdb-icon>
+                </a>
+              </div>
             </div>
           </div>
           <div *ngIf=noticeModal>
@@ -102,8 +120,10 @@
             </div>
           </div>
         </div>
-        <div class="modal-footer {{!noticeModal ? footerbtnshow ? 'footerbutton':'footerbuttonactive':'footerbuttonactive'}}">
-          <a *ngIf=!noticeModal class="text-white {{footerbtnshow ? 'footercss':'footercssactive'}}" (click)="noticeModal = true">ADD</a>
+        <div
+          class="modal-footer {{!noticeModal ? footerbtnshow ? 'footerbutton':'footerbuttonactive':'footerbuttonactive'}}">
+          <a *ngIf=!noticeModal class="text-white {{footerbtnshow ? 'footercss':'footercssactive'}}"
+            (click)="noticeModal = true">ADD</a>
           <a *ngIf=noticeModal class="text-white footercssactive">GOT IT</a>
         </div>
       </div>

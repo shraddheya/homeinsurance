@@ -3,6 +3,23 @@
   height:100vh;
   width:100vw;
 }
+.quotesdiv{
+  z-index: 1000;
+}
+.imgsrc{
+  height: 35em;
+  width: 168em;
+}
+.leftimg{
+  position: absolute;
+  left: -141em;
+  top: 14em;
+}
+.rightimg{
+  position: absolute;
+  right: -141em;
+  top: 14em;
+}
 .quotescircle{
   border-radius: 50%;
   height:9.7em;
