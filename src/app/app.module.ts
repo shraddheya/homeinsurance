@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -28,7 +27,10 @@ import { QuotesIactiveinsuranceComponent } from './quotes-iactiveinsurance/quote
 import { TopbarComponent } from './topbar/topbar.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { AgmCoreModule } from '@agm/core';
-import { PdfComponent } from './pdf/pdf.component';
+import { QuatationpdfComponent } from './quatationpdf/quatationpdf.component';
+import { HomeComponent } from './home/home.component';
+
+import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,8 @@ import { PdfComponent } from './pdf/pdf.component';
     QuotesHlinkpolicyComponent,
     QuotesIactiveinsuranceComponent,
     TopbarComponent,
-    PdfComponent
+    QuatationpdfComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +65,7 @@ import { PdfComponent } from './pdf/pdf.component';
     MDBBootstrapModule.forRoot(),
     ReactiveFormsModule,
     GoogleMapsModule,
+    GooglePlaceModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDt1YJIwwZRjt3wI1xyH8bdY3sBf7PbR8s',
       libraries:["places"]

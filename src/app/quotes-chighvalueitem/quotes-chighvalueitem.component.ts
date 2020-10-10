@@ -127,7 +127,6 @@ export class QuotesChighvalueitemComponent implements OnInit {
         });
       }
     }
-    console.log(data.price)
   }
 
 }

@@ -8,9 +8,11 @@ import { DataterminalService } from '../dataterminal.service';
 export class QuotesdetailComponent implements OnInit {
 
   quotesdetailView: any = false;
+  quotesc:any;
   constructor(public dataservice: DataterminalService) {
     dataservice.datatransferShared.subscribe((el: any) => {
-      this.quotesdetailView = el.viewinfo === "quotesview"
+      this.quotesdetailView = el.viewinfo === "quotesview";
+      this.quotesc = (el.insuracevisiter_info.assetspurchase === 'yes') ? true : false;
     })
   }
 

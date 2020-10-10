@@ -7,11 +7,11 @@ import { DataterminalService } from '../dataterminal.service';
   styleUrls: ['./insurance.component.scss']
 })
 export class InsuranceComponent implements OnInit {
-  
+
   insuranceview:any = false
   insurance_claim:any;
   disabled_btn:any = true;
-  constructor(public dataservice:DataterminalService) { 
+  constructor(public dataservice:DataterminalService) {
     dataservice.datatransferShared.subscribe((el:any)=>{
       this.insuranceview = el.viewinfo === "insurance";
     })
@@ -19,7 +19,7 @@ export class InsuranceComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
   setInsurance(data){
     let check:any = data.target.value === "true";
     this.disabled_btn = check;

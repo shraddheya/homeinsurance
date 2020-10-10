@@ -39,7 +39,7 @@ export class SubscribepricesComponent implements OnInit {
   constructor(public dataservice: DataterminalService) {
     dataservice.datatransferShared.subscribe((el: any) => {
       if (Object.keys(el).length !== 0) {
-        this.pricepackage = el.viewinfo === "pricepanel";
+        this.pricepackage = el.viewinfo === "";
       }
     });
     dataservice.domEffectShared.subscribe((el: any) => {

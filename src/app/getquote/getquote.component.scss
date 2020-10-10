@@ -9,6 +9,20 @@
   cursor: pointer;
   border-radius: 5em !important;
 }
+.dobinput{
+  position: absolute;
+  width: 4em;
+  margin-left: 0.3em;
+}
+.dobinputy{
+  position: absolute;
+  width: 5.3em;
+  margin-left: 1.3em;
+}
+.dobmain{
+  position: relative;
+  left: -0.5em;
+}
 #listResults .checkbox label::before {
   content: "";
   display: inline-block;
@@ -33,6 +47,7 @@
   padding-top: 0px;
   font-size: 11px;
   color: white !important;
+  background-color: red;
 }
 #listResults .checkbox input[type="checkbox"]{
   opacity: 0;

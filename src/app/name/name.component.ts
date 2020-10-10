@@ -14,8 +14,7 @@ export class NameComponent implements OnInit {
     lastName: new FormControl('',Validators.required),
   });
   constructor(public dataservice: DataterminalService) {
-    console.log(dataservice.allData.insuracevisiter_info);
-    dataservice.datatransferShared.subscribe((el:any)=>{ 
+    dataservice.datatransferShared.subscribe((el:any)=>{
       this.namesection = el.viewinfo === "name";
     })
   }

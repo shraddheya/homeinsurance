@@ -52,7 +52,7 @@ export class MemberinhomeComponent implements OnInit {
   about_members: any;
   disabled_btn: any = true;
   messagecheck: any;
-  messageshow:any;
+  messageshow: any;
   constructor(public dataservice: DataterminalService) {
     dataservice.datatransferShared.subscribe((el: any) => {
       this.memberview = el.viewinfo === "memberinhome";
@@ -62,13 +62,11 @@ export class MemberinhomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  memberLogic(data) {
-    this.messagecheck = data.id
-    this.messageshow = (data.id !== 'a')
-    this.membertypelist.forEach((el: any) => {
-      el.selectedview = el.type === data.id;
-      this.about_members = (el.type === data.id) ? el.title :'';
-    });
+  memberLogic(element, data) {
+    this.messagecheck = element.id
+    this.messageshow = (element.id !== 'a')
+    this.membertypelist.forEach((el: any) => { el.selectedview = el.type === element.id });
+    this.about_members = data.title
     this.disabled_btn = false;
   }
 
