@@ -7,7 +7,7 @@ import { DataterminalService } from '../dataterminal.service';
 })
 export class TopbarComponent implements OnInit {
 
-  constructor(public dataservice:DataterminalService) { }
+  constructor(public dataservice:DataterminalService) {  }
 
   ngOnInit(): void {
   }

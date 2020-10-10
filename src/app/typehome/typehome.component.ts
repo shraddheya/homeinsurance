@@ -30,7 +30,7 @@ export class TypehomeComponent implements OnInit {
   };
   home_type: any;
   disabledbtn:any= true;
-  constructor(public dataservice:DataterminalService) { 
+  constructor(public dataservice:DataterminalService) {
     dataservice.datatransferShared.subscribe((el:any)=>{
       this.thomeview = el.viewinfo === "describehome";
     })

@@ -34,8 +34,7 @@ export class QuotesDcoveragesuperpowersComponent implements OnInit {
   }
 
   buttonCheck(evt: any, itemid: any){
-    console.log(evt)
-     this.superpowerArray[itemid].showchecked = evt.currentTarget.checked
+    this.superpowerArray[itemid].showchecked = evt.currentTarget.checked
   }
 
 }

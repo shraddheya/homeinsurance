@@ -68,6 +68,5 @@ export class QuotesBcoverageamountComponent implements OnInit {
         });
       }
     }
-    console.log(data.price)
   }
 }

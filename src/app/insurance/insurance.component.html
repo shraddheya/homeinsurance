@@ -1,25 +1,28 @@
 <div class="text-center pt-5" *ngIf=insuranceview>
-  <div class="mt-4">
+  <div class="mt-5">
     <span class="backtoCpmponent">
-    <a (click)="dataservice.backComponent('memberinhome')">
-      <mdb-icon fas icon="chevron-left"></mdb-icon>
-    </a>
+      <a (click)="dataservice.backComponent('memberinhome')">
+        <mdb-icon fas icon="chevron-left"></mdb-icon>
+      </a>
     </span>
 
     <h2 class="p-2 maintitle font-weight-bold">Go it. Have you field any insurance <br> claims in the past 3 years?</h2>
+
     <div class="row justify-content-center p-2 mt-5">
-    <div class="col-2">
-      <select class="browser-default custom-select p-4" (change)="setInsurance($event)">
-        <option value=true selected>Select Insurance</option>
-        <option value="No">No</option>
-        <option value="Only One">Only One</option>
-        <option value="Two">Two</option>
-        <option value="More than two">More than two</option>
-      </select>
+      <div class="col-2">
+        <select class="browser-default custom-select" (change)="setInsurance($event)">
+          <option value=true selected>Select Insurance</option>
+          <option value="No">No</option>
+          <option value="Only One">Only One</option>
+          <option value="Two">Two</option>
+          <option value="More than two">More than two</option>
+        </select>
+      </div>
     </div>
-    </div>
-    <div class="p-2">
-    <button mdbBtn  class="buttoneffect m-3 text-white" mdbWavesEffect (click)="dataservice.stepsFunction(insurance_claim).insuranceclaim()" [disabled]=disabled_btn>Next</button>
+
+    <div class="p-2 mt-3">
+      <button mdbBtn class="buttoneffect m-3 text-white" mdbWavesEffect
+        (click)="dataservice.stepsFunction(insurance_claim).insuranceclaim()" [disabled]=disabled_btn>Next</button>
     </div>
   </div>
 </div>

@@ -1,86 +1,19 @@
-<div class="mt-5">
-  <section *ngIf=pricepackage class="pt-4">
-    <div class="container pt-4">
-      <h2 class="maintitle font-weight-bold pt-4">
-        Monthly Subscription,<br>Cancel Anytime
-      </h2>
-      <div class="row">
-        <div *ngFor="let item of pricescard" class="col-xl-4 col-lg-4 col-md-4 col-12">
-          <div class="cardouter">
-            <h3 class="cardtitle">{{item.title1}}<br>{{item.title2}}</h3>
-            <div class="p-1">
-              <small class="cardtext">{{item.text |uppercase}}</small>
-            </div>
-            <div class="p-1">
-              <em class="cardprice">{{item.price}}€</em>
-            </div>
-            <div class="p-1">
-              <a class="cardbutton text-white"
-                (click)="dataservice.stepsFunction(item).fromPrice()">{{item.buttontext}}</a>
-            </div>
-          </div>
+<div class="container pt-5" *ngIf=pricepackage>
+  <h2 class="maintitle font-weight-bold pt-4">
+    Monthly Subscription,<br>Cancel Anytime
+  </h2>
+  <div class="row">
+    <div *ngFor="let item of pricescard" class="col-xl-4 col-lg-4 col-md-4 col-12">
+      <div class="cardouter">
+        <h3 class="cardtitle">{{item.title1}}<br>{{item.title2}}</h3>
+        <div class="p-1">
+          <small class="cardtext">{{item.text |uppercase}}</small>
         </div>
-      </div>
-    </div>
-  </section>
-  <section>
-    <app-name></app-name>
-  </section>
-  <section>
-    <app-address></app-address>
-  </section>
-  <section>
-    <app-typehome></app-typehome>
-  </section>
-  <section>
-    <app-homesize></app-homesize>
-  </section>
-  <section>
-    <app-sequrity></app-sequrity>
-  </section>
-  <section>
-    <app-memberinhome></app-memberinhome>
-  </section>
-  <section>
-    <app-insurance></app-insurance>
-  </section>
-  <section>
-    <app-assetspurchase></app-assetspurchase>
-  </section>
-  <section>
-    <app-getquote></app-getquote>
-  </section>
-  <section>
-    <app-quotesdetail></app-quotesdetail>
-  </section>
-
-  <div mdbModal #resetmodal="mdbModal" class="modal fade" tabindex="-1" role="dialog"
-    aria-labelledby="myBasicModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-md modal-dialog-centered" role="document">
-      <div class="modal-content" style="border-radius: 0.5em;">
-        <div class="modal-header border-bottom border-white">
-          <button type="button" class="close pull-right" aria-label="Close" (click)="resetmodal.hide()">
-            <span aria-hidden="true">×</span>
-          </button>
-          <h6 class="modal-title w-100 cardtitle font-weight-bold pt-2" id="myModalLabel">WANT TO START OVER</h6>
+        <div class="p-1">
+          <em class="cardprice">{{item.price}}€</em>
         </div>
-        <div class="modal-body">
-          <div class="text-center">
-            <p style="font-size: 1em;" class="cardtext">
-              This will clear your answers and start again from the beginning
-            </p>
-          </div>
-        </div>
-        <div class="modal-footer border-top border-white">
-          <div class="row">
-            <div class="col-5">
-              <button type="button" mdbBtn class="waves-light canclecss" (click)="resetmodal.hide()"
-                mdbWavesEffect>CANCEL</button>
-            </div>
-            <div class="col-7">
-              <button type="button" mdbBtn class="waves-light text-white resetcss" (click)="dataservice.resetFunction();resetmodal.hide()" mdbWavesEffect>START OVER</button>
-            </div>
-          </div>
+        <div class="p-1">
+          <a class="cardbutton text-white" (click)="dataservice.stepsFunction(item).fromPrice()">{{item.buttontext}}</a>
         </div>
       </div>
     </div>
