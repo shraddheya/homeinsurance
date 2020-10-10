@@ -28,6 +28,7 @@ import { QuotesIactiveinsuranceComponent } from './quotes-iactiveinsurance/quote
 import { TopbarComponent } from './topbar/topbar.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { AgmCoreModule } from '@agm/core';
+import { PdfComponent } from './pdf/pdf.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { AgmCoreModule } from '@agm/core';
     QuotesGnotcoveredComponent,
     QuotesHlinkpolicyComponent,
     QuotesIactiveinsuranceComponent,
-    TopbarComponent
+    TopbarComponent,
+    PdfComponent
   ],
   imports: [
     BrowserModule,

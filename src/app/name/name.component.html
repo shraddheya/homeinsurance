@@ -12,12 +12,10 @@
       <form [formGroup]="profileForm">
         <div class="form-row">
           <div class="col">
-            <input mdbInput type="text" class="form-control p-4 inputtexthover" formControlName="firstName"
-              placeholder="First name">
+            <input mdbInput type="text" class="form-control p-4 inputtexthover" formControlName="firstName" placeholder="First name" value="{{dataservice.allData.insuracevisiter_info.names.firstName}}">
           </div>
           <div class="col">
-            <input mdbInput type="text" (keyup)="activeButton()" class="form-control p-4 inputtexthover" formControlName="lastName"
-              placeholder="Last name">
+            <input mdbInput type="text" (keyup)="activeButton()" class="form-control p-4 inputtexthover" formControlName="lastName" placeholder="Last name" value="{{dataservice.allData.insuracevisiter_info.names.lastName}}">
           </div>
         </div>
       </form>

@@ -14,17 +14,17 @@
           <div class="form-row">
             <div class="col-6">
               <select class="browser-default custom-select" formControlName="address" (change)="setPincode($event)">
-                <option value=true>Street, City</option>
-                <option *ngFor='let item of citystatelist' value={{item.data}}>
+                <option value=true disabled>Street, City</option>
+                <option *ngFor='let item of citystatelist' value={{item.data}} [selected]="item.data === dataservice.allData.insuracevisiter_info.address.address">
                   {{item.data}}
                 </option>
               </select>
             </div>
             <div class="col-3">
-              <input type="text" class="form-control p-3" formControlName="housenumber" placeholder="Housenumber">
+              <input type="text" class="form-control p-3" formControlName="housenumber" placeholder="Housenumber" value="{{dataservice.allData.insuracevisiter_info.address.housenumber}}">
             </div>
             <div class="col-3">
-              <input type="text" class="form-control p-3" formControlName="pincodedata" placeholder="{{pincodeset}}" [readonly]=true>
+              <input type="text" class="form-control p-3" formControlName="pincodedata" placeholder="{{pincodeset}}" [readonly]=true value="{{dataservice.allData.insuracevisiter_info.address.pincodedata}}">
             </div>
           </div>
         </form>

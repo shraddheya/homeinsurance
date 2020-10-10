@@ -13,9 +13,10 @@ export class AddressComponent implements OnInit {
   disabledaddress_btn: any = true
   testpanel:any;
   citystatelist: any = [
-    { data: 'Indore,Madhyapradesh', pincode: '452010' },
-    { data: 'Pune,Maharashtra', pincode: '472010' },
+    { data: 'Indore,Madhyapradesh', pincode: '452010', selected: false},
+    { data: 'Pune,Maharashtra', pincode: '472010', selected: false },
   ]
+  
   pincodeset:any = '';
   addressForm = new FormGroup({
     housenumber: new FormControl(''),

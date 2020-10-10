@@ -7,7 +7,29 @@ import opimjson from '../oipmodel';
 })
 export class DataterminalService {
 
-  allData: any = { insuracevisiter_info: {}, viewinfo: "" };
+  allData = { "insuracevisiter_info": 
+              { "fromprice": 
+                { "name": "", "price": 0 }, 
+                "names": { "firstName": "", "lastName": "" }, 
+                "address": { "housenumber": "", "pincodedata": "", "address": "" }, 
+                "hometype": "", 
+                "homesize": "", 
+                "sequrity": [], 
+                "members": "", 
+                "insuranceclaim": "", 
+                "assetspurchase": "", 
+                "getQuotes": {} 
+              }, 
+              "viewinfo": "pricepanel" };
+
+
+
+
+  // allData: any = {
+  //   insuracevisiter_info: {
+
+  //   }, viewinfo: ""
+  // };
   private datatransfer = new BehaviorSubject({});
   private domEffect = new BehaviorSubject({});
 
@@ -15,7 +37,11 @@ export class DataterminalService {
   domEffectShared = this.domEffect.asObservable();
   constructor() {
     console.log(opimjson);
-    //this.testFunction()
+    (window as any).aldata = () => {
+      console.log(this.allData);
+      return (this.allData);
+    };
+    // this.testFunction()
   }
 
   stepsFunction(record) {
@@ -74,15 +100,15 @@ export class DataterminalService {
     }
   }
 
-  backComponent(component) {
+  backComponent(component: any) {
     this.allData.viewinfo = component;
     this.datatransfer.next(this.allData)
   }
 
-  resetFunction(){
+  resetFunction() {
     this.allData.viewinfo = "pricepanel";
-    this.allData.insuracevisiter_info = {}
-    console.log(this.allData)
+    // this.allData.insuracevisiter_info = {}
+    // console.log(this.allData)
     this.datatransfer.next(this.allData)
   }
 
@@ -91,7 +117,7 @@ export class DataterminalService {
     this.datatransfer.next(this.allData)
   }
 
-  domFunction(data){
-    this.domEffect.next({mode:data});
+  domFunction(data) {
+    this.domEffect.next({ mode: data });
   }
 }
