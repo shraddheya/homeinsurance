@@ -114,10 +114,18 @@
   -o-transition: margin 0.2s;
   transition: margin 0.2s;
 }
-.md-switch input.md-toggle-round:checked + label:before {
+
+/* Theme wise checked */
+.md-switch-theme1 input.md-toggle-round:checked + label:before {
   background-color: rgb(247, 39, 74);
 	box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.24);
 }
+.md-switch-theme2 input.md-toggle-round:checked + label:before {
+  background-color: #09233C !important;
+	box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.24);
+}
+/* Theme wise checked */
+
 .md-switch input.md-toggle-round:checked + label:after {
   margin-left: 32px;
 }

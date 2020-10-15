@@ -41,6 +41,7 @@
     "jspdf": "^2.1.1",
     "ngx-google-places-autocomplete": "^2.0.4",
     "rxjs": "~6.5.5",
+    "stripe-angular": "^1.2.1",
     "tslib": "^2.0.1",
     "zone.js": "~0.10.3"
   },

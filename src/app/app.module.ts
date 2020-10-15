@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { SubscribepricesComponent } from './subscribeprices/subscribeprices.component';
 import { NameComponent } from './name/name.component';
-import { ReactiveFormsModule } from '@angular/forms';
 import { AddressComponent } from './address/address.component';
 import { TypehomeComponent } from './typehome/typehome.component';
 import { HomesizeComponent } from './homesize/homesize.component';
@@ -25,12 +24,15 @@ import { QuotesGnotcoveredComponent } from './quotes-gnotcovered/quotes-gnotcove
 import { QuotesHlinkpolicyComponent } from './quotes-hlinkpolicy/quotes-hlinkpolicy.component';
 import { QuotesIactiveinsuranceComponent } from './quotes-iactiveinsurance/quotes-iactiveinsurance.component';
 import { TopbarComponent } from './topbar/topbar.component';
-import { GoogleMapsModule } from '@angular/google-maps';
-import { AgmCoreModule } from '@agm/core';
 import { QuatationpdfComponent } from './quatationpdf/quatationpdf.component';
 import { HomeComponent } from './home/home.component';
+import { PaymentComponent } from './payment/payment.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { AgmCoreModule } from '@agm/core';
 import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
+import { StripeModule } from 'stripe-angular';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,7 @@ import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
     TopbarComponent,
     QuatationpdfComponent,
     HomeComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,6 +69,7 @@ import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
     ReactiveFormsModule,
     GoogleMapsModule,
     GooglePlaceModule,
+    StripeModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDt1YJIwwZRjt3wI1xyH8bdY3sBf7PbR8s',
       libraries:["places"]

@@ -1,28 +1,35 @@
 <div class="text-center pt-5" *ngIf=namesection>
   <div class="mt-4">
     <span class="backtoCpmponent">
-    <a (click)="dataservice.backComponent('')">
-      <mdb-icon fas icon="chevron-left"></mdb-icon>
-    </a>
+      <a (click)="dataservice.backComponent('')">
+        <mdb-icon fas icon="chevron-left"></mdb-icon>
+      </a>
     </span>
 
-    <h2 class="p-3 maintitle font-weight-bold">Hey! I'm Maya. I'll get you an awesome<br> price in seconds. Ready to go?</h2>
+    <h2 class="p-3 maintitle font-weight-bold">Hey! I'm Maya. I'll get you an awesome<br> price in seconds. Ready to go?
+    </h2>
     <div class="row justify-content-center p-5">
-    <div class="col-5">
-      <form [formGroup]="profileForm">
-        <div class="form-row">
-          <div class="col">
-            <input mdbInput type="text" class="form-control p-4 inputtexthover" formControlName="firstName" placeholder="First name" value="{{dataservice.allData.insuracevisiter_info.names.firstName}}">
+      <div class="col-5">
+        <form [formGroup]="profileForm">
+          <div class="form-row">
+            <div class="col">
+              <input mdbInput type="text" class="form-control p-4 {{dataservice.themeview.inputtexthover}}"
+                formControlName="firstName" placeholder="First name"
+                value="{{dataservice.allData.insuracevisiter_info.names.firstName}}">
+            </div>
+            <div class="col">
+              <input mdbInput type="text" (keyup)="activeButton()"
+                class="form-control p-4 {{dataservice.themeview.inputtexthover}}" formControlName="lastName"
+                placeholder="Last name" value="{{dataservice.allData.insuracevisiter_info.names.lastName}}">
+            </div>
           </div>
-          <div class="col">
-            <input mdbInput type="text" (keyup)="activeButton()" class="form-control p-4 inputtexthover" formControlName="lastName" placeholder="Last name" value="{{dataservice.allData.insuracevisiter_info.names.lastName}}">
-          </div>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
     </div>
     <div class="whitetext p-3">
-    <button mdbBtn class="buttoneffect m-3 text-white" (click)="dataservice.stepsFunction(profileForm.value).nameForm()" [disabled]=disabledbutton>LETS DO THIS</button>
+      <button mdbBtn class="buttonstyle text-white {{dataservice.themeview.btn}}"
+        (click)="dataservice.stepsFunction(profileForm.value).nameForm()" [disabled]=disabledbutton>LETS DO
+        THIS</button>
     </div>
   </div>
 </div>

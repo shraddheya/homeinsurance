@@ -13,7 +13,7 @@
           <em class="cardprice">{{item.price}}€</em>
         </div>
         <div class="p-1">
-          <a class="cardbutton text-white" (click)="dataservice.stepsFunction(item).fromPrice()">{{item.buttontext}}</a>
+          <a class="buttonstyle text-white {{dataservice.themeview.btn}}" (click)="dataservice.stepsFunction(item).fromPrice()">{{item.buttontext}}</a>
         </div>
       </div>
     </div>

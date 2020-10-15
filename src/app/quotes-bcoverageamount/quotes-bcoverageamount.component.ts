@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { DataterminalService } from '../dataterminal.service';
 
 @Component({
   selector: 'app-quotes-bcoverageamount',
@@ -43,7 +44,7 @@ export class QuotesBcoverageamountComponent implements OnInit {
     }]
   @ViewChild('covrgamtinput') covrgamtinput: ElementRef;
 
-  constructor() { }
+  constructor(public dataservice:DataterminalService) { }
 
   ngOnInit(): void {
   }
