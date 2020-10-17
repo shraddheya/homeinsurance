@@ -8,12 +8,14 @@
 
     <h2 class="p-2 mt-4 maintitle font-weight-bold">How big is your home?</h2>
     <h6 class="p-2 mt-3 maintitle font-weight-bold">If you don't remember the exact size, an approximation is ok</h6>
-
+    <span *ngIf=alert class="alertspan">
+      ! {{home_size}} seems unreasonable. Please try again.
+    </span>
     <div class="row justify-content-center p-2 mt-5">
       <div class="col-2">
         <div class="form-row">
           <div class="col">
-            <input mdbInput type="number" class="form-control p-4" (keyup)="activeBtnhomesize($event.target.value)"
+            <input mdbInput type="number" class="form-control p-4" (keyup)="activeBtnhomesize($event.target)"
               min=10 max=999 value="10" placeholder="SQUARE METERS">
           </div>
         </div>
@@ -21,8 +23,9 @@
     </div>
 
     <div class="p-2 mt-4">
-      <button mdbBtn class="buttoneffect m-3 text-white" mdbWavesEffect
+      <button mdbBtn class="buttonstyle text-white {{dataservice.themeview.btn}}" mdbWavesEffect
         (click)="dataservice.stepsFunction(home_size).homeSize()" [disabled]=disabled_btn>Next</button>
+
     </div>
   </div>
 </div>

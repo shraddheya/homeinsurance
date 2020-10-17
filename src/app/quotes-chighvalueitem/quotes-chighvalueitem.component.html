@@ -20,8 +20,8 @@
               <div class="item-details pt-2">
                 <h6 class="text-center">{{item.title | uppercase}}</h6>
               </div>
-              <a id="item-main-action" (click)="openModal(item)"
-                class="btn-standard btn-pink text-white text-center">+</a>
+              <span id="item-main-action" (click)="openModal(item)"
+                class="{{dataservice.themeview.btn}} text-white text-center">+</span>
             </div>
           </div>
         </div>
@@ -122,10 +122,10 @@
           </div>
         </div>
         <div
-          class="modal-footer {{!noticeModal ? footerbtnshow ? 'footerbutton':'footerbuttonactive':'footerbuttonactive'}}">
-          <a *ngIf=!noticeModal class="text-white {{footerbtnshow ? 'footercss':'footercssactive'}}"
+          class="modal-footer {{!noticeModal ? footerbtnshow ? 'footerbutton':dataservice.themeview.footerbuttonactive:dataservice.themeview.footerbuttonactive}}">
+          <a *ngIf=!noticeModal class="text-white {{footerbtnshow ? 'footercss':dataservice.themeview.hvaluemodal}}"
             (click)="noticeModal = true">ADD</a>
-          <a *ngIf=noticeModal class="text-white footercssactive">GOT IT</a>
+          <a *ngIf=noticeModal class="text-white {{dataservice.themeview.hvaluemodal}}">GOT IT</a>
         </div>
       </div>
     </div>

@@ -13,6 +13,7 @@ export class QuotesdetailComponent implements OnInit {
     dataservice.datatransferShared.subscribe((el: any) => {
       this.quotesdetailView = el.viewinfo === "quotesview";
       this.quotesc = (el.insuracevisiter_info.assetspurchase === 'yes') ? true : false;
+      //this.quotesc = true
     })
   }
 

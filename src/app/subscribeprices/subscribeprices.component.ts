@@ -33,7 +33,7 @@ export class SubscribepricesComponent implements OnInit {
     },
 
   ];
-  projEnvironment:any = environment
+  projEnvironment: any = environment
   @ViewChild('resetmodal', { static: true }) private resetmodal: ModalDirective
 
   constructor(public dataservice: DataterminalService) {

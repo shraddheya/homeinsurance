@@ -6,10 +6,11 @@ import { DataterminalService } from '../dataterminal.service';
   styleUrls: ['./homesize.component.scss']
 })
 export class HomesizeComponent implements OnInit {
+  alert:any;
 
   hsizeview: any = false;
   home_size: any;
-  disabled_btn: any = true;
+  disabled_btn: any = false;
   constructor(public dataservice: DataterminalService) {
     dataservice.datatransferShared.subscribe((el: any) => {
       this.hsizeview = el.viewinfo === "homesize";
@@ -19,8 +20,10 @@ export class HomesizeComponent implements OnInit {
   ngOnInit(): void {
   }
   activeBtnhomesize(data) {
-    let check: any = data === "";
-    this.disabled_btn = check
-    this.home_size = (!check) ? data : ''
+    console.log(data.value)
+    this.alert = !(data.value >= 10 && data.value <= 999)
+    this.disabled_btn = this.alert
+    let check: any = data.value === "";
+    this.home_size = (!check) ? data.value : ''
   }
 }

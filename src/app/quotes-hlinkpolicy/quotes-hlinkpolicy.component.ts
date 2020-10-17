@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataterminalService } from '../dataterminal.service';
 
 @Component({
   selector: 'app-quotes-hlinkpolicy',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuotesHlinkpolicyComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dataservice:DataterminalService) { }
 
   ngOnInit(): void {
   }

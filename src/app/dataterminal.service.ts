@@ -7,24 +7,55 @@ import { Router } from '@angular/router';
 })
 export class DataterminalService {
 
-  allData = { "insuracevisiter_info": 
-              { "fromprice": 
-                { "name": "", "price": 0 }, 
-                "names": { "firstName": "", "lastName": "" }, 
-                "address": { "housenumber": "", "pincodedata": "", "address": "" }, 
-                "hometype": "", 
-                "homesize": "", 
-                "sequrity": [], 
-                "members": "", 
-                "insuranceclaim": "", 
-                "assetspurchase": "", 
-                "getQuotes": {} 
-              }, 
-              "viewinfo": "pricepanel" };
+  allData = {
+    "insuracevisiter_info":
+    {
+      "fromprice":
+        { "name": "", "price": 0 },
+      "names": { "firstName": "", "lastName": "" },
+      "address": { "housenumber": "", "pincodedata": "", "address": "" },
+      "hometype": "",
+      "homesize": "",
+      "sequrity": [],
+      "members": "",
+      "insuranceclaim": "",
+      "assetspurchase": "",
+      "getQuotes": {}
+    },
+    "viewinfo": "pricepanel"
+  };
 
+  themeobject = {
+    1: {
+      bgcolor: 'bgcolor_theme1',
+      txtcolor: 'textcolor_theme1',
+      btn: 'btn_theme1',
+      htext: 'highlight_theme1',
+      inputtexthover: 'inputtexthover_theme1',
+      inputradio: 'inputradio_theme1',
+      inputcheckbox: 'inputcheckbox_theme1',
+      hrline: 'hrline_theme1',
+      onoff: 'md-switch-theme1',
+      hvaluemodal: 'footercssactive_theme1',
+      footerbuttonactive: 'footerbuttonactive_theme1'
+    },
+    2: {
+      bgcolor: 'bgcolor_theme2',
+      txtcolor: 'textcolor_theme2',
+      btn: 'btn_theme2',
+      htext: 'highlight_text2',
+      inputtexthover: 'inputtexthover_theme2',
+      inputradio: 'inputradio_theme2',
+      inputcheckbox: 'inputcheckbox_theme2',
+      hrline: 'hrline_theme2',
+      onoff: 'md-switch-theme2',
+      hvaluemodal: 'footercssactive_theme2',
+      footerbuttonactive: 'footerbuttonactive_theme2'
+    }
+  }
 
-
-
+  themeview: any
+  finalPayment: any
   // allData: any = {
   //   insuracevisiter_info: {
 
@@ -32,13 +63,21 @@ export class DataterminalService {
   // };
   private datatransfer = new BehaviorSubject({});
   private domEffect = new BehaviorSubject({});
+  private theme = new BehaviorSubject({});
 
   datatransferShared = this.datatransfer.asObservable();
   domEffectShared = this.domEffect.asObservable();
+  themeShared = this.theme.asObservable();
 
   constructor(private route: Router) {
     this.allData.viewinfo = window.location.pathname.replace('/', '')
     this.datatransfer.next(this.allData)
+    this.themeShared.subscribe((el: any) => {
+      this.themeview = el;
+    })
+    this.datatransferShared.subscribe(elfp => {
+      console.log(elfp);
+    })
   }
 
   stepsFunction(record) {
@@ -117,17 +156,17 @@ export class DataterminalService {
     this.route.navigate(['']);
     this.allData = {
       "insuracevisiter_info": {
-        "fromprice": { "name": "", "price": 0 }, 
-        "names": { "firstName": "", "lastName": "" }, 
-        "address": { "housenumber": "", "pincodedata": "", "address": "" }, 
-        "hometype": "", 
-        "homesize": "", 
-        "sequrity": [], 
-        "members": "", 
-        "insuranceclaim": "", 
-        "assetspurchase": "", 
-        "getQuotes": {} 
-      }, 
+        "fromprice": { "name": "", "price": 0 },
+        "names": { "firstName": "", "lastName": "" },
+        "address": { "housenumber": "", "pincodedata": "", "address": "" },
+        "hometype": "",
+        "homesize": "",
+        "sequrity": [],
+        "members": "",
+        "insuranceclaim": "",
+        "assetspurchase": "",
+        "getQuotes": {}
+      },
       "viewinfo": "pricepanel"
     };
     this.datatransfer.next(this.allData);
@@ -135,5 +174,10 @@ export class DataterminalService {
 
   domFunction(data) {
     this.domEffect.next({ mode: data });
+  }
+
+  // Below function is use for change theme
+  themeNext(theme: any) {
+    this.theme.next(this.themeobject[theme])
   }
 }

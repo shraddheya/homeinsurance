@@ -36,7 +36,7 @@
                 <span class="font-weight-bold {{item.value.showchecked ? 'coverageitemtextactive' : 'coverageitemtext'}}">{{item.value.price}}</span>
               </div>
               <div class="col-2" style="top:3.6em;">
-                <div class="md-switch">
+                <div class="md-switch {{dataservice.themeview.onoff}}">
                   <input type="checkbox" class="md-toggle md-toggle-round z-depth-3" name={{item.value.title}} id={{item.value.id}} (change)="buttonCheck($event, item.key)">
                   <label for={{item.value.id}}></label>
                 </div>
