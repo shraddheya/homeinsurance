@@ -1,0 +1,19 @@
+.iconimgtop {
+  height: 4.3em;
+  width: 4.3em;
+  z-index: 1038;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5em;
+  top: 1.9em;
+}
+.fixedheader {
+  position: fixed;
+  top: 0em;
+  left: 0em;
+  width: 100%;
+  z-index: 1;
+}
+.linkindex {
+  z-index: 3000;
+}

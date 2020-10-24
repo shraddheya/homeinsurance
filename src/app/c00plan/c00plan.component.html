@@ -1,0 +1,21 @@
+<div class="container pt-5">
+  <h2 class="maintitle font-weight-bold pt-4">
+    Monthly Subscription,<br>Cancel Anytime
+  </h2>
+  <div class="row">
+    <div *ngFor="let item of pricescard" class="col-xl-4 col-lg-4 col-md-4 col-12">
+      <div class="cardouter">
+        <h3 class="cardtitle">{{item.title1}}<br>{{item.title2}}</h3>
+        <div class="p-1">
+          <small class="cardtext">{{item.text |uppercase}}</small>
+        </div>
+        <div class="p-1">
+          <em class="cardprice">{{item.price}}€</em>
+        </div>
+        <div class="p-1">
+          <a class="buttonstyle text-white" (click)="clicked(item)">{{item.buttontext}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

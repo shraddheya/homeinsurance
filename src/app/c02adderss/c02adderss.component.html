@@ -1,0 +1,39 @@
+<div class="text-center pt-5">
+  <div class="mt-5">
+    <h2 class="p-4 maintitle font-weight-bold">Great to meet you {{dataservice.allData.info_details.c01name.firstName}}! What's your home <br> address?</h2>
+    <div class="p-5">
+      <div class="row justify-content-center">
+        <div class="col-5">
+          <form [formGroup]="addressForm" class="p-2">
+            <div class="form-row">
+              <div class="col-5">
+                <select class="browser-default custom-select" (change)="changed($event)" formControlName="address">
+                  <option value=true disabled selected>Street, City</option>
+                  <option *ngFor='let item of citystatelist | keyvalue' value={{item.key}} >
+                    {{item.key}}
+                  </option>
+                </select>
+              </div>
+              <div class="col-4">
+                <input type="text" class="form-control p-3" formControlName="housenumber" placeholder="Housenumber">
+              </div>
+              <div class="col-3">
+                <input type="text" class="form-control p-3" formControlName="pincode" placeholder="pincode" [readonly]=true>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container">
+        <input ngx-google-places-autocomplete [options]='options.componenRestrictions' (onAddressChange)="AddressChange($event)" />
+        {{ formattedaddress }}
+      </div> -->
+
+    <!-- Next Button -->
+    <div class="p-3">
+      <button mdbBtn class="buttonstyle text-white" (click)="clicked()" [disabled]="! addressForm.valid">Next</button>
+    </div>
+  </div>
+</div>
