@@ -1,1 +1,34 @@
-<p>c08assets works!</p>
+<div class="pt-5">
+  <div class="mt-4">
+    <h2 class="text-center  p-2 maintitle font-weight-bold">Do you own any single item worth more<br> than 5,000 €?</h2>
+    <h6 class="text-center  p-2 maintitle font-weight-bold">Things like bikes, cameras, jewelry, electronic and fashion items</h6>
+    <div class="row justify-content-center p-2">
+      <div class="col-3 p-3">
+        <div style="text-align: center;">
+          <mdb-card *ngFor="let val of ['Yes', 'No']">
+            <mdb-card-body class="assetspurchase">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" (change)="changed($event.target.value === 'Yes')"  value="{{val}}" name="members" id="{{val}}">
+                <label class="form-check-label" for="{{val}}">{{val}}</label>
+              </div>
+            </mdb-card-body>
+          </mdb-card>
+        </div>
+      </div>
+    </div>
+    <div class="container p-2">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <div class="messagepart messagetitle" *ngIf=showMsg>
+            <span>
+              “OK. I'll show you how to add it to your policy later”
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-2 text-center">
+      <button mdbBtn class="buttonstyle text-white" mdbWavesEffect [disabled]=buttDisabled (click)="clicked()">Next</button>
+    </div>
+  </div>
+</div>

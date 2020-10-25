@@ -8,7 +8,6 @@ import { DataterminalService } from '../dataterminal.service';
   styleUrls: ['./c01name.component.scss']
 })
 export class C01nameComponent implements OnInit {
-
   profileForm = new FormGroup({
     firstName: new FormControl(this.dataservice.allData.info_details.c01name.firstName, Validators.required),
     lastName: new FormControl(this.dataservice.allData.info_details.c01name.lastName, Validators.required),

@@ -9,11 +9,17 @@ export class DataterminalService {
   allData = {
     info_details: {
       // c00plan: null
-      c00plan: { name: "something", price: 4 },
-      c01name: { firstName: "sd", lastName: "gfds" },
-      c02address: { housenumber: "", pincode: "", address: "" },
+      "c00plan": { name: "something", price: 4 },
+      "c01name": { firstName: "sd", lastName: "gfds" },
+      "c02address": { housenumber: "", pincode: "", address: "" },
       "c03type-home": "",
       "c04size-home": 11,
+      "c05security": ['burglar alarm',], 
+      "c06menbers": "", 
+      "c07insurance-claim-count": "", 
+      "c08assets": "", 
+      "c09get-quote": "", 
+      "c10quote-detail": ""
     }
   }
   currPage = 0
@@ -30,7 +36,12 @@ export class DataterminalService {
     return pageName;
   }
   changepage(goForward = true) {
+    if (! this.currPage) {
+      this.currPage = parseInt(this.route.url.substr(2,2));
+    }
+    // console.log(this.currPage);
     this.currPage = this.currPage + (goForward ? 1 : -1);
+    // console.log(this.currPage);
     this.route.navigate([this.checkAndRoute(this.pageList[this.currPage])]);
   }
   domFunction(data: any) { }

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 // import { GoogleMapsModule } from '@angular/google-maps';
 // import { AgmCoreModule } from '@agm/core';
 // import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
@@ -71,7 +72,7 @@ import { Q08activeinsuranceComponent } from './c10quote-detail/q08activeinsuranc
     //   libraries:["places"]
     // }),
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
