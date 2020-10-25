@@ -20,7 +20,7 @@ export class C07insuranceClaimCountComponent implements OnInit {
   }
 
   changed(val: string) {
-    this.dataservice.allData.info_details["c07insurance-claim-count"] = val;
+    this.dataservice.allData["c07insurance-claim-count"] = val;
     this.buttDisable = false;
   }
   clicked() {

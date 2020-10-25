@@ -15,9 +15,9 @@ export class C02adderssComponent implements OnInit {
   }
 
   addressForm = new FormGroup({
-    housenumber: new FormControl(this.dataservice.allData.info_details.c02address.housenumber, Validators.required),
-    address: new FormControl(this.dataservice.allData.info_details.c02address.address, Validators.required),
-    pincode: new FormControl(this.citystatelist[this.dataservice.allData.info_details.c02address.address], Validators.required),
+    housenumber: new FormControl(this.dataservice.allData.c02address.housenumber, Validators.required),
+    address: new FormControl(this.dataservice.allData.c02address.address, Validators.required),
+    pincode: new FormControl(this.citystatelist[this.dataservice.allData.c02address.address], Validators.required),
   });
 
   constructor( public dataservice: DataterminalService ) { }
@@ -31,7 +31,7 @@ export class C02adderssComponent implements OnInit {
   }
 
   clicked() {
-    this.dataservice.allData.info_details.c02address = this.addressForm.value;
+    this.dataservice.allData.c02address = this.addressForm.value;
     this.dataservice.changepage();
   }
 }

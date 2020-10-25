@@ -15,7 +15,7 @@ export class C08assetsComponent implements OnInit {
   }
 
   changed(val: any) {
-    this.dataservice.allData.info_details.c08assets = val;
+    this.dataservice.allData.c08assets = val;
     this.buttDisabled = true;
     this.showMsg = val;
     this.buttDisabled = false;
