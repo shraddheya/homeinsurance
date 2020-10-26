@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'c03type-home', component: C03typeHomeComponent},
   { path: 'c04size-home', component: C04sizeHomeComponent},
   { path: 'c05security', component: C05securityComponent},
-  { path: 'c06menbers', component: C06membersComponent},
+  { path: 'c06members', component: C06membersComponent},
   { path: 'c07insurance-claim-count', component: C07insuranceClaimCountComponent},
   { path: 'c08assets', component: C08assetsComponent},
   { path: 'c09get-quote', component: C09getQuoteComponent},

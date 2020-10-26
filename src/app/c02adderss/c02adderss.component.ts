@@ -22,7 +22,9 @@ export class C02adderssComponent implements OnInit {
 
   constructor( public dataservice: DataterminalService ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+    console.log(this.addressForm.value, this.addressForm.value.address === "");
+  }
   
   changed(e: any) {
     let addressValues = this.addressForm.getRawValue();

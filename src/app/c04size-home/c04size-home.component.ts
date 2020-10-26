@@ -10,7 +10,7 @@ import { DataterminalService } from '../dataterminal.service';
 export class C04sizeHomeComponent implements OnInit {
   alert = false;
   sizeForm = new FormGroup({
-    size: new FormControl(this.dataservice.allData["c04size-home"], Validators.required),
+    size: new FormControl(this.dataservice.allData["c04size-home"] || 10, Validators.compose([Validators.required, Validators.min(10), Validators.max(999)])),
   })
   constructor( public dataservice: DataterminalService ) { }
 

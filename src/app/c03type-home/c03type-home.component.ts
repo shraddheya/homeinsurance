@@ -31,6 +31,7 @@ export class C03typeHomeComponent implements OnInit {
   constructor( public dataservice: DataterminalService ) { }
 
   ngOnInit(): void {
+    if (this.dataservice.allData["c03type-home"].length > 1) this.buttDisabled = false;
   }
   changed(key: string) {
     this.dataservice.allData["c03type-home"] = key;

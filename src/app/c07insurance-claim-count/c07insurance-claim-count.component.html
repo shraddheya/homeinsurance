@@ -1,12 +1,12 @@
 <div class="text-center pt-5">
   <div class="mt-5">
-    <h2 class="p-2 maintitle font-weight-bold">Got it. Have you field any insurance <br> claims in the past 3 years?</h2>
+    <h2 class="p-2 maintitle font-weight-bold">Got it. Have you filed any insurance <br> claims in the past 3 years?</h2>
 
     <div class="row justify-content-center p-2 mt-5">
       <div class="col-2">
         <select class="browser-default custom-select" (change)="changed($event.target.value)">
-          <option value=true selected disabled>Select Insurance</option>
-          <option *ngFor="let val of opts" value=val (selected)="this.dataservice.allData['c07insurance-claim-count'] === val">{{val}}</option>
+          <option value=true [selected]="this.dataservice.allData['c07insurance-claim-count'] === ''" disabled>Select Insurance</option>
+          <option *ngFor="let val of opts" value="{{val}}" [selected]="this.dataservice.allData['c07insurance-claim-count'] === val">{{val}}</option>
         </select>
       </div>
     </div>

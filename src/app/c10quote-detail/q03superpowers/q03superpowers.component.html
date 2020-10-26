@@ -1,46 +1,42 @@
 <section class="coveragebbg">
-    <div class="p-5">
-      <div class="row justify-content-center">
-        <div class="p-2 text-center">
-          <h2 class="maintitle">
-            Coverage Superpowers ⚡
-          </h2>
-  
-          <h5 class="cardtext pt-3">
-            Add even more strength to your policy with these special additions
-          </h5>
-        </div>
-  
+  <div class="p-5">
+    <div class="row justify-content-center">
+      <div class="p-2 text-center">
+        <h2 class="maintitle">
+          Coverage Superpowers ⚡
+        </h2>
+
+        <h5 class="cardtext pt-3">
+          Add even more strength to your policy with these special additions
+        </h5>
       </div>
-      <div class="container p-2">
-        <div class="p-5">
-          <div class="row">
-            <div class="col-12 p-2 bg-white mt-3" *ngFor='let item of superpowerArray | keyvalue'>
+
+    </div>
+    <div class="container p-2">
+      <div class="p-5">
+        <div class="row">
+          <div class="col-12 p-2 bg-white mt-3" *ngFor='let item of superpowerArray | keyvalue'>
               <div class="row">
                 <div class="col-2">
                   <img src="{{item.value.showchecked ? item.value.imgcheck : item.value.img}}">
                 </div>
                 <div class="col-6 pt-4">
-                  <div>
-                    <h6 class="coverageitemtitle font-weight-bold">{{item.value.title}}</h6>
-                  </div>
-                  <div>
-                    <p class="coverageitemtext font-weight-bold">{{item.value.text}}</p>
-                  </div>
+                  <div><h6 class="coverageitemtitle font-weight-bold">{{item.key}}</h6></div>
+                  <div><p class="coverageitemtext font-weight-bold">{{item.value.text}}</p></div>
                 </div>
                 <div class="col-2 text-right" style="top:3.6em;color:rgb(183, 183, 183);">
                   <span class="font-weight-bold {{item.value.showchecked ? 'coverageitemtextactive' : 'coverageitemtext'}}">{{item.value.price}}</span>
                 </div>
                 <div class="col-2" style="top:3.6em;">
                   <div class="md-switch">
-                    <input type="checkbox" class="md-toggle md-toggle-round z-depth-3" name={{item.key}} (change)="null">
+                    <input id="{{item.key.replaceAll(' ', '')}}" type="checkbox" class="md-toggle md-toggle-round z-depth-3" (change)="changed($event, item.key)">
+                    <label for="{{item.key.replaceAll(' ', '')}}"></label>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>

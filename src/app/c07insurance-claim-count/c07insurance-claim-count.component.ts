@@ -17,6 +17,7 @@ export class C07insuranceClaimCountComponent implements OnInit {
   constructor( public dataservice: DataterminalService ) { }
 
   ngOnInit(): void {
+    if (this.dataservice.allData["c07insurance-claim-count"].length > 1) this.buttDisable = false;
   }
 
   changed(val: string) {

@@ -28,7 +28,6 @@ export class C05securityComponent implements OnInit {
     if (el.checked) this.dataservice.allData.c05security.push(el.name);
     else {
       let idx  = this.dataservice.allData.c05security.indexOf(el.name);
-      console.log(idx);
       if (idx > -1) this.dataservice.allData.c05security.splice(idx, 1);
     }
     this.securitytype[el.name].selectedview = el.checked;

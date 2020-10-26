@@ -8,10 +8,8 @@
             <div class="form-row">
               <div class="col-5">
                 <select class="browser-default custom-select" (change)="changed($event)" formControlName="address">
-                  <option value=true disabled selected>Street, City</option>
-                  <option *ngFor='let item of citystatelist | keyvalue' value={{item.key}} >
-                    {{item.key}}
-                  </option>
+                  <option >Street, City</option>
+                  <option *ngFor='let item of citystatelist | keyvalue' value={{item.key}} >{{item.key}}</option>
                 </select>
               </div>
               <div class="col-4">

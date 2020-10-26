@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ModalDirective } from 'angular-bootstrap-md';
+import { DataterminalService } from  '../../dataterminal.service'
 
 @Component({
   selector: 'app-q02highvalueitems',
@@ -6,80 +8,108 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./q02highvalueitems.component.scss']
 })
 export class Q02highvalueitemsComponent implements OnInit {
-  valueItem: any = [
-    {
+  asIs(a: any, b: any) { return a; }
+  @ViewChild('highvaluemodal', { static: true }) private highvaluemodal: ModalDirective
+
+  noticeModal = false;
+  valueItem = {
+    "JEWELRY": {
       img: "../../../assets/valuable_items_jewelry.png",
-      title: "JEWELRY",
       text: "What’s the total value of your jewelry items that are worth more than 5.000 € each?",
       maxvalue: 50000,
       minvalue: 5000,
       price: 5000,
       incrtoggle: 5000,
-      domid: 'jewelry'
     },
-    {
+    "BICYCLES": {
       img: "../../../assets/valuable_items_bicycle.png",
-      title: "BICYCLES",
       text: "What’s the total value of your bikes that are worth more than 5.000 € each?",
       maxvalue: 10000,
       minvalue: 5000,
       price: 5000,
       incrtoggle: 500,
-      domid: 'bicycles'
     },
-    {
+    "CAMERAS": {
       img: "../../../assets/valuable_items_camera.png",
-      title: "CAMERAS",
       text: "What’s the total value of your camera gear worth more than 5.000 € each?",
       maxvalue: 10000,
       minvalue: 5000,
       price: 5000,
       incrtoggle: 500,
-      domid: 'cameras'
     },
-    {
+    "PORTABLE ELECTRONICS": {
       img: "../../../assets/valuable_items_portable_electronics.png",
-      title: "PORTABLE ELECTRONICS",
       text: "What’s the total value of your portable electronics worth more than 5.000 € each?",
       maxvalue: 10000,
       minvalue: 5000,
       price: 5000,
       incrtoggle: 500,
-      domid: 'electronic'
     },
-    {
+    "MUSIC GEAR": {
       img: "../../../assets/valuable_items_musical_instrument.png",
-      title: "MUSIC GEAR",
       text: "What’s the total value of your music gear worth more than 5.000 € each?",
       maxvalue: 10000,
       minvalue: 5000,
       price: 5000,
       incrtoggle: 500,
-      domid: 'music'
     },
-    // {
+    // FASHION ITEMS": {
     //   img:"../../../assets/valuable_items_fashion_items.png",
-    //   title:"FASHION ITEMS",
     //   text:"What’s the total value of your fashion items worth more than 5.000 € each?",
     //   maxvalue:50000,
     //   minvalue:5000,
     //   price:,
     //   incrtoggle:5000
-    // },
-    {
+    "OTHER": {
       img: "../../../assets/valuable_items_other.png",
-      title: "OTHER",
       text: "What’s the total value of any other items worth more than 5.000 € each?",
       maxvalue: 10000,
       minvalue: 5000,
       price: 5000,
       incrtoggle: 500,
-      domid: 'other'
     }
-  ];
-  constructor() { }
+  };
+  
+  importantArray: any = [
+    {
+      img: '../../../assets/email_icon.png',
+      text: "After you get a policy, we'll send you instructions to add your items for our review"
+    },
+    {
+      img: '../../../assets/attention-icon.png',
+      text: "Extra Coverage doesn't include wear & tear, equipment malfunctions and zombie attacks."
+    }
+  ]
+
+  modalObject = {key: '', value: {
+    img: '',
+    text: '',
+    maxvalue: 0,
+    minvalue: 0,
+    price: 0,
+    incrtoggle: 0,
+  }}
+
+  constructor( public dataservice: DataterminalService ) { }
 
   ngOnInit(): void {
+  }
+
+  additem(item: any) {
+    console.log(item);
+    this.dataservice.allData["c10quote-detail"].q02highvalueitems[item.key] = item.value.price;
+    this.highvaluemodal.hide();
+  }
+  
+  hvalueFunction(val: any, inc: string) {
+    if (inc === "+") this.modalObject.value.price += this.modalObject.value.incrtoggle;
+    else this.modalObject.value.price -= this.modalObject.value.incrtoggle;
+  }
+  
+  openModal(data: any) {
+    this.noticeModal = false
+    this.modalObject = data;
+    this.highvaluemodal.show();
   }
 
 }
