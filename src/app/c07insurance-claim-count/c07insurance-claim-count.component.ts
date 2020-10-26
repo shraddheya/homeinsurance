@@ -14,7 +14,7 @@ export class C07insuranceClaimCountComponent implements OnInit {
     "Two",
     "More than two"
   ];
-  constructor(public dataservice: DataterminalService) { }
+  constructor( public dataservice: DataterminalService ) { }
 
   ngOnInit(): void {
   }

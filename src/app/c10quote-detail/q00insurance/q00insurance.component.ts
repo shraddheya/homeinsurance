@@ -8,7 +8,7 @@ import { DataterminalService } from 'src/app/dataterminal.service';
 })
 export class Q00insuranceComponent implements OnInit {
 
-  constructor(public dataservice: DataterminalService) { }
+  constructor( public dataservice: DataterminalService ) { }
 
   ngOnInit(): void {
   }
