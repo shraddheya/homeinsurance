@@ -1,0 +1,79 @@
+<div class="text-center pt-5" *ngIf=quotsview>
+  <div class="mt-3">
+    <span class="backtoCpmponent">
+      <a (click)="dataservice.backComponent('assetspurchase')">
+        <mdb-icon fas icon="chevron-left"></mdb-icon>
+      </a>
+    </span>
+
+    <h2 class="p-3 maintitle">Alright! Let's get you a quote</h2>
+
+    <div class="container pt-3">
+      <div class="row justify-content-center">
+        <div class="col-4">
+          <div class="form-row justify-content-center">
+            <div class="col-10">
+              <label class="sr-only" for="inlineFormInputGroup">Username</label>
+              <div class="input-group p-2">
+                <div class="input-group-prepend">
+                  <div class="input-group-text bg-white">
+                    <mdb-icon far icon="envelope"></mdb-icon>
+                  </div>
+                </div>
+                <input type="text" class="form-control" (input)='email=$event.target.value' placeholder="Email">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row justify-content-center dobmain pt-2">
+            <div class="col-9">
+                <div class="row">
+                <div class="col-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text bg-white">
+                      <mdb-icon fas icon="birthday-cake"></mdb-icon>&nbsp;DOB
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="input-group">
+                    <input type="number" class="form-control dobinput" (input)='month=$event.target.value' min='1' max='12' id="inlineFormInputGroup" placeholder="MM">
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="input-group">
+
+                    <input type="number" class="form-control dobinput" (input)='day=$event.target.value' min='1' max='31' id="inlineFormInputGroup" placeholder="DD">
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="input-group">
+                    <input type="number" class="form-control dobinputy" (input)='year=$event.target.value' min='1935' max={{currentyear-18}} id="inlineFormInputGroup" placeholder="YYYY">
+                  </div>
+                </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row justify-content-center pt-4">
+        <div class="col-5">
+          <div class="{{dataservice.themeview.inputcheckbox}}">
+            <input type="checkbox" class="mr-3 checkbox" id="receivediscount" (change)="quotesCheck($event)">
+            I agree to receive updates and discount offers
+          </div>
+          <div class="pt-3 {{dataservice.themeview.inputcheckbox}}">
+            <input type="checkbox" class="mr-3 checkbox" id="privacyterm" (change)="quotesCheck($event)">
+            I agree to the <a class="{{dataservice.themeview.htext}}">privacy policy</a> & <a class="{{dataservice.themeview.htext}}">terms of service</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-3">
+        <button mdbBtn class="buttonstyle text-white {{dataservice.themeview.btn}}" (click)="dataservice.stepsFunction(quotesobject).getQuote()"
+          mdbWavesEffect [disabled]=getQuotesnext>Next</button>
+      </div>
+    </div>
+  </div>

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { DataterminalService } from '../dataterminal.service';
+
 @Component({
-  selector: 'app-topbar',
-  templateUrl: './topbar.component.html',
-  styleUrls: ['./topbar.component.scss']
+  selector: 'app-quotes-hlinkpolicy',
+  templateUrl: './quotes-hlinkpolicy.component.html',
+  styleUrls: ['./quotes-hlinkpolicy.component.scss']
 })
-export class TopbarComponent implements OnInit {
+export class QuotesHlinkpolicyComponent implements OnInit {
 
   constructor(public dataservice:DataterminalService) { }
 
