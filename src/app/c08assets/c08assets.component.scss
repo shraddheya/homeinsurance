@@ -1,0 +1,58 @@
+.assetspurchase {
+    box-sizing: border-box;
+    display: flex;
+    align-items: left;
+    background-color: #f7f7f7;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 47px 46px -27px;
+    font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+    line-height: 0.3;
+    font-weight: 400;
+    flex-flow: column;
+    border-radius: 12px;
+}
+
+.assetspurchase input[type='radio']:after {
+    width           : 15px !important;
+    height          : 15px !important;
+    border-radius   : 15px !important;
+    top             : -2px !important;
+    left            : -1px !important;
+    position        : relative !important;
+    background-color: white !important;
+    content         : "";
+    display         : inline-block !important;
+    visibility      : visible !important;
+    border          : 1px solid gray !important;
+    padding         : 0.3em
+}
+
+.assetspurchase input[type='radio']:checked:after {
+    width           : 15px !important;
+    height          : 15px !important;
+    border-radius   : 15px !important;
+    top             : -2px !important;
+    left            : -1px !important;
+    position        : relative !important;
+    background-color: var(--accent2) !important;
+    content         : "";
+    display         : inline-block !important;
+    visibility      : visible !important;
+    border          : 1px solid gray !important;
+    padding         : 0.3em
+}
+
+.messagepart {
+    box-sizing      : border-box;
+    display         : flex;
+    background-color: #f7f7f7;
+    box-shadow      : rgba(0, 0, 0, 0.16) 0px 47px 46px -27px;
+    font-family     : Lato, "Helvetica Neue", Arial, sans-serif;
+    font-weight     : 400;
+    border-radius   : 12px;
+    padding         : 9px 60px;
+}
+
+.messagetitle {
+    font-family: 30px Lato, "Helvetica Neue", Arial, sans-serif;
+    color      : #4A4A4A;
+}

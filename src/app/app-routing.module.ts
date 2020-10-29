@@ -11,6 +11,7 @@ import { C07insuranceClaimCountComponent } from './c07insurance-claim-count/c07i
 import { C08assetsComponent } from './c08assets/c08assets.component';
 import { C09getQuoteComponent } from './c09get-quote/c09get-quote.component';
 import { C10quoteDetailComponent } from './c10quote-detail/c10quote-detail.component';
+import { C11pdfComponent } from './c11pdf/c11pdf.component';
 const routes: Routes = [
   {path: '', redirectTo: 'c00plan', pathMatch: 'full'},
   {path: 'c00plan', component: C00planComponent },
@@ -19,11 +20,12 @@ const routes: Routes = [
   { path: 'c03type-home', component: C03typeHomeComponent},
   { path: 'c04size-home', component: C04sizeHomeComponent},
   { path: 'c05security', component: C05securityComponent},
-  { path: 'c06menbers', component: C06membersComponent},
+  { path: 'c06members', component: C06membersComponent},
   { path: 'c07insurance-claim-count', component: C07insuranceClaimCountComponent},
   { path: 'c08assets', component: C08assetsComponent},
   { path: 'c09get-quote', component: C09getQuoteComponent},
-  { path: 'c10quote-detail', component: C10quoteDetailComponent}
+  { path: 'c10quote-detail', component: C10quoteDetailComponent},
+  { path: 'c11pdf', component: C11pdfComponent}
 ];
 
 @NgModule({

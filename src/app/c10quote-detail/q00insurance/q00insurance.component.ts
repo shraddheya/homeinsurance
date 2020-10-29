@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataterminalService } from 'src/app/dataterminal.service';
 
 @Component({
   selector: 'app-q00insurance',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Q00insuranceComponent implements OnInit {
 
-  constructor() { }
+  constructor( public dataservice: DataterminalService ) { }
 
   ngOnInit(): void {
   }

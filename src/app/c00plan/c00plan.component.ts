@@ -35,7 +35,7 @@ export class C00planComponent implements OnInit {
   ];
 
   clicked(item: any) {
-    this.dataservice.allData.info_details.c00plan = { name: `${item.title1} ${item.title1}`, price: item.price}
+    this.dataservice.allData.c00plan = { name: `${item.title1} ${item.title1}`, price: item.price}
     this.dataservice.changepage()
   }
   

@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { DataterminalService } from '../dataterminal.service';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-payment',
@@ -7,15 +6,17 @@ import { DataterminalService } from '../dataterminal.service';
   styleUrls: ['./payment.component.scss']
 })
 export class PaymentComponent implements OnInit {
+  @Input() amount: number;
+  companyname = "Oursurplus"
 
-  price:any = 200
-  constructor(public dataservice: DataterminalService) { }
-
-  ngOnInit() {
+  constructor( ) {
     this.loadStripe();
   }
 
-  pay(amount) {
+  ngOnInit() {
+  }
+
+  pay(amount: any) {
 
     var handler = (<any>window).StripeCheckout.configure({
       key: 'pk_test_sySuhYAA1h9AFteXhD5Q4qkV',
@@ -29,11 +30,10 @@ export class PaymentComponent implements OnInit {
     });
 
     handler.open({
-      name: 'Demo Site',
-      description: '2 widgets',
+      name: this.companyname,
+      description: '',
       amount: amount * 100
     });
-
   }
 
   loadStripe() {

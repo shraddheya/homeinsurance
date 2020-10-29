@@ -1,0 +1,112 @@
+[
+  {
+    "insurance_value": 0,
+    "po_event": 0,
+    "lg_event": 0,
+    "el_event": 0,
+    "curvature": 0,
+    "price_month": 0.00,
+    "per_year": 0.00,
+    "yearly_policy_event": 0
+  },
+  {
+    "insurance_value": 5000,
+    "po_event": 20,
+    "lg_event": 40,
+    "el_event": 400,
+    "curvature": 45,
+    "price_month": 3.00,
+    "per_year": 36.00,
+    "yearly_policy_event": 11.1
+  },
+  {
+    "insurance_value": 10000,
+    "po_event": 20,
+    "lg_event": 40,
+    "el_event": 800,
+    "curvature": 40,
+    "price_month": 4.20,
+    "per_year": 50.40,
+    "yearly_policy_event": 15.9
+  },
+  {
+    "insurance_value": 15000,
+    "po_event": 20,
+    "lg_event": 40,
+    "el_event": 1200,
+    "curvature": 30,
+    "price_month": 5.46,
+    "per_year": 65.52,
+    "yearly_policy_event": 18.3
+  },
+  {
+    "insurance_value": 20000,
+    "po_event": 20,
+    "lg_event": 40,
+    "el_event": 1600,
+    "curvature": 35,
+    "price_month": 7.37,
+    "per_year": 88.45,
+    "yearly_policy_event": 18.1
+  },
+  {
+    "insurance_value": 25000,
+    "po_event": 20,
+    "lg_event": 40,
+    "el_event": 2000,
+    "curvature": 25,
+    "price_month": 9.21,
+    "per_year": 110.57,
+    "yearly_policy_event": 18.1
+  },
+  {
+    "insurance_value": 30000,
+    "po_event": 20,
+    "lg_event": 40,
+    "el_event": 2400,
+    "curvature": 20,
+    "price_month": 11.06,
+    "per_year": 132.68,
+    "yearly_policy_event": 18.1
+  },
+  {
+    "insurance_value": 35000,
+    "po_event": 20,
+    "lg_event": 40,
+    "el_event": 2800,
+    "curvature": 15,
+    "price_month": 12.71,
+    "per_year": 152.58,
+    "yearly_policy_event": 18.4
+  },
+  {
+    "insurance_value": 40000,
+    "po_event": 20,
+    "lg_event": 40,
+    "el_event": 3200,
+    "curvature": 10,
+    "price_month": 13.99,
+    "per_year": 167.84,
+    "yearly_policy_event": 19.1
+  },
+  {
+    "insurance_value": 45000,
+    "po_event": 20,
+    "lg_event": 40,
+    "el_event": 3600,
+    "curvature": 5,
+    "price_month": 14.69,
+    "per_year": 176.23,
+    "yearly_policy_event": 20.4
+  },
+  {
+    "insurance_value": 50000,
+    "po_event": 20,
+    "lg_event": 40,
+    "el_event": 4000,
+    "curvature": 5,
+    "price_month": 15.42,
+    "per_year": 185.04,
+    "yearly_policy_event": 21.6
+  }
+]

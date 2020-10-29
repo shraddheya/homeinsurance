@@ -1,0 +1,40 @@
+.coverageouter {
+    box-sizing       : border-box;
+    display          : flex;
+    width            : auto;
+    -webkit-box-align: center;
+    align-items      : center;
+    background-color : rgb(247, 247, 247);
+    box-shadow       : rgba(0, 0, 0, 0.16) 0px 47px 46px -27px;
+    font-size        : 1.6rem;
+    line-height      : 1.3;
+    font-weight      : 400;
+    flex-flow        : column;
+    border-radius    : 12px;
+    margin-top: -4.4em;
+  }
+  .textdata{
+    color: #4A4A4A;
+    font-family: 30px Lato, "Helvetica Neue", Arial, sans-serif;
+  }
+  .custom-center {
+    height: 100%;
+    width: 100%;
+  }
+  // hr{
+  //   background-color:rgb(255, 0, 131) !important;
+  //   height:1.3px;
+  // }
+  
+  .circlemainupulate{
+    border-radius:100%;
+    background-color: white;
+    border:0.1em solid silver;
+    padding:0.3em;
+    font-size: 0.7sem;
+  }
+  
+  .btn_hover:hover{
+    box-shadow: 0.6em;
+  }
+  

@@ -1,1 +1,23 @@
-<p>c05security works!</p>
+<div class="pt-5 text-center">
+  <div class="mt-4">
+    <h2 class="p-2 maintitle font-weight-bold">Do you have any of the following in your<br> home?</h2>
+    <div class="container mt-3 p-3">
+      <div class="row justify-content-center">
+        <div class="col-2 text-center" *ngFor='let item of securitytype | keyvalue'>
+          <div class="iconsize">
+            <img class="iconimg" src="{{item.value.selectedview ? item.value.imgactive : item.value.img}}">
+          </div>
+          <div>
+            <h6>{{item.key | uppercase}}</h6>
+          </div>
+          <div class="">
+            <input type="checkbox" name="{{item.key}}" [checked]="item.value.selectedview" (change)="changed($event.target)">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5">
+      <button mdbBtn class="buttonstyle text-white" (click)='clicked()'>Next</button>
+    </div>
+  </div>
+</div>

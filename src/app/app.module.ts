@@ -2,10 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DatePipe } from '@angular/common';
 // import { GoogleMapsModule } from '@angular/google-maps';
 // import { AgmCoreModule } from '@agm/core';
 // import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
-// import { StripeModule } from 'stripe-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +23,16 @@ import { C08assetsComponent } from './c08assets/c08assets.component';
 import { C09getQuoteComponent } from './c09get-quote/c09get-quote.component';
 import { C10quoteDetailComponent } from './c10quote-detail/c10quote-detail.component';
 import { Q00insuranceComponent } from './c10quote-detail/q00insurance/q00insurance.component';
+import { Q01coverageamountComponent } from './c10quote-detail/q01coverageamount/q01coverageamount.component';
+import { Q02highvalueitemsComponent } from './c10quote-detail/q02highvalueitems/q02highvalueitems.component';
+import { Q03superpowersComponent } from './c10quote-detail/q03superpowers/q03superpowers.component';
+import { Q04listcoveredComponent } from './c10quote-detail/q04listcovered/q04listcovered.component';
+import { Q05deductiblesComponent } from './c10quote-detail/q05deductibles/q05deductibles.component';
+import { Q06notcoveredComponent } from './c10quote-detail/q06notcovered/q06notcovered.component';
+import { Q07linkpolicyComponent } from './c10quote-detail/q07linkpolicy/q07linkpolicy.component';
+import { Q08activeinsuranceComponent } from './c10quote-detail/q08activeinsurance/q08activeinsurance.component';
+import { C11pdfComponent } from './c11pdf/c11pdf.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +51,16 @@ import { Q00insuranceComponent } from './c10quote-detail/q00insurance/q00insuran
     C09getQuoteComponent,
     C10quoteDetailComponent,
     Q00insuranceComponent,
+    Q01coverageamountComponent,
+    Q02highvalueitemsComponent,
+    Q03superpowersComponent,
+    Q04listcoveredComponent,
+    Q05deductiblesComponent,
+    Q06notcoveredComponent,
+    Q07linkpolicyComponent,
+    Q08activeinsuranceComponent,
+    C11pdfComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,13 +69,12 @@ import { Q00insuranceComponent } from './c10quote-detail/q00insurance/q00insuran
     ReactiveFormsModule,
     // GoogleMapsModule,
     // GooglePlaceModule,
-    // StripeModule.forRoot(),
     // AgmCoreModule.forRoot({
     //   apiKey: 'AIzaSyDt1YJIwwZRjt3wI1xyH8bdY3sBf7PbR8s',
     //   libraries:["places"]
     // }),
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
