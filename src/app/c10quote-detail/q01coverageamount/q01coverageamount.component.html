@@ -19,7 +19,7 @@
                 <a (click)="cvrgCalculation(item.key,'-')"><mdb-icon class="circlemainupulate btn_hover" fas icon="minus"></mdb-icon></a>
               </div>
               <div class="col-8">
-                <input type="number" class="border border-white text-center" value="{{item.value.price}}" readonly>
+                <input type="number" class="border border-white text-center custom-center" value="{{item.value.price}}" readonly min="{{item.value.minvalue}}">
               </div>
               <div class="col-2 text-center">
                 <a (click)="cvrgCalculation(item.key,'+')"> <mdb-icon class="circlemainupulate btn_hover" fas icon="plus"></mdb-icon></a>

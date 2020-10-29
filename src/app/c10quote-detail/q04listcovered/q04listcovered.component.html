@@ -3,7 +3,7 @@
     <h1 class="maintitle text-center">What's Covered</h1>
   </div>
   <div class="row justify-content-center">
-    <div class="col-6 p-5" *ngFor="let item of whatscovered | keyvalue: asIs">
+    <div class="col-6 p-5 custom-padding" *ngFor="let item of whatscovered | keyvalue: asIs">
       <div class="text-center">
         <i class="icn-peril" style="background-size: 466px 375px; position: relative; z-index: 1; display: block; overflow: hidden; left: 50%; transform: translateX(-50%); width: 68px; height: 68px; background: transparent url(../../../assets/icn-sprite-perils-68.png) no-repeat {{item.value.x}} {{item.value.y}};"></i>
       </div>

@@ -1,0 +1,106 @@
+
+.quotessections{
+  position: relative;
+  margin: auto;
+}
+.headerLogo{
+  position: relative;
+  top: -9.5em;
+  left: -5em;
+}
+.watermark{
+  position: relative;
+  top: 3em;
+  right: -37em;
+  height: 12em !important;
+  width: 12em !important;
+  border-radius: 50% !important;
+  border: 0.1em solid #B7B7B7;
+  border-style: double;
+  border-width: 0.6em;
+  // z-index: 100;
+}
+.logo{
+  background: transparent url(../../assets/logo.svg) no-repeat 0 0;
+}
+.logo.center{
+  display: inline-block;
+  height: 20px;
+  width: 92px;
+  background-size: 92px 20px;
+  position: absolute;
+  margin-left: 0;
+  top: calc(50% - 10px);
+  left: calc(50% - 49px);
+  z-index: 1;
+}
+.ptdetail{
+  font-size: 0.8em;
+  text-align: left;
+  font-weight: 700;
+  color:rgb(87, 83, 83);
+}
+.ptrecord{
+  font-size: 1.1em;
+  color:black
+}
+#belowlogo{
+  font-size: 0.8em;
+  color: #575353;
+  position: relative;
+  top: -14em;
+
+}
+#imgstyle{
+  height: 11em;
+  width: 17em;
+}
+.watermarktext{
+  position: relative;
+    top: 2.3em;
+    left: 0.7em;
+    color: #B7B7B7;
+    transform: rotate(20deg);
+    font-size: 2em;
+    font-weight: 700;
+}
+.pagecontent{
+  position: relative;
+  top: -7em;
+  left: 2em;
+}
+.page2detail{
+  position: relative;
+  top: -9.8em;
+}
+.pagetitle h1{
+  color:rgb(61, 60, 60);
+  font-size: 5.5em;
+}
+.pagegape{
+  position: relative;
+  padding: 10em;
+}
+.pagefooter{
+  position: relative;
+  padding-top: -2em;
+  padding: 5em;
+}
+.footertext{
+  font-size: 0.6em;
+  color: black;
+  font-weight: 600;
+
+}
+
+// .childsection{
+//   position: relative;
+//   height:70em;
+//   width:70em;
+//   margin:auto
+// }
+// .title{
+//   font-size: 7em;
+//   line-height: 1em;
+//   font-family: 28px Lato, "Helvetica Neue", Arial, sans-serif;
+// }

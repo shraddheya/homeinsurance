@@ -1,11 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ɵConsole } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataterminalService {
-  pageList = ["c00plan", "c01name", "c02address", "c03type-home", "c04size-home", "c05security", "c06members", "c07insurance-claim-count", "c08assets", "c09get-quote", "c10quote-detail"]
+  pageList = ["c00plan", "c01name", "c02address", "c03type-home", "c04size-home", "c05security", "c06members", "c07insurance-claim-count", "c08assets", "c09get-quote", "c10quote-detail", "c11pdf"]
   allData = JSON.parse(JSON.stringify({
     "c00plan": { name: "", price: 0 },
     "c01name": { firstName: "", lastName: "" },
@@ -18,15 +18,30 @@ export class DataterminalService {
     "c08assets": "", 
     "c09get-quote": "", 
     "c10quote-detail": {
-      q01coverageamount: {},
-      q02highvalueitems: {},
-      q03superpowers: [],
+      q01coverageamount: {
+        'PERSONAL LIABILITY': 0, 
+        'CONTENTS': 0, 
+        'TEMP ACCOMMODATION': 0
+      },
+      q02highvalueitems: {
+        'Jewlery' : 0,
+        'Bicycles' : 0,
+        'Cameras' : 0,
+        'Electronics' : 0,
+        'Music Equipment' : 0,
+        'Other' : 0,
+      },
+      q03superpowers: ["",],
+      q05deductibles: ["",],
     }
   }));
   dtblank = JSON.parse(JSON.stringify(this.allData));
   currPage = 0
 
-  constructor(private route: Router) { }
+  constructor(private route: Router) { 
+    this.dtblank.c05security = [];
+    this.dtblank["c10quote-detail"].q05deductibles = [];
+  }
   changepage(goForward = true) {
     if (goForward) this.currPage++;
     else this.currPage--;

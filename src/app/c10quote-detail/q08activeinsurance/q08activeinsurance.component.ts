@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataterminalService } from 'src/app/dataterminal.service';
 
 @Component({
   selector: 'app-q08activeinsurance',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Q08activeinsuranceComponent implements OnInit {
 
-  constructor() { }
+  constructor( public dataservice: DataterminalService ) { }
 
   ngOnInit(): void {
+    console.log(this.dataservice.allData.c00plan.price);
   }
-
+  clicked() {
+    this.dataservice.changepage();
+  }
 }

@@ -1,5 +1,6 @@
 .quotessection {
-  height: 100vh;
+  height: 35em;
+  // height: 100vh;
   width: 100vw;
 }
 .quotesdiv {
@@ -12,12 +13,12 @@
 .leftimg {
   position: absolute;
   left: -141em;
-  top: 14em;
+  top: 5em;
 }
 .rightimg {
   position: absolute;
   right: -141em;
-  top: 14em;
+  top: 5em;
 }
 .quotescircle {
   border-radius: 50%;
@@ -29,6 +30,7 @@
   padding-top: 2.5em;
   padding-left: 2.6em;
   background-color: var(--accent1) !important;
+  margin: auto
 }
 .quoterate {
   font-weight: 300;

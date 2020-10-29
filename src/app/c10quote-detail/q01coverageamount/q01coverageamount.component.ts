@@ -45,10 +45,8 @@ export class Q01coverageamountComponent implements OnInit {
   }
 
   cvrgCalculation(key: string, op: string) {
-    // console.log(key);
-    if ( op === '+' ) this.coverageAmount[key].price += this.coverageAmount[key].incrtoggle;
-    else this.coverageAmount[key].price -= this.coverageAmount[key].incrtoggle;
+    if ( op === '+' ) this.coverageAmount[key].price = Math.min(this.coverageAmount[key].maxvalue, this.coverageAmount[key].price + this.coverageAmount[key].incrtoggle);
+    else this.coverageAmount[key].price = Math.max(this.coverageAmount[key].minvalue, this.coverageAmount[key].price - this.coverageAmount[key].incrtoggle);
     this.dataservice.allData["c10quote-detail"].q01coverageamount[key] = this.coverageAmount[key].price;
   }
-
 }

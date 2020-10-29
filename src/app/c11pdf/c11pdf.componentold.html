@@ -1,0 +1,35 @@
+<div class="bg-dark">
+  <div class="quotessections">
+    <div class="row justify-content-center mt-5">
+      <div class="col-7">
+        <div class="bg-white m-2">
+          <div>
+            <div class="datatitle">
+              {{'coverage summary' | uppercase}}
+            </div>
+            <div>
+              <table class="table text-left">
+                <tr class="tborderquotes" id="tableheadfont">
+                  <td *ngFor="let th of ['coverage', 'maximum amount', 'cost']">{{th | uppercase}}</td>
+                </tr>
+                <tr class="tborderquotes" *ngFor="let td of data | keyvalue: asIs">
+                  <td>{{td.key}}</td>
+                  <td>{{td.value}}</td>
+                  <td>INCLUDED</td>
+                </tr>
+                <!-- <tr class="font-weight-bold">
+                  <td>{{item.value.table.total.title}}</td>
+                  <td>{{item.value.table.total.value}}</td>
+                </tr> -->
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="staticButt">
+  <app-payment></app-payment>
+</div>

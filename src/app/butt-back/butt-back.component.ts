@@ -16,11 +16,56 @@ export class ButtBackComponent implements OnInit {
   }
 
   constructor( public dataservice: DataterminalService, private router: Router ) {
+    dataservice.allData = {
+      "c00plan": {
+        "name": "Contents Contents",
+        "price": 2
+      },
+      "c01name": {
+        "firstName": "shraddheya",
+        "lastName": "shrivastava"
+      },
+      "c02address": {
+        "housenumber": "A404 new cosmopolitan plot33 dwarka sector 10 new delhi",
+        "address": "Indore,Madhyapradesh",
+        "pincode": "452010"
+      },
+      "c03type-home": "Single family house",
+      "c04size-home": 10,
+      "c05security": [
+        ""
+      ],
+      "c06members": "c",
+      "c07insurance-claim-count": "No",
+      "c08assets": true,
+      "c09get-quote": {
+        "email": "shraddheya.shrivastava@gmail.com",
+        "dob": "2002-10-29",
+        "receivediscount": true,
+        "privacyterm": true
+      },
+      "c10quote-detail": {
+        "q01coverageamount": {
+          'PERSONAL LIABILITY': 40000,
+          'CONTENTS': 10000,
+          'TEMP ACCOMMODATION': 20000,
+        },
+        "q02highvalueitems": {
+          'Jewlery': 5000,
+          'Bicycles': 5000,
+          'Cameras': 5000,
+          'Electronics': 5000,
+          'Music Equipment': 5000,
+          'Other': 5000,
+        },
+        "q03superpowers": []
+      }
+    };
     router.events.subscribe(val => {
       if (val instanceof NavigationEnd) {
         let idx = dataservice.pageList.indexOf(val.url.substr(1));
         this.disp = idx > 0;
-        console.log(idx, val.url.substr(1), dataservice.allData[val.url.substr(1)])
+        console.log(dataservice.allData)
         if (idx < 0) return;
         let gotoPageIdx = idx;
         for (let i = 0; i < idx; i++) {

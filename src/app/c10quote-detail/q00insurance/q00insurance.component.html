@@ -1,24 +1,24 @@
 <div class="quotessection">
-    <div class="leftimg">
-      <img src="../../../assets/NY-0f99d0c22a44484e5ef5302c157dccf71abdacb7a4f312aa4e93cd65dbe8a6d1.png"class="imgsrc">
+  <div class="leftimg">
+    <img src="../../../assets/NY-0f99d0c22a44484e5ef5302c157dccf71abdacb7a4f312aa4e93cd65dbe8a6d1.png" class="imgsrc">
+  </div>
+  <div class="quotesdiv">
+    <div class="p-2">
+      <h1 class="maintitle">{{dataservice.allData.c01name.firstName}}, here's your insurance quote</h1>
+      <h5 class="cardtext text-center">H.no- {{dataservice.allData.c02address.housenumber}} {{dataservice.allData.c02address.address}}</h5>
     </div>
-    <div class="quotesdiv">
-      <div class="p-2">
-        <h1 class="maintitle">{{dataservice.allData.c01name.firstName}}, here's your insurance quote</h1>
-        <h5 class="cardtext text-center">H.no- {{dataservice.allData.c02address.housenumber}} {{dataservice.allData.c02address.address}}</h5>
-      </div>
-      <div class="mt-2">
-        <div class="row justify-content-center pt-4">
-          <div class="col-2">
-            <div class="quotescircle">
-              <div>
-                <h1 class="quoterate">{{dataservice.allData.c00plan.price}}<sup>.3</sup>€</h1>
-                <small class="font-weight-bold">PER MONTH</small>
-              </div>
+    <div class="mt-2">
+      <div class="row justify-content-center pt-4">
+        <div class="col-2">
+          <div class="quotescircle">
+            <div>
+              <h1 class="quoterate">{{dataservice.allData.c00plan.price}}<sup>.3</sup>€</h1>
+              <small class="font-weight-bold">PER MONTH</small>
             </div>
           </div>
         </div>
-        <div class="row justify-content-center p-4">
+      </div>
+      <!-- <div class="row justify-content-center p-4">
           <div class="col-4">
             <div class="pt-2">
               <div class="row">
@@ -31,20 +31,18 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- <div class="row justify-content-center pt-4">
+        </div> -->
+      <!-- <div class="row justify-content-center pt-4">
           <a class="cardbutton text-white">PAY {{dataservice.allData.c00plan.price}}€ /MONTH</a>
         </div> -->
-        <div class="text-center pt-4">
+      <!-- <div class="text-center pt-4">
           <h6 style="font-family: 28px Lato, 'Helvetica Neue', Arial, sans-serif;">
-            <!--  <a style="color:rgb(255, 0, 131) !important;" href="https://production-quote-files.s3.amazonaws.com/LQ44CE7FB84.pdf?AWSAccessKeyId=AKIAZAPSMIMBB6BNF73M&Expires=1601983044&Signature=ZwMyjE15Osvc%2F9wvU1TXfvbfT%2FA%3D" target="_blank">Download quote</a> -->
-          <span class="htext" routerLink="/pdf"> Download quote </span>
+          <span class="htext" routerLink="/c11pdf"> Download quote </span>
           </h6>
-        </div>
-      </div>
-    </div>
-    <div class="rightimg">
-      <img src="../../../assets/NY-0f99d0c22a44484e5ef5302c157dccf71abdacb7a4f312aa4e93cd65dbe8a6d1.png" class="imgsrc">
+        </div> -->
     </div>
   </div>
-  
+  <div class="rightimg">
+    <img src="../../../assets/NY-0f99d0c22a44484e5ef5302c157dccf71abdacb7a4f312aa4e93cd65dbe8a6d1.png" class="imgsrc">
+  </div>
+</div>

@@ -11,15 +11,16 @@ import { DataterminalService } from '../dataterminal.service';
 export class C09getQuoteComponent implements OnInit {
   maxDate= this.datepipe.transform(new Date(new Date().getTime() - 6570 * 24 * 60 * 60 * 1000), 'yyyy-MM-dd');
   moreDetails = new FormGroup({
-    email: new FormControl('', Validators.required),
-    dob: new FormControl('', Validators.required),
-    receivediscount: new FormControl('', Validators.required),
-    privacyterm: new FormControl('', Validators.required),
+    email: new FormControl(this.dataservice.allData['c09get-quote'].email, Validators.required),
+    dob: new FormControl(this.dataservice.allData['c09get-quote'].dob, Validators.required),
+    receivediscount: new FormControl(this.dataservice.allData['c09get-quote'].receivediscount, Validators.required),
+    privacyterm: new FormControl(this.dataservice.allData['c09get-quote'].privacyterm, Validators.required),
   });
   constructor(public dataservice: DataterminalService, private datepipe: DatePipe) { }
 
   ngOnInit(): void { }
   clicked() {
+    this.dataservice.allData['c09get-quote'] = this.moreDetails.value;
     this.dataservice.changepage();
   }
 }

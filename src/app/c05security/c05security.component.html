@@ -9,7 +9,6 @@
           </div>
           <div>
             <h6>{{item.key | uppercase}}</h6>
-            <h6>{{item.value.selectedview}}</h6>
           </div>
           <div class="">
             <input type="checkbox" name="{{item.key}}" [checked]="item.value.selectedview" (change)="changed($event.target)">

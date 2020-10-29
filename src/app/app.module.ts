@@ -6,7 +6,6 @@ import { DatePipe } from '@angular/common';
 // import { GoogleMapsModule } from '@angular/google-maps';
 // import { AgmCoreModule } from '@agm/core';
 // import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
-// import { StripeModule } from 'stripe-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,6 +31,8 @@ import { Q05deductiblesComponent } from './c10quote-detail/q05deductibles/q05ded
 import { Q06notcoveredComponent } from './c10quote-detail/q06notcovered/q06notcovered.component';
 import { Q07linkpolicyComponent } from './c10quote-detail/q07linkpolicy/q07linkpolicy.component';
 import { Q08activeinsuranceComponent } from './c10quote-detail/q08activeinsurance/q08activeinsurance.component';
+import { C11pdfComponent } from './c11pdf/c11pdf.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,8 @@ import { Q08activeinsuranceComponent } from './c10quote-detail/q08activeinsuranc
     Q06notcoveredComponent,
     Q07linkpolicyComponent,
     Q08activeinsuranceComponent,
+    C11pdfComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,
@@ -66,7 +69,6 @@ import { Q08activeinsuranceComponent } from './c10quote-detail/q08activeinsuranc
     ReactiveFormsModule,
     // GoogleMapsModule,
     // GooglePlaceModule,
-    // StripeModule.forRoot(),
     // AgmCoreModule.forRoot({
     //   apiKey: 'AIzaSyDt1YJIwwZRjt3wI1xyH8bdY3sBf7PbR8s',
     //   libraries:["places"]
