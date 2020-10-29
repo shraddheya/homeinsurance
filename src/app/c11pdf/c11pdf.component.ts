@@ -12,7 +12,7 @@ export class C11pdfComponent implements OnInit {
   payable: number;
   quotespages: any = {
     watermark:'quote',
-    logo: "../../assets/logo.svg",
+    logo: "assets/logo.svg",
     footertext:'Copyright 2017 by LEMONADE INSURANCE COMPANY (a stock company) | 5 Crosby, New York, NY 10013 | help@lemonade.com | LEM-DEC-01',
     tlogotext:"5 Crosby St. 3rd floor, New York, NY 10013 LEM-DEC-01 CO-OP INSURANCE (HO6)",
     footertext1:'Rating information - Protection Class: 1, Tier: 5, Territory: 5, Construction: Frame',

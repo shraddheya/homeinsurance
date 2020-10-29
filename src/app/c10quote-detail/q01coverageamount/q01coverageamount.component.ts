@@ -12,7 +12,7 @@ export class Q01coverageamountComponent implements OnInit {
   }
   coverageAmount: any = {
     'PERSONAL LIABILITY': {
-      icon: '../../../assets/icn-sprite-coverages-100.png',
+      icon: 'assets/icn-sprite-coverages-100.png',
       price: 0,
       style: "col-4 pl-5",
       minvalue: 0,
@@ -21,7 +21,7 @@ export class Q01coverageamountComponent implements OnInit {
       text: "If you accidentally cause damage to others or their property, this is the maximum we’ll pay.For example, if you break someone’s window while playing golf in your backyard we'll cover it.",
     }, 
     'CONTENTS': {
-      icon: '../../../assets/icn-sprite-coverages-100.png',
+      icon: 'assets/icn-sprite-coverages-100.png',
       price: 10000,
       style: "col-4 p-0",
       minvalue: 10000,
@@ -30,7 +30,7 @@ export class Q01coverageamountComponent implements OnInit {
       text: 'Try to estimate the total value of your stuff as new, such as electronics, clothing, furniture, bikes etc. For any single items worth more than 5.000 € each, add them to your policy here',
     }, 
     'TEMP ACCOMMODATION': {
-      icon: '../../../assets/icn-sprite-coverages-100.png',
+      icon: 'assets/icn-sprite-coverages-100.png',
       price: 0,
       style: "col-4 pr-5",
       minvalue: 0,

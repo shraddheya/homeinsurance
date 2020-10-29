@@ -14,7 +14,7 @@ export class Q02highvalueitemsComponent implements OnInit {
   noticeModal = false;
   valueItem = {
     "JEWELRY": {
-      img: "../../../assets/valuable_items_jewelry.png",
+      img: "assets/valuable_items_jewelry.png",
       text: "What’s the total value of your jewelry items that are worth more than 5.000 € each?",
       maxvalue: 50000,
       minvalue: 5000,
@@ -22,7 +22,7 @@ export class Q02highvalueitemsComponent implements OnInit {
       incrtoggle: 5000,
     },
     "BICYCLES": {
-      img: "../../../assets/valuable_items_bicycle.png",
+      img: "assets/valuable_items_bicycle.png",
       text: "What’s the total value of your bikes that are worth more than 5.000 € each?",
       maxvalue: 10000,
       minvalue: 5000,
@@ -30,7 +30,7 @@ export class Q02highvalueitemsComponent implements OnInit {
       incrtoggle: 500,
     },
     "CAMERAS": {
-      img: "../../../assets/valuable_items_camera.png",
+      img: "assets/valuable_items_camera.png",
       text: "What’s the total value of your camera gear worth more than 5.000 € each?",
       maxvalue: 10000,
       minvalue: 5000,
@@ -38,7 +38,7 @@ export class Q02highvalueitemsComponent implements OnInit {
       incrtoggle: 500,
     },
     "PORTABLE ELECTRONICS": {
-      img: "../../../assets/valuable_items_portable_electronics.png",
+      img: "assets/valuable_items_portable_electronics.png",
       text: "What’s the total value of your portable electronics worth more than 5.000 € each?",
       maxvalue: 10000,
       minvalue: 5000,
@@ -46,7 +46,7 @@ export class Q02highvalueitemsComponent implements OnInit {
       incrtoggle: 500,
     },
     "MUSIC GEAR": {
-      img: "../../../assets/valuable_items_musical_instrument.png",
+      img: "assets/valuable_items_musical_instrument.png",
       text: "What’s the total value of your music gear worth more than 5.000 € each?",
       maxvalue: 10000,
       minvalue: 5000,
@@ -54,14 +54,14 @@ export class Q02highvalueitemsComponent implements OnInit {
       incrtoggle: 500,
     },
     // FASHION ITEMS": {
-    //   img:"../../../assets/valuable_items_fashion_items.png",
+    //   img:"assets/valuable_items_fashion_items.png",
     //   text:"What’s the total value of your fashion items worth more than 5.000 € each?",
     //   maxvalue:50000,
     //   minvalue:5000,
     //   price:,
     //   incrtoggle:5000
     "OTHER": {
-      img: "../../../assets/valuable_items_other.png",
+      img: "assets/valuable_items_other.png",
       text: "What’s the total value of any other items worth more than 5.000 € each?",
       maxvalue: 10000,
       minvalue: 5000,
@@ -72,11 +72,11 @@ export class Q02highvalueitemsComponent implements OnInit {
   
   importantArray: any = [
     {
-      img: '../../../assets/email_icon.png',
+      img: 'assets/email_icon.png',
       text: "After you get a policy, we'll send you instructions to add your items for our review"
     },
     {
-      img: '../../../assets/attention-icon.png',
+      img: 'assets/attention-icon.png',
       text: "Extra Coverage doesn't include wear & tear, equipment malfunctions and zombie attacks."
     }
   ]

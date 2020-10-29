@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataterminalService } from '../dataterminal.service';
-import * as hvi from '../../assets/oipmodel';
+import * as hvi from 'assets/oipmodel';
 
 @Component({
   selector: 'app-c11pdf',
