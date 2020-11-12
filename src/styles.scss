@@ -1,10 +1,14 @@
 $accent1: #00acee;
 $accent2: #15202a;
+$accent3: rgb(220, 0, 115);
 :root {
   --accent1: #00acee;
   --accent2: #15202a;
+  --accent3: rgb(220, 0, 115)
 }
-
+.lightbghome{
+  background-color: #f8f4f4;
+}
 body {
   box-sizing: content-box;
   overflow-x: hidden;
@@ -32,8 +36,14 @@ body {
   text-align: center;
 }
 
+.divcenter{
+  margin-left:auto;
+  margin-right:auto;
+  display: table;
+}
+
 .bcktitle {
-  background-color: var(--accent1);
+  background-color: var(--accent3);
 }
 
 .cardouter {
@@ -106,19 +116,19 @@ body {
   font-size: 14px;
   outline: none;
   text-decoration: none;
-  padding: 15px 60px 15px 60px;
+  padding: 15px 70px 15px 70px;
   border-radius: 5px;
   border-width: 1px;
   border-style: solid;
   border-color: transparent;
   border-image: initial;
   transition: all 0.3s ease 0s, transform 0.5s ease 0s;
-  background-color: var(--accent1);
+  background-color: var(--accent3);
   // box-shadow: '#{$accent1}bb'
 }
 
 .hrline {
-  background-color: var(--accent2) !important;
+  background-color: var(--accent3) !important;
   height: 1.3px;
 }
 
@@ -144,7 +154,7 @@ input[type='radio']:checked:after {
   top: -2px !important;
   left: -1px !important;
   position: relative !important;
-  background-color: var(--accent2) !important;
+  background-color: var(--accent3) !important;
   display: inline-block !important;
   visibility: visible !important;
   border: 1px solid gray!important;
@@ -164,7 +174,7 @@ input[type='checkbox']:after {
   text-align: center;
   font-size: 1.25em;
   font-family: bold;
-  color:var(--accent2) !important;
+  color:var(--accent3) !important;
 }
 
 input[type='checkbox']:checked:after {
@@ -172,7 +182,7 @@ input[type='checkbox']:checked:after {
 }
 
 .modelOpenButt{
-  background-color: var(--accent2);
+  background-color: var(--accent3);
   box-shadow: rgba(15, 15, 15, 0.699) 0px 20px 40px -10px;
   position: absolute;
   top: .7em;

@@ -1,0 +1,60 @@
+.titlecolor{
+  color: rgb(74, 74, 74);
+  display: table;
+  margin:auto;
+  font-size: 3rem;
+  line-height: 1.3;
+  font-family: Merriweather, Georgia, serif;
+  font-weight: 5000;
+}
+.cotitle{
+  text-align: center;
+    font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 4000;
+    font-size: 1.1rem;
+    line-height: 1.5em;
+    color: rgb(74, 74, 74);
+}
+.playdiv{
+  margin:auto;
+  display: table;
+}
+.btntext{
+  color:rgb(255, 0, 131)
+}
+.imgbg{
+  margin:auto;
+  display:table
+}
+.styleimg{
+  height:21sem;
+  width:42em;
+}
+
+.instantimg{
+  font-size: 2em;
+}
+#imgleft{
+  position: relative;
+  top: -2em;
+  right: -7.5em;
+
+}
+#imgright{
+  position: relative;
+    top: -2em;
+    left: -1em;
+}
+#instantleft{
+  position: relative;
+  top: 3.6em;
+}
+#instantright{
+  left: -4em;
+    position: relative;
+    top: 2em;
+}
+#instantcontent{
+  position: relative;
+  top:3em
+}

@@ -1,0 +1,21 @@
+<div class="text-center pt-5">
+  <div class="mt-5">
+    <h2 class="p-2 mt-4 maintitle font-weight-bold">How big is your home?</h2>
+    <h6 class="p-2 mt-3 maintitle font-weight-bold">If you don't remember the exact size, an approximation is ok</h6>
+    <!-- <span *ngIf=alert class="alertspan"> ! {{home_size}} seems unreasonable. Please try again. </span> -->
+    <span *ngIf=alert class="alertspan">  seems unreasonable. Please try again. </span>
+    <div class="row justify-content-center p-2 mt-5">
+      <div class="col-lg-2 col-xs-4">
+        <div class="form-row">
+          <form class="col" [formGroup]="sizeForm">
+            <input mdbInput type="number" class="form-control p-4" min=10 max=999 value="10" placeholder="SQUARE METERS" formControlName="size">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-2 mt-4">
+      <button mdbBtn class="buttonstyle text-white" mdbWavesEffect (click)="clicked()" [disabled]="! sizeForm.valid">Next</button>
+    </div>
+  </div>
+</div>

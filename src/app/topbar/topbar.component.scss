@@ -17,3 +17,16 @@
 .linkindex {
   z-index: 3000;
 }
+#centerlogo{
+  box-sizing: border-box;
+ display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  top: 0px;
+  transform: translateX(-50%);
+}

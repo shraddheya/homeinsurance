@@ -1,0 +1,40 @@
+.footersection{
+  box-sizing: border-box;
+  background-color: rgb(40, 40, 40);
+}
+.dropdown{
+  background-color: rgb(40, 40, 40);
+}
+.dropdown-item{
+  background-color: rgb(40, 40, 40);
+}
+.dropdown-item:hover{
+  background-color:gray;
+}
+.footertitle{
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    font-weight: 700;
+    color: rgb(183, 183, 183);
+    text-transform: uppercase;
+}
+.footertexts{
+  color: rgb(255, 255, 255);
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+#footerbottomtext{
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  color: rgba(183, 183, 183, 0.5);
+  white-space: pre-wrap;
+}
+.centerstyle{
+  margin:auto;
+  display:table
+}

@@ -15,7 +15,7 @@ export class ButtBackComponent implements OnInit {
     this.dataservice.changepage(false);
   }
 
-  constructor( public dataservice: DataterminalService, private router: Router ) {
+  constructor(public dataservice: DataterminalService, private router: Router) {
     dataservice.allData = {
       "c00plan": {
         "name": "Contents Contents",
@@ -31,12 +31,10 @@ export class ButtBackComponent implements OnInit {
         "pincode": "452010"
       },
       "c03type-home": "Single family house",
-      "c04size-home": 10,
-      "c05security": [
-        ""
-      ],
-      "c06members": "c",
-      "c07insurance-claim-count": "No",
+      "c04primaryresidence": 10,
+      "c05size-home": 0,
+      "c06security": [""],
+      "c07members": "c",
       "c08assets": true,
       "c09get-quote": {
         "email": "shraddheya.shrivastava@gmail.com",
@@ -44,7 +42,10 @@ export class ButtBackComponent implements OnInit {
         "receivediscount": true,
         "privacyterm": true
       },
-      "c10quote-detail": {
+      "c10loading":"",
+      "c11builthome-year": "",
+      "c12insurance-claim-count": "No",
+      "c13quote-detail": {
         "q01coverageamount": {
           'PERSONAL LIABILITY': 40000,
           'CONTENTS': 10000,
@@ -58,9 +59,12 @@ export class ButtBackComponent implements OnInit {
           'Music Equipment': 5000,
           'Other': 5000,
         },
-        "q03superpowers": []
+        q03superpowers: ["",],
       }
     };
+
+
+
     router.events.subscribe(val => {
       if (val instanceof NavigationEnd) {
         let idx = dataservice.pageList.indexOf(val.url.substr(1));
@@ -70,7 +74,7 @@ export class ButtBackComponent implements OnInit {
         let gotoPageIdx = idx;
         for (let i = 0; i < idx; i++) {
           let pgnm = dataservice.pageList[i];
-          if (JSON.stringify(dataservice.allData[pgnm]) === JSON.stringify(dataservice.dtblank[pgnm])){
+          if (JSON.stringify(dataservice.allData[pgnm]) === JSON.stringify(dataservice.dtblank[pgnm])) {
             gotoPageIdx = i;
             break;
           }
@@ -80,7 +84,7 @@ export class ButtBackComponent implements OnInit {
           dataservice.gotopage(gotoPageIdx);
         }
       }
-    })  
+    })
   }
 
   ngOnInit(): void { }

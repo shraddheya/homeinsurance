@@ -1,0 +1,138 @@
+<div class="bg-dark">
+  <div class="quotessections">
+    <div class="row justify-content-center mt-5">
+      <div class="col-7 p-5">
+        <div id="page1" class="bg-white m-2">
+          <div class="watermark">
+            <div class="watermarktext">{{quotespages.watermark | uppercase}}</div>
+          </div>
+          <div class="pagetitle text-center">
+            <h1>You’re <br> Amazing</h1>
+            <h4 class="p-5">
+              <span>You’re now part of a special group of people, who participate in making history. Together, we’ll be
+                able to make insurance anhonest, simple and fun experience.</span><br><br>
+              <span>Thanks for joining, we’re sure you’re gonna love it here :)"</span>
+            </h4>
+          </div>
+          <div class="pagegape"></div>
+          <div class="pagefooter">
+            <img src={{quotespages.logo}} alt="" class="centerdiv pb-4">
+            <div class="text-center footertext">@ {{quotespages.footertext}}</div>
+          </div>
+        </div>
+
+        <div id="page2" class="bg-white m-2">
+          <div class="watermark">
+            <div class="watermarktext">{{quotespages.watermark | uppercase}}</div>
+          </div>
+          <img id="imgstyle" class="centerdiv" src={{quotespages.logo}} alt="">
+          <div class="row p-4">
+            <div class="col-4 p-3" *ngFor="let spdetail of quotespages.data.page2.detail | keyvalue">
+              <span class="ptdetail">{{spdetail.key}}</span><br>
+              <span class="ptrecord">{{spdetail.value}}</span>
+            </div>
+          </div>
+          <div id="page2table">
+            <div class="datatitle">
+              {{quotespages.data.page2.table.title | uppercase}}
+            </div>
+            <table class="table text-left">
+              <tr class="tborderquotes" id="tableheadfont">
+                <td *ngFor="let th of quotespages.data.page2.table.head">{{th | uppercase}}</td>
+              </tr>
+              <tr class="tborderquotes" *ngFor="let td of quotespages.data.page2.table.data | keyvalue: asIs">
+                <td>{{td.key}}</td>
+                <td>{{td.value}}</td>
+                <td>Included</td>
+              </tr>
+              <tr class="font-weight-bold">
+                <td>{{quotespages.data.page2.table.total.title}}</td>
+                <td>{{quotespages.data.page2.table.total.value}}</td>
+              </tr>
+            </table>
+
+          </div>
+          <div class="pagegape"></div>
+          <div class="pagefooter">
+            <div class="text-center footertext">@ {{quotespages.footertext2}}</div>
+          </div>
+        </div>
+
+        <div id="page3" class="bg-white m-2">
+          <div class="watermark">
+            <div class="watermarktext">{{quotespages.watermark | uppercase}}</div>
+          </div>
+          <img id="imgstyle" class="centerdiv" src={{quotespages.logo}} alt="">
+          <div id="page2table">
+            <div class="datatitle">
+              {{quotespages.data.page3.table.title | uppercase}}
+            </div>
+            <table class="table text-left">
+              <tr class="tborderquotes" id="tableheadfont">
+                <td *ngFor="let th of quotespages.data.page3.table.head">{{th | uppercase}}</td>
+              </tr>
+              <tr class="tborderquotes" *ngFor="let td of quotespages.data.page3.table.data | keyvalue">
+                <td>{{td.key}}</td>
+                <td>{{td.value}}</td>
+              </tr>
+              <tr class="font-weight-bold">
+                <td>{{quotespages.data.page3.table.total.title}}</td>
+                <td>{{quotespages.data.page3.table.total.value}}</td>
+              </tr>
+            </table>
+
+          </div>
+          <div class="pagegape"></div>
+          <div class="centerdiv p-2 text-center footertext">{{quotespages.footertext1}}</div>
+          <div class="centerdiv pl-4 pr-4 pb-5 text-center footertext">{{quotespages.footertext2}}</div>
+        </div>
+
+        <div id="page4" class="bg-white m-2">
+          <div class="watermark">
+            <div class="watermarktext">{{quotespages.watermark | uppercase}}</div>
+          </div>
+          <img id="imgstyle" class="centerdiv" src={{quotespages.logo}} alt="">
+          <div>
+            <div class="datatitle">
+              {{quotespages.data.page4.listdata.title | uppercase}}
+            </div>
+            <div class="tborderquotes p-2" *ngFor="let lditem of quotespages.data.page4.listdata.data">
+              {{lditem}}
+            </div>
+          </div>
+          <div class="pagegape"></div>
+          <div class="centerdiv p-2 text-center footertext">{{quotespages.footertext1}}</div>
+          <div class="centerdiv pl-4 pr-4 pb-5 text-center footertext">{{quotespages.footertext2}}</div>
+        </div>
+
+        <div id="page5" class="bg-white m-2">
+          <div class="watermark">
+            <div class="watermarktext">{{quotespages.watermark | uppercase}}</div>
+          </div>
+          <img id="imgstyle" class="centerdiv" src={{quotespages.logo}} alt="">
+
+          <div class="pl-3 pr-3">
+            <div class="datatitle">
+              {{quotespages.data.page5.paragraph.title | uppercase}}
+            </div>
+            <div id="parafont">
+              <div *ngFor="let paradata of quotespages.data.page5.paragraph.data | keyvalue" class="p-2">
+                <p class="font-weight-bold p-1">{{paradata.value.title}}</p>
+                <p class="p-1">{{paradata.value.value}}</p>
+              </div>
+              <div *ngFor="let pararegards of quotespages.data.page5.paragraph.regards">
+                <p class="p-3">{{pararegards}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="pagegape"></div>
+          <div class="centerdiv p-2 text-center footertext">{{quotespages.footertext1}}</div>
+          <div class="centerdiv pl-4 pr-4 pb-5 text-center footertext">{{quotespages.footertext2}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="payButt">
+  <app-payment [amount]=payable></app-payment>
+</div>

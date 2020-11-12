@@ -7,12 +7,15 @@ import { DataterminalService } from '../dataterminal.service';
   templateUrl: './c02adderss.component.html',
   styleUrls: ['./c02adderss.component.scss']
 })
-export class C02adderssComponent implements OnInit {  
+export class C02adderssComponent implements OnInit {
 
   citystatelist = {
     'Indore,Madhyapradesh': '452010',
     'Pune,Maharashtra': '472010',
   }
+
+  lat = 56.678418;
+  lng = 7.809007;
 
   addressForm = new FormGroup({
     housenumber: new FormControl(this.dataservice.allData.c02address.housenumber, Validators.required),
@@ -22,10 +25,10 @@ export class C02adderssComponent implements OnInit {
 
   constructor( public dataservice: DataterminalService ) { }
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
     console.log(this.addressForm.value, this.addressForm.value.address === "");
   }
-  
+
   changed(e: any) {
     let addressValues = this.addressForm.getRawValue();
     addressValues.pincode = this.citystatelist[addressValues.address];

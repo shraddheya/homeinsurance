@@ -1,0 +1,64 @@
+<div class="footersection">
+  <div class="row p-5">
+    <div class="col-2">
+
+    </div>
+    <div class="col-2">
+      <p class="footertitle">FEATURES</p>
+      <p><a href="" class="footertexts">API</a></p>
+      <p><a href="" class="footertexts">Giveback</a></p>
+      <p><a href="" class="footertexts">Claims</a></p>
+      <p><a href="" class="footertexts">Policy 2.0</a></p>
+      <p><a href="" class="footertexts">Homeowners Insurance</a></p>
+    </div>
+    <div class="col-2">
+      <p class="footertitle">RESOURCES</p>
+      <p><a href="" class="footertexts" >Blog</a></p>
+      <p><a href="" class="footertexts" >FAQ</a></p>
+      <p><a href="" class="footertexts" >Community</a></p>
+      <p><a href="" class="footertexts" >Transparency</a></p>
+      <p><a href="" class="footertexts" >Where We're Live</a></p>
+      <p><a href="" class="footertexts" >Insurance Dictionary</a></p>
+      <p><a href="" class="footertexts" >Investor Relations</a></p>
+    </div>
+    <div class="col-2">
+      <p class="footertitle">Company</p>
+      <p><a href="" class="footertexts">Join the Team</a></p>
+      <p><a href="" class="footertexts">Legal Stuff</a></p>
+      <p><a href="" class="footertexts">Privacy Pledge</a></p>
+      <p><a href="" class="footertexts">Terms of Service</a></p>
+      <p><a href="" class="footertexts">Accessibility</a></p>
+      <p><a href="" class="footertexts">Partners Program</a></p>
+      <p><a href="" class="footertexts">Reviews</a></p>
+    </div>
+    <div class="col-4">
+      <div>
+        <p class="footertitle">REGION</p>
+        <div class="mt-2 mb-2">
+          <div class="btn-group border border-white rounded mb-0" mdbDropdown>
+            <a mdbDropdownToggle type="button" mdbBtn  class="dropdown-toggle waves-light dropdown"
+              mdbWavesEffect>
+              {{footerregion.code | uppercase}} {{footerregion.language | uppercase}}
+            </a>
+
+            <div class="dropdown-menu dropdown border border-white">
+              <a *ngFor="let drli of footerregionarray" class="dropdown-item text-white dropdownlist" (click)="footerregion = drli">{{drli.code | uppercase}} {{drli.language | uppercase}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="footertitle">GET OUR APP</p>
+      </div>
+      <div>
+        <p class="footertitle">FOLLOW US</p>
+      </div>
+    </div>
+  </div>
+  <div class="centerstyle">
+    <p id="footerbottomtext">
+      Insurance provided by Lemonade Insurance Company, 5 Crosby St. 3rd floor, New York, NY 10013<br>
+      Lemonade Insurance Agency (LIA) is acting as the agent of Lemonade Insurance Company in selling this insurance policy. It receives compensation based on the premiums for the <br> insurance policies it sells. Further information is available upon request.
+    </p>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div>
+  <app-h01-banner></app-h01-banner>
+  <app-h02-clients></app-h02-clients>
+  <app-h03-rattinggreel></app-h03-rattinggreel>
+  <app-h04-coverageprotects></app-h04-coverageprotects>
+  <app-h05-instanteverything></app-h05-instanteverything>
+  <!-- <app-h06-plansubscribe></app-h06-plansubscribe> -->
+  <app-c00plan></app-c00plan>
+  <app-h07-alreadyinsured></app-h07-alreadyinsured>
+  <app-h08-howwork></app-h08-howwork>
+  <app-h09-licensedcertification></app-h09-licensedcertification>
+  <app-footer></app-footer>
+</div>
+<a id="helpdesk" class="z-depth-3" (click)="helpmodal.show()">
+  <p><mdb-icon far icon="question-circle"></mdb-icon>&nbsp;Help</p>
+</a>
+<div mdbModal #helpmodal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header border border-white">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="helpmodal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title w-100" id="myModalLabel">
+          <span *ngIf=formsubmit>ASK US ANYTHING</span>
+          <span *ngIf=!formsubmit>Thanks {{helpForm.value.fullname}}</span>
+        </h4>
+      </div>
+      <div class="modal-body border border-white">
+        <p class="modalbodytitle">
+          <span *ngIf=formsubmit>Fill in your details, write your question, and we will get back to<br> you</span>
+          <span *ngIf=!formsubmit>We got your message and will get back to you as soon as possible.</span>
+        </p>
+        <form [formGroup]="helpForm" *ngIf=formsubmit>
+          <div style="margin:auto;display: table;">
+            <div>
+              <input type="text" class="form-control inputhelp" formControlName="fullname" placeholder="FULL NAME">
+            </div>
+            <div>
+              <input type="text" class="form-control inputhelp" formControlName="email" placeholder="EMAIL ADDRESS">
+            </div>
+            <div>
+              <textarea cols="30" class="form-control inputhelp" rows="9" formControlName="writehelp" placeholder="HOW CAN WE HELP?"></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer border border-white">
+        <div style="margin:auto;display:table">
+          <div *ngIf=formsubmit>
+            <button [disabled]="! helpForm.valid" type="button" mdbBtn class="waves-light btnhome" aria-label="Close" (click)="helpClicked()" mdbWavesEffect>SEND</button>
+          </div>
+          <div *ngIf=!formsubmit>
+            <button type="button" mdbBtn class="waves-light btnhome" aria-label="Close" (click)="helpmodal.hide()" mdbWavesEffect>OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

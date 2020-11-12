@@ -13,8 +13,8 @@ export class C03typeHomeComponent implements OnInit {
   buttDisabled = true;
   hometype = {
     Apartment: {
-      img:'assets/apartment-4a8897f29eed3d4213146db08afe4e9929ad64f22e8dd081b56007e18ff0d346.png',
-      imgactive:'assets/apartment_active-7af90d4284ac71df4c7893b737aeab9783c7a6206f9023f663bb808835567df5.png',
+      img:'assets/renters.png',
+      imgactive:'assets/renters_selected.png',
       selectedview: this.dataservice.allData["c03type-home"] === "Apartment"
     },
     'Single family house': {

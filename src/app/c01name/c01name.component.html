@@ -3,22 +3,24 @@
 
     <h2 class="p-3 maintitle font-weight-bold">Hey! I'm Maya. I'll get you an awesome<br> price in seconds. Ready to go?
     </h2>
-    <div class="row justify-content-center p-5">
-      <div class="col-5">
-        <form [formGroup]="profileForm">
-          <div class="form-row">
-            <div class="col">
-              <input mdbInput type="text" class="form-control p-4 inputtexthover" formControlName="firstName" placeholder="First name">
-            </div>
-            <div class="col">
-              <input mdbInput type="text" class="form-control p-4 inputtexthover" formControlName="lastName" placeholder="Last name">
-            </div>
+    <div class="divcenter">
+      <form [formGroup]="profileForm">
+        <div class="form-row p-2">
+          <div class="col">
+            <input mdbInput type="text" class="form-control p-4 inputtexthover" formControlName="firstName"
+              placeholder="First name">
           </div>
-        </form>
-      </div>
+          <div class="col">
+            <input mdbInput type="text" class="form-control p-4 inputtexthover" formControlName="lastName"
+              placeholder="Last name">
+          </div>
+        </div>
+      </form>
     </div>
+
     <div class="whitetext p-3">
-      <button mdbBtn class="buttonstyle text-white" (click)="clicked()" [disabled]="! profileForm.valid">LETS DO THIS</button>
+      <button mdbBtn class="buttonstyle text-white" (click)="clicked()" [disabled]="! profileForm.valid">LETS DO
+        THIS</button>
     </div>
   </div>
 </div>
