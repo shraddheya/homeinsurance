@@ -17,7 +17,7 @@ import { C13quoteDetailComponent } from './c13quote-detail/c13quote-detail.compo
 import { C14pdfComponent } from './c14pdf/c14pdf.component';
 import { HomeComponent } from './home/home.component';
 const routes: Routes = [
-  // { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '', component: HomeComponent },
   { path: 'c01name', component: C01nameComponent },
   { path: 'c02address', component: C02adderssComponent },
