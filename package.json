@@ -5,6 +5,8 @@
     "ng": "ng",
     "build:prod": "ng build --prod --baseHref=\"./\"",
     "gitproc": "git commit -m \"AUTO CI CD\"",
+    "preherokupush": "git commit -am \"heroku\"",
+    "herokupush": "git push heroku master",
     "start:serve": "ng serve",
     "start": "node server.js",
     "build": "ng build",
@@ -13,7 +15,7 @@
     "e2e": "ng e2e",
     "pregitproc": "git add .",
     "postgitproc": "git push",
-    "postinstall": "ng build --aot --target=production"
+    "postinstall": "ng build --aot --prod"
   },
   "private": true,
   "dependencies": {
