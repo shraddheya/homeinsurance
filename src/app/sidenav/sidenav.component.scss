@@ -1,0 +1,26 @@
+.sidesection{
+  box-sizing: border-box;
+  background-color: rgb(40, 40, 40);
+}
+#sidenavlist{
+  position: relative;
+  line-height: 3em;
+  color:white
+}
+#sidenavlist > ul > li{
+  list-style-type: none;;
+}
+#footerlistdiv{
+  position: relative;
+  display: table;
+  margin: auto;
+}
+.sidenavfooter{
+  box-sizing: border-box;
+  position: inherit;
+  width: 57px;
+  height: 57px;
+  background-color: #4a4a4a;
+  border-radius: 50%;
+  display: table-cell;
+}

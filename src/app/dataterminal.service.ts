@@ -64,5 +64,11 @@ export class DataterminalService {
         return
     }
   }
-  domFunction(data: any) { }
+  domFunction(mode: any) {
+    switch(mode){
+      case 'reset':
+        this.route.navigate(['/c01name'])
+      return
+    }
+  }
 }

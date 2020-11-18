@@ -1,31 +1,28 @@
 <div class="fixedheader">
-
   <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark white p-3 border border-grey darken-3 border-bottom"
     [containerInside]="false">
     <mdb-navbar-brand>
-      <a class="navbar-brand text-dark" href="#">
-        <mdb-icon fas icon="bars"></mdb-icon>
-      </a>
-      <span *ngIf="router.url !== '/'">
+      <app-sidenav></app-sidenav>
+      <span *ngIf="router.url !== '/home'">
         <img src="assets/logo.svg" alt="">
       </span>
     </mdb-navbar-brand>
-    <div id="centerlogo" *ngIf="router.url === '/'">
-      <img src="assets/logo.svg" alt="" height="30em">
+    <div id="centerlogo">
+      <img *ngIf="router.url === '/home'" src="assets/logo.svg" alt="" height="30em">
     </div>
     <links>
       <ul class="navbar-nav ml-auto nav-flex-icons">
-        <li class="nav-item linkindex" *ngIf="router.url !== '/'">
+        <li class="nav-item linkindex" *ngIf="router.url !== '/home'">
           <a class="nav-link text-dark" (click)="dataservice.domFunction('reset')">
             <mdb-icon fas icon="undo"></mdb-icon>
           </a>
         </li>
-        <li class="nav-item linkindex" *ngIf="router.url !== '/'">
+        <li class="nav-item linkindex" *ngIf="router.url !== '/home'">
           <a class="nav-link text-dark">
             <mdb-icon far icon="question-circle"></mdb-icon>
           </a>
         </li>
-        <li class="nav-item linkindex" *ngIf="router.url === '/'">
+        <li class="nav-item linkindex" *ngIf="router.url === '/home'">
           <a class="nav-link text-dark">
             My Account
           </a>
@@ -39,7 +36,7 @@
     </links>
     <!-- Collapsible content -->
   </mdb-navbar>
-  <div class="row justify-content-center" style="position: relative;top:-4.7em;" *ngIf="router.url !== '/'">
+  <div class="row justify-content-center" style="position: relative;top:-4.7em;" *ngIf="router.url !== '/home'">
     <div class="col-1">
       <img class="iconimgtop" src="assets/Maya-79af77d3c1e0abe54a4a8f349950ec6b23457716b5361568851546d1cb5c3643.jpg"
         alt="">

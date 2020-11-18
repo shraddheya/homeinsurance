@@ -1,0 +1,38 @@
+<a class="navbar-brand text-dark" (click)="sidenavmodal.show()">
+  <mdb-icon fas icon="bars"></mdb-icon>
+</a>
+
+<div mdbModal #sidenavmodal="mdbModal" class="modal fade left" tabindex="-1" role="dialog"
+  aria-labelledby="myBasicModalLabel" aria-hidden="true" [config]="{backdrop: false}">
+  <div class="modal-dialog modal-full-height modal-left modal-sm" role="document">
+    <div class="modal-content sidesection">
+      <div class="modal-header" style="border-bottom: 0.3em solid rgb(40, 40, 40);">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="sidenavmodal.hide()">
+          <span aria-hidden="true" class="text-white">×</span>
+        </button>
+        <h4 class="modal-title w-100" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+        <div id="sidenavlist">
+          <ul>
+            <li><a routerLink='/home' class="text-white">Home</a></li>
+            <li><a href="#" class="text-white">FAQ</a></li>
+            <li><a href="#" class="text-white">Claims</a></li>
+            <li><a href="#" class="text-white">Giveback</a></li>
+            <li><a href="#" class="text-white">Blog</a></li>
+            <li><a href="#" class="text-white">COVID-19</a></li>
+            <li><a href="#" class="text-white">Pet</a></li>
+            <li><a href="#" class="text-white">My Account</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer" style="border-top: 0.3em solid rgb(40, 40, 40);">
+        <div id="footerlistdiv">
+          <div class="sidenavfooter"></div>
+          <div class="sidenavfooter"></div>
+          <div class="sidenavfooter"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

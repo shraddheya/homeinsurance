@@ -3,10 +3,7 @@ import { NgModule } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
-// import { GoogleMapsModule } from '@angular/google-maps';
-// import { AgmCoreModule } from '@agm/core';
-// import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
-
+import { AgmCoreModule } from '@agm/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopbarComponent } from './topbar/topbar.component';
@@ -35,15 +32,15 @@ import { C06securityComponent } from './c06security/c06security.component';
 import { C05sizeHomeComponent } from './c05size-home/c05size-home.component';
 import { C04primaryresidenceComponent } from './c04primaryresidence/c04primaryresidence.component';
 import { C11builthomeYearComponent } from './c11builthome-year/c11builthome-year.component';
-import { H01BannerComponent } from './h01-banner/h01-banner.component';
-import { H02ClientsComponent } from './h02-clients/h02-clients.component';
-import { H03RattinggreelComponent } from './h03-rattinggreel/h03-rattinggreel.component';
-import { H04CoverageprotectsComponent } from './h04-coverageprotects/h04-coverageprotects.component';
-import { H05InstanteverythingComponent } from './h05-instanteverything/h05-instanteverything.component';
-import { H06PlansubscribeComponent } from './h06-plansubscribe/h06-plansubscribe.component';
-import { H07AlreadyinsuredComponent } from './h07-alreadyinsured/h07-alreadyinsured.component';
-import { H08HowworkComponent } from './h08-howwork/h08-howwork.component';
-import { H09LicensedcertificationComponent } from './h09-licensedcertification/h09-licensedcertification.component';
+import { H01BannerComponent } from './home/h01-banner/h01-banner.component';
+import { H02ClientsComponent } from './home/h02-clients/h02-clients.component';
+import { H03RattinggreelComponent } from './home/h03-rattinggreel/h03-rattinggreel.component';
+import { H04CoverageprotectsComponent } from './home/h04-coverageprotects/h04-coverageprotects.component';
+import { H05InstanteverythingComponent } from './home/h05-instanteverything/h05-instanteverything.component';
+import { H06PlansubscribeComponent } from './home/h06-plansubscribe/h06-plansubscribe.component';
+import { H07AlreadyinsuredComponent } from './home/h07-alreadyinsured/h07-alreadyinsured.component';
+import { H08HowworkComponent } from './home/h08-howwork/h08-howwork.component';
+import { H09LicensedcertificationComponent } from './home/h09-licensedcertification/h09-licensedcertification.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -97,12 +94,11 @@ import { C10loadingpageComponent } from './c10loadingpage/c10loadingpage.compone
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     ReactiveFormsModule,
-    // GoogleMapsModule,
-    // GooglePlaceModule,
-    //  AgmCoreModule.forRoot({
-    //   apiKey: 'AIzaSyDt1YJIwwZRjt3wI1xyH8bdY3sBf7PbR8s',
-    //   libraries:["places"]
-    // }),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAhjjjihi_jtY24Dd3ci3HAikdhn8fTrPs',
+      libraries: ["places"]
+    }),
+
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]

@@ -1,39 +1,39 @@
 <div class="text-center pt-5">
   <div class="mt-5">
-    <h2 class="p-4 maintitle font-weight-bold">Great to meet you {{dataservice.allData.c01name.firstName}}! What's your home <br> address?</h2>
-    <div class="p-3">
-      <!-- <agm-map [latitude]="lat" [longitude]="lng">
-        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-      </agm-map> -->
-    </div>
+    <h2 class="p-2 maintitle font-weight-bold">Great to meet you {{dataservice.allData.c01name.firstName}}! What's your
+      home <br> address?</h2>
     <div class="p-5">
+      <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+        <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
+          (dragEnd)="markerDragEnd($event)"></agm-marker>
+      </agm-map>
+    </div>
+    <div class="p-4">
       <div class="row justify-content-center">
         <div class="col-lg-5 col-xs-8">
           <form [formGroup]="addressForm" class="p-2">
             <div class="form-row">
               <div class="col-lg-5 col-xs-12 m-xs-2">
-                <select class="browser-default custom-select" (change)="changed($event)" formControlName="address">
-                  <option >Street, City</option>
-                  <option *ngFor='let item of citystatelist | keyvalue' value={{item.key}} >{{item.key}}</option>
-                </select>
+                <!-- <select class="browser-default custom-select" (change)="changed($event)" formControlName="address">
+                  <option>Street, City</option>
+                  <option *ngFor='let item of citystatelist | keyvalue' value={{item.key}}>{{item.key}}</option>
+                </select> -->
+                <div class="form-group">
+                  <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search>
+                </div>
               </div>
               <div class="col-lg-4 col-xs-12 m-xs-2">
                 <input type="text" class="form-control p-3" formControlName="housenumber" placeholder="Housenumber">
               </div>
               <div class="col-lg-3 col-xs-12 m-xs-2">
-                <input type="text" class="form-control p-3" formControlName="pincode" placeholder="pincode" [readonly]=true>
+                <input type="text" class="form-control p-3" formControlName="pincode" placeholder="pincode"
+                  [readonly]=true>
               </div>
             </div>
           </form>
         </div>
       </div>
     </div>
-
-
-    <!-- <div class="container">
-        <input ngx-google-places-autocomplete [options]='options.componenRestrictions' (onAddressChange)="AddressChange($event)" />
-        {{ formattedaddress }}
-      </div> -->
 
     <!-- Next Button -->
     <div class="p-3">
