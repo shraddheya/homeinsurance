@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build:prod": "ng build --prod --baseHref=\"./\" --output-hashing none",
+    "build:prod": "ng build --prod --baseHref=\"./\"",
     "gitproc": "git commit -m \"AUTO CI CD\"",
     "preherokucommit": "git add -A",
     "herokucommit": "git commit -am \"heroku\"",
