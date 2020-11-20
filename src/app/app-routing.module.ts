@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { C00planComponent } from './c00plan/c00plan.component';
 import { C01nameComponent } from './c01name/c01name.component';
 import { C02adderssComponent } from './c02adderss/c02adderss.component';
 import { C03typeHomeComponent } from './c03type-home/c03type-home.component';
@@ -15,6 +14,7 @@ import { C11builthomeYearComponent } from './c11builthome-year/c11builthome-year
 import { C12insuranceClaimCountComponent } from './c12insurance-claim-count/c12insurance-claim-count.component';
 import { C13quoteDetailComponent } from './c13quote-detail/c13quote-detail.component';
 import { C14pdfComponent } from './c14pdf/c14pdf.component';
+import { H10ProductoncheckpriceComponent } from './home/h10-productoncheckprice/h10-productoncheckprice.component';
 import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -32,7 +32,8 @@ const routes: Routes = [
   { path: 'c11builthome-year', component: C11builthomeYearComponent },
   { path: 'c12insurance-claim-count', component: C12insuranceClaimCountComponent },
   { path: 'c13quote-detail', component: C13quoteDetailComponent },
-  { path: 'c14pdf', component: C14pdfComponent }
+  { path: 'c14pdf', component: C14pdfComponent },
+  { path: 'product', component: H10ProductoncheckpriceComponent}
 
 ];
 @NgModule({

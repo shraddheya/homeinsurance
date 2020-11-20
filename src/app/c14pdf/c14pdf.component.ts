@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataterminalService } from '../dataterminal.service';
-import * as hvi from '../../assets/oipmodel';
+import * as hvi from 'src/assets/oipmodel';
 
 @Component({
   selector: 'app-c14pdf',
@@ -11,6 +11,7 @@ export class C14pdfComponent implements OnInit {
 
   asIs (a: any, b:any) { return a; }
   payable: number;
+
   quotespages: any = {
     watermark:'quote',
     logo: "assets/logo.svg",
@@ -96,7 +97,7 @@ export class C14pdfComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.dataservice.allData["c10quote-detail"].q01coverageamount);
 
-    this.payable = this.dataservice.allData.c00plan.price +
+    this.payable = this.dataservice.allData.home.price +
     hvi.content_lowvalue.filter((it: any) => {
       return it.insurance_value === this.dataservice.allData['c10quote-detail'].q01coverageamount['CONTENTS']
     })[0].price_month +

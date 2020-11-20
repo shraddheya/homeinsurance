@@ -13,7 +13,7 @@
     <links>
       <ul class="navbar-nav ml-auto nav-flex-icons">
         <li class="nav-item linkindex" *ngIf="router.url !== '/home'">
-          <a class="nav-link text-dark" (click)="dataservice.domFunction('reset')">
+          <a class="nav-link text-dark" mdbTooltip="Start Over" placement="bottom" (click)="resetmodal.show()">
             <mdb-icon fas icon="undo"></mdb-icon>
           </a>
         </li>
@@ -28,8 +28,8 @@
           </a>
         </li>
         <li class="nav-item linkindex" *ngIf="showpricebtn">
-          <a class="nav-link text-white buttonstyle" style="width:6em">
-            Prices
+          <a class="nav-link text-white buttonstyle" routerLink="/product" style="width:auto">
+            CHECK OUR PRICES
           </a>
         </li>
       </ul>
@@ -40,6 +40,33 @@
     <div class="col-1">
       <img class="iconimgtop" src="assets/Maya-79af77d3c1e0abe54a4a8f349950ec6b23457716b5361568851546d1cb5c3643.jpg"
         alt="">
+    </div>
+  </div>
+</div>
+
+
+
+<div mdbModal #resetmodal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header border border-white">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="resetmodal.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <h5 class="p-2 font-weight-bold">WANT TO START OVER?</h5>
+        <p class="p-2">This will clear your answers and start again from the beginning</p>
+      </div>
+      <div class="modal-footer border border-white">
+        <div class="divcenter">
+          <button type="button" mdbBtn  class="waves-light font-weight-bold startovercancel" aria-label="Close"
+            (click)="resetmodal.hide()" mdbWavesEffect>CANCEL</button>
+          <button type="button" mdbBtn class="relative text-white waves-light buttonstyle"
+            (click)="dataservice.domFunction('reset'); resetmodal.hide()" mdbWavesEffect>START OVER</button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

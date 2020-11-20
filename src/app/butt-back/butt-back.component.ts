@@ -17,7 +17,7 @@ export class ButtBackComponent implements OnInit {
 
   constructor(public dataservice: DataterminalService, private router: Router) {
     dataservice.allData = {
-      "c00plan": {
+      "home": {
         "name": "Contents Contents",
         "price": 2
       },

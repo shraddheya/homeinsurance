@@ -11,7 +11,7 @@ export class Q08activeinsuranceComponent implements OnInit {
   constructor( public dataservice: DataterminalService ) { }
 
   ngOnInit(): void {
-    console.log(this.dataservice.allData.c00plan.price);
+    console.log(this.dataservice.allData.home.price);
   }
   clicked() {
     this.dataservice.changepage();

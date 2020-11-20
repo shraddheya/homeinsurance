@@ -39,6 +39,7 @@
   box-shadow: rgba(255, 0, 131, 0.5) 0px 10px 40px -10px;
   margin:auto;
   display: table;
+  z-index: 1;
 }
 .homebtn:hover{
   background-color: rgb(255, 0, 131);

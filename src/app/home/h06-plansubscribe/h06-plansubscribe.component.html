@@ -1,1 +1,25 @@
-
+<div class="container pt-5">
+  <h2 class="maintitle font-weight-bold pt-4">
+    Monthly Subscription,<br>Cancel Anytime
+  </h2>
+  <div class="row">
+    <div *ngFor="let item of pricescard" class="col-xl-4 col-lg-4 col-md-4 col-12">
+      <div class="cardouter">
+        <h3 class="cardtitle">{{item.title1}}<br>{{item.title2}}</h3>
+        <div class="p-1">
+          <small class="cardtext">{{item.text |uppercase}}</small>
+        </div>
+        <div class="p-1">
+          <em class="cardprice">{{item.price}}€</em>
+        </div>
+        <div class="p-1">
+          <a class="buttonstyle text-white" (click)="clicked(item)">{{item.buttontext}}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-5">
+    <h5 class="text-center font-weight-bold" style="color:rgb(74, 74, 74);font-size: 1.1em;">Already insured? We'll take care of the switching hassle</h5>
+  </div>
+</div>
+<div style="background-color: rgb(216, 211, 211);height:0.1em;margin:0.2em"></div>

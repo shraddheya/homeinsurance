@@ -30,3 +30,26 @@
   top: 0px;
   transform: translateX(-50%);
 }
+.startovercancel{
+    font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.3;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    white-space: nowrap;
+    font-size: 14px;
+    outline: none;
+    text-decoration: none;
+    padding: 15px 70px 15px 70px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: initial;
+    transition: all 0.3s ease 0s, transform 0.5s ease 0s;
+    background-color: var(--accent4);
+    // box-shadow: '#{$accent1}bb'
+
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataterminalService } from "../../dataterminal.service";
 
 @Component({
   selector: 'app-h06-plansubscribe',
@@ -7,7 +8,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class H06PlansubscribeComponent implements OnInit {
 
-  constructor() { }
+  pricepackage: any = true;
+  pricescard: any = [
+    {
+      title1: 'Contents',
+      title2: 'Insurance',
+      text: 'Monthly, From',
+      price: 2,
+      buttontext: 'GET CONTENTS'
+    },
+    {
+      title1: 'Liability',
+      title2: 'Insurance',
+      text: 'Monthly, From',
+      price: 2,
+      buttontext: 'GET LIABILITY'
+    },
+    {
+      title1: 'Contents and',
+      title2: 'Liability Package',
+      text: 'Monthly, From',
+      price: 4,
+      buttontext: 'GET BOTH'
+    },
+  ];
+
+  clicked(item: any) {
+    this.dataservice.allData.home = { name: `${item.title1} ${item.title1}`, price: item.price}
+    this.dataservice.changepage()
+  }
+
+  constructor( public dataservice: DataterminalService) {
+
+  }
 
   ngOnInit(): void {
   }

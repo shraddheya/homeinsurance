@@ -25,13 +25,49 @@
   padding:7em;
   padding: 3em;
 }
+
+//Marquee card css
 .cardrating{
-  margin: 15px;
-  display: table-cell;
-  flex-direction: column;
-  background: rgb(255, 255, 255);
+  margin: 0.7em;
+  display: inline-block;
+  background: white;
+  height: 195px;
+  width: 33%;
   box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 12px 0px, rgba(0, 0, 0, 0.16) 0px 47px 46px -27px;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 1em;
+  padding: 1.5em;
   box-sizing: content-box;
+}
+.carduserdiv{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+.carduserpic{
+  width: 4.4rem;
+    height: 4.4rem;
+    padding: 2px;
+    position: relative;
+    top: -5px;
+    border-radius: 50%;
+}
+.carduserinfo{
+  box-sizing: border-box;
+  padding-left: 10px;
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+}
+.carduserinfo_name{
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.2rem;
+  font-weight: 700;
+}
+.carduserinfo_id{
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 0.2rem;
+  font-weight: 700;
+  color: #b7b7b7;
 }

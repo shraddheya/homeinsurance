@@ -18,3 +18,39 @@
 .btntext{
   color:rgb(255, 0, 131)
 }
+
+.subscripprices{
+    position:relative;
+    overflow-y: auto;
+    height:100vh; /* 100% screen height  */
+    width:100vw;  /* 100% screen width */
+    scroll-snap-type: y proximity;
+  }
+.scrollbar-cyan::-webkit-scrollbar {
+    width: 0.3em;
+    background-color: #f5f5f5;
+}
+.scrollbar-cyan::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ec407a!important;
+}
+.resetcss{
+  background-color: rgb(255, 0, 131);
+  font-weight: 700;
+  border-radius: 0.5em;
+}
+.environmentdiv{
+  position: absolute;
+  left:0.9em;
+  height:0.8em;
+  width:0.8em;
+  z-index: 1;
+  border-radius: 5em;
+  background-color: green;
+}
+.canclecss{
+  background-color: rgb(247, 247, 247);
+  color:#4A4A4A;
+  font-weight: 700;
+  border-radius: 0.5em;
+}

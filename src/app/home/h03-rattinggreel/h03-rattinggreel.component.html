@@ -9,17 +9,17 @@
   <div class="img">
     <img src='assets/pink_5_stars_large-cb51595d7397758318705c616ea472ff.png' class="imgsrc" alt="">
   </div>
-  <div class="p-5">
+  <div class="p-5" *ngIf=false>
     <marquee width="100%" direction="left" height="100%">
-      <div class="cardrating">
-        <div class="row">
-          <div class="col-3"></div>
-          <div class="col-9"></div>
+      <div class="cardrating" *ngFor='let item of reelrating'>
+        <div class="carduserdiv">
+          <img src={{item.img}} alt="Img not found" class="carduserpic">
+          <div class="carduserinfo">
+            <p class="carduserinfo_name">Name</p>
+            <p class="carduserinfo_id">Id</p>
+          </div>
         </div>
-      </div>
-      <div class="cardrating">
-        <div class="col-3"></div>
-        <div class="col-9"></div>
+        <p></p>
       </div>
     </marquee>
   </div>

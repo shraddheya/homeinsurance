@@ -7,7 +7,6 @@ import { AgmCoreModule } from '@agm/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopbarComponent } from './topbar/topbar.component';
-import { C00planComponent } from './c00plan/c00plan.component';
 import { C01nameComponent } from './c01name/c01name.component';
 import { C02adderssComponent } from './c02adderss/c02adderss.component';
 import { ButtBackComponent } from './butt-back/butt-back.component';
@@ -45,12 +44,13 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { C10loadingpageComponent } from './c10loadingpage/c10loadingpage.component';
+import { H10ProductoncheckpriceComponent } from './home/h10-productoncheckprice/h10-productoncheckprice.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TopbarComponent,
-    C00planComponent,
     C01nameComponent,
     C02adderssComponent,
     ButtBackComponent,
@@ -88,6 +88,7 @@ import { C10loadingpageComponent } from './c10loadingpage/c10loadingpage.compone
     FooterComponent,
     SidenavComponent,
     C10loadingpageComponent,
+    H10ProductoncheckpriceComponent,
   ],
   imports: [
     BrowserModule,

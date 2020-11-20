@@ -5,10 +5,11 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class DataterminalService {
-  pageList = ["c00plan", "c01name", "c02address", "c03type-home", "c04primaryresidence", "c05size-home", "c06security", "c07members", "c08assets", "c09get-quote","c10loading", "c11builthome-year", "c12insurance-claim-count", "c13quote-detail", "c14pdf"]
+  pageList = ["home","product","c01name", "c02address", "c03type-home", "c04primaryresidence", "c05size-home", "c06security", "c07members", "c08assets", "c09get-quote","c10loading", "c11builthome-year", "c12insurance-claim-count", "c13quote-detail", "c14pdf"]
   allData = JSON.parse(JSON.stringify({
     "homehelp": { fullname: "", email: "", writehelp: "" },
-    "c00plan": { name: "", price: 0 },
+    "product":"",
+    "home": { name: "", price: 0 },
     "c01name": { firstName: "", lastName: "" },
     "c02address": { housenumber: "", pincode: "", address: "" },
     "c03type-home": "",
