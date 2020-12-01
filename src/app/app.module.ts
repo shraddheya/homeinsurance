@@ -96,7 +96,7 @@ import { H10ProductoncheckpriceComponent } from './home/h10-productoncheckprice/
     MDBBootstrapModule.forRoot(),
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyAhjjjihi_jtY24Dd3ci3HAikdhn8fTrPs',
+      apiKey: 'AIzaSyBjdIEmseyD5iVu8ig03c3CUFM9Yiz2hzA',
       libraries: ["places"]
     }),
 

@@ -9,6 +9,7 @@ import { DataterminalService } from '../dataterminal.service';
 })
 export class C05sizeHomeComponent implements OnInit {
 
+  sizetype:any;
   alert = false;
   sizeForm = new FormGroup({
     size: new FormControl(this.dataservice.allData["c05size-home"] || 10, Validators.compose([Validators.required, Validators.min(10), Validators.max(999)])),

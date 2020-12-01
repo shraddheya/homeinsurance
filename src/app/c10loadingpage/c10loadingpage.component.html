@@ -2,7 +2,26 @@
   <div class="mt-3">
     <h2 class="p-3 maintitle">One sec while I crunch some numbers...</h2>
     <div id="progressdivs">
-
+      <div class="mt-2 mb-2">
+        <div>
+          <span *ngIf=processicon>
+            <div class="spinner-border loaderprogress textcolor" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </span>
+          <span *ngIf=!processicon class="textcolor">
+            <mdb-icon fas icon="check"></mdb-icon>
+          </span>
+        </div>
+        <div>
+          {{processmsg}}
+        </div>
+      </div>
+      <!-- Progress bar -->
+      <div id="myProgress">
+        <div id="myBar"></div>
+      </div>
+      <div class="pt-3 border-dark"></div>
     </div>
   </div>
 </div>

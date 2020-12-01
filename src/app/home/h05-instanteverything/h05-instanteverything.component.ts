@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ModalDirective } from 'angular-bootstrap-md';
 @Component({
   selector: 'app-h05-instanteverything',
   templateUrl: './h05-instanteverything.component.html',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class H05InstanteverythingComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('lemonadeapp', { static: true }) private lemonadeapp: ModalDirective
+  @ViewChild('lemonadeapp') lemonadeel: ElementRef<any>
+  viewofapp: any = false;
+  constructor() {
+
+  }
 
   ngOnInit(): void {
+
+    console.log(this.lemonadeapp)
+
   }
+
+
 
 }

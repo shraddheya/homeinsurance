@@ -13,6 +13,7 @@ export class C07membersComponent implements OnInit {
   }
   buttDisabled = true;
   msgShow = null;
+  imgcheck:any
   membertypelist: any = {
     a: {
       title: "It's just me",

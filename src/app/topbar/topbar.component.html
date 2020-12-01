@@ -2,10 +2,14 @@
   <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark white p-3 border border-grey darken-3 border-bottom"
     [containerInside]="false">
     <mdb-navbar-brand>
-      <app-sidenav></app-sidenav>
-      <span *ngIf="router.url !== '/home'">
-        <img src="assets/logo.svg" alt="">
-      </span>
+      <div class="navbrandtop">
+        <app-sidenav></app-sidenav>
+      </div>
+      <div class="navbrandtop">
+        <span *ngIf="router.url !== '/home'">
+          <img src="assets/logo.svg" alt="">
+        </span>
+      </div>
     </mdb-navbar-brand>
     <div id="centerlogo">
       <img *ngIf="router.url === '/home'" src="assets/logo.svg" alt="" height="30em">

@@ -2,3 +2,31 @@
   position: relative;
 
 }
+#myProgress {
+  width: 50%;
+    background-color: grey;
+    display: table;
+    margin: auto;
+    border-radius: 29em;
+    position: relative;
+    height: 0.5em;
+}
+
+#myBar {
+  width: 1%;
+  background-color:var(--accent3);
+  border-radius: 29em;
+  position: relative;
+  height: 0.5em;
+}
+
+.textcolor{
+  color:var(--accent3);
+}
+
+.loaderprogress{
+  position: relative;
+    left: -10em;
+    height: 1.3em;
+    width: 1.3em;
+}

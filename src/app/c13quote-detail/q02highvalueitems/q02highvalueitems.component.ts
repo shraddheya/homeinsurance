@@ -69,7 +69,7 @@ export class Q02highvalueitemsComponent implements OnInit {
       incrtoggle: 500,
     }
   };
-  
+
   importantArray: any = [
     {
       img: 'assets/email_icon.png',
@@ -96,16 +96,16 @@ export class Q02highvalueitemsComponent implements OnInit {
   }
 
   additem(item: any) {
-    console.log(item);
+    // console.log(item);
     this.dataservice.allData["c10quote-detail"].q02highvalueitems[item.key] = item.value.price;
     this.highvaluemodal.hide();
   }
-  
+
   hvalueFunction(val: any, inc: string) {
     if (inc === "+") this.modalObject.value.price += this.modalObject.value.incrtoggle;
     else this.modalObject.value.price -= this.modalObject.value.incrtoggle;
   }
-  
+
   openModal(data: any) {
     this.noticeModal = false
     this.modalObject = data;

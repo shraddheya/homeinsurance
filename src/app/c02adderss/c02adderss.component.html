@@ -1,6 +1,6 @@
 <div class="text-center pt-5">
   <div class="mt-5">
-    <h2 class="p-2 maintitle font-weight-bold">Great to meet you {{dataservice.allData.c01name.firstName}}! What's your
+    <h2 class="p-3 maintitle font-weight-bold">Great to meet you {{dataservice.allData.c01name.firstName}}! What's your
       home <br> address?</h2>
     <div class="p-5">
       <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
@@ -23,11 +23,10 @@
                 </div>
               </div>
               <div class="col-lg-4 col-xs-12 m-xs-2">
-                <input type="text" class="form-control p-3" formControlName="housenumber" placeholder="Housenumber">
+                <input type="text" class="form-control p-3" formControlName="housenumber" placeholder="House Number">
               </div>
               <div class="col-lg-3 col-xs-12 m-xs-2">
-                <input type="text" class="form-control p-3" formControlName="pincode" placeholder="pincode"
-                  [readonly]=true>
+                <input type="text" class="form-control p-3" formControlName="pincode" placeholder="pincode">
               </div>
             </div>
           </form>

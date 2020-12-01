@@ -33,7 +33,7 @@ export class H10ProductoncheckpriceComponent implements OnInit {
   constructor(public dataservice: DataterminalService, public router: Router) { }
 
   ngOnInit(): void {
-    if (this.dataservice.allData["product"].length > 1) this.buttDisabled = false;
+    // if (this.dataservice.allData["product"].length > 1) this.buttDisabled = false;
   }
   changed(key: string) {
     this.dataservice.allData["product"] = key;

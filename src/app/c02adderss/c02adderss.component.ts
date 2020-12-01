@@ -38,7 +38,7 @@ export class C02adderssComponent implements OnInit {
      ) { }
 
   ngOnInit(): void {
-    console.log(this.addressForm.value, this.addressForm.value.address === "");
+    // console.log(this.addressForm.value, this.addressForm.value.address === "");
       //load Places Autocomplete
       this.mapsAPILoader.load().then(() => {
         this.setCurrentLocation();

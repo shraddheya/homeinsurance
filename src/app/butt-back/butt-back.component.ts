@@ -63,28 +63,25 @@ export class ButtBackComponent implements OnInit {
       }
     };
 
-
-
-    router.events.subscribe(val => {
-      if (val instanceof NavigationEnd) {
-        let idx = dataservice.pageList.indexOf(val.url.substr(1));
-        this.disp = idx > 0;
-        console.log(dataservice.allData)
-        if (idx < 0) return;
-        let gotoPageIdx = idx;
-        for (let i = 0; i < idx; i++) {
-          let pgnm = dataservice.pageList[i];
-          if (JSON.stringify(dataservice.allData[pgnm]) === JSON.stringify(dataservice.dtblank[pgnm])) {
-            gotoPageIdx = i;
-            break;
-          }
-        }
-        if (gotoPageIdx !== idx) {
-          dataservice.currPage = gotoPageIdx;
-          dataservice.gotopage(gotoPageIdx);
-        }
-      }
-    })
+    // router.events.subscribe(val => {
+    //   if (val instanceof NavigationEnd) {
+    //     let idx = dataservice.pageList.indexOf(val.url.substr(1));
+    //     this.disp = idx > 0;
+    //     if (idx < 0) return;
+    //     let gotoPageIdx = idx;
+    //     for (let i = 0; i < idx; i++) {
+    //       let pgnm = dataservice.pageList[i];
+    //       if (JSON.stringify(dataservice.allData[pgnm]) === JSON.stringify(dataservice.dtblank[pgnm])) {
+    //         gotoPageIdx = i;
+    //         break;
+    //       }
+    //     }
+    //     if (gotoPageIdx !== idx) {
+    //       dataservice.currPage = gotoPageIdx;
+    //       dataservice.gotopage(gotoPageIdx);
+    //     }
+    //   }
+    // })
   }
 
   ngOnInit(): void { }

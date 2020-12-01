@@ -3,7 +3,7 @@
     <h1 class="maintitle mb-2">Which would you like?</h1>
 
     <div class="contentproduct" *ngFor='let item of producttype | keyvalue: asIs'>
-      <img class="iconimg divcenter" src="{{item.value.selectedview ? item.value.imgactive : item.value.img}}">
+      <img class="iconimg divcenter" (click)="changed(item.key)" src="{{item.value.selectedview ? item.value.imgactive : item.value.img}}">
       <!-- <mdb-icon far icon={{items.icon}} class="textcolor"></mdb-icon> -->
       <div class="">
         <span style="font-size:0.9em">{{item.key | uppercase}}</span>

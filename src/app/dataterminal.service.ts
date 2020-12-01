@@ -5,10 +5,8 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class DataterminalService {
-  pageList = ["home","product","c01name", "c02address", "c03type-home", "c04primaryresidence", "c05size-home", "c06security", "c07members", "c08assets", "c09get-quote","c10loading", "c11builthome-year", "c12insurance-claim-count", "c13quote-detail", "c14pdf"]
+  pageList = ["home","c01name", "c02address", "c03type-home", "c04primaryresidence", "c05size-home", "c06security", "c07members", "c08assets", "c09get-quote","c10loading", "c11builthome-year", "c12insurance-claim-count", "c13quote-detail", "c14pdf"]
   allData = JSON.parse(JSON.stringify({
-    "homehelp": { fullname: "", email: "", writehelp: "" },
-    "product":"",
     "home": { name: "", price: 0 },
     "c01name": { firstName: "", lastName: "" },
     "c02address": { housenumber: "", pincode: "", address: "" },
@@ -43,11 +41,16 @@ export class DataterminalService {
   dtblank = JSON.parse(JSON.stringify(this.allData));
   currPage = 0
 
+  //  "homehelp": { fullname: "", email: "", writehelp: "" },
+  //  "product":"",
+
   constructor(private route: Router) {
+    this.route.navigate([window.location.pathname]);
     this.dtblank.c06security = [];
     this.dtblank["c13quote-detail"].q05deductibles = [];
   }
   changepage(goForward = true) {
+    console.log(goForward)
     if (goForward) this.currPage++;
     else this.currPage--;
     if (this.currPage < 0) this.currPage = 0;
@@ -55,13 +58,12 @@ export class DataterminalService {
     this.gotopage();
   }
   gotopage(idx = this.currPage) {
-    console.log(this.pageList[idx])
-    this.route.navigate([this.pageList[idx]]);
+    this.route.navigate([this.pageList[idx]])
   }
   homepage(mode: any, data: any) {
     switch (mode) {
       case 'help':
-        console.log(data)
+        // console.log(data)
         return
     }
   }

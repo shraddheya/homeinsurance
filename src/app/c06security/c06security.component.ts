@@ -20,19 +20,22 @@ export class C06securityComponent implements OnInit {
       selectedview: this.dataservice.allData.c06security.indexOf('sequrity camera') > -1
     }
   };
-  constructor( public dataservice: DataterminalService ) { }
+  constructor(public dataservice: DataterminalService) { }
 
   ngOnInit(): void {
   }
 
   changed(el: any) {
+    console.log(el.name , el.checked)
     if (el.checked) this.dataservice.allData.c06security.push(el.name);
     else {
-      let idx  = this.dataservice.allData.c06security.indexOf(el.name);
+      let idx = this.dataservice.allData.c06security.indexOf(el.name);
       if (idx > -1) this.dataservice.allData.c06security.splice(idx, 1);
     }
     this.securitytype[el.name].selectedview = el.checked;
   }
+
+
 
   clicked() {
     this.dataservice.changepage();

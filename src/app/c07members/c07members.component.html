@@ -1,15 +1,15 @@
 <div class="pt-5 text-center">
   <div class="mt-4">
-    <h2 class="p-2 maintitle font-weight-bold">Who else lives in your home ?</h2>
+    <h2 class="p-3 maintitle font-weight-bold">Who else lives in your home ?</h2>
     <div class="container p-2">
       <div class="row justify-content-center">
         <div class="col-lg-2 col-xs-3 mt-3 p-2 text-center" *ngFor='let item of membertypelist | keyvalue: asIs'>
           <div class="">
-            <img class="iconimg" src='{{item.value.selectedview ? item.value.imgactive : item.value.img}}'>
+            <img class="iconimg" (click)="changed(item.key)" src='{{item.value.selectedview ? item.value.imgactive : item.value.img}}'>
           </div>
 
           <div>
-            <span style="font-size:0.7em">{{item.value.title | uppercase}}</span>
+            <span class="font-weight-bold" style="font-size:0.7em;color: rgb(74, 74, 74);font-family: Merriweather, Georgia, serif;">{{item.value.title | uppercase}}</span>
           </div>
 
           <div class="form-check form-check-inline p-3">

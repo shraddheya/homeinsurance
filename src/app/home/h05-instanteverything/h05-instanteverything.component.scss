@@ -19,9 +19,6 @@
   margin:auto;
   display: table;
 }
-.btntext{
-  color:rgb(255, 0, 131)
-}
 .imgbg{
   margin:auto;
   display:table
@@ -29,6 +26,9 @@
 .styleimg{
   height:21sem;
   width:42em;
+}
+.tranparent_el{
+  background: transparent;
 }
 
 .instantimg{
@@ -57,4 +57,7 @@
 #instantcontent{
   position: relative;
   top:3em
+}
+.cvXITO{
+  background-color: black ;
 }
