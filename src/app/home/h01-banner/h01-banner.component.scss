@@ -1,5 +1,6 @@
 #bannerbg{
   background-image: url('../../../assets/bg-clouds-2-6dcdd0a252148447204022d42385e0df.png');
+  height: 35em;
 }
 .titlecolor{
   color: rgb(74, 74, 74);
@@ -48,12 +49,15 @@
   position: relative;
     top: -8em;
     left: -7em;
+
 }
 #bannerimgleft{
   position: relative;
   left: -11em;
+  top: -9em;
 }
 #bannerimgright{
   position: relative;
     right: -9em;
+    top: -9em;
 }

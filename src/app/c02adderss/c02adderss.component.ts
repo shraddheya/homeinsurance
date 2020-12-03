@@ -24,7 +24,7 @@ export class C02adderssComponent implements OnInit {
   addressForm = new FormGroup({
     housenumber: new FormControl(this.dataservice.allData.c02address.housenumber, Validators.required),
     address: new FormControl(this.dataservice.allData.c02address.address, Validators.required),
-    pincode: new FormControl(this.citystatelist[this.dataservice.allData.c02address.address], Validators.required),
+    //pincode: new FormControl(this.citystatelist[this.dataservice.allData.c02address.address], Validators.required),
   });
 
   @ViewChild('search')

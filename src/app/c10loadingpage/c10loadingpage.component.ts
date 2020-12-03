@@ -9,7 +9,10 @@ let comp: C10loadingpageComponent
   styleUrls: ['./c10loadingpage.component.scss']
 })
 export class C10loadingpageComponent implements OnInit {
-   percentage:any;
+   percentage1:any = false;
+   percentage2:any = false;
+   percentage3:any = false;
+   percentage4:any = false;
 
   processicon: any = true;
   processmsg: any = 'Calculating Data ...'
@@ -32,7 +35,14 @@ export class C10loadingpageComponent implements OnInit {
           } else {
             width++;
             elem.style.width = width + "%";
-            console.log(width === 20)
+            comp.percentage1 = width >= 20
+            comp.percentage2 = width >= 45
+            comp.percentage3 = width >= 70
+            comp.percentage4 = width >= 95
+            if(width >= 95){
+              comp.processicon = false
+              comp.processmsg = "Analysis complete"
+            }
             if (width === 100) {
               comp.clicked()
             }
