@@ -21,7 +21,31 @@
       <div id="myProgress">
         <div id="myBar"></div>
       </div>
-      <div class="pt-3 border-dark"></div>
+      <div class="pt-3 border-dark" *ngIf=percentage1>
+        <div class="row">
+          <div class="col-8">Building Age</div>
+          <div class="col-4"></div>
+        </div>
+
+      </div>
+      <div class="pt-3 border-dark" *ngIf=percentage2>
+        <div class="row">
+          <div class="col-8">Building Durability</div>
+          <div class="col-4"></div>
+        </div>
+      </div>
+      <div class="pt-3 border-dark" *ngIf=percentage3>
+        <div class="row">
+          <div class="col-8">Distance From Coast</div>
+          <div class="col-4"></div>
+        </div>
+      </div>
+      <div class="pt-3 border-dark" *ngIf=percentage4>
+        <div class="row">
+          <div class="col-8">Fire Station Proximity</div>
+          <div class="col-4"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

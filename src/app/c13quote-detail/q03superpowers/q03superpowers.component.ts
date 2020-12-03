@@ -29,11 +29,12 @@ export class Q03superpowersComponent implements OnInit {
   ngOnInit(): void { }
 
   changed(evt: any, itemid: any) {
+    console.log(evt.currentTarget.checked)
     this.superpowerArray[itemid].showchecked = evt.currentTarget.checked;
-    if (evt.target.checked) this.dataservice.allData["c10quote-detail"].q03superpowers.push(itemid);
+    if (evt.target.checked) this.dataservice.allData["c13quote-detail"].q03superpowers.push(itemid);
     else {
-      let idx  = this.dataservice.allData["c10quote-detail"].q03superpowers.indexOf(itemid);
-      if (idx > -1) this.dataservice.allData["c10quote-detail"].q03superpowers.splice(idx, 1);
+      let idx  = this.dataservice.allData["c13quote-detail"].q03superpowers.indexOf(itemid);
+      if (idx > -1) this.dataservice.allData["c13quote-detail"].q03superpowers.splice(idx, 1);
     }
   }
 }
