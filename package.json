@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "build:prod": "ng build --prod --baseHref=\"./\"",
+    "build:watch": "ng build --prod --baseHref=\"./\" --watch",
     "gitproc": "git commit -m \"AUTO CI CD\"",
     "preherokucommit": "git add -A",
     "herokucommit": "git commit -am \"heroku\"",
