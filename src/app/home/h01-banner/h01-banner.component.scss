@@ -3,10 +3,10 @@
   height: 35em;
 }
 .titlecolor{
-  color: rgb(74, 74, 74);
+  color: #4a4a4a;
   display: table;
-  margin:auto;
-  font-size: 4rem;
+  margin: auto;
+  font-size: 3.1rem;
   line-height: 1.3;
   font-family: Merriweather, Georgia, serif;
   font-weight: 4000;
@@ -21,26 +21,28 @@
 }
 .homebtn{
   font-family: Lato, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.3;
-  font-weight: 700;
-  text-align: center;
-  outline: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  position: relative;
-  text-decoration: none;
-  white-space: nowrap;
-  padding: 15px;
-  font-size: 14px;
-  border-radius: 5px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(255, 0, 131);
-  border: 1px solid transparent;
-  transition: all 0.3s ease 0s, transform 0.5s ease 0s;
-  box-shadow: rgba(255, 0, 131, 0.5) 0px 10px 40px -10px;
-  margin:auto;
-  display: table;
-  z-index: 1;
+    line-height: 1.3;
+    font-weight: 700;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 15px;
+    padding-left: 3.3em;
+    padding-right: 3.3em;
+    font-size: 14px;
+    border-radius: 5px;
+    color: white;
+    background-color: #ff0083;
+    border: 1px solid transparent;
+    transition: all 0.3s ease 0s, transform 0.5s ease 0s;
+    box-shadow: rgba(255, 0, 131, 0.5) 0px 10px 40px -10px;
+    margin: auto;
+    display: table;
+    z-index: 1;
 }
 .homebtn:hover{
   background-color: rgb(255, 0, 131);
@@ -53,11 +55,18 @@
 }
 #bannerimgleft{
   position: relative;
-  left: -11em;
-  top: -9em;
+  left: 0.5em;
+  top: 2em;
+  z-index: -1;
 }
 #bannerimgright{
   position: relative;
-    right: -9em;
-    top: -9em;
+  right: -4em;
+  top: 2em;
+  z-index: -1;
+}
+
+.banerimgstyle{
+  height: 19em;
+  width: 30em;
 }
