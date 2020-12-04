@@ -48,6 +48,8 @@ export class DataterminalService {
     this.dtblank.c10loading = '';
     this.dtblank["c13quote-detail"].q05deductibles = [];
     console.log("constructed service");
+    // Use for after restart process
+    this.allData = (localStorage.getItem('alldata') == 'null') ? JSON.parse(this.allData) : this.allData
   }
   changepage(goForward = true) {
     console.log(goForward)
@@ -72,7 +74,8 @@ export class DataterminalService {
   domFunction(mode: any) {
     switch(mode){
       case 'reset':
-        this.allData = this.initVals;
+        this.allData = JSON.parse(this.initVals)
+        //this.allData = this.initVals;
         localStorage.setItem('currPage', '0');
         localStorage.setItem('allData', JSON.stringify(this.allData));
         this.gotopage(0);

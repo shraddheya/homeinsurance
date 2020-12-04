@@ -34,6 +34,7 @@ export class H06PlansubscribeComponent implements OnInit {
   ];
 
   clicked(item: any) {
+    console.log(this.ds.allData)
     this.ds.allData.home = { name: `${item.title1} ${item.title1}`, price: item.price}
     this.ds.changepage()
   }
