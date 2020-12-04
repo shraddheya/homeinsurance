@@ -5,8 +5,8 @@
     <div class="row justify-content-center p-2 mt-5">
       <div class="col-lg-2 col-xs-4">
         <select class="browser-default custom-select" (change)="changed($event.target.value)">
-          <option value=true [selected]="this.dataservice.allData['c12insurance-claim-count'] === ''" disabled>Select Insurance</option>
-          <option *ngFor="let val of opts" value="{{val}}" [selected]="this.dataservice.allData['c12insurance-claim-count'] === val">{{val}}</option>
+          <option value=true [selected]="this.ds.allData['c12insurance-claim-count'] === ''" disabled>Select Insurance</option>
+          <option *ngFor="let val of opts" value="{{val}}" [selected]="this.ds.allData['c12insurance-claim-count'] === val">{{val}}</option>
         </select>
       </div>
     </div>

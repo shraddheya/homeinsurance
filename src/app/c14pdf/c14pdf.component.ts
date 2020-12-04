@@ -32,15 +32,15 @@ export class C14pdfComponent implements OnInit {
           title:'coverage summary',
           head:["coverage","amount covered","cost"],
           data:{
-            'Contents - Low Value Items': this.dataservice.allData['c13quote-detail'].q01coverageamount['CONTENTS'] || 0,
-            'Personal Liability ': this.dataservice.allData['c13quote-detail'].q01coverageamount['PERSONAL LIABILITY'] || 0,
-            'Temporary Accomodation': this.dataservice.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION'] || 0,
-            'Contents - High Value Items (Jewlery)': this.dataservice.allData['c13quote-detail'].q02highvalueitems['Jewlery'] || 0,
-            'Contents - High Value Items (Bicycles)': this.dataservice.allData['c13quote-detail'].q02highvalueitems['Bicycles'] || 0,
-            'Contents - High Value Items (Cameras)': this.dataservice.allData['c13quote-detail'].q02highvalueitems['Cameras'] || 0,
-            'Contents - High Value Items (Electronics)': this.dataservice.allData['c13quote-detail'].q02highvalueitems['Electronics'] || 0,
-            'Contents - High Value Items (Music Equipment)': this.dataservice.allData['c13quote-detail'].q02highvalueitems['Music Equipment'] || 0,
-            'Contents - High Value Items (Other)': this.dataservice.allData['c13quote-detail'].q02highvalueitems['Other'] || 0,
+            'Contents - Low Value Items': this.ds.allData['c13quote-detail'].q01coverageamount['CONTENTS'] || 0,
+            'Personal Liability ': this.ds.allData['c13quote-detail'].q01coverageamount['PERSONAL LIABILITY'] || 0,
+            'Temporary Accomodation': this.ds.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION'] || 0,
+            'Contents - High Value Items (Jewlery)': this.ds.allData['c13quote-detail'].q02highvalueitems['Jewlery'] || 0,
+            'Contents - High Value Items (Bicycles)': this.ds.allData['c13quote-detail'].q02highvalueitems['Bicycles'] || 0,
+            'Contents - High Value Items (Cameras)': this.ds.allData['c13quote-detail'].q02highvalueitems['Cameras'] || 0,
+            'Contents - High Value Items (Electronics)': this.ds.allData['c13quote-detail'].q02highvalueitems['Electronics'] || 0,
+            'Contents - High Value Items (Music Equipment)': this.ds.allData['c13quote-detail'].q02highvalueitems['Music Equipment'] || 0,
+            'Contents - High Value Items (Other)': this.ds.allData['c13quote-detail'].q02highvalueitems['Other'] || 0,
           },
           total:{title:'Total Premium',value:'44.42/mo'}
         },
@@ -89,44 +89,44 @@ export class C14pdfComponent implements OnInit {
       }
     }
   };
-  constructor(public dataservice: DataterminalService) {
-    console.log(dataservice.allData)
+  constructor(public ds: DataterminalService) {
+    console.log(ds.allData)
 
   }
 
   ngOnInit(): void {
-    console.log(this.dataservice.allData["c13quote-detail"].q01coverageamount);
+    console.log(this.ds.allData["c13quote-detail"].q01coverageamount);
 
-    this.payable = this.dataservice.allData.home.price +
+    this.payable = this.ds.allData.home.price +
     hvi.content_lowvalue.filter((it: any) => {
-      return it.insurance_value === this.dataservice.allData['c13quote-detail'].q01coverageamount['CONTENTS']
+      return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['CONTENTS']
     })[0].price_month +
     hvi.personalliability.filter((it: any) => {
-      return it.insurance_value ===     this.dataservice.allData['c13quote-detail'].q01coverageamount['PERSONAL LIABILITY']
+      return it.insurance_value ===     this.ds.allData['c13quote-detail'].q01coverageamount['PERSONAL LIABILITY']
     })[0].price_month +
     hvi.temporary_accomodation.filter((it: any) => {
-      return it.insurance_value === this.dataservice.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION']
+      return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION']
     })[0].price_month +
     hvi.content_lowvalue.filter((it: any) => {
-      return it.insurance_value === this.dataservice.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION']
+      return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION']
     })[0].price_month +
     hvi.jewellery.filter((it: any) => {
-      return it.insurance_value === this.dataservice.allData['c13quote-detail'].q02highvalueitems['Jewlery']
+      return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['Jewlery']
     })[0].price_month +
     hvi.bicycles.filter((it: any) => {
-      return it.insurance_value === this.dataservice.allData['c13quote-detail'].q02highvalueitems['Bicycles']
+      return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['Bicycles']
     })[0].price_month +
     hvi.cameras.filter((it: any) => {
-      return it.insurance_value === this.dataservice.allData['c13quote-detail'].q02highvalueitems['Cameras']
+      return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['Cameras']
     })[0].price_month +
     hvi.electronics.filter((it: any) => {
-      return it.insurance_value === this.dataservice.allData['c13quote-detail'].q02highvalueitems['Electronics']
+      return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['Electronics']
     })[0].price_month +
     hvi.music.filter((it: any) => {
-      return it.insurance_value === this.dataservice.allData['c13quote-detail'].q02highvalueitems['Music Equipment']
+      return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['Music Equipment']
     })[0].price_month +
     hvi.other.filter((it: any) => {
-      return it.insurance_value === this.dataservice.allData['c13quote-detail'].q02highvalueitems['Other']
+      return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['Other']
     })[0].price_month +
     0
   }

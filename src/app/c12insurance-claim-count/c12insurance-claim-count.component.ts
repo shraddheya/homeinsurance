@@ -14,18 +14,18 @@ export class C12insuranceClaimCountComponent implements OnInit {
     "Two",
     "More than two"
   ];
-  constructor( public dataservice: DataterminalService ) { }
+  constructor( public ds: DataterminalService ) { }
 
   ngOnInit(): void {
-    if (this.dataservice.allData["c12insurance-claim-count"].length > 1) this.buttDisable = false;
+    if (this.ds.allData["c12insurance-claim-count"].length > 1) this.buttDisable = false;
   }
 
   changed(val: string) {
-    this.dataservice.allData["c12insurance-claim-count"] = val;
+    this.ds.allData["c12insurance-claim-count"] = val;
     this.buttDisable = false;
   }
   clicked() {
-    this.dataservice.changepage();
+    this.ds.changepage();
   }
 
 }

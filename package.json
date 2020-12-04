@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "build:prod": "ng build --prod --baseHref=\"./\"",
+    "build:watch": "ng build --prod --baseHref=\"./\" --watch",
     "gitproc": "git commit -m \"AUTO CI CD\"",
     "preherokucommit": "git add -A",
     "herokucommit": "git commit -am \"heroku\"",
@@ -44,6 +45,7 @@
     "hammerjs": "^2.0.8",
     "html2canvas": "^1.0.0-rc.7",
     "jspdf": "^2.1.1",
+    "moment": "^2.29.1",
     "ngx-google-places-autocomplete": "^2.0.4",
     "rxjs": "~6.5.5",
     "stripe-angular": "^1.2.1",

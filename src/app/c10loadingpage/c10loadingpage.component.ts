@@ -16,7 +16,7 @@ export class C10loadingpageComponent implements OnInit {
 
   processicon: any = true;
   processmsg: any = 'Calculating Data ...'
-  constructor(public dataservice: DataterminalService, public route: Router) {
+  constructor(public ds: DataterminalService, public route: Router) {
     comp = this
   }
 
@@ -27,7 +27,7 @@ export class C10loadingpageComponent implements OnInit {
         i = 1;
         var elem = document.getElementById("myBar");
         var width = 1;
-        var id = setInterval(frame, 150);
+        var id = setInterval(frame, 50);
         function frame() {
           if (width >= 100) {
             clearInterval(id);
@@ -53,7 +53,7 @@ export class C10loadingpageComponent implements OnInit {
   }
 
   clicked() {
-    this.dataservice.changepage();
+    this.ds.changepage();
   }
 
 }

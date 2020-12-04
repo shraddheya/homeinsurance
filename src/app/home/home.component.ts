@@ -17,13 +17,13 @@ export class HomeComponent implements OnInit {
   })
 
 
-  constructor(public dataservice: DataterminalService) { }
+  constructor(public ds: DataterminalService) { }
 
   ngOnInit(): void {
   }
   helpClicked() {
     this.formsubmit = false;
-    this.dataservice.homepage('help',this. helpForm.value)
+    this.ds.homepage('help',this. helpForm.value)
   }
 
 }

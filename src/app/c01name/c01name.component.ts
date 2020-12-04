@@ -9,16 +9,16 @@ import { DataterminalService } from '../dataterminal.service';
 })
 export class C01nameComponent implements OnInit {
   profileForm = new FormGroup({
-    firstName: new FormControl(this.dataservice.allData.c01name.firstName, Validators.required),
-    lastName: new FormControl(this.dataservice.allData.c01name.lastName, Validators.required),
+    firstName: new FormControl(this.ds.allData.c01name.firstName, Validators.required),
+    lastName: new FormControl(this.ds.allData.c01name.lastName, Validators.required),
   })
 
   clicked() {
-    this.dataservice.allData.c01name = this.profileForm.value;
-    this.dataservice.changepage();
+    this.ds.allData.c01name = this.profileForm.value;
+    this.ds.changepage();
   }
 
-  constructor( public dataservice: DataterminalService ) { }
+  constructor( public ds: DataterminalService ) { }
 
   ngOnInit(): void { }
 }

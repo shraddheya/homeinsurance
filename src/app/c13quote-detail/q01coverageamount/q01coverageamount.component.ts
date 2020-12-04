@@ -39,7 +39,7 @@ export class Q01coverageamountComponent implements OnInit {
       text: "If your place becomes unlivable, we'll put you up in a nice hotel or Airbnb. We'll also include living expenses to get you back on your feet. This is the max that we'll pay in such an event."
     }
   };
-  constructor( public dataservice: DataterminalService ) {
+  constructor( public ds: DataterminalService ) {
 
   }
 
@@ -50,6 +50,6 @@ export class Q01coverageamountComponent implements OnInit {
   cvrgCalculation(key: string, op: string) {
     if ( op === '+' ) this.coverageAmount[key].price = Math.min(this.coverageAmount[key].maxvalue, this.coverageAmount[key].price + this.coverageAmount[key].incrtoggle);
     else this.coverageAmount[key].price = Math.max(this.coverageAmount[key].minvalue, this.coverageAmount[key].price - this.coverageAmount[key].incrtoggle);
-    this.dataservice.allData["c10quote-detail"].q01coverageamount[key] = this.coverageAmount[key].price;
+    this.ds.allData["c10quote-detail"].q01coverageamount[key] = this.coverageAmount[key].price;
   }
 }

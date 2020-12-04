@@ -22,9 +22,9 @@ export class C02adderssComponent implements OnInit {
   private geoCoder;
 
   addressForm = new FormGroup({
-    housenumber: new FormControl(this.dataservice.allData.c02address.housenumber, Validators.required),
-    address: new FormControl(this.dataservice.allData.c02address.address, Validators.required),
-    //pincode: new FormControl(this.citystatelist[this.dataservice.allData.c02address.address], Validators.required),
+    housenumber: new FormControl(this.ds.allData.c02address.housenumber, Validators.required),
+    address: new FormControl(this.ds.allData.c02address.address, Validators.required),
+    //pincode: new FormControl(this.citystatelist[this.ds.allData.c02address.address], Validators.required),
   });
 
   @ViewChild('search')
@@ -32,7 +32,7 @@ export class C02adderssComponent implements OnInit {
 
 
   constructor(
-    public dataservice: DataterminalService,
+    public ds: DataterminalService,
     private mapsAPILoader: MapsAPILoader,
     private ngZone: NgZone
      ) { }
@@ -71,8 +71,8 @@ export class C02adderssComponent implements OnInit {
   }
 
   clicked() {
-    this.dataservice.allData.c02address = this.addressForm.value;
-    this.dataservice.changepage();
+    this.ds.allData.c02address = this.addressForm.value;
+    this.ds.changepage();
   }
 
   private setCurrentLocation() {
