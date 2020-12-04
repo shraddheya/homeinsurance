@@ -90,14 +90,14 @@ export class Q02highvalueitemsComponent implements OnInit {
     incrtoggle: 0,
   }}
 
-  constructor( public dataservice: DataterminalService ) { }
+  constructor( public ds: DataterminalService ) { }
 
   ngOnInit(): void {
   }
 
   additem(item: any) {
     // console.log(item);
-    this.dataservice.allData["c10quote-detail"].q02highvalueitems[item.key] = item.value.price;
+    this.ds.allData["c10quote-detail"].q02highvalueitems[item.key] = item.value.price;
     this.highvaluemodal.hide();
   }
 

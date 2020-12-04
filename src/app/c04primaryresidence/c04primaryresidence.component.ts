@@ -11,10 +11,10 @@ export class C04primaryresidenceComponent implements OnInit {
   valueSelected = '';
   buttDisabled = true;
   showMsg= false;
-  constructor( public dataservice:DataterminalService ) { }
+  constructor( public ds: DataterminalService ) { }
 
   ngOnInit(): void {
-    let v = this.dataservice.allData.c04primaryresidence;
+    let v = this.ds.allData.c04primaryresidence;
     if (v !== true && v !== false) return;
     this.valueSelected = v ? 'Yes' : 'No';
     this.buttDisabled = false
@@ -22,13 +22,13 @@ export class C04primaryresidenceComponent implements OnInit {
 
   changed(val: any) {
     console.log(val)
-    this.dataservice.allData.c04primaryresidence = val === 'Yes';
+    this.ds.allData.c04primaryresidence = val === 'Yes';
     this.showMsg = val === 'Yes';
     this.buttDisabled = false;
   }
 
   clicked() {
-    this.dataservice.changepage()
+    this.ds.changepage()
   }
 
 }

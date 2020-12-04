@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 })
 export class DataterminalService {
   pageList = ["home","c01name", "c02address", "c03type-home", "c04primaryresidence", "c05size-home", "c06security", "c07members", "c08assets", "c09get-quote","c10loading", "c11builthome-year", "c12insurance-claim-count", "c13quote-detail", "c14pdf"]
-  allData = JSON.parse(JSON.stringify({
+  initVals = JSON.stringify({
     "home": { name: "", price: 0 },
     "c01name": { firstName: "", lastName: "" },
     "c02address": { housenumber: "", pincode: "", address: "" },
@@ -17,7 +17,7 @@ export class DataterminalService {
     "c07members": "",
     "c08assets": "",
     "c09get-quote": "",
-    "c10loading": "",
+    "c10loading": "fakeval",
     "c11builthome-year": "",
     "c12insurance-claim-count": "",
     "c13quote-detail": {
@@ -37,17 +37,17 @@ export class DataterminalService {
       q03superpowers: ["",],
       q05deductibles: ["",],
     }
-  }));
-  dtblank = JSON.parse(JSON.stringify(this.allData));
-  currPage = 0
-
-  //  "homehelp": { fullname: "", email: "", writehelp: "" },
-  //  "product":"",
+  });
+  allData = JSON.parse(localStorage.getItem('allData') || this.initVals);
+  dtblank = JSON.parse(this.initVals);
+  currPage = parseInt(localStorage.getItem('currPage')) || 0;
 
   constructor(private route: Router) {
     this.route.navigate([window.location.pathname]);
     this.dtblank.c06security = [];
+    this.dtblank.c10loading = '';
     this.dtblank["c13quote-detail"].q05deductibles = [];
+    console.log("constructed service");
   }
   changepage(goForward = true) {
     console.log(goForward)
@@ -58,6 +58,8 @@ export class DataterminalService {
     this.gotopage();
   }
   gotopage(idx = this.currPage) {
+    localStorage.setItem('currPage', idx.toString());
+    localStorage.setItem('allData', JSON.stringify(this.allData));
     this.route.navigate([this.pageList[idx]])
   }
   homepage(mode: any, data: any) {
@@ -70,7 +72,10 @@ export class DataterminalService {
   domFunction(mode: any) {
     switch(mode){
       case 'reset':
-        this.route.navigate(['/c01name'])
+        this.allData = this.initVals;
+        localStorage.setItem('currPage', '0');
+        localStorage.setItem('allData', JSON.stringify(this.allData));
+        this.gotopage(0);
       return
     }
   }

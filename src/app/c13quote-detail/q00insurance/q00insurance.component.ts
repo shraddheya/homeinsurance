@@ -9,7 +9,7 @@ import { DataterminalService } from 'src/app/dataterminal.service';
 export class Q00insuranceComponent implements OnInit {
 
   devicesize: any;
-  constructor(public dataservice: DataterminalService) {
+  constructor(public ds: DataterminalService) {
     window.onresize = function () {
      this.devicesize = document.body.clientWidth
     }

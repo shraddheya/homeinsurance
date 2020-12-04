@@ -8,12 +8,12 @@ import { DataterminalService } from 'src/app/dataterminal.service';
 })
 export class Q08activeinsuranceComponent implements OnInit {
 
-  constructor( public dataservice: DataterminalService ) { }
+  constructor( public ds: DataterminalService ) { }
 
   ngOnInit(): void {
-    console.log(this.dataservice.allData.home.price);
+    console.log(this.ds.allData.home.price);
   }
   clicked() {
-    this.dataservice.changepage();
+    this.ds.changepage();
   }
 }

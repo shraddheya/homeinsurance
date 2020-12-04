@@ -12,11 +12,12 @@ export class ButtBackComponent implements OnInit {
   disp: boolean;
 
   goBack() {
-    this.dataservice.changepage(false);
+    this.ds.changepage(false);
   }
 
-  constructor(public dataservice: DataterminalService, private router: Router) {
-    // dataservice.allData = {
+  constructor(public ds: DataterminalService, private router: Router) {
+    //#region default values
+    // ds.allData = {
     //   "home": {
     //     "name": "Contents Contents",
     //     "price": 2
@@ -62,24 +63,26 @@ export class ButtBackComponent implements OnInit {
     //     q03superpowers: ["",],
     //   }
     // };
+    //#endregion
 
     router.events.subscribe(val => {
       if (val instanceof NavigationEnd) {
-        let idx = dataservice.pageList.indexOf(val.url.substr(1));
+        let idx = ds.pageList.indexOf(val.url.substr(1));
+        if (idx === ds.pageList.indexOf('c10loading')) idx = idx - 1;
         this.disp = idx > 0;
         if (idx < 0) return;
         console.log(idx)
         let gotoPageIdx = idx;
         for (let i = 0; i < idx; i++) {
-          let pgnm = dataservice.pageList[i];
-          if (JSON.stringify(dataservice.allData[pgnm]) === JSON.stringify(dataservice.dtblank[pgnm])) {
+          let pgnm = ds.pageList[i];
+          if (JSON.stringify(ds.allData[pgnm]) === JSON.stringify(ds.dtblank[pgnm])) {
             gotoPageIdx = i;
             break;
           }
         }
         if (gotoPageIdx !== idx) {
-          dataservice.currPage = gotoPageIdx;
-          dataservice.gotopage(gotoPageIdx);
+          ds.currPage = gotoPageIdx;
+          ds.gotopage(gotoPageIdx);
         }
       }
     })

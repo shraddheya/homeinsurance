@@ -17,32 +17,32 @@ export class H10ProductoncheckpriceComponent implements OnInit {
     'Renters insurance': {
       img: 'assets/renters.png',
       imgactive: 'assets/renters_selected.png',
-      selectedview: this.dataservice.allData["product"] === "Renters insurance"
+      selectedview: this.ds.allData["product"] === "Renters insurance"
     },
     'Homeowners insurance': {
       img: 'assets/houseowner.png',
       imgactive: 'assets/houseowner_selected.png',
-      selectedview: this.dataservice.allData["product"] === "Homeowners insurance"
+      selectedview: this.ds.allData["product"] === "Homeowners insurance"
     },
     'pet insurance': {
       img: 'assets/pet.png',
       imgactive: 'assets/pet_selected.png',
-      selectedview: this.dataservice.allData["product"] === "pet insurance"
+      selectedview: this.ds.allData["product"] === "pet insurance"
     }
   };
-  constructor(public dataservice: DataterminalService, public router: Router) { }
+  constructor(public ds: DataterminalService, public router: Router) { }
 
   ngOnInit(): void {
-    // if (this.dataservice.allData["product"].length > 1) this.buttDisabled = false;
+    // if (this.ds.allData["product"].length > 1) this.buttDisabled = false;
   }
   changed(key: string) {
-    this.dataservice.allData["product"] = key;
+    this.ds.allData["product"] = key;
     for (let item in this.producttype) this.producttype[item].selectedview = key === item;
     this.buttDisabled = false;
   }
   clicked() {
     this.router.navigate(['c01name'])
-    //this.dataservice.changepage();
+    //this.ds.changepage();
   }
 
 }
