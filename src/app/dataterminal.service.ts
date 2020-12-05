@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class DataterminalService {
-  pageList = ["home","c01name", "c02address", "c03type-home", "c04primaryresidence", "c05size-home", "c06security", "c07members", "c08assets", "c09get-quote","c10loading", "c11builthome-year", "c12insurance-claim-count", "c13quote-detail", "c14pdf"]
+  pageList = ["home", "c01name", "c02address", "c03type-home", "c04primaryresidence", "c05size-home", "c06security", "c07members", "c08assets", "c09get-quote", "c10loading", "c11builthome-year", "c12insurance-claim-count", "c13quote-detail", "c14pdf"]
   initVals = JSON.stringify({
     "home": { name: "", price: 0 },
     "c01name": { firstName: "", lastName: "" },
@@ -42,6 +42,8 @@ export class DataterminalService {
   dtblank = JSON.parse(this.initVals);
   currPage = parseInt(localStorage.getItem('currPage')) || 0;
 
+  resetcheck = false;
+
   constructor(private route: Router) {
     this.route.navigate([window.location.pathname]);
     this.dtblank.c06security = [];
@@ -52,7 +54,6 @@ export class DataterminalService {
     this.allData = (localStorage.getItem('alldata') == 'null') ? JSON.parse(this.allData) : this.allData
   }
   changepage(goForward = true) {
-    console.log(goForward)
     if (goForward) this.currPage++;
     else this.currPage--;
     if (this.currPage < 0) this.currPage = 0;
@@ -60,6 +61,8 @@ export class DataterminalService {
     this.gotopage();
   }
   gotopage(idx = this.currPage) {
+    idx = (this.resetcheck === true) ? idx + 1 : idx //Use for reset
+    console.log(idx)
     localStorage.setItem('currPage', idx.toString());
     localStorage.setItem('allData', JSON.stringify(this.allData));
     this.route.navigate([this.pageList[idx]])
@@ -67,19 +70,19 @@ export class DataterminalService {
   homepage(mode: any, data: any) {
     switch (mode) {
       case 'help':
-        // console.log(data)
         return
     }
   }
   domFunction(mode: any) {
-    switch(mode){
+    switch (mode) {
       case 'reset':
         this.allData = JSON.parse(this.initVals)
         //this.allData = this.initVals;
-        localStorage.setItem('currPage', '0');
+        localStorage.setItem('currPage', '1');
         localStorage.setItem('allData', JSON.stringify(this.allData));
-        this.gotopage(0);
-      return
+        this.gotopage(1);
+        this.resetcheck = true
+        return
     }
   }
 }
