@@ -1,6 +1,5 @@
 <div class="fixedheader">
-  <mdb-navbar id="navbarid" SideClass="navbar navbar-expand-lg navbar-dark white p-3" style="box-shadow: 0 2px 5px 0 rgba(0,0,0,.16) !important"
-    [containerInside]="false">
+  <mdb-navbar id="navbarid" SideClass="navbar navbar-expand-lg navbar-dark white {{(navsize)? 'p-5 z-depth-0':'p-3'}}" [containerInside]="false">
     <mdb-navbar-brand>
       <div class="navbrandtop">
         <app-sidenav></app-sidenav>
@@ -12,7 +11,7 @@
       </div>
     </mdb-navbar-brand>
     <div id="centerlogo">
-      <img *ngIf="router.url === '/home'" src="assets/logo.svg" alt="" height="30em">
+      <img *ngIf="router.url === '/home'" src="assets/logo.svg" alt="" class="{{(navsize)? 'centerlogo_before' : 'centerlogo_after'}}">
     </div>
     <links>
       <ul class="navbar-nav ml-auto nav-flex-icons">
@@ -32,7 +31,7 @@
           </a>
         </li>
         <li class="nav-item linkindex" *ngIf="showpricebtn">
-          <a class="nav-link text-white buttonstyle" routerLink="/product" style="width:auto">
+          <a class="nav-link buttonstyle" routerLink="/product" style="width:auto">
             CHECK OUR PRICES
           </a>
         </li>

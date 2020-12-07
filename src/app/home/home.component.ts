@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DataterminalService } from '../dataterminal.service';
+declare var $: any
 
 @Component({
   selector: 'app-home',
@@ -17,13 +18,23 @@ export class HomeComponent implements OnInit {
   })
 
 
-  constructor(public ds: DataterminalService) { }
+  constructor(public ds: DataterminalService) {
+    // $(window).resize(function () {
+    //   console.log(screen.availHeight, screen.availWidth);
+    // });
+    window.onresize = () =>{
+      console.log(window.screen.height, window.screen.width);
+    }
+  }
 
   ngOnInit(): void {
+
   }
   helpClicked() {
     this.formsubmit = false;
-    this.ds.homepage('help',this. helpForm.value)
+    this.ds.homepage('help', this.helpForm.value)
+  }
+  findSize(){
   }
 
 }
