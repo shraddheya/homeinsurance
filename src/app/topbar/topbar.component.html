@@ -1,17 +1,15 @@
 <div class="fixedheader {{(navsize)?'border border-white':'bottomborder'}}">
-
-
-  <mdb-navbar
-    SideClass="navbar navbar-expand-lg navbar-dark white {{(navsize)? 'p-5 z-depth-0':'p-3 z-depth-0 bottomborder'}}"
+  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark white {{(navsize)? 'p-5 z-depth-0':'p-3 z-depth-0'}}"
     [containerInside]="false">
     <mdb-navbar-brand>
       <div class="navbrandtop">
         <app-sidenav *ngIf=false></app-sidenav>
       </div>
-      <div class="navbrandtop">
-        <span *ngIf="router.url !== '/home'">
-          <img src="assets/logo.svg" alt="">
-        </span>
+      <div *ngIf="router.url !== '/home'" class="pl-3 pr-3 logofont" style="background-color:var(--accent2)">
+        <p class="">
+          <a class="text-white">Our</a>
+          <a style="color:var(--accent1)">Insurer</a>
+        </p>
       </div>
     </mdb-navbar-brand>
     <div id="centerlogo" class="{{(navsize)?'mb-2':'mt-3'}} font-weight-bold">
@@ -60,7 +58,8 @@
           </a>
         </li>
         <li class="nav-item linkindex" *ngIf="showpricebtn">
-          <a class="nav-link buttonstyle" routerLink="/product" style="width:auto">
+          <!-- routerLink="/product" -->
+          <a class="nav-link buttonstyle py-2 px-4" (click)="ds.gotopage(1)">
             CHECK OUR PRICES
           </a>
         </li>
