@@ -1,10 +1,12 @@
-<div class="fixedheader">
+<div class="fixedheader {{(navsize)?'border border-white':'bottomborder'}}">
 
 
-  <mdb-navbar id="navbarid" SideClass="navbar navbar-expand-lg navbar-dark white {{(navsize)? 'p-5 z-depth-0':'p-3'}}" [containerInside]="false">
+  <mdb-navbar
+    SideClass="navbar navbar-expand-lg navbar-dark white {{(navsize)? 'p-5 z-depth-0':'p-3 z-depth-0 bottomborder'}}"
+    [containerInside]="false">
     <mdb-navbar-brand>
       <div class="navbrandtop">
-        <app-sidenav></app-sidenav>
+        <app-sidenav *ngIf=false></app-sidenav>
       </div>
       <div class="navbrandtop">
         <span *ngIf="router.url !== '/home'">
@@ -12,36 +14,34 @@
         </span>
       </div>
     </mdb-navbar-brand>
-    <div id="centerlogo">
-      <img *ngIf="router.url === '/home'" src="assets/logo.svg" alt="" class="{{(navsize)? 'centerlogo_before' : 'centerlogo_after'}}">
+    <div id="centerlogo" class="{{(navsize)?'mb-2':'mt-3'}} font-weight-bold">
+      <div *ngIf="router.url === '/home'" class="pl-3 pr-3 logofont" style="background-color:var(--accent2)">
+        <p class="{{(navsize)? 'centerlogo_before' : 'centerlogo_after'}}">
+          <a class="text-white">Our</a>
+          <a style="color:var(--accent1)">Insurer</a>
+        </p>
+      </div>
+      <!-- <img *ngIf="router.url === '/home'" src="assets/logo.svg" alt="" class="{{(navsize)? 'centerlogo_before' : 'centerlogo_after'}}"> -->
     </div>
     <links>
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link waves-light" mdbWavesEffect>Home
+        <li class="nav-item linkindex">
+          <a class="nav-link waves-light navlistleft" mdbWavesEffect>Home
             <!-- <span class="sr-only">(current)</span> -->
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect>Features</a>
+        <li class="nav-item linkindex">
+          <a class="nav-link waves-light navlistleft" mdbWavesEffect>FAQ</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
+        <li class="nav-item linkindex">
+          <a class="nav-link waves-light navlistleft" mdbWavesEffect>Claims</a>
         </li>
-
-        <!-- Dropdown -->
-        <li class="nav-item dropdown" dropdown>
-          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-            Basic dropdown<span class="caret"></span></a>
-          <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
-            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
-            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
-            <div class="divider dropdown-divider"></div>
-            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
-          </div>
+        <li class="nav-item linkindex">
+          <a class="nav-link waves-light navlistleft" mdbWavesEffect>Giveback</a>
         </li>
-
+        <li class="nav-item linkindex">
+          <a class="nav-link waves-light navlistleft" mdbWavesEffect>Policy 2.0</a>
+        </li>
       </ul>
       <ul class="navbar-nav ml-auto nav-flex-icons">
         <li class="nav-item linkindex" *ngIf="router.url !== '/home'">
@@ -93,7 +93,7 @@
       </div>
       <div class="modal-footer border border-white">
         <div class="divcenter">
-          <button type="button" mdbBtn  class="waves-light font-weight-bold startovercancel" aria-label="Close"
+          <button type="button" mdbBtn class="waves-light font-weight-bold startovercancel" aria-label="Close"
             (click)="resetmodal.hide()" mdbWavesEffect>CANCEL</button>
           <button type="button" mdbBtn class="relative text-white waves-light buttonstyle"
             (click)="ds.domFunction('reset'); resetmodal.hide()" mdbWavesEffect>START OVER</button>

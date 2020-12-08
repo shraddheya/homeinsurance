@@ -16,22 +16,23 @@
   z-index: 2;
 
 }
+.bottomborder{
+  border-bottom: 0.1em solid var(--accent2);
+}
+
 .linkindex {
   z-index: 3000;
 }
 #centerlogo{
-  box-sizing: border-box;
- display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
+  display: table;
   position: absolute;
-  height: 100%;
   left: 50%;
-  top: 0px;
+  right: 50%;
   transform: translateX(-50%);
+  margin: auto;
 }
+
+
 .startovercancel{
     font-family: Lato, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.3;
@@ -55,14 +56,23 @@
     // box-shadow: '#{$accent1}bb'
 
 }
+#navbarid{
+  border-bottom: 0.4em solid red !important;
+}
 .navbrandtop{
   position: relative;
   display:inline-block
 }
 
+.navlistleft{
+  color:var(--accent2) !important
+}
+
 .centerlogo_before{
-  height:3em;
+   font-size: 3.5em;
+   line-height: 1.5em;
 }
 .centerlogo_after{
-   height:2em
+   font-size:2em;
+   line-height: 1.5em;
 }

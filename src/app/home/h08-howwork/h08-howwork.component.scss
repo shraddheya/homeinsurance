@@ -1,5 +1,8 @@
+.bgofsection{
+  background-color: var(--accent2);
+}
 .titlecolor{
-  color: rgb(74, 74, 74);
+  color: white;
   display: table;
   margin:auto;
   font-size: 3rem;
@@ -13,7 +16,7 @@
     font-weight: 4000;
     font-size: 1.1rem;
     line-height: 1.5em;
-    color: rgb(74, 74, 74);
+    color: white;
 }
 
 .imgbg{
@@ -30,4 +33,7 @@
     font-size: 0.9rem;
     line-height: 1.5em;
     color: rgb(74, 74, 74);
+}
+.h08bottom{
+  padding: 2em;
 }

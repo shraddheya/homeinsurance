@@ -1,12 +1,20 @@
+// accent1, accent2, accent5 mainly use
 $accent1: #00acee;
 $accent2: #15202a;
 $accent3: rgb(220, 0, 115);
 $accent4: rgb(224, 219, 219);
+$accent5: #2C363F;
+$fontfamily: Arial;
 :root {
   --accent1: #00acee;
   --accent2: #15202a;
   --accent3: rgb(220, 0, 115);
   --accent4: rgb(224, 219, 219);
+  --accent5: #2C363F;
+  --fontfamily: Arial
+}
+.logofont{
+  font-family: "Century Gothic"
 }
 .lightbghome{
   //background-color: #f8f4f4;
@@ -35,7 +43,7 @@ body {
 /* Card css for global use*/
 .maintitle {
   line-height: 1.3;
-  color: rgb(74, 74, 74);
+  color: var(--accent2);
   // font-family: Merriweather, Georgia, serif;
   font-family: Arial;
   text-align: center;
