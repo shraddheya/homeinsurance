@@ -5,15 +5,21 @@
   <div class="row">
     <div *ngFor="let item of pricescard" class="col-xl-4 col-lg-4 col-md-4 col-12">
       <div class="cardouter">
-        <h3 class="cardtitle">{{item.title1}}<br>{{item.title2}}</h3>
+        <!-- <h3 class="cardtitle">{{item.title1}}<br>{{item.title2}}</h3> -->
         <div class="p-1">
+          <small class="cardtext">€ {{item.price}}</small>
+        </div>
+        <!-- <div class="p-1">
+          <em class="cardprice">{{item.price}}</em>
+        </div> -->
+        <div class="pt-2 pb-3">
+          <a class="buttonstyle" (click)="clicked(item)">{{item.buttontext | uppercase}}</a>
+        </div>
+        <div class="">
           <small class="cardtext">{{item.text |uppercase}}</small>
         </div>
         <div class="p-1">
-          <em class="cardprice">{{item.price}}€</em>
-        </div>
-        <div class="p-1">
-          <a class="buttonstyle" (click)="clicked(item)">{{item.buttontext}}</a>
+          <small class="cardtext">{{item.title1}} {{item.title2}}</small>
         </div>
       </div>
     </div>

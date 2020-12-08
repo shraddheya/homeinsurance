@@ -15,15 +15,12 @@
     line-height: 1.5em;
     color: rgb(74, 74, 74);
 }
+.bgimgs{
+  display:table;
+  margin:auto;
+}
 .imgbg{
-  box-sizing: border-box;
-  padding-top: 23px;
-  padding-left: 10px;
-  padding-right: 10px;
-  display: flex;
-  flex-direction: column;
-  -webkit-box-align: center;
-  align-items: center;
-  height: 580px;
-  background: url("../../../assets/bg-living-room-7104315b717f054f8668c9446cfcc09f.svg") 71% 100% no-repeat;
+  height: 20em;
+  width: 35em;
+  display: inline-block
 }

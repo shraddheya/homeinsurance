@@ -9,7 +9,9 @@ $accent4: rgb(224, 219, 219);
   --accent4: rgb(224, 219, 219);
 }
 .lightbghome{
-  background-color: #f8f4f4;
+  //background-color: #f8f4f4;
+  background-color: var(--accent2);
+  color: var(--accent1)
 }
 body {
   box-sizing: content-box;
@@ -34,7 +36,8 @@ body {
 .maintitle {
   line-height: 1.3;
   color: rgb(74, 74, 74);
-  font-family: Merriweather, Georgia, serif;
+  // font-family: Merriweather, Georgia, serif;
+  font-family: Arial;
   text-align: center;
 }
 
@@ -54,9 +57,11 @@ body {
   width: 320px;
   -webkit-box-align: center;
   align-items: center;
-  background-color: rgb(247, 247, 247);
+  //background-color: rgb(247, 247, 247);
+  background-color: var(--accent2);
+  color: var(--accent1);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 47px 46px -27px;
-  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  font-family: Lato, "Arial";
   font-size: 1.6rem;
   line-height: 1.3;
   font-weight: 400;
@@ -72,20 +77,20 @@ body {
   line-height: 1.9rem;
   white-space: pre;
   text-align: center;
-  font-family: 30px Lato, "Helvetica Neue", Arial, sans-serif;
-  color: #4a4a4a;
+  font-family: Arial;
+  color: white;
 }
 
 .cardtext {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.3;
-  color: rgb(183, 183, 183);
+  color: white;
 }
 
 .cardprice {
-  color: #4a4a4a;
-  font-family: Merriweather, Georgia, serif;
+  color: white;
+  font-family: Arial;
   font-size: 5.1rem;
   line-height: 7.7rem;
   font-weight: 500;
