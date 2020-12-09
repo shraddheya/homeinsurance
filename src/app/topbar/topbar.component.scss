@@ -8,6 +8,15 @@
   border-radius: 5em;
   top: 3.9em;
 }
+.iconimgtop_scroll{
+  height: 3em;
+  width: 3em;
+  z-index: 1038;
+  position: fixed;
+  overflow: hidden;
+  border-radius: 5em;
+  top: 1.5em;
+}
 .fixedheader {
   position: fixed;
   top: 0em;
