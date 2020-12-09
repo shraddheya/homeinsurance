@@ -41,16 +41,16 @@
           </div>
           <div class="pt-3 ">
             <input type="checkbox" class="mr-3 checkbox" formControlName="privacyterm"> I agree to the
-             <!-- <a
+            <!-- <a
               class="termscolor">privacy policy</a> &  -->
-              <a class="termscolor" (click)='termandcondition.show()'>terms of
+            <a class="termscolor" (click)='termandcondition.show()'>terms of
               service</a>
           </div>
         </div>
       </div>
 
       <div class="mt-3">
-        <button mdbBtn class="buttonstyle" (click)="clicked()" mdbWavesEffect
+        <button mdbBtn class="{{(!moreDetails)?'buttonstyle':'disablestyle'}}" (click)="clicked()" mdbWavesEffect
           [disabled]="!moreDetails.valid">Next</button>
       </div>
     </form>
@@ -73,7 +73,8 @@
       </div>
       <div class="modal-footer border border-white">
         <div style="display:table;margin:auto">
-          <button mdbBtn size="lg" class="text-dark font-weight-bold termbtn" (click)="termandcondition.hide()">OK</button>
+          <button mdbBtn size="lg" class="text-dark font-weight-bold termbtn"
+            (click)="termandcondition.hide()">OK</button>
         </div>
       </div>
     </div>

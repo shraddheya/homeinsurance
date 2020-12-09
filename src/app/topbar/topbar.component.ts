@@ -13,8 +13,9 @@ export class TopbarComponent implements OnInit {
   navsize: any = true;
   constructor(public ds: DataterminalService, public router: Router) {
     comp = this
+    console.log((router.url === '/home') ? window.pageYOffset <= 112 : window.pageYOffset <= 50)
     window.addEventListener('scroll', function () {
-      comp.navsize = window.pageYOffset <= 112
+      comp.navsize = (router.url === '/home') ? window.pageYOffset <= 112 : window.pageYOffset <= 50
       comp.showpricebtn = window.pageYOffset >= 400
     });
   }
