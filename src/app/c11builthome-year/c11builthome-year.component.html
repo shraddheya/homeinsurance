@@ -14,7 +14,7 @@
     </div>
 
     <div class="p-2 mt-4">
-      <button mdbBtn class="buttonstyle" mdbWavesEffect (click)="clicked()" [disabled]="! yearForm.valid">Next</button>
+      <button mdbBtn class="{{(!yearForm.valid) ? 'disablestyle':'buttonstyle'}}" mdbWavesEffect (click)="clicked()" [disabled]="! yearForm.valid">Next</button>
     </div>
   </div>
 </div>

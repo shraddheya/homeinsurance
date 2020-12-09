@@ -2,7 +2,9 @@
   box-sizing: border-box;
   display: flex;
   align-items: left;
-  background-color: #f7f7f7;
+  //background-color: #f7f7f7;
+  background-color: var(--accent2);
+  color: white;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 47px 46px -27px;
   font-family: Lato, "Helvetica Neue", Arial, sans-serif;
   line-height: 0.3;
@@ -44,7 +46,8 @@
 .messagepart {
   box-sizing      : border-box;
   display         : flex;
-  background-color: #f7f7f7;
+  background-color: var(--accent2);
+  //background-color: #f7f7f7;
   box-shadow      : rgba(0, 0, 0, 0.16) 0px 47px 46px -27px;
   font-family     : Lato, "Helvetica Neue", Arial, sans-serif;
   font-weight     : 400;
@@ -54,5 +57,6 @@
 
 .messagetitle {
   font-family: 30px Lato, "Helvetica Neue", Arial, sans-serif;
-  color      : #4A4A4A;
+  //color      : #4A4A4A;
+  color      : white;
 }

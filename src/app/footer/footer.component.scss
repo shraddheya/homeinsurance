@@ -1,12 +1,37 @@
 .footersection{
   box-sizing: border-box;
-  background-color: rgb(40, 40, 40);
+  //background-color: rgb(40, 40, 40);
+  background-color: var(--accent2);
 }
 .dropdown{
-  background-color: rgb(40, 40, 40);
+  background-color: var(--accent2);
+}
+.footerlang_dropdown{
+  width:10em;
+}
+.languagedrop{
+  position: inherit;
+  background-color: var(--accent2);
+  border-radius: 5px;
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  line-height: 2.1rem;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  white-space: pre;
+  text-align: left;
+  outline: none;
+  padding: 0px 8px;
+  width:22.5em;
+  transition: background-color 0.2s ease 0s;
+}
+constructed stylesheet
+* {
+    background-color: var(--accent2);
 }
 .dropdown-item{
-  background-color: rgb(40, 40, 40);
+    //background-color: rgb(40, 40, 40);
+    background-color: var(--accent2);
 }
 .dropdown-item:hover{
   background-color:gray;

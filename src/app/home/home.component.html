@@ -24,7 +24,7 @@
   <div class="modal-dialog modal-md modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header border border-white">
-        <button type="button" class="close pull-right" aria-label="Close" (click)="helpmodal.hide()">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="helpmodal.hide();">
           <span aria-hidden="true">×</span>
         </button>
         <h4 class="modal-title w-100" id="myModalLabel">
@@ -59,7 +59,7 @@
               (click)="helpClicked()" mdbWavesEffect>SEND</button>
           </div>
           <div *ngIf=!formsubmit>
-            <button type="button" mdbBtn class="waves-light btnhome" aria-label="Close" (click)="helpmodal.hide()"
+            <button type="button" mdbBtn class="waves-light btnhome" aria-label="Close" (click)="helpmodal.hide();checkmodalview = false"
               mdbWavesEffect>OK</button>
           </div>
         </div>

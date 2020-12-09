@@ -7,7 +7,7 @@ import { DataterminalService } from '../dataterminal.service';
   styleUrls: ['./c06security.component.scss']
 })
 export class C06securityComponent implements OnInit {
-
+  checktest:any = true
   securitytype: any = {
     'burglar alarm': {
       img: 'assets/burglar-e86e0122c41e7d8257a8bc167070cb06d588ec91810469cbb4b27b948ce67fb5.png',
@@ -26,9 +26,12 @@ export class C06securityComponent implements OnInit {
   }
 
   changed(el: any) {
-    console.log(el.name , el.checked)
-    if (el.checked) this.ds.allData.c06security.push(el.name);
+    if (el.checked) {
+      this.checktest = false
+      this.ds.allData.c06security.push(el.name)
+    }
     else {
+      this.checktest = true
       let idx = this.ds.allData.c06security.indexOf(el.name);
       if (idx > -1) this.ds.allData.c06security.splice(idx, 1);
     }

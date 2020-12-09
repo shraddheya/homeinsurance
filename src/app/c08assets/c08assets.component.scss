@@ -2,7 +2,9 @@
     box-sizing: border-box;
     display: flex;
     align-items: left;
-    background-color: #f7f7f7;
+    background-color: var(--accent2);
+    color: white;
+   // background-color: #f7f7f7;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 47px 46px -27px;
     font-family: Lato, "Helvetica Neue", Arial, sans-serif;
     line-height: 0.3;
@@ -10,7 +12,9 @@
     flex-flow: column;
     border-radius: 12px;
 }
-
+.c08msg{
+  color:var(--accent1) !important;
+}
 .assetspurchase input[type='radio']:after {
     width           : 15px !important;
     height          : 15px !important;
@@ -44,7 +48,8 @@
 .messagepart {
     box-sizing      : border-box;
     display         : flex;
-    background-color: #f7f7f7;
+    //background-color: #f7f7f7;
+    background-color: var(--accent2);
     box-shadow      : rgba(0, 0, 0, 0.16) 0px 47px 46px -27px;
     font-family     : Lato, "Helvetica Neue", Arial, sans-serif;
     font-weight     : 400;
@@ -54,5 +59,6 @@
 
 .messagetitle {
     font-family: 30px Lato, "Helvetica Neue", Arial, sans-serif;
-    color      : #4A4A4A;
+    color:white
+    //color      : var(--accent1);
 }

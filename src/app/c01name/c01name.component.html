@@ -12,15 +12,14 @@
           </div>
           <div class="col">
             <input mdbInput type="text" class="form-control p-4 inputtexthover" formControlName="lastName"
-              placeholder="Last name">
+              placeholder="Last name" (keydown.enter)="(profileForm.valid)?clicked():''">
           </div>
         </div>
       </form>
     </div>
-
     <div class="whitetext p-3">
-      <button mdbBtn class="buttonstyle" (click)="clicked()" [disabled]="! profileForm.valid">LETS DO
-        THIS</button>
+      <button mdbBtn class="{{(!profileForm.valid) ? 'disablestyle':'buttonstyle'}} " (click)="clicked()"
+        [disabled]="! profileForm.valid"> LETS DO THIS</button>
     </div>
   </div>
 </div>

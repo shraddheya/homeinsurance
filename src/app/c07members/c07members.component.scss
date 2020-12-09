@@ -3,7 +3,8 @@
   display: flex;
   -webkit-box-align: center;
   align-items: center;
-  background-color: rgb(247, 247, 247);
+  //background-color: rgb(247, 247, 247);
+  background-color: var(--accent2);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 47px 46px -27px;
   font-family: Lato, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.3;
@@ -15,5 +16,6 @@
 }
 .messagetitle {
   font-family: 30px Lato, "Helvetica Neue", Arial, sans-serif;
-  color: #4a4a4a;
+  //color: #4a4a4a;
+  color: white;
 }

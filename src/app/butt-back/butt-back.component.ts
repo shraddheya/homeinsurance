@@ -20,7 +20,7 @@ export class ButtBackComponent implements OnInit {
       if (val instanceof NavigationEnd) {
         let idx = ds.pageList.indexOf(val.url.substr(1));
         if (idx === ds.pageList.indexOf('c10loading')) idx = idx - 1;
-        this.disp = idx > 0;
+        this.disp = idx > 1;
         if (idx < 0) return;
         let gotoPageIdx = idx;
         for (let i = 0; i < idx; i++) {

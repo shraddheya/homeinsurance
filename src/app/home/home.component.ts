@@ -10,6 +10,7 @@ declare var $: any
 })
 export class HomeComponent implements OnInit {
 
+  checkmodalview = false
   formsubmit: any = true;
   helpForm = new FormGroup({
     fullname: new FormControl('', Validators.required),
