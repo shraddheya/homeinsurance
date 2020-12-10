@@ -15,12 +15,15 @@
     line-height: 1.5em;
     color: rgb(74, 74, 74);
 }
-.bgimgs{
-  display:table;
-  margin:auto;
-}
-.imgbg{
+#imgbgleft{
   height: 20em;
-  width: 35em;
-  display: inline-block
+  width: 100%;
+  background-image: url('../../../assets/h04left.jpg');
+  border:0.1em solid black
+}
+#imgbgright{
+  height: 20em;
+  width: 100%;
+  background-image: url('../../../assets/h04right.jpg');
+  border:0.1em solid black
 }

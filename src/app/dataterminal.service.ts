@@ -42,8 +42,6 @@ export class DataterminalService {
   dtblank = JSON.parse(this.initVals);
   currPage = parseInt(localStorage.getItem('currPage')) || 0;
 
-  checkroute = false;
-
   constructor(private route: Router) {
     this.route.navigate([window.location.pathname]);
     this.dtblank.c06security = [];
@@ -61,8 +59,6 @@ export class DataterminalService {
     this.gotopage();
   }
   gotopage(idx = this.currPage) {
-    idx = (this.checkroute === true) ? idx + 1 : idx //Use for reset
-    console.log(idx)
     localStorage.setItem('currPage', idx.toString());
     localStorage.setItem('allData', JSON.stringify(this.allData));
     this.route.navigate([this.pageList[idx]])
@@ -78,10 +74,9 @@ export class DataterminalService {
       case 'reset':
         this.allData = JSON.parse(this.initVals)
         //this.allData = this.initVals;
-        localStorage.setItem('currPage', '1');
+        localStorage.setItem('currPage', '0');
         localStorage.setItem('allData', JSON.stringify(this.allData));
-        this.gotopage(1);
-        this.checkroute = true
+        this.gotopage(0);
         return
     }
   }
