@@ -9,34 +9,24 @@
     margin: auto;
     border-radius: 29em;
     position: relative;
-    height: 0.3em;
+    height: 0.5em;
 }
-.loadingcrunch{
-  left: 12em;
-  position: relative;
-  color:var(--accent2) !important;
-}
+
 #myBar {
   width: 1%;
-  background-color: var(--accent1);
+  background-color:var(--accent3);
   border-radius: 29em;
   position: relative;
-  height: 0.3em;
+  height: 0.5em;
 }
 
 .textcolor{
-  color:var(--accent1);
+  color:var(--accent3);
 }
 
 .loaderprogress{
-    height: 1.1em;
-    width: 1.1em;
-}
-
-.imgsrc{
   position: relative;
-  width: 11em;
-  height: -12em;
-  padding: 7em;
-  padding: 0em;
+    left: -10em;
+    height: 1.3em;
+    width: 1.3em;
 }

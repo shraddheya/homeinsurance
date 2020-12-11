@@ -10,18 +10,13 @@ let comp: TopbarComponent
 })
 export class TopbarComponent implements OnInit {
   showpricebtn: any = false
-  navsize: any = true;
   constructor(public ds: DataterminalService, public router: Router) {
     comp = this
-    console.log((router.url === '/home') ? window.pageYOffset <= 112 : window.pageYOffset <= 50)
-    window.addEventListener('scroll', function () {
-      comp.navsize = (router.url === '/home') ? window.pageYOffset <= 112 : window.pageYOffset <= 50
-      comp.showpricebtn = window.pageYOffset >= 400
-    });
+    window.addEventListener('scroll', function () { comp.showpricebtn = window.pageYOffset >= 400 });
   }
 
   ngOnInit(): void {
-    (window as any).getdata = () => {
+    (window as any).getdata =()=> {
       console.log("allData : ", this.ds.allData);
       console.log("dtblank : ", this.ds.dtblank);
       console.log("initVals : ", this.ds.initVals);

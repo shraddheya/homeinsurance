@@ -14,7 +14,11 @@ export class H05InstanteverythingComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+
+    console.log(this.lemonadeapp)
+
+  }
 
 
 

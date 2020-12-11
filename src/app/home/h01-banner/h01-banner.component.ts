@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataterminalService } from '../../dataterminal.service';
 
 @Component({
   selector: 'app-h01-banner',
@@ -9,7 +8,7 @@ import { DataterminalService } from '../../dataterminal.service';
 })
 export class H01BannerComponent implements OnInit {
 
-  constructor(public ds: DataterminalService) { }
+  constructor(public router: Router) { }
 
   ngOnInit(): void {
   }

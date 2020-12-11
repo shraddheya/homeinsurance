@@ -1,12 +1,19 @@
-.h09license{
-  background-color: white;
-  font-family: var(--fontfamily);
-
+.labelstyle{
+  position: relative;
+  top: -3em;
+  width: 6em;
+  height: 5em;
 }
-.licensedimg{
-  height: 6.5em;
-  width: 7.3em;
+.lctitle{
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: rgb(74, 74, 74);
 }
-.fontbold{
-  font-weight: 800;
+.lctext{
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
 }

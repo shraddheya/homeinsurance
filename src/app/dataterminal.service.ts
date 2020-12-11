@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class DataterminalService {
-  pageList = ["home", "c01name", "c02address", "c03type-home", "c04primaryresidence", "c05size-home", "c06security", "c07members", "c08assets", "c09get-quote", "c10loading", "c11builthome-year", "c12insurance-claim-count", "c13quote-detail", "c14pdf"]
+  pageList = ["home","c01name", "c02address", "c03type-home", "c04primaryresidence", "c05size-home", "c06security", "c07members", "c08assets", "c09get-quote","c10loading", "c11builthome-year", "c12insurance-claim-count", "c13quote-detail", "c14pdf"]
   initVals = JSON.stringify({
     "home": { name: "", price: 0 },
     "c01name": { firstName: "", lastName: "" },
@@ -48,10 +48,9 @@ export class DataterminalService {
     this.dtblank.c10loading = '';
     this.dtblank["c13quote-detail"].q05deductibles = [];
     console.log("constructed service");
-    // Use for after restart process
-    this.allData = (localStorage.getItem('alldata') == 'null') ? JSON.parse(this.allData) : this.allData
   }
   changepage(goForward = true) {
+    console.log(goForward)
     if (goForward) this.currPage++;
     else this.currPage--;
     if (this.currPage < 0) this.currPage = 0;
@@ -66,18 +65,18 @@ export class DataterminalService {
   homepage(mode: any, data: any) {
     switch (mode) {
       case 'help':
+        // console.log(data)
         return
     }
   }
   domFunction(mode: any) {
-    switch (mode) {
+    switch(mode){
       case 'reset':
-        this.allData = JSON.parse(this.initVals)
-        //this.allData = this.initVals;
+        this.allData = this.initVals;
         localStorage.setItem('currPage', '0');
         localStorage.setItem('allData', JSON.stringify(this.allData));
         this.gotopage(0);
-        return
+      return
     }
   }
 }

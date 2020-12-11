@@ -1,49 +1,18 @@
-// Help desk css
-.helpprnt{
-  box-sizing: border-box;
-  padding: 0px;
-}
-.helpprnt1{
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  justify-content: center;
-}
-.helpprnt2{
-  position: absolute;
-  bottom: 0px;
-  right: 20px;
+#helpdesk{
+  position: fixed;
   background: rgb(180, 179, 179);
   color: rgb(67, 67, 67);
-  border-radius: 50px;
+  right: 0.6em;
+  bottom: 0.6em;
+  width: 7.5em;
+  height:3em;
+  border-radius: 5em;
   font-size: 15px;
-  font-weight: 700;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    text-align: center;
+    line-height: 2.8em;
 }
-.helpdesk1{
-  box-sizing: border-box;
-}
-.helpdesk2{
-  position: sticky;
-  right: 0px;
-  bottom: 10px;
-  z-index: 1;
-}
-@media (min-width: 1025px) {
-  .helpprnt2 {
-    min-width: 110px;
-    min-height: 3em;
-  }
-}
-@media (max-width: 1025px) and (min-width: 768px){
-  .helpprnt2 {
-    width: 51px;
-    height: 51px;
-  }
-}
-//Help desk css
-
 .btnhome{
   font-family: Lato, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.3;

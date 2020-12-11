@@ -1,21 +1,15 @@
-
-.iconimgtop {
-  height: 3.8em;
-  width: 3.8em;
-  z-index: 1038;
-  position: fixed;
-  overflow: hidden;
-  border-radius: 5em;
-  top: 3.9em;
+#navbarid{
+  box-shadow: 0 0px 0px 0 rgba(231, 224, 224, 0) !important;
+  font-weight: 300;
 }
-.iconimgtop_scroll{
-  height: 3em;
-  width: 3em;
+.iconimgtop {
+  height: 4.3em;
+  width: 4.3em;
   z-index: 1038;
-  position: fixed;
+  position: relative;
   overflow: hidden;
   border-radius: 5em;
-  top: 1.5em;
+  top: 1.9em;
 }
 .fixedheader {
   position: fixed;
@@ -25,23 +19,22 @@
   z-index: 2;
 
 }
-.bottomborder{
-  border-bottom: 0.1em solid var(--accent2);
-}
-
 .linkindex {
   z-index: 3000;
 }
 #centerlogo{
-  display: table;
+  box-sizing: border-box;
+ display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
   position: absolute;
+  height: 100%;
   left: 50%;
-  right: 50%;
+  top: 0px;
   transform: translateX(-50%);
-  margin: auto;
 }
-
-
 .startovercancel{
     font-family: Lato, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.3;
@@ -65,23 +58,7 @@
     // box-shadow: '#{$accent1}bb'
 
 }
-#navbarid{
-  border-bottom: 0.4em solid red !important;
-}
 .navbrandtop{
   position: relative;
   display:inline-block
-}
-
-.navlistleft{
-  color:var(--accent2) !important
-}
-
-.centerlogo_before{
-   font-size: 3.5em;
-   line-height: 1.5em;
-}
-.centerlogo_after{
-   font-size:2em;
-   line-height: 1.5em;
 }

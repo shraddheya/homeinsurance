@@ -4,27 +4,21 @@
   <app-h04-coverageprotects></app-h04-coverageprotects>
   <app-h05-instanteverything></app-h05-instanteverything>
   <app-h06-plansubscribe></app-h06-plansubscribe>
-  <app-h03-rattinggreel *ngIf=false></app-h03-rattinggreel>
+  <app-h03-rattinggreel></app-h03-rattinggreel>
   <app-h07-alreadyinsured *ngIf=false></app-h07-alreadyinsured>
   <app-h08-howwork></app-h08-howwork>
   <app-h09-licensedcertification></app-h09-licensedcertification>
   <app-footer></app-footer>
 </div>
-
-<div class="helpdesk1 helpdesk2">
-  <div class="helpprnt helpprnt1 helpprnt2">
-    <a class="" (click)="helpmodal.show()">
-      <mdb-icon far icon="question-circle"></mdb-icon>&nbsp;Help
-    </a>
-  </div>
-</div>
-
+<a id="helpdesk" class="z-depth-3" (click)="helpmodal.show()">
+  <p><mdb-icon far icon="question-circle"></mdb-icon>&nbsp;Help</p>
+</a>
 <div mdbModal #helpmodal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-md modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header border border-white">
-        <button type="button" class="close pull-right" aria-label="Close" (click)="helpmodal.hide();">
+        <button type="button" class="close pull-right" aria-label="Close" (click)="helpmodal.hide()">
           <span aria-hidden="true">×</span>
         </button>
         <h4 class="modal-title w-100" id="myModalLabel">
@@ -46,8 +40,7 @@
               <input type="text" class="form-control inputhelp" formControlName="email" placeholder="EMAIL ADDRESS">
             </div>
             <div>
-              <textarea cols="30" class="form-control inputhelp" rows="9" formControlName="writehelp"
-                placeholder="HOW CAN WE HELP?"></textarea>
+              <textarea cols="30" class="form-control inputhelp" rows="9" formControlName="writehelp" placeholder="HOW CAN WE HELP?"></textarea>
             </div>
           </div>
         </form>
@@ -55,12 +48,10 @@
       <div class="modal-footer border border-white">
         <div style="margin:auto;display:table">
           <div *ngIf=formsubmit>
-            <button [disabled]="! helpForm.valid" type="button" mdbBtn class="waves-light btnhome" aria-label="Close"
-              (click)="helpClicked()" mdbWavesEffect>SEND</button>
+            <button [disabled]="! helpForm.valid" type="button" mdbBtn class="waves-light btnhome" aria-label="Close" (click)="helpClicked()" mdbWavesEffect>SEND</button>
           </div>
           <div *ngIf=!formsubmit>
-            <button type="button" mdbBtn class="waves-light btnhome" aria-label="Close" (click)="helpmodal.hide();checkmodalview = false"
-              mdbWavesEffect>OK</button>
+            <button type="button" mdbBtn class="waves-light btnhome" aria-label="Close" (click)="helpmodal.hide()" mdbWavesEffect>OK</button>
           </div>
         </div>
       </div>

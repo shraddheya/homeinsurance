@@ -20,7 +20,7 @@ export class C11builthomeYearComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+ 
   clicked() {
     this.ds.allData["c11builthome-year"] = this.yearForm.value.builtyear;
     this.ds.changepage();

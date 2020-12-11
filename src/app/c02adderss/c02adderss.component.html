@@ -20,13 +20,12 @@
                 </select> -->
                 <div class="form-group">
                   <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()"
-                    placeholder="Search Nearest Location" formControlName="address" autocorrect="off"
-                    autocapitalize="off" spellcheck="off" type="text" #search>
+                    placeholder="Search Nearest Location" formControlName="address"  autocorrect="off" autocapitalize="off" spellcheck="off"
+                    type="text" #search>
                 </div>
               </div>
               <div class="col-lg-4 col-xs-12 m-xs-2">
-                <input type="text" class="form-control p-3" formControlName="housenumber" placeholder="House Number"
-                  (keydown.enter)="addressForm.valid ? clicked() :''">
+                <input type="text" class="form-control p-3" formControlName="housenumber" placeholder="House Number">
               </div>
               <!-- <div class="col-lg-4 col-xs-12 m-xs-2">
                 <input type="text" class="form-control p-3" formControlName="pincode" placeholder="pincode">
@@ -39,8 +38,7 @@
 
     <!-- Next Button -->
     <div class="p-3">
-      <button mdbBtn class="{{(!addressForm.valid) ? 'disablestyle':'buttonstyle'}}" (click)="clicked()"
-        [disabled]="!addressForm.valid">Next</button>
+      <button mdbBtn class="buttonstyle text-white" (click)="clicked()" [disabled]="!addressForm.valid">Next</button>
     </div>
   </div>
 </div>
