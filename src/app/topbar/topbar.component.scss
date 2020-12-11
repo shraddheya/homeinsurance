@@ -2,6 +2,9 @@
   box-shadow: 0 0px 0px 0 rgba(231, 224, 224, 0) !important;
   font-weight: 300;
 }
+.bottomborder{
+  border-bottom: 0.1em solid var(--accent2);
+}
 .iconimgtop {
   height: 4.3em;
   width: 4.3em;
@@ -24,7 +27,7 @@
 }
 #centerlogo{
   box-sizing: border-box;
- display: flex;
+  display: flex;
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: center;
@@ -35,6 +38,13 @@
   top: 0px;
   transform: translateX(-50%);
 }
+.logoscroll_before > img{
+  height:3em;
+}
+.logoscroll_after > img{
+  height:1.5em;
+}
+
 .startovercancel{
     font-family: Lato, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.3;
@@ -54,8 +64,7 @@
     border-color: transparent;
     border-image: initial;
     transition: all 0.3s ease 0s, transform 0.5s ease 0s;
-    background-color: var(--accent4);
-    // box-shadow: '#{$accent1}bb'
+    background-color: var(--accent2);
 
 }
 .navbrandtop{

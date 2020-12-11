@@ -1,5 +1,5 @@
-<div class="fixedheader">
-  <mdb-navbar id="navbarid" SideClass="navbar navbar-expand-lg navbar-dark white p-3" style="box-shadow: 0 2px 5px 0 rgba(0,0,0,.16) !important"
+<div class="fixedheader {{(navsize)?'border border-white':'bottomborder'}}">
+  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark white {{(navsize)? 'p-5':'p-2'}} z-depth-0"
     [containerInside]="false">
     <mdb-navbar-brand>
       <div class="navbrandtop">
@@ -11,7 +11,8 @@
         </span>
       </div>
     </mdb-navbar-brand>
-    <div id="centerlogo">
+
+    <div id="centerlogo" class="{{(navsize)?'logoscroll_before':'logoscroll_after'}}">
       <img *ngIf="router.url === '/home'" src="assets/logo.svg" alt="" height="30em">
     </div>
     <links>
@@ -32,7 +33,7 @@
           </a>
         </li>
         <li class="nav-item linkindex" *ngIf="showpricebtn">
-          <a class="nav-link text-white buttonstyle" routerLink="/product" style="width:auto">
+          <a class="nav-link text-white buttonstyle" style="width:auto">
             CHECK OUR PRICES
           </a>
         </li>
