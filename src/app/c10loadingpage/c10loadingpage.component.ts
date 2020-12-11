@@ -27,7 +27,7 @@ export class C10loadingpageComponent implements OnInit {
         i = 1;
         var elem = document.getElementById("myBar");
         var width = 1;
-        var id = setInterval(frame, 300);
+        var id = setInterval(frame, 50);
         function frame() {
           if (width >= 100) {
             clearInterval(id);
