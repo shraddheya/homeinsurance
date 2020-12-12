@@ -1,6 +1,6 @@
 <div class="h10divsection">
   <div class="divcenter">
-    <h1 class="maintitle mb-2">Which would you like?</h1>
+    <h1 class="maintitle">Which would you like?</h1>
 
     <div class="contentproduct" *ngFor='let item of producttype | keyvalue: asIs'>
       <img class="iconimg divcenter" (click)="changed(item.key)" src="{{item.value.selectedview ? item.value.imgactive : item.value.img}}">

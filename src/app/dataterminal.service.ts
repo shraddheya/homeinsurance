@@ -8,7 +8,7 @@ export class DataterminalService {
   pageList = ["home","c01name", "c02address", "c03type-home", "c04primaryresidence", "c05size-home", "c06security", "c07members", "c08assets", "c09get-quote","c10loading", "c11builthome-year", "c12insurance-claim-count", "c13quote-detail", "c14pdf"]
   initVals = JSON.stringify({
     "home": { name: "", price: 0 },
-    "c01name": { firstName: "", lastName: "" },
+    "c01name": { firstName: "facfn", lastName: "facln" },
     "c02address": { housenumber: "", pincode: "", address: "" },
     "c03type-home": "",
     "c04primaryresidence": "",

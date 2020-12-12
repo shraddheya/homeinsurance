@@ -1,6 +1,5 @@
-<div class="fixedheader {{(navsize)?'border border-white':'bottomborder'}}">
-  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark white {{(navsize)? 'p-5':'p-2'}} z-depth-0"
-    [containerInside]="false">
+<div class="fixedheader p-1 {{(router.url === '/home')?(navsize)?'border border-white':'bottomborder':'bottomborder'}}">
+  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark white z-depth-0" [containerInside]="false">
     <mdb-navbar-brand>
       <div class="navbrandtop">
         <app-sidenav></app-sidenav>
@@ -12,28 +11,33 @@
       </div>
     </mdb-navbar-brand>
 
-
-    <div id="centerlogo" class="{{(navsize)?'logoscroll_before':'logoscroll_after'}}">
-      <img *ngIf="router.url === '/home'" src="assets/logo.svg" alt="" height="30em">
+    <div id="centerlogo" class="font-weight-bold">
+      <div *ngIf="router.url === '/home'">
+        <p class="{{(navsize)? 'centerlogo_before' : 'centerlogo_after'}}">
+          <a style="color:#cfc9c9">Our</a>
+          <a style="color:var(--accent1)">Insurer</a>
+        </p>
+      </div>
+      <!-- <img *ngIf="router.url === '/home'" src="assets/logo.svg" alt="" class="{{(navsize)? 'centerlogo_before' : 'centerlogo_after'}}"> -->
     </div>
     <links>
       <ul class="navbar-nav ml-auto nav-flex-icons">
-        <li class="nav-item linkindex" *ngIf="router.url !== '/home'">
+        <li class="nav-item" *ngIf="router.url !== '/home'">
           <a class="nav-link text-dark" mdbTooltip="Start Over" placement="bottom" (click)="resetmodal.show()">
             <mdb-icon fas icon="undo"></mdb-icon>
           </a>
         </li>
-        <li class="nav-item linkindex" *ngIf="router.url !== '/home'">
+        <li class="nav-item" *ngIf="router.url !== '/home'">
           <a class="nav-link text-dark">
             <mdb-icon far icon="question-circle"></mdb-icon>
           </a>
         </li>
-        <li class="nav-item linkindex" *ngIf="router.url === '/home'">
+        <li class="nav-item" *ngIf="router.url === '/home'">
           <a class="nav-link text-dark">
             My Account
           </a>
         </li>
-        <li class="nav-item linkindex" *ngIf="showpricebtn">
+        <li class="nav-item" *ngIf="showpricebtn">
           <a class="nav-link text-white buttonstyle" style="width:auto">
             CHECK OUR PRICES
           </a>
@@ -42,15 +46,14 @@
     </links>
     <!-- Collapsible content -->
   </mdb-navbar>
-  <div class="row justify-content-center" style="position: relative;top:-4.7em;" *ngIf="router.url !== '/home'">
-    <div class="col-1">
-      <img class="iconimgtop" src="assets/Maya-79af77d3c1e0abe54a4a8f349950ec6b23457716b5361568851546d1cb5c3643.jpg"
-        alt="">
-    </div>
-  </div>
 </div>
 
-
+<div *ngIf="router.url !== '/home'">
+  <div class="divcenter">
+    <img class="{{(centerimg_scroll)? 'iconimgtop_before': 'iconimgtop_after'}} iconimgtop"
+      src="assets/Maya-79af77d3c1e0abe54a4a8f349950ec6b23457716b5361568851546d1cb5c3643.jpg" alt="">
+  </div>
+</div>
 
 <div mdbModal #resetmodal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
   aria-hidden="true">
@@ -67,7 +70,7 @@
       </div>
       <div class="modal-footer border border-white">
         <div class="divcenter">
-          <button type="button" mdbBtn  class="waves-light font-weight-bold startovercancel" aria-label="Close"
+          <button type="button" mdbBtn class="waves-light font-weight-bold startovercancel" aria-label="Close"
             (click)="resetmodal.hide()" mdbWavesEffect>CANCEL</button>
           <button type="button" mdbBtn class="relative text-white waves-light buttonstyle"
             (click)="ds.domFunction('reset'); resetmodal.hide()" mdbWavesEffect>START OVER</button>

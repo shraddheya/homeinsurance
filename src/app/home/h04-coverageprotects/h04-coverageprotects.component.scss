@@ -7,16 +7,27 @@
     line-height: 1.5em;
     color: rgb(74, 74, 74);
 }
-.imgbg{
-  box-sizing: border-box;
-  padding-top: 23px;
-  padding-left: 10px;
-  padding-right: 10px;
-  display: flex;
-  flex-direction: column;
-  -webkit-box-align: center;
-  align-items: center;
-  height: 580px;
-  width:85em;
-  background: url("../../../assets/bg-living-room-7104315b717f054f8668c9446cfcc09f.svg") 71% 100% no-repeat;
+// .imgbg{
+//   box-sizing: border-box;
+//   padding-top: 23px;
+//   padding-left: 10px;
+//   padding-right: 10px;
+//   display: flex;
+//   flex-direction: column;
+//   -webkit-box-align: center;
+//   align-items: center;
+//   height: 580px;
+//   width:85em;
+//   background: url("../../../assets/bg-living-room-7104315b717f054f8668c9446cfcc09f.svg") 71% 100% no-repeat;
+// }
+
+#imgbgleft{
+  height: 20em;
+  width: 100%;
+  background-image: url('../../../assets/h04left.jpg');
+}
+#imgbgright{
+  height: 20em;
+  width: 100%;
+  background-image: url('../../../assets/h04right.jpg');
 }

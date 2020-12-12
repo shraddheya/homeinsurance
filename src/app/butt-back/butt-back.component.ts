@@ -85,24 +85,6 @@ export class ButtBackComponent implements OnInit {
           ds.gotopage(gotoPageIdx);
         }
       }
-      // if (val instanceof NavigationEnd) {
-      //   let idx = dataservice.pageList.indexOf(val.url.substr(1));
-      //   this.disp = idx > 0;
-      //   if (idx < 0) return;
-      //   console.log(idx)
-      //   let gotoPageIdx = idx;
-      //   for (let i = 0; i < idx; i++) {
-      //     let pgnm = dataservice.pageList[i];
-      //     if (JSON.stringify(dataservice.allData[pgnm]) === JSON.stringify(dataservice.dtblank[pgnm])) {
-      //       gotoPageIdx = i;
-      //       break;
-      //     }
-      //   }
-      //   if (gotoPageIdx !== idx) {
-      //     dataservice.currPage = gotoPageIdx;
-      //     dataservice.gotopage(gotoPageIdx);
-      //   }
-      // }
     })
   }
 

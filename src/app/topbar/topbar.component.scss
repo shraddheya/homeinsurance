@@ -1,30 +1,13 @@
-#navbarid{
-  box-shadow: 0 0px 0px 0 rgba(231, 224, 224, 0) !important;
-  font-weight: 300;
-}
-.bottomborder{
-  border-bottom: 0.1em solid var(--accent2);
-}
-.iconimgtop {
-  height: 4.3em;
-  width: 4.3em;
-  z-index: 1038;
-  position: relative;
-  overflow: hidden;
-  border-radius: 5em;
-  top: 1.9em;
-}
 .fixedheader {
   position: fixed;
   top: 0em;
   left: 0em;
   width: 100%;
+  background-color: white;
   z-index: 2;
+}
 
-}
-.linkindex {
-  z-index: 3000;
-}
+/* Center logo */
 #centerlogo{
   box-sizing: border-box;
   display: flex;
@@ -33,17 +16,23 @@
   -webkit-box-pack: center;
   justify-content: center;
   position: absolute;
-  height: 100%;
+  height: auto !important;
   left: 50%;
-  top: 0px;
+  top: 2px !important;
   transform: translateX(-50%);
 }
 .logoscroll_before > img{
-  height:3em;
+  height:2em;
+  top:1.6em;
+  position:relative
 }
 .logoscroll_after > img{
-  height:1.5em;
+  height:1.6em;
+  top:0.4em;
+  bottom:0.5em;
+  position: relative;
 }
+/* Center logo */
 
 .startovercancel{
     font-family: Lato, "Helvetica Neue", Arial, sans-serif;
@@ -65,9 +54,43 @@
     border-image: initial;
     transition: all 0.3s ease 0s, transform 0.5s ease 0s;
     background-color: var(--accent2);
-
 }
+
 .navbrandtop{
   position: relative;
   display:inline-block
 }
+
+/* Bottom border of nav*/
+.bottomborder{
+  border-bottom: 0.2em solid var(--accent2);
+}
+/* Bottom border of nav*/
+
+/* For nonehome pages*/
+.iconimgtop{
+  z-index: 1038;
+  position: fixed;
+  overflow: hidden;
+  border-radius: 5em;
+}
+.iconimgtop_before {
+  height: 4.3em;
+  width: 4.3em;
+  top: 1.9em;
+}
+.iconimgtop_after{
+  height: 2.6em;
+  width: 2.6em;
+  top: 1em;
+}
+
+.centerlogo_before{
+  font-size: 3.5em;
+  line-height: 1.5em;
+}
+.centerlogo_after{
+  font-size:2em;
+  line-height: 1.5em;
+}
+/* For nonehome pages*/

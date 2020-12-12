@@ -11,10 +11,12 @@ let comp: TopbarComponent
 export class TopbarComponent implements OnInit {
   showpricebtn: any = false
   navsize: any = true;
+  centerimg_scroll: any = true
   constructor(public ds: DataterminalService, public router: Router) {
     comp = this
     window.addEventListener('scroll', function () {
-      comp.navsize = (router.url === '/home') ? window.pageYOffset <= 112 : window.pageYOffset <= 50
+      comp.centerimg_scroll = window.pageYOffset <=10
+      comp.navsize = window.pageYOffset <= 112
       comp.showpricebtn = window.pageYOffset >= 400
     });
   }
