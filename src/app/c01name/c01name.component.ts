@@ -12,13 +12,14 @@ export class C01nameComponent implements OnInit {
     firstName: new FormControl(this.ds.allData.c01name.firstName, Validators.required),
     lastName: new FormControl(this.ds.allData.c01name.lastName, Validators.required),
   })
+  constructor( public ds: DataterminalService ) {}
+
 
   clicked() {
     this.ds.allData.c01name = this.profileForm.value;
     this.ds.changepage();
   }
 
-  constructor( public ds: DataterminalService ) { }
 
   ngOnInit(): void { }
 }

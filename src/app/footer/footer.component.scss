@@ -2,6 +2,25 @@
   box-sizing: border-box;
   background-color: rgb(40, 40, 40);
 }
+.languagedrop{
+  position: inherit;
+  background-color: var(--accent2);
+  border-radius: 5px;
+  font-family: Lato, "Helvetica Neue", Arial, sans-serif;
+  line-height: 2.1rem;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  white-space: pre;
+  text-align: left;
+  outline: none;
+  padding: 0px 8px;
+  width:22.5em;
+  transition: background-color 0.2s ease 0s;
+}
+.footerlang_dropdown{
+  width:10em;
+}
 .dropdown{
   background-color: rgb(40, 40, 40);
 }

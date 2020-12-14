@@ -33,8 +33,6 @@ const routes: Routes = [
   { path: 'c12insurance-claim-count', component: C12insuranceClaimCountComponent },
   { path: 'c13quote-detail', component: C13quoteDetailComponent },
   { path: 'c14pdf', component: C14pdfComponent },
-  { path: 'product', component: H10ProductoncheckpriceComponent}
-
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -8,9 +8,14 @@ import { DataterminalService } from '../../dataterminal.service';
 })
 export class H01BannerComponent implements OnInit {
 
-  constructor(public ds: DataterminalService) { }
+  constructor(public ds: DataterminalService) {
+  }
 
   ngOnInit(): void {
+  }
+
+  clicked(){
+    this.ds.changepage()
   }
 
 }

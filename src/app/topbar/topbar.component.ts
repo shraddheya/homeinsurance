@@ -28,4 +28,8 @@ export class TopbarComponent implements OnInit {
       console.log("initVals : ", this.ds.initVals);
     };
   }
+
+  clicked(){
+    this.ds.changepage();
+  }
 }

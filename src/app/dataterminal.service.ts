@@ -8,7 +8,7 @@ export class DataterminalService {
   pageList = ["home","c01name", "c02address", "c03type-home", "c04primaryresidence", "c05size-home", "c06security", "c07members", "c08assets", "c09get-quote","c10loading", "c11builthome-year", "c12insurance-claim-count", "c13quote-detail", "c14pdf"]
   initVals = JSON.stringify({
     "home": { name: "", price: 0 },
-    "c01name": { firstName: "facfn", lastName: "facln" },
+    "c01name": { firstName: "", lastName: "" },
     "c02address": { housenumber: "", pincode: "", address: "" },
     "c03type-home": "",
     "c04primaryresidence": "",
@@ -43,7 +43,7 @@ export class DataterminalService {
   currPage = parseInt(localStorage.getItem('currPage')) || 0;
 
   constructor(private route: Router) {
-    this.route.navigate([window.location.pathname]);
+   // this.route.navigate([window.location.pathname]);
     this.dtblank.c06security = [];
     this.dtblank.c10loading = '';
     this.dtblank["c13quote-detail"].q05deductibles = [];
