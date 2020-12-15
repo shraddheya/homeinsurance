@@ -13,8 +13,8 @@ export class C09getQuoteComponent implements OnInit {
   moreDetails = new FormGroup({
     email: new FormControl(this.ds.allData['c09get-quote'].email, Validators.required),
     dob: new FormControl(this.ds.allData['c09get-quote'].dob, Validators.required),
-    receivediscount: new FormControl(this.ds.allData['c09get-quote'].receivediscount, Validators.required),
-    privacyterm: new FormControl(this.ds.allData['c09get-quote'].privacyterm, Validators.required),
+    receivediscount: new FormControl(this.ds.allData['c09get-quote'].receivediscount, Validators.requiredTrue),
+    privacyterm: new FormControl(this.ds.allData['c09get-quote'].privacyterm, Validators.requiredTrue),
   });
   constructor(public ds: DataterminalService, private datepipe: DatePipe) { }
 

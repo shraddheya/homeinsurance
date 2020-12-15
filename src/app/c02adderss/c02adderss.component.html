@@ -38,7 +38,8 @@
 
     <!-- Next Button -->
     <div class="p-3">
-      <button mdbBtn class="buttonstyle text-white" (click)="clicked()" [disabled]="!addressForm.valid">Next</button>
+      <button mdbBtn class="{{(!addressForm.valid) ? 'disablestyle':'buttonstyle'}}" (click)="clicked()"
+        [disabled]="!addressForm.valid">Next</button>
     </div>
   </div>
 </div>

@@ -22,6 +22,6 @@
     </div>
   </div>
   <div class="p-2 mt-5">
-    <button mdbBtn class="buttonstyle text-white" (click)='clicked()' [disabled]=buttDisabled>Next</button>
+    <button mdbBtn class="{{(buttDisabled) ? 'disablestyle':'buttonstyle'}}" (click)='clicked()' [disabled]=buttDisabled>Next</button>
   </div>
 </div>

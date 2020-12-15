@@ -19,8 +19,8 @@
     </div>
 
     <div class="whitetext p-3">
-      <button mdbBtn class="buttonstyle text-white" (click)="clicked()" [disabled]="! profileForm.valid">LETS DO
-        THIS</button>
+      <button mdbBtn class="{{(!profileForm.valid) ? 'disablestyle':'buttonstyle'}}" (click)="clicked()"
+        [disabled]="! profileForm.valid"> LETS DO THIS</button> <br>
     </div>
   </div>
 </div>
