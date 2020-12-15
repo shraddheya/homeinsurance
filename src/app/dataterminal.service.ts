@@ -72,7 +72,7 @@ export class DataterminalService {
   domFunction(mode: any) {
     switch(mode){
       case 'reset':
-        this.allData = this.initVals;
+        this.allData = JSON.parse(this.initVals)
         localStorage.setItem('currPage', '0');
         localStorage.setItem('allData', JSON.stringify(this.allData));
         this.gotopage(0);

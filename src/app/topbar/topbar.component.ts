@@ -30,6 +30,7 @@ export class TopbarComponent implements OnInit {
   }
 
   clicked(){
+    this.ds.allData.home = { name: `Content`, price: 2}
     this.ds.changepage();
   }
 }
