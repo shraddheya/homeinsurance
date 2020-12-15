@@ -36,9 +36,13 @@ body {
   text-align: center;
 }
 
+.h01btn{
+  position: relative;
+  left: -3em;
+}
+
 .divcenter{
-  margin-left:auto;
-  margin-right:auto;
+   margin:auto!important;
   display: table;
 }
 
