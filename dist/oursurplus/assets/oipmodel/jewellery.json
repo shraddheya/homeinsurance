@@ -1,0 +1,102 @@
+[
+  {
+    "insurance_value": 5000,
+    "po_event": 20,
+    "lg_event": 20,
+    "el_event": 200,
+    "curvature": 0,
+    "price_month": 2.00,
+    "per_year": 24.00,
+    "yearly_policy_event": 8.3
+  },
+  {
+    "insurance_value": 10000,
+    "po_event": 20,
+    "lg_event": 20,
+    "el_event": 400,
+    "curvature": 45,
+    "price_month": 2.90,
+    "per_year": 34.80,
+    "yearly_policy_event": 11.5
+  },
+  {
+    "insurance_value": 15000,
+    "po_event": 20,
+    "lg_event": 20,
+    "el_event": 600,
+    "curvature": 40,
+    "price_month": 4.06,
+    "per_year": 48.72,
+    "yearly_policy_event": 12.3
+  },
+  {
+    "insurance_value": 20000,
+    "po_event": 20,
+    "lg_event": 20,
+    "el_event": 800,
+    "curvature": 30,
+    "price_month": 5.28,
+    "per_year": 63.34,
+    "yearly_policy_event": 12.6
+  },
+  {
+    "insurance_value": 25000,
+    "po_event": 20,
+    "lg_event": 20,
+    "el_event": 1000,
+    "curvature": 25,
+    "price_month": 6.60,
+    "per_year": 79.17,
+    "yearly_policy_event": 12.6
+  },
+  {
+    "insurance_value": 30000,
+    "po_event": 20,
+    "lg_event": 20,
+    "el_event": 1200,
+    "curvature": 20,
+    "price_month": 7.92,
+    "per_year": 95.00,
+    "yearly_policy_event": 12.6
+  },
+  {
+    "insurance_value": 35000,
+    "po_event": 20,
+    "lg_event": 20,
+    "el_event": 1400,
+    "curvature": 15,
+    "price_month": 9.10,
+    "per_year": 109.25,
+    "yearly_policy_event": 12.8
+  },
+  {
+    "insurance_value": 40000,
+    "po_event": 20,
+    "lg_event": 20,
+    "el_event": 1600,
+    "curvature": 10,
+    "price_month": 10.02,
+    "per_year": 120.18,
+    "yearly_policy_event": 13.3
+  },
+  {
+    "insurance_value": 45000,
+    "po_event": 20,
+    "lg_event": 20,
+    "el_event": 1800,
+    "curvature": 5,
+    "price_month": 10.52,
+    "per_year": 126.19,
+    "yearly_policy_event": 14.3
+  },
+  {
+    "insurance_value": 50000,
+    "po_event": 20,
+    "lg_event": 20,
+    "el_event": 2000,
+    "curvature": 5,
+    "price_month": 11.04,
+    "per_year": 132.50,
+    "yearly_policy_event": 15.1
+  }
+]
