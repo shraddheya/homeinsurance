@@ -21,7 +21,6 @@ export class C04primaryresidenceComponent implements OnInit {
   }
 
   changed(val: any) {
-    console.log(val)
     this.ds.allData.c04primaryresidence = val === 'Yes';
     this.showMsg = val === 'Yes';
     this.buttDisabled = false;

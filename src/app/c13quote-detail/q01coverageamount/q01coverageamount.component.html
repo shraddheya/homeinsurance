@@ -4,10 +4,6 @@
     <div class="row p-5">
       <div class="col-xl-4 col-lg-4 col-sm-12 col-xs-12 mb-4" *ngFor="let item of coverageAmount | keyvalue: asIs">
         <div class="card">
-          <div class="card-img-top">
-            <!-- <img src={{item.icon}} alt=""> -->
-          </div>
-
           <div class="card-body">
             <h5 class="card-title text-center"><a>{{item.key}}</a></h5>
             <h6 class="card-text text-center p-2" style="min-height: 6em;">{{item.value.text}}</h6>

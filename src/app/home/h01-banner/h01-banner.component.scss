@@ -2,7 +2,10 @@
   background-image: url('../../../assets/bg-clouds-2-6dcdd0a252148447204022d42385e0df.png');
   height: auto;
 }
+#gradient{
 
+  background-image: linear-gradient(to bottom,  var(--accent1), white);
+}
 .cotitle{
   color: var(--text1-accent);
   font-family: var(--fontfamily);
@@ -29,7 +32,6 @@
   display: table;
   z-index: 1;
   margin-top: 0em;
-  //top: -1.2em;
 }
 #bannerimgleft {
   float:left;

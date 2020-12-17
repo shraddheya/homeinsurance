@@ -1,10 +1,9 @@
 <div class="text-center pt-5">
   <div class="mt-5">
     <h2 class="maintitle">How big is your home?</h2>
-    <h6 class="p-2 mt-3 font-weight-bold">If you don't remember the exact size, an approximation is ok</h6>
-    <!-- <span *ngIf=alert class="alertspan"> ! {{home_size}} seems unreasonable. Please try again. </span> -->
-    <span *ngIf=alert class="alertspan">  seems unreasonable. Please try again. </span>
-    <div class="row justify-content-center p-2 mt-5">
+    <h6 class="p-2 mb-5 mt-3 font-weight-bold">If you don't remember the exact size, an approximation is ok</h6>
+    <span *ngIf=!sizeForm.valid class="alertspan"> ! {{sizeForm.value.size}} seems unreasonable. Please try again. </span>
+    <div class="row justify-content-center p-2 mt-3">
       <div class="col-lg-2 col-xs-4">
         <div class="form-row">
           <form class="col" [formGroup]="sizeForm">

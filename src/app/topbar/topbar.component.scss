@@ -3,8 +3,11 @@
   top: 0em;
   left: 0em;
   width: 100%;
-  background-color: white;
-  z-index: 2;
+  height:6em;
+   z-index: 2;
+}
+.fixedheader_beforescroll{
+  background-color: var(--accent1) !important;
 }
 
 /* Center logo */
@@ -22,14 +25,24 @@
   transform: translateX(-50%);
 }
 .logoscroll_before > img{
-  height:2em;
-  top:1.6em;
-  position:relative
+  height: 4em;
+  top: 0.6em;
+  position: relative;
 }
+
+.navlistcolor{
+  color:var(--accent2) !important;
+  position: relative;
+}
+.linkindex {
+  z-index: 3000;
+}
+
 .logoscroll_after > img{
-  height:1.6em;
-  top:0.4em;
-  bottom:0.5em;
+  height: 3em;
+  top: 0.9em;
+  bottom: 0.5em;
+  /* width: 4em; */
   position: relative;
 }
 /* Center logo */
@@ -56,9 +69,13 @@
     background-color: var(--accent2);
 }
 
-.navbrandtop{
-  position: relative;
-  display:inline-block
+// .navbrandtop{
+//   position: relative;
+//   display:inline-block
+// }
+#navbrandtopimg{
+   height:3em;
+   width:3em
 }
 
 /* Bottom border of nav*/

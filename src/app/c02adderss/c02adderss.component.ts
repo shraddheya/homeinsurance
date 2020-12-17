@@ -38,7 +38,6 @@ export class C02adderssComponent implements OnInit {
      ) { }
 
   ngOnInit(): void {
-    // console.log(this.addressForm.value, this.addressForm.value.address === "");
       //load Places Autocomplete
       this.mapsAPILoader.load().then(() => {
         this.setCurrentLocation();
@@ -87,16 +86,10 @@ export class C02adderssComponent implements OnInit {
   }
 
   markerDragEnd($event: MouseEvent) {
-    // console.log($event.coords);
-    // this.latitude = $event.coords.lat;
-    // this.longitude = $event.coords.lng;
-    // this.getAddress(this.latitude, this.longitude);
   }
 
   getAddress(latitude, longitude) {
     this.geoCoder.geocode({ 'location': { lat: latitude, lng: longitude } }, (results, status) => {
-      console.log(results);
-      console.log(status);
       if (status === 'OK') {
         if (results[0]) {
           this.zoom = 12;

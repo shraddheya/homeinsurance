@@ -1,43 +1,66 @@
-<div class="fixedheader p-1 {{(router.url === '/home')?(navsize)?'border border-white':'bottomborder':'bottomborder'}}">
-  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark white z-depth-0" [containerInside]="false">
+<div class="fixedheader p-1 {{(router.url === '/home') ? 'fixedheader_beforescroll':'bottomborder'}}">
+  <mdb-navbar SideClass="navbar navbar-expand-lg z-depth-0" [containerInside]="false">
     <mdb-navbar-brand>
       <div class="navbrandtop">
-        <app-sidenav></app-sidenav>
+        <!-- <app-sidenav></app-sidenav> -->
+
       </div>
       <div class="navbrandtop">
         <span *ngIf="router.url !== '/home'">
-          <img src="assets/logo.svg" alt="">
+          <img id="navbrandtopimg"src="assets/logo1.png" alt="">
         </span>
       </div>
     </mdb-navbar-brand>
 
     <div id="centerlogo" class="font-weight-bold">
       <div *ngIf="router.url === '/home'">
-        <p class="{{(navsize)? 'centerlogo_before' : 'centerlogo_after'}}">
+        <div class="{{(navsize)? 'logoscroll_before' : 'logoscroll_after'}}">
+          <img src="assets/logo1.png" alt="">
+        </div>
+        <!-- <p class="{{(navsize)? 'centerlogo_before' : 'centerlogo_after'}}">
           <a style="color:#cfc9c9">Our</a>
           <a style="color:var(--accent1)">Insurer</a>
-        </p>
+        </p> -->
       </div>
-      <!-- <img *ngIf="router.url === '/home'" src="assets/logo.svg" alt="" class="{{(navsize)? 'centerlogo_before' : 'centerlogo_after'}}"> -->
     </div>
-    <links>
+    <links class="{{(router.url === '/home') ?'navlistcolor':'text-dark'}}">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item linkindex">
+          <a class="nav-link waves-light" mdbWavesEffect>Home
+            <!-- <span class="sr-only">(current)</span> -->
+          </a>
+        </li>
+        <li class="nav-item linkindex">
+          <a class="nav-link waves-light" mdbWavesEffect>FAQ</a>
+        </li>
+        <li class="nav-item linkindex">
+          <a class="nav-link waves-light" mdbWavesEffect>Claims</a>
+        </li>
+        <li class="nav-item linkindex">
+          <a class="nav-link waves-light" mdbWavesEffect>Giveback</a>
+        </li>
+        <li class="nav-item linkindex">
+          <a class="nav-link waves-light" mdbWavesEffect>Policy 2.0</a>
+        </li>
+      </ul>
+
       <ul class="navbar-nav ml-auto nav-flex-icons">
         <li class="nav-item" *ngIf="router.url !== '/home'">
-          <a class="nav-link text-dark" mdbTooltip="Start Over" placement="bottom" (click)="resetmodal.show()">
+          <a class="nav-link" mdbTooltip="Start Over" placement="bottom" (click)="resetmodal.show()">
             <mdb-icon fas icon="undo"></mdb-icon>
           </a>
         </li>
         <li class="nav-item" *ngIf="router.url !== '/home'">
-          <a class="nav-link text-dark">
+          <a class="nav-link">
             <mdb-icon far icon="question-circle"></mdb-icon>
           </a>
         </li>
-        <li class="nav-item" *ngIf="router.url === '/home'">
-          <a class="nav-link text-dark">
+        <li class="nav-item mr-2" *ngIf="router.url === '/home'">
+          <a class="nav-link">
             My Account
           </a>
         </li>
-        <li class="nav-item" *ngIf="showpricebtn">
+        <li class="nav-item z-depth-2" *ngIf="showpricebtn">
           <a class="nav-link text-white buttonstyle" (click)="clicked()" style="width:auto">
             CHECK OUR PRICES
           </a>

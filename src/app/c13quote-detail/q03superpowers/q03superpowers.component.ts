@@ -29,7 +29,6 @@ export class Q03superpowersComponent implements OnInit {
   ngOnInit(): void { }
 
   changed(evt: any, itemid: any) {
-    console.log(evt.currentTarget.checked)
     this.superpowerArray[itemid].showchecked = evt.currentTarget.checked;
     if (evt.target.checked) this.ds.allData["c13quote-detail"].q03superpowers.push(itemid);
     else {

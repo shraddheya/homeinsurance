@@ -43,14 +43,12 @@ export class DataterminalService {
   currPage = parseInt(localStorage.getItem('currPage')) || 0;
 
   constructor(private route: Router) {
-   // this.route.navigate([window.location.pathname]);
+    this.route.navigate([window.location.pathname]);
     this.dtblank.c06security = [];
     this.dtblank.c10loading = '';
     this.dtblank["c13quote-detail"].q05deductibles = [];
-    console.log("constructed service");
   }
   changepage(goForward = true) {
-    console.log(goForward)
     if (goForward) this.currPage++;
     else this.currPage--;
     if (this.currPage < 0) this.currPage = 0;
@@ -65,7 +63,6 @@ export class DataterminalService {
   homepage(mode: any, data: any) {
     switch (mode) {
       case 'help':
-        // console.log(data)
         return
     }
   }

@@ -90,13 +90,10 @@ export class C14pdfComponent implements OnInit {
     }
   };
   constructor(public ds: DataterminalService) {
-    console.log(ds.allData)
 
   }
 
   ngOnInit(): void {
-    console.log(this.ds.allData["c13quote-detail"].q01coverageamount);
-
     this.payable = this.ds.allData.home.price +
     hvi.content_lowvalue.filter((it: any) => {
       return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['CONTENTS']

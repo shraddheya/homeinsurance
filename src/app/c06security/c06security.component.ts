@@ -27,7 +27,6 @@ export class C06securityComponent implements OnInit {
   }
 
   changed(el: any) {
-    // console.log(el.name , el.checked)
     if (el.checked){
       this.ds.allData.c06security.push(el.name);
       this.checktest = false
@@ -36,7 +35,6 @@ export class C06securityComponent implements OnInit {
       let idx = this.ds.allData.c06security.indexOf(el.name);
       if (idx > -1) this.ds.allData.c06security.splice(idx, 1);
       this.checktest = (this.ds.allData.c06security.length-1 === 0)
-      console.log(this.checktest)
     }
     this.securitytype[el.name].selectedview = el.checked;
   }

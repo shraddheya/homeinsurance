@@ -96,7 +96,6 @@ export class Q02highvalueitemsComponent implements OnInit {
   }
 
   additem(item: any) {
-    // console.log(item);
     this.ds.allData["c10quote-detail"].q02highvalueitems[item.key] = item.value.price;
     this.highvaluemodal.hide();
   }

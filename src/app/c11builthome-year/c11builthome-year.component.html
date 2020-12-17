@@ -1,12 +1,10 @@
 <div class="text-center pt-5">
   <div class="mt-5">
     <h2 class="maintitle">When was your house built?</h2>
-    <!-- <span *ngIf=alert class="alertspan"> ! {{home_size}} seems unreasonable. Please try again. </span> -->
     <div class="row justify-content-center p-2 mt-5">
       <div class="col-lg-2 col-xs-4">
         <div class="form-row">
           <form class="col" [formGroup]="yearForm">
-            <!-- <input mdbInput type="text" class="form-control p-4" min=1980 max=2019 value="2019" placeholder="Enter Year" formControlName="builtyear"> -->
             <input mdbInput type="number" class="form-control p-4" placeholder="Enter Year" formControlName="builtyear">
           </form>
         </div>

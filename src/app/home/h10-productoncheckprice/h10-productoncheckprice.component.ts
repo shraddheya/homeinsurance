@@ -32,9 +32,7 @@ export class H10ProductoncheckpriceComponent implements OnInit {
   };
   constructor(public ds: DataterminalService, public router: Router) { }
 
-  ngOnInit(): void {
-    // if (this.ds.allData["product"].length > 1) this.buttDisabled = false;
-  }
+  ngOnInit(): void {}
   changed(key: string) {
     this.ds.allData["product"] = key;
     for (let item in this.producttype) this.producttype[item].selectedview = key === item;
@@ -42,7 +40,6 @@ export class H10ProductoncheckpriceComponent implements OnInit {
   }
   clicked() {
     this.router.navigate(['c01name'])
-    //this.ds.changepage();
   }
 
 }
