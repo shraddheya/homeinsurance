@@ -1,13 +1,10 @@
 <div class="fixedheader p-1 {{(router.url === '/home') ? 'fixedheader_beforescroll':'bottomborder'}}">
   <mdb-navbar SideClass="navbar navbar-expand-lg z-depth-0" [containerInside]="false">
     <mdb-navbar-brand>
-      <div class="navbrandtop">
-        <!-- <app-sidenav></app-sidenav> -->
-
-      </div>
-      <div class="navbrandtop">
+      <!-- <app-sidenav></app-sidenav> -->
+      <div class="mt-3">
         <span *ngIf="router.url !== '/home'">
-          <img id="navbrandtopimg"src="assets/logo1.png" alt="">
+          <img id="navbrandtopimg" src="assets/logo1.png" alt="">
         </span>
       </div>
     </mdb-navbar-brand>
@@ -23,7 +20,7 @@
         </p> -->
       </div>
     </div>
-    <links class="{{(router.url === '/home') ?'navlistcolor':'text-dark'}}">
+    <links class="{{(router.url === '/home') ?'navlistcolor':'text-dark'}} mt-5">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item linkindex">
           <a class="nav-link waves-light" mdbWavesEffect>Home
@@ -69,14 +66,16 @@
     </links>
     <!-- Collapsible content -->
   </mdb-navbar>
-</div>
 
-<div *ngIf="router.url !== '/home'">
-  <div class="divcenter">
-    <img class="{{(centerimg_scroll)? 'iconimgtop_before': 'iconimgtop_after'}} iconimgtop"
+  <div class="iconimgtop" *ngIf="router.url !== '/home'">
+
+    <img class="{{(centerimg_scroll)? 'iconimgtop_before': 'iconimgtop_after'}}"
       src="assets/Maya-79af77d3c1e0abe54a4a8f349950ec6b23457716b5361568851546d1cb5c3643.jpg" alt="">
+
   </div>
 </div>
+
+
 
 <div mdbModal #resetmodal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
   aria-hidden="true">

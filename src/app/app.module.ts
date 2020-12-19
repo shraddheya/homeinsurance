@@ -45,6 +45,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { C10loadingpageComponent } from './c10loadingpage/c10loadingpage.component';
 import { H10ProductoncheckpriceComponent } from './home/h10-productoncheckprice/h10-productoncheckprice.component';
+import { HelpdeskComponent } from './helpdesk/helpdesk.component';
 
 
 @NgModule({
@@ -89,6 +90,7 @@ import { H10ProductoncheckpriceComponent } from './home/h10-productoncheckprice/
     SidenavComponent,
     C10loadingpageComponent,
     H10ProductoncheckpriceComponent,
+    HelpdeskComponent,
   ],
   imports: [
     BrowserModule,
