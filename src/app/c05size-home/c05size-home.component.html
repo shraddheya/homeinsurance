@@ -7,7 +7,7 @@
       <div class="col-lg-2 col-xs-4">
         <div class="form-row">
           <form class="col" [formGroup]="sizeForm">
-            <input mdbInput type="number" class="form-control p-4" placeholder="SQUARE FEET" formControlName="size">
+            <input mdbInput type="number" class="form-control p-4" placeholder="SQUARE FEET" formControlName="size" (keydown.enter)="clicked()">
           </form>
         </div>
       </div>

@@ -5,7 +5,7 @@
       <div class="col-lg-2 col-xs-4">
         <div class="form-row">
           <form class="col" [formGroup]="yearForm">
-            <input mdbInput type="number" class="form-control p-4" placeholder="Enter Year" formControlName="builtyear">
+            <input mdbInput type="number" class="form-control p-4" (keydown.enter)="clicked()" placeholder="Enter Year" formControlName="builtyear">
           </form>
         </div>
       </div>

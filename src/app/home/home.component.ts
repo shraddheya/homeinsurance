@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { DataterminalService } from '../dataterminal.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor() {
+  constructor(public ds:DataterminalService) {
     localStorage.removeItem('allData')
   }
   ngOnInit(): void {

@@ -41,8 +41,10 @@ export class DataterminalService {
   allData = JSON.parse(localStorage.getItem('allData') || this.initVals);
   dtblank = JSON.parse(this.initVals);
   currPage = parseInt(localStorage.getItem('currPage')) || 0;
+  scroll = "height:" +screen.height;
 
   constructor(private route: Router) {
+    console.log(screen.height)
     this.route.navigate([window.location.pathname]);
     this.dtblank.c06security = [];
     this.dtblank.c10loading = '';

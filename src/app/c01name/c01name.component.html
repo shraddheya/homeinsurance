@@ -1,4 +1,4 @@
-<div class="text-center pt-5">
+  <div class="text-center pt-5">
   <div class="mt-4">
 
     <h2 class="p-3 maintitle">Hey! I'm Maya. I'll get you an awesome<br> price in seconds. Ready to go?
@@ -12,7 +12,7 @@
           </div>
           <div class="col">
             <input mdbInput type="text" class="form-control p-4 inputtexthover" formControlName="lastName"
-              placeholder="Last name">
+              placeholder="Last name" (keydown.enter)="clicked()">
           </div>
         </div>
       </form>
@@ -23,4 +23,4 @@
         [disabled]="! profileForm.valid"> LETS DO THIS</button> <br>
     </div>
   </div>
-</div>
+  </div>

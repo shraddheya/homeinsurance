@@ -19,6 +19,12 @@ body {
   box-sizing: content-box;
   overflow-x:hidden
 }
+.fulldimention{
+  height:100vh !important;
+  width:100vw !important;
+}
+
+
 
 /* Global margin div*/
 .MargDiv {
@@ -31,7 +37,7 @@ body {
   color: var(--text1-accent);
   font-weight: 400;
   font-family: Merriweather, Georgia, serif;
-  font-size: 3rem;
+  font-size: 2.45rem;
   line-height: 1;
   text-align: center;
 }
@@ -151,7 +157,7 @@ body {
   font-size: 14px !important;
   outline: none !important;
   text-decoration: none !important;
-  padding: 20px 60px 20px 60px !important;
+  padding: 13px 60px 13px 60px !important;
   border-radius: 5px !important;
   border-width: 1px !important;
   border-style: solid !important;
