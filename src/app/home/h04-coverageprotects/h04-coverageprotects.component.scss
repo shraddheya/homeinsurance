@@ -1,30 +1,7 @@
-
-.cotitle{
-  text-align: center;
-    font-family: Lato, "Helvetica Neue", Arial, sans-serif;
-    font-weight: 4000;
-    font-size: 1.1rem;
-    line-height: 1.5em;
-    color: rgb(74, 74, 74);
-}
 .imgbg{
   box-sizing: border-box;
-  padding-top: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   height: 34em;
   width:auto;
   background: url("../../../assets/bg-living-room-7104315b717f054f8668c9446cfcc09f.svg") 71% 100% no-repeat;
-}
-
-#imgbgleft{
-  height: 20em;
-  width: 100%;
-  background-image: url('../../../assets/h04left.jpg');
-}
-#imgbgright{
-  height: 20em;
-  width: 100%;
-  background-image: url('../../../assets/h04right.jpg');
+  background-size: cover;
 }

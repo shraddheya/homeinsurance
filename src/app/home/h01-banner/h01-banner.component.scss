@@ -3,14 +3,6 @@
   background: linear-gradient(180deg, var(--accent1) 3%, #fff 37%);
   height: auto;
 }
-.cotitle{
-  color: var(--text1-accent);
-  font-family: var(--fontfamily);
-  font-weight: 400;
-  text-align: center;
-  font-size: 1rem;
-  line-height: 4em;
-}
 #bannerimgleft {
   float:left;
   background-image: url('../../../assets/home-left-35e4ff48b1abcefd87e665c7ae7d9945.svg') !important;
@@ -27,7 +19,11 @@
   // right: -6.2em !important;
   position: relative !important;
 }
-
+#h01imgmain{
+  position: relative;
+  bottom:0em;
+}
 .h01banner{
-  display:table-cell !important
+  display:table-cell !important;
+  float: unset;
 }

@@ -23,9 +23,6 @@ body {
   height:100vh !important;
   width:100vw !important;
 }
-
-
-
 /* Global margin div*/
 .MargDiv {
   height: 4.8em;
@@ -58,11 +55,20 @@ body {
 
 .mainresolution{
   height:100vh !important;
-  width:100vw !important
+  width:100vw !important;
 }
 
 .secondbg_color{
   background-color: var(--accent2);
+}
+
+.cotitle{
+  color: var(--text1-accent);
+  font-family: var(--fontfamily);
+  font-weight: 400;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 4em;
 }
 
 .cardouter {

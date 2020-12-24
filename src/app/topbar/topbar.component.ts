@@ -15,7 +15,6 @@ export class TopbarComponent implements OnInit {
   constructor(public ds: DataterminalService, public router: Router) {
     comp = this
     window.addEventListener('scroll', function () {
-      console.log(window.pageYOffset)
       comp.centerimg_scroll = window.pageYOffset <=10
       comp.navsize = window.pageYOffset <= 112
       comp.showpricebtn = window.pageYOffset >= 400
