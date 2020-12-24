@@ -34,7 +34,10 @@
   position: relative;
 }
 .linkindex {
-  z-index: 3000;
+  z-index: 3000 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .logoscroll_after > img{

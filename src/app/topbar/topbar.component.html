@@ -21,7 +21,7 @@
         </p> -->
         </div>
       </div>
-      <links class="{{(router.url === '/home') ?'navlistcolor':'text-dark'}} mt-5">
+      <links class="{{(router.url === '/home') ?'navlistcolor mt-5':'text-dark'}}">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item linkindex">
             <a class="nav-link waves-light" mdbWavesEffect>Home
@@ -43,22 +43,22 @@
         </ul>
 
         <ul class="navbar-nav ml-auto nav-flex-icons">
-          <li class="nav-item" *ngIf="router.url !== '/home'">
+          <li class="nav-item linkindex" *ngIf="router.url !== '/home'">
             <a class="nav-link" mdbTooltip="Start Over" placement="bottom" (click)="resetmodal.show()">
               <mdb-icon fas icon="undo"></mdb-icon>
             </a>
           </li>
-          <li class="nav-item" *ngIf="router.url !== '/home'">
+          <li class="nav-item linkindex" *ngIf="router.url !== '/home'">
             <a class="nav-link">
               <mdb-icon far icon="question-circle"></mdb-icon>
             </a>
           </li>
-          <li class="nav-item mr-2" *ngIf="router.url === '/home'">
+          <li class="nav-item mr-2 linkindex" *ngIf="router.url === '/home'">
             <a class="nav-link">
               My Account
             </a>
           </li>
-          <li class="nav-item z-depth-2" *ngIf="showpricebtn">
+          <li class="nav-item z-depth-2 linkindex" *ngIf="showpricebtn">
             <a class="nav-link text-white buttonstyle" (click)="clicked()" style="width:auto">
               CHECK OUR PRICES
             </a>
