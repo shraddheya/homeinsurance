@@ -1,9 +1,9 @@
-<div class="scrollbar">
+<div class="scrollbar" *ngIf="thisPage.idx !== 0">
   <div class="force-overflow">
     <app-topbar></app-topbar>
-    <div class="MargDiv"></div>
     <app-butt-back></app-butt-back>
-    <app-helpdesk></app-helpdesk>
     <router-outlet></router-outlet>
+    <app-helpdesk></app-helpdesk>
   </div>
 </div>
+<router-outlet *ngIf="thisPage.idx === 0"></router-outlet>

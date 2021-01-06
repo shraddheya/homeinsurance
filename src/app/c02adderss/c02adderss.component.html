@@ -2,7 +2,7 @@
   <div class="mt-5">
     <h2 class="p-3 maintitle">Great to meet you {{ds.allData.c01name.firstName}}! What's your
       home <br> address?</h2>
-    <div class="p-2 mapdiv">
+    <div class="p-2 mapdiv" *ngIf="mapCalc">
       <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
         <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
           (dragEnd)="markerDragEnd($event)"></agm-marker>

@@ -41,11 +41,13 @@ import { H07AlreadyinsuredComponent } from './home/h07-alreadyinsured/h07-alread
 import { H08HowworkComponent } from './home/h08-howwork/h08-howwork.component';
 import { H09LicensedcertificationComponent } from './home/h09-licensedcertification/h09-licensedcertification.component';
 import { HomeComponent } from './home/home.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './home/footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { C10loadingpageComponent } from './c10loadingpage/c10loadingpage.component';
 import { H10ProductoncheckpriceComponent } from './home/h10-productoncheckprice/h10-productoncheckprice.component';
 import { HelpdeskComponent } from './helpdesk/helpdesk.component';
+import { H00TopbarComponent } from './home/h00-topbar/h00-topbar.component';
+import { SafePipe } from './safe.pipe';
 
 
 @NgModule({
@@ -91,6 +93,8 @@ import { HelpdeskComponent } from './helpdesk/helpdesk.component';
     C10loadingpageComponent,
     H10ProductoncheckpriceComponent,
     HelpdeskComponent,
+    H00TopbarComponent,
+    SafePipe,
   ],
   imports: [
     BrowserModule,

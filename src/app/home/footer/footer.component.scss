@@ -1,16 +1,16 @@
 .footersection{
   box-sizing: border-box;
-  background-color: rgb(40, 40, 40);
+  background-color:var(--accent3);
 }
 
 .footerlang_dropdown{
   width:10em;
 }
 .dropdown{
-  background-color: rgb(40, 40, 40);
+  background-color:var(--accent3);
 }
 .dropdown-item{
-  background-color: rgb(40, 40, 40);
+  background-color:var(--accent3);
 }
 .dropdown-item:hover{
   background-color:gray;
@@ -20,22 +20,26 @@
     font-size: 0.9rem;
     line-height: 1.6rem;
     font-weight: 700;
-    color: rgb(183, 183, 183);
+    color: var(--text3-accent);
     text-transform: uppercase;
 }
 .footertexts{
-  color: rgb(255, 255, 255);
+  color: var(--textbtn-accent);
   font-family: Lato, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.6rem;
+}
+.footertexts:hover {
+  color: var(--accent1-5) !important;
 }
 #footerbottomtext{
   font-family: Lato, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
   font-size: 0.8rem;
   line-height: 1.1rem;
-  color: rgba(183, 183, 183, 0.5);
+  color: var(--accent1-5);
+  opacity: 0.5;
   white-space: pre-wrap;
 }
 .centerstyle{

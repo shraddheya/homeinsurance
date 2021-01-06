@@ -1,78 +1,43 @@
-<div class="fixedheader p-1 {{(router.url === '/home') ? 'fixedheader_beforescroll':'bottomborder'}}">
-  <div>
-    <mdb-navbar SideClass="navbar navbar-expand-lg z-depth-0" [containerInside]="false">
-      <mdb-navbar-brand>
-        <!-- <app-sidenav></app-sidenav> -->
-        <div class="mt-3">
-          <span *ngIf="router.url !== '/home'">
-            <img id="navbrandtopimg" src="assets/logo1.png" alt="">
-          </span>
-        </div>
-      </mdb-navbar-brand>
-
-      <div id="centerlogo" class="font-weight-bold">
-        <div *ngIf="router.url === '/home'">
-          <div class="{{(navsize)? 'logoscroll_before' : 'logoscroll_after'}}">
-            <img src="assets/logo1.png" alt="">
-          </div>
-          <!-- <p class="{{(navsize)? 'centerlogo_before' : 'centerlogo_after'}}">
-          <a style="color:#cfc9c9">Our</a>
-          <a style="color:var(--accent1)">Insurer</a>
-        </p> -->
-        </div>
+<div class="fixedheader p-1 bottomborder">
+  <mdb-navbar SideClass="navbar navbar-expand-lg z-depth-0" [containerInside]="false">
+    <mdb-navbar-brand>
+      <div class="mt-3 mr-3">
+        <span>
+          <img id="navbrandtopimg" src="assets/logo1.png" alt="">
+        </span>
       </div>
-      <links class="{{(router.url === '/home') ?'navlistcolor mt-5':'text-dark'}}">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item linkindex">
-            <a class="nav-link waves-light" mdbWavesEffect>Home
-              <!-- <span class="sr-only">(current)</span> -->
-            </a>
-          </li>
-          <li class="nav-item linkindex">
-            <a class="nav-link waves-light" mdbWavesEffect>FAQ</a>
-          </li>
-          <li class="nav-item linkindex">
-            <a class="nav-link waves-light" mdbWavesEffect>Claims</a>
-          </li>
-          <li class="nav-item linkindex">
-            <a class="nav-link waves-light" mdbWavesEffect>Giveback</a>
-          </li>
-          <li class="nav-item linkindex">
-            <a class="nav-link waves-light" mdbWavesEffect>Policy 2.0</a>
-          </li>
-        </ul>
+    </mdb-navbar-brand>
 
-        <ul class="navbar-nav ml-auto nav-flex-icons">
-          <li class="nav-item linkindex" *ngIf="router.url !== '/home'">
-            <a class="nav-link" mdbTooltip="Start Over" placement="bottom" (click)="resetmodal.show()">
-              <mdb-icon fas icon="undo"></mdb-icon>
-            </a>
-          </li>
-          <li class="nav-item linkindex" *ngIf="router.url !== '/home'">
-            <a class="nav-link">
-              <mdb-icon far icon="question-circle"></mdb-icon>
-            </a>
-          </li>
-          <li class="nav-item mr-2 linkindex" *ngIf="router.url === '/home'">
-            <a class="nav-link">
-              My Account
-            </a>
-          </li>
-          <li class="nav-item z-depth-2 linkindex" *ngIf="showpricebtn">
-            <a class="nav-link text-white buttonstyle" (click)="clicked()" style="width:auto">
-              CHECK OUR PRICES
-            </a>
-          </li>
-        </ul>
-      </links>
-      <!-- Collapsible content -->
-    </mdb-navbar>
-  </div>
+    <links class="text-dark">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item linkindex" *ngFor='let item of ds.navlinks'>
+          <a class="nav-link waves-light" mdbWavesEffect>{{item}}</a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item linkindex">
+          <a class="nav-link" mdbTooltip="Start Over" placement="bottom" (click)="resetmodal.show()">
+            <mdb-icon fas icon="undo"></mdb-icon>
+          </a>
+        </li>
+        <li class="nav-item linkindex">
+          <a class="nav-link">
+            <mdb-icon far icon="question-circle"></mdb-icon>
+          </a>
+        </li>
+        <li class="nav-item z-depth-2 linkindex" *ngIf="showbackquote">
+          <a class="nav-link text-white buttonstyle buttstyle2" (click)="clicked()" style="width:auto">BACK TO YOUR QUOTE</a>
+        </li>
+      </ul>
+    </links>
+  </mdb-navbar>
   <div class="divcenter iconimgtop">
     <img *ngIf="router.url !== '/home'" class="{{(centerimg_scroll)? 'iconimgtop_before': 'iconimgtop_after'}}"
       src="assets/Maya-79af77d3c1e0abe54a4a8f349950ec6b23457716b5361568851546d1cb5c3643.jpg" alt="">
   </div>
 </div>
+<div id="hiddenBehind" style="height: 6em; width: 100%;"></div>
 
 <div mdbModal #resetmodal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
   aria-hidden="true">
@@ -89,10 +54,8 @@
       </div>
       <div class="modal-footer border border-white">
         <div class="divcenter">
-          <button type="button" mdbBtn class="waves-light font-weight-bold startovercancel" aria-label="Close"
-            (click)="resetmodal.hide()" mdbWavesEffect>CANCEL</button>
-          <button type="button" mdbBtn class="relative text-white waves-light buttonstyle"
-            (click)="ds.domFunction('reset'); resetmodal.hide()" mdbWavesEffect>START OVER</button>
+          <button type="button" mdbBtn class="waves-light font-weight-bold startovercancel" aria-label="Close" (click)="resetmodal.hide()" mdbWavesEffect>CANCEL</button>
+          <button type="button" mdbBtn class="relative text-white waves-light buttonstyle" (click)="ds.domFunction('reset'); resetmodal.hide()" mdbWavesEffect>START OVER</button>
         </div>
       </div>
     </div>

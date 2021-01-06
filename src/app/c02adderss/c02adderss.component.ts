@@ -1,4 +1,10 @@
-import { Component, OnInit ,ViewChild, ElementRef, NgZone} from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  NgZone,
+} from '@angular/core';
 import { MapsAPILoader } from '@agm/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DataterminalService } from '../dataterminal.service';
@@ -6,14 +12,13 @@ import { DataterminalService } from '../dataterminal.service';
 @Component({
   selector: 'app-c02adderss',
   templateUrl: './c02adderss.component.html',
-  styleUrls: ['./c02adderss.component.scss']
+  styleUrls: ['./c02adderss.component.scss'],
 })
 export class C02adderssComponent implements OnInit {
-
   citystatelist = {
     'Indore,Madhyapradesh': '452010',
     'Pune,Maharashtra': '472010',
-  }
+  };
 
   latitude: number;
   longitude: number;
@@ -22,45 +27,52 @@ export class C02adderssComponent implements OnInit {
   private geoCoder;
 
   addressForm = new FormGroup({
-    housenumber: new FormControl(this.ds.allData.c02address.housenumber, Validators.required),
-    address: new FormControl(this.ds.allData.c02address.address, Validators.required),
+    housenumber: new FormControl(
+      this.ds.allData.c02address.housenumber,
+      Validators.required
+    ),
+    address: new FormControl(
+      this.ds.allData.c02address.address,
+      Validators.required
+    ),
     //pincode: new FormControl(this.citystatelist[this.ds.allData.c02address.address], Validators.required),
   });
 
   @ViewChild('search')
   public searchElementRef: ElementRef;
-
-
+  mapCalc = false;
   constructor(
     public ds: DataterminalService,
     private mapsAPILoader: MapsAPILoader,
     private ngZone: NgZone
-     ) { }
+  ) {}
 
   ngOnInit(): void {
-      //load Places Autocomplete
-      this.mapsAPILoader.load().then(() => {
-        this.setCurrentLocation();
-        this.geoCoder = new google.maps.Geocoder;
+    //load Places Autocomplete
+    this.mapsAPILoader.load().then(() => {
+      this.setCurrentLocation();
+      this.geoCoder = new google.maps.Geocoder();
 
-        let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement);
-        autocomplete.addListener("place_changed", () => {
-          this.ngZone.run(() => {
-            //get the place result
-            let place: google.maps.places.PlaceResult = autocomplete.getPlace();
+      let autocomplete = new google.maps.places.Autocomplete(
+        this.searchElementRef.nativeElement
+      );
+      autocomplete.addListener('place_changed', () => {
+        this.ngZone.run(() => {
+          //get the place result
+          let place: google.maps.places.PlaceResult = autocomplete.getPlace();
 
-            //verify result
-            if (place.geometry === undefined || place.geometry === null) {
-              return;
-            }
+          //verify result
+          if (place.geometry === undefined || place.geometry === null) {
+            return;
+          }
 
-            //set latitude, longitude and zoom
-            this.latitude = place.geometry.location.lat();
-            this.longitude = place.geometry.location.lng();
-            this.zoom = 12;
-          });
+          //set latitude, longitude and zoom
+          this.latitude = place.geometry.location.lat();
+          this.longitude = place.geometry.location.lng();
+          this.zoom = 12;
         });
       });
+    });
   }
 
   changed(e: any) {
@@ -85,22 +97,23 @@ export class C02adderssComponent implements OnInit {
     }
   }
 
-  markerDragEnd($event: MouseEvent) {
-  }
+  markerDragEnd($event: MouseEvent) {}
 
   getAddress(latitude, longitude) {
-    this.geoCoder.geocode({ 'location': { lat: latitude, lng: longitude } }, (results, status) => {
-      if (status === 'OK') {
-        if (results[0]) {
-          this.zoom = 12;
-          this.address = results[0].formatted_address;
+    this.geoCoder.geocode(
+      { location: { lat: latitude, lng: longitude } },
+      (results, status) => {
+        if (status === 'OK') {
+          if (results[0]) {
+            this.zoom = 12;
+            this.address = results[0].formatted_address;
+          } else {
+            window.alert('No results found');
+          }
         } else {
-          window.alert('No results found');
+          window.alert('Geocoder failed due to: ' + status);
         }
-      } else {
-        window.alert('Geocoder failed due to: ' + status);
       }
-
-    });
+    );
   }
 }

@@ -1,0 +1,43 @@
+.fixedheader {
+  position: fixed;
+  top: 0em;
+  left: 0em;
+  width: 100%;
+  height: 6em;
+  z-index: 2;
+  background-color: var(--accent1) !important;
+}
+
+#centerlogo {
+  box-sizing: border-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  height: auto !important;
+  top: .2em !important;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logoscroll_before > img {
+  height: 4em;
+}
+.logoscroll_after > img {
+  height: 3em;
+}
+
+.navlistcolor {
+  color: var(--accent2) !important;
+  position: relative;
+}
+.nav-link:hover {
+  color: var(--accent1-5) !important;
+}
+.linkindex {
+  z-index: 3000 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}

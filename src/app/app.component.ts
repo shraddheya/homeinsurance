@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataterminalService } from './dataterminal.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'oursurplus';
+  thisPage = {idx: 0, uri: ''};
+  constructor (public ds: DataterminalService) {
+    ds.pageAdd.subscribe((val: any)=> {
+      this.thisPage = val;
+    });
+  }
 }

@@ -1,0 +1,26 @@
+<div class="fixedheader">
+  <mdb-navbar SideClass="navbar navbar-expand-lg z-depth-0 h-100" [containerInside]="false">
+    <div id="centerlogo" class="font-weight-bold {{(navsize)? 'logoscroll_before' : 'logoscroll_after'}}">
+      <img src="assets/logo1.png" alt="OurSurplus">
+    </div>
+    <links class="navlistcolor">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item linkindex" *ngFor='let item of ds.navlinks'>
+          <a class="nav-link waves-light" mdbWavesEffect>{{item}}</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto nav-flex-icons">
+        <li class="nav-item mr-2 linkindex">
+          <a class="nav-link">My Account</a>
+        </li>
+        <li class="nav-item z-depth-2 linkindex" *ngIf="showpricebtn">
+          <a class="nav-link text-white buttonstyle" (click)="clicked()" style="width:auto">CHECK OUR PRICES</a>
+        </li>
+        <li class="nav-item z-depth-2 linkindex" *ngIf="showbackquote">
+          <a class="nav-link text-white buttonstyle buttstyle2" (click)="clicked()" style="width:auto">BACK TO YOUR QUOTE</a>
+        </li>
+      </ul>
+    </links>
+  </mdb-navbar>
+</div>
+<div id="hiddenBehind" style="height: 6em; width: 100%;"></div>

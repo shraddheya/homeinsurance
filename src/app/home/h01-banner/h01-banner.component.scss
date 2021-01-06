@@ -1,29 +1,9 @@
 #bannerbg{
-  background-image: url('../../../assets/bg-clouds-2-6dcdd0a252148447204022d42385e0df.png');
-  background: linear-gradient(180deg, var(--accent1) 3%, #fff 37%);
-  height: auto;
-}
-#bannerimgleft {
-  float:left;
-  background-image: url('../../../assets/home-left-35e4ff48b1abcefd87e665c7ae7d9945.svg') !important;
-  height: 28em !important;
-  width: 38em !important;
-  // left: -14.2em !important;
-  position: relative !important;
-}
-#bannerimgright{
-  float:right;
-  background-image: url('../../../assets/home-right-8e4273250df741758be48d9efb95ff1a.svg') !important;
-  height: 28em !important;
-  width: 30em !important;
-  // right: -6.2em !important;
-  position: relative !important;
-}
-#h01imgmain{
+  background: linear-gradient(180deg, var(--accent1) 3%, var(--accent2) 50%);
+  height: 40em;
   position: relative;
-  bottom:0em;
 }
-.h01banner{
-  display:table-cell !important;
-  float: unset;
+.overlay {
+  position: absolute;
+  width: 100%;
 }

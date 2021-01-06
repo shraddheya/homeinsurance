@@ -12,6 +12,7 @@ export class TopbarComponent implements OnInit {
   showpricebtn: any = false
   navsize: any = true;
   centerimg_scroll: any = true
+  showbackquote = false;
   constructor(public ds: DataterminalService, public router: Router) {
     comp = this
     window.addEventListener('scroll', function () {
