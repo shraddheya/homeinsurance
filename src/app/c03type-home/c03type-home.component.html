@@ -7,20 +7,27 @@
   <div class="container mt-4">
     <div class="row justify-content-center">
       <div class="col-lg-2 col-xs-12 text-center" *ngFor='let item of hometype | keyvalue: asIs'>
-        <div>
-          <object type="image/svg+xml" [data]='item.value.imgsvg | safe'></object>
-          <!-- <img class="iconimg" (click)="changed(item.key)" src="{{item.value.selectedview ? item.value.imgactive : item.value.img}}"> -->
-        </div>
-        <div>
-          <span class="font-weight-bold" style="color: rgb(74, 74, 74);font-size:0.7em;font-family: Merriweather, Georgia, serif;">{{item.key | uppercase}}</span>
-        </div>
+        <a (click)="changed(item.key)" style="display:block;">
+          <object *ngIf=item.value.selectedview type="image/svg+xml" [data]="item.value.imgsvg_c | safe"
+            style="pointer-events: none;"></object>
+          <object *ngIf=!item.value.selectedview type="image/svg+xml" [data]="item.value.imgsvg | safe"
+            style="pointer-events: none;"></object>
+        </a>
+        <!-- <img class="iconimg" (click)="changed(item.key)" src="{{item.value.selectedview ? item.value.imgactive : item.value.img}}"> -->
+        <p class="font-weight-bold"
+          style="color: rgb(74, 74, 74);font-size:0.7em;font-family: Merriweather, Georgia, serif;">{{item.key |
+          uppercase}}</p>
+
         <div class="form-check form-check-inline p-3">
-          <input class="form-check-input" type="radio" name="typeHomeoption" id={{item.key}} value={{item.key}} [checked]="item.value.selectedview" (change)="changed(item.key)" >
+          <input class="form-check-input" type="radio" name="typeHomeoption" id={{item.key}} value={{item.key}}
+            [checked]="item.value.selectedview" (change)="changed(item.key)">
         </div>
       </div>
     </div>
   </div>
+  {{teststring}}
   <div class="p-2 mt-5">
-    <button mdbBtn class="{{(buttDisabled) ? 'disablestyle':'buttonstyle'}}" (click)='clicked()' [disabled]=buttDisabled>Next</button>
+    <button mdbBtn class="{{(buttDisabled) ? 'disablestyle':'buttonstyle'}}" (click)='clicked()'
+      [disabled]=buttDisabled>Next</button>
   </div>
 </div>

@@ -12,7 +12,7 @@
   --text3-accent: rgb(183, 183, 183);
   --textbtn-accent: #ffffff;
   --topbar-background: var(--accent1);
-
+  --screen: #202030;  //#B01B69 for pink
 }
 body {
   box-sizing: content-box;
@@ -260,5 +260,5 @@ input[type='checkbox']:checked:after {
 
 .pac-container {
   display: none;
-  
+
 }
