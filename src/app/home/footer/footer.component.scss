@@ -2,19 +2,6 @@
   box-sizing: border-box;
   background-color:var(--accent3);
 }
-
-.footerlang_dropdown{
-  width:10em;
-}
-.dropdown{
-  background-color:var(--accent3);
-}
-.dropdown-item{
-  background-color:var(--accent3);
-}
-.dropdown-item:hover{
-  background-color:gray;
-}
 .footertitle{
   font-family: Lato, "Helvetica Neue", Arial, sans-serif;
     font-size: 0.9rem;
@@ -33,6 +20,20 @@
 .footertexts:hover {
   color: var(--accent1-5) !important;
 }
+
+.footerlang_dropdown{
+  width:10em;
+}
+.dropdown{
+  background-color:var(--accent3);
+}
+.dropdown-item{
+  background-color:var(--accent3);
+}
+.dropdown-item:hover{
+  background-color:gray;
+}
+
 #footerbottomtext{
   font-family: Lato, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
@@ -46,3 +47,46 @@
   margin:auto;
   display:table
 }
+
+/*---------------------------------------select---------------------------------------*/
+
+.select-wrapper {
+  position: relative;
+  border: 0.01em solid white;
+  border-radius: 0.3em;
+  width: 70%;
+  height: auto;
+  // Dropdown icon
+  &::after {
+    color: white;
+    content: "▾";
+    margin-right: 10px;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+  }
+}
+.select-wrapper :hover {
+  background-color: var(--text1-accent);
+}
+
+// Default state
+.select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: var(--accent3);
+  color: white;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 0.9em;
+  &:focus {
+    color: white;
+  }
+  // Hack for IE 11+
+  &::-ms-expand {
+    display: none;
+  }
+}
+

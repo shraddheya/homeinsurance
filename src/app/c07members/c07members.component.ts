@@ -17,36 +17,36 @@ export class C07membersComponent implements OnInit {
   membertypelist: any = {
     a: {
       title: "It's just me",
-      img: 'assets/oursurplusassetsSVG/SVG210106/singlelives_unchecked.svg',
-      imgactive: 'assets/oursurplusassetsSVG/SVG210106/singlelives_checked.svg',
+      img: 'assets/oursurplusassetsPNG/Residents Me.png',
+      imgactive: 'assets/oursurplusassetsPNG/Residents Me Active.png',
       selectedview: this.ds.allData.c07members === "a"
     },
     b: {
       title: 'my partner',
       message: 'Great, your partner will be covered by your Lemonade policy 🙂 ',
-      img: 'assets/oursurplusassetsSVG/SVG210106/patnerlives_unchecked.svg',
-      imgactive: 'assets/oursurplusassetsSVG/SVG210106/patnerlives_checked.svg',
+      img: 'assets/oursurplusassetsPNG/Residents Partner.png',
+      imgactive: 'assets/oursurplusassetsPNG/Residents Partner Active.png',
       selectedview: this.ds.allData.c07members === "b"
     },
     c: {
       title: 'partner and kids',
       message: 'Great, they’ll be covered by your Lemonade policy 🙂',
-      img: 'assets/oursurplusassetsSVG/SVG210106/patnerkidslives_unchecked.svg',
-      imgactive: 'assets/oursurplusassetsSVG/SVG210106/patnerkidslives_checked.svg',
+      img: 'assets/oursurplusassetsPNG/Residents Partner Kids.png',
+      imgactive: 'assets/oursurplusassetsPNG/Residents Partner Kids Active.png',
       selectedview: this.ds.allData.c07members === "c"
     },
     d: {
       title: 'my kids',
       message: 'Great, they’ll be covered by your Lemonade policy 🙂',
-      img: 'assets/oursurplusassetsSVG/SVG210106/kidslives_unchecked.svg',
-      imgactive: 'assets/oursurplusassetsSVG/SVG210106/kidslives_checked.svg',
+      img: 'assets/oursurplusassetsPNG/Simple Brush.png',
+      imgactive:'assets/oursurplusassetsPNG/Coloured Brush.png',
       selectedview: this.ds.allData.c07members === "d"
     },
     e: {
       title: 'other',
       message: 'FYI - You are the only person covered under this policy. Tell the others to get their own Lemonade 😉',
-      img: 'assets/oursurplusassetsSVG/SVG210106/otherlives_unchecked.svg',
-      imgactive: 'assets/oursurplusassetsSVG/SVG210106/otherlives_checked.svg',
+      img: 'assets/oursurplusassetsPNG/Residents Other.png',
+      imgactive: 'assets/oursurplusassetsPNG/Residents Other Active.png',
       selectedview: this.ds.allData.c07members === "e"
     }
   };

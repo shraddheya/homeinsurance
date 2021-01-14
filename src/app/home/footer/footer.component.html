@@ -26,19 +26,18 @@
     <div class="col-4">
       <div>
         <p class="footertitle">REGION</p>
-        <div class="mt-2 mb-2 footerlang_dropdown">
-          <div class="btn-group border border-white rounded mb-1" mdbDropdown>
-            <a mdbDropdownToggle type="button" mdbBtn  class="dropdown-toggle waves-light dropdown languagedrop"
-              mdbWavesEffect>
-              <span style="font-size: 0.6em;width:auto" class="pr-2 pl-3">{{footerregion.code | uppercase}}</span> <span style="font-size: 0.9em;">{{footerregion.language | uppercase}}</span>
-            </a>
-
-            <div class="dropdown-menu dropdown border border-white">
-              <a *ngFor="let drli of footerregionarray" class="dropdown-item text-white dropdownlist" (click)="footerregion = drli">
-                <span style="font-size: 0.6em;" class="pr-2">{{drli.code | uppercase}}</span> <span style="font-size: 0.9em;">{{drli.language | uppercase}}</span>
-              </a>
-            </div>
-          </div>
+        <div class="select-wrapper">
+          <select class="select rounded mb-1 form-control">
+            <option value="footerregion" selected>
+              <span class="smallcode">{{footerregion.code | uppercase}}</span> &nbsp;
+              {{footerregion.language |uppercase}}
+            </option>
+            <option value={{slitem.language}} *ngFor="let slitem of footerregionarray">
+              <span class="smallcode">{{slitem.code | uppercase}}</span>
+              &nbsp;
+              {{slitem.language |uppercase}}
+            </option>
+          </select>
         </div>
       </div>
       <div>

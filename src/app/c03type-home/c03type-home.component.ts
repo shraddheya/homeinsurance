@@ -15,23 +15,21 @@ export class C03typeHomeComponent implements OnInit {
   imgc03:any
   teststring:any;
   constructor( public ds: DataterminalService ) {
+    //img: 'assets/SVG210106/apartment_unchecked.svg',
     this.hometype = {
       Apartment: {
-        //imgsvg: 'assets/oursurplusassetsSVG/SVG/12.svg',
-        imgsvg: 'assets/oursurplusassetsSVG/SVG210106/apartment_unchecked.svg',
-        imgsvg_c: 'assets/oursurplusassetsSVG/SVG210106/apartment_checked.svg',
+        img: 'assets/oursurplusassetsPNG/Appartment.png',
+        imgactive: 'assets/oursurplusassetsPNG/Appartment S.png',
         selectedview: this.ds.allData["c03type-home"] === "Apartment"
       },
       'Single family house': {
-        //imgsvg: 'assets/oursurplusassetsSVG/SVG/24.svg',
-        imgsvg: 'assets/oursurplusassetsSVG/SVG210106/singlefamilyhome_unchecked.svg',
-        imgsvg_c: 'assets/oursurplusassetsSVG/SVG210106/singlefamilyhome_checked.svg',
+        img: 'assets/oursurplusassetsPNG/Single Home.png',
+        imgactive: 'assets/oursurplusassetsPNG/Single Home S.png',
         selectedview: this.ds.allData["c03type-home"] === "Single family house"
       },
       Duplex: {
-        //imgsvg: 'assets/oursurplusassetsSVG/SVG/04.svg',
-        imgsvg: 'assets/oursurplusassetsSVG/SVG210106/duplex_unchecked.svg',
-        imgsvg_c: 'assets/oursurplusassetsSVG/SVG210106/duplex_checked.svg',
+        img: 'assets/oursurplusassetsPNG/Duplex.png',
+        imgactive: 'assets/oursurplusassetsPNG/Duplex S.png',
         selectedview: this.ds.allData["c03type-home"] === "Duplex"
       }
     };
@@ -41,7 +39,6 @@ export class C03typeHomeComponent implements OnInit {
     if (this.ds.allData["c03type-home"].length > 1) this.buttDisabled = false;
   }
   changed(key: string) {
-    this.teststring = "working"
     this.ds.allData["c03type-home"] = key;
     for (let item in this.hometype) this.hometype[item].selectedview = key === item;
     this.buttDisabled = false;

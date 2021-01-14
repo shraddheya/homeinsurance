@@ -8,16 +8,17 @@ import { DataterminalService } from '../dataterminal.service';
 })
 export class C06securityComponent implements OnInit {
 
+ // imgactive: 'assets/SVG210106/burglar_checked.svg'
   checktest: any = this.ds.allData.c06security.length-1 < 1; //newadded
   securitytype: any = {
     'burglar alarm': {
-      img: 'assets/burglar-e86e0122c41e7d8257a8bc167070cb06d588ec91810469cbb4b27b948ce67fb5.png',
-      imgactive: 'assets/oursurplusassetsSVG/SVG210106/burglar_checked.svg',
+      img: 'assets/oursurplusassetsPNG/Burglar.png',
+      imgactive:'assets/oursurplusassetsPNG/Burglar S.png',
       selectedview: this.ds.allData.c06security.indexOf('burglar alarm') > -1
     },
     'sequrity camera': {
-      img: 'assets/oursurplusassetsSVG/SVG210106/camera_unchecked.svg',
-      imgactive: 'assets/oursurplusassetsSVG/SVG210106/camera_checked.svg',
+      img: 'assets/oursurplusassetsPNG/Home Security Camera.png',
+      imgactive: 'assets/oursurplusassetsPNG/Home Security Camera S.png',
       selectedview: this.ds.allData.c06security.indexOf('sequrity camera') > -1
     }
   };

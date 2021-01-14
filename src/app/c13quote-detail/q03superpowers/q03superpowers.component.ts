@@ -24,7 +24,7 @@ export class Q03superpowersComponent implements OnInit {
       showchecked: this.ds.allData["c13quote-detail"].q03superpowers.indexOf("EXTREME WEATHER PACKAGE") > -1,
     }
   }
-  constructor( public ds: DataterminalService ) { }
+  constructor(public ds: DataterminalService) { }
 
   ngOnInit(): void { }
 
@@ -32,7 +32,7 @@ export class Q03superpowersComponent implements OnInit {
     this.superpowerArray[itemid].showchecked = evt.currentTarget.checked;
     if (evt.target.checked) this.ds.allData["c13quote-detail"].q03superpowers.push(itemid);
     else {
-      let idx  = this.ds.allData["c13quote-detail"].q03superpowers.indexOf(itemid);
+      let idx = this.ds.allData["c13quote-detail"].q03superpowers.indexOf(itemid);
       if (idx > -1) this.ds.allData["c13quote-detail"].q03superpowers.splice(idx, 1);
     }
   }

@@ -31,12 +31,12 @@ export class DataterminalService {
         'TEMP ACCOMMODATION': 0
       },
       q02highvalueitems: {
-        'Jewlery': 0,
-        'Bicycles': 0,
-        'Cameras': 0,
-        'Electronics': 0,
-        'Music Equipment': 0,
-        'Other': 0,
+        'JEWLERY': 0,
+        'BICYCLES': 0,
+        'CAMERAS': 0,
+        'ELECTRONICS': 0,
+        'MUSIC EQUIPMENT': 0,
+        'OTHER': 0,
       },
       q03superpowers: ["",],
       q05deductibles: ["",],

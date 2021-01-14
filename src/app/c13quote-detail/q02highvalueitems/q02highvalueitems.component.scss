@@ -53,9 +53,22 @@
   font-weight: 740;
 }
 
-.footerbutton {
-  background-color: var(--accent2);
+.footerbutton{
+  background-color: var(--accent1);
 }
+.footerbuttonbefore {
+   opacity: 0.1;
+}
+.footerbuttonafter {
+  opacity: 1
+}
+.footerbtn_disabled{
+  cursor: not-allowed;
+}
+.footerbtn_enabled{
+  cursor: pointer
+}
+
 .btneffect {
   border-radius: 5em;
   border: 0.1em solid silver;

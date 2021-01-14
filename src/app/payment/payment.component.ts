@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DataterminalService } from '../dataterminal.service';
 
 @Component({
   selector: 'app-payment',
@@ -7,9 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PaymentComponent implements OnInit {
   @Input() amount: number;
+  amount1:any
   companyname = "Oursurplus"
 
-  constructor( ) {
+  constructor(public ds: DataterminalService) {
+    this.amount1 = ds.totalamount;
     this.loadStripe();
   }
 
@@ -31,7 +34,8 @@ export class PaymentComponent implements OnInit {
     handler.open({
       name: this.companyname,
       description: '',
-      amount: amount * 100
+      //amount: amount * 100
+      amount: amount
     });
   }
 

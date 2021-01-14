@@ -5,14 +5,12 @@
       <div class="row justify-content-center">
         <div class="col-lg-2 col-xs-3 mt-3 p-2 text-center" *ngFor='let item of membertypelist | keyvalue: asIs'>
           <div class="">
-            <a (click)="changed(item.key)" style="display:block">
+            <!-- <a (click)="changed(item.key)" style="display:block">
               <object style="pointer-events: none;" *ngIf=item.value.selectedview type="image/svg+xml" [data]="item.value.imgactive  | safe"></object>
               <object style="pointer-events: none;" *ngIf=!item.value.selectedview type="image/svg+xml" [data]="item.value.img | safe"></object>
-            </a>
-
-            <!--
+            </a> -->
             <img class="iconimg" (click)="changed(item.key)"
-              src='{{item.value.selectedview ? item.value.imgactive : item.value.img}}'> -->
+              src='{{item.value.selectedview ? item.value.imgactive : item.value.img}}'>
           </div>
 
           <div>

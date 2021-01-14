@@ -6,14 +6,14 @@
         <div class="col-lg-2 col-xs-4 text-center" *ngFor='let item of securitytype | keyvalue'>
           <div class="iconsize">
             <div class="containers">
-              <a (click)="changed(checkboximg)" style="display:block;">
+              <!-- <a (click)="changed(checkboximg)" style="display:block;">
                 <object style="pointer-events: none;" *ngIf=item.value.selectedview type="image/svg+xml"
-                   [data]="item.value.imgactive | safe"></object>
+                  [data]="item.value.imgactive | safe"></object>
                 <object style="pointer-events: none;" *ngIf=!item.value.selectedview type="image/svg+xml"
                   [data]="item.value.img | safe"></object>
-              </a>
+              </a> -->
 
-              <!-- <img class="iconimg" src="{{item.value.selectedview ? item.value.imgactive : item.value.img}}" (click)="changed(checkboximg)"/> -->
+              <img class="iconimg" src="{{item.value.selectedview ? item.value.imgactive : item.value.img}}" (click)="changed(checkboximg)"/>
               <input #checkboximg type="checkbox" class="checkbox" name="{{item.key}}"
                 [checked]="!item.value.selectedview" />
             </div>
@@ -30,8 +30,9 @@
       </div>
     </div>
     <div class="mt-5">
-      <button mdbBtn class="{{(checktest) ? 'disablestyle':'buttonstyle'}}" (click)="clicked()"
-        [disabled]=checktest>Next</button>
+      <!-- <button mdbBtn class="{{(checktest) ? 'disablestyle':'buttonstyle'}}" (click)="clicked()"
+        [disabled]=checktest>Next</button> -->
+      <button mdbBtn class="buttonstyle" (click)="clicked()" >Next</button>
     </div>
   </div>
 </div>

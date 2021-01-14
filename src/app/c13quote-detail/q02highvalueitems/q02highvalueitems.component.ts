@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalDirective } from 'angular-bootstrap-md';
-import { DataterminalService } from  '../../dataterminal.service'
+import { DataterminalService } from '../../dataterminal.service'
 
 @Component({
   selector: 'app-q02highvalueitems',
@@ -13,7 +13,7 @@ export class Q02highvalueitemsComponent implements OnInit {
 
   noticeModal = false;
   valueItem = {
-    "JEWELRY": {
+    "JEWLERY": {
       img: "assets/valuable_items_jewelry.png",
       text: "What’s the total value of your jewelry items that are worth more than 5.000 € each?",
       maxvalue: 50000,
@@ -37,7 +37,7 @@ export class Q02highvalueitemsComponent implements OnInit {
       price: 5000,
       incrtoggle: 500,
     },
-    "PORTABLE ELECTRONICS": {
+    "ELECTRONICS": {
       img: "assets/valuable_items_portable_electronics.png",
       text: "What’s the total value of your portable electronics worth more than 5.000 € each?",
       maxvalue: 10000,
@@ -45,7 +45,7 @@ export class Q02highvalueitemsComponent implements OnInit {
       price: 5000,
       incrtoggle: 500,
     },
-    "MUSIC GEAR": {
+    "MUSIC EQUIPMENT": {
       img: "assets/valuable_items_musical_instrument.png",
       text: "What’s the total value of your music gear worth more than 5.000 € each?",
       maxvalue: 10000,
@@ -80,29 +80,35 @@ export class Q02highvalueitemsComponent implements OnInit {
       text: "Extra Coverage doesn't include wear & tear, equipment malfunctions and zombie attacks."
     }
   ]
+  addBtn: any = false
+  modalObject = {
+    key: '', value: {
+      img: '',
+      text: '',
+      maxvalue: 0,
+      minvalue: 0,
+      price: 0,
+      incrtoggle: 0,
+    }
+  }
 
-  modalObject = {key: '', value: {
-    img: '',
-    text: '',
-    maxvalue: 0,
-    minvalue: 0,
-    price: 0,
-    incrtoggle: 0,
-  }}
-
-  constructor( public ds: DataterminalService ) { }
+  constructor(public ds: DataterminalService) { }
 
   ngOnInit(): void {
   }
 
   additem(item: any) {
-    this.ds.allData["c10quote-detail"].q02highvalueitems[item.key] = item.value.price;
+    this.ds.allData["c13quote-detail"].q02highvalueitems[item.key] = item.value.price;
+    console.log(this.ds.allData["c13quote-detail"])
     this.highvaluemodal.hide();
   }
 
   hvalueFunction(val: any, inc: string) {
-    if (inc === "+") this.modalObject.value.price += this.modalObject.value.incrtoggle;
-    else this.modalObject.value.price -= this.modalObject.value.incrtoggle;
+    if (val.key === this.modalObject.key) {
+      if (inc === "+") this.modalObject.value.price += this.modalObject.value.incrtoggle;
+      else this.modalObject.value.price -= this.modalObject.value.incrtoggle;
+      this.addBtn = ((val.value.price >= this.modalObject.value.minvalue) && (val.value.price <= this.modalObject.value.maxvalue))
+    }
   }
 
   openModal(data: any) {
@@ -110,5 +116,6 @@ export class Q02highvalueitemsComponent implements OnInit {
     this.modalObject = data;
     this.highvaluemodal.show();
   }
+
 
 }
