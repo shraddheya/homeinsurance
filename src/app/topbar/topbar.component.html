@@ -11,7 +11,7 @@
     <links class="text-dark">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item linkindex" *ngFor='let item of ds.navlinks'>
-          <a class="nav-link waves-light" mdbWavesEffect>{{item}}</a>
+          <a class="nav-link waves-light" [routerLink]="item === 'Home' ? '/home':'_blank'" mdbWavesEffect>{{item}}</a>
         </li>
       </ul>
 
@@ -57,12 +57,12 @@
         <div class="divcenter">
           <div class="celltable">
             <button type="button" mdbBtn class="waves-light font-weight-bold startovercancel" aria-label="Close"
-            (click)="resetmodal.hide()" mdbWavesEffect>CANCEL</button>
+              (click)="resetmodal.hide()" mdbWavesEffect>CANCEL</button>
           </div>
 
           <div class="celltable">
             <button type="button" mdbBtn class="relative text-white waves-light buttonstyle"
-            (click)="ds.domFunction('reset'); resetmodal.hide()" mdbWavesEffect>START OVER</button>
+              (click)="ds.domFunction('reset'); resetmodal.hide()" mdbWavesEffect>START OVER</button>
           </div>
         </div>
       </div>

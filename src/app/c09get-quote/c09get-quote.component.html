@@ -16,10 +16,12 @@
             </div>
           </div>
           <div class="input-field row m-3">
-            <div class="col-5" style="display:inline-block;">
+            <div class="col-6">
+
               <mdb-icon fas icon="birthday-cake" class="icon"></mdb-icon>Date of birth
+
             </div>
-            <div class="col-7">
+            <div class="col-6 p-0">
               <!-- <div class="row"> -->
               <!-- <div class="col-4">
                   <input type="text" class="form-control" formControlName='date' placeholder="DD">
@@ -30,12 +32,11 @@
                 <div class="col-4">
                   <input type="text" class="form-control" formControlName='year' placeholder="YYYY">
                 </div> -->
-              <input class="form-control" type="date" formControlName="dob" required>
+              <input class="form-control" type="date" [min]="minDate" [max]="maxDate" formControlName="dob" required>
               <!-- </div> -->
             </div>
           </div>
         </div>
-
         <div class="pt-0 center_div">
           <div class="pt-3">
             <input type="checkbox" class="checkbox" formControlName="receivediscount">

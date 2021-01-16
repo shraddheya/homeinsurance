@@ -17,7 +17,7 @@
         <div class="row">
           <div class="col-12 p-2 bg-white mt-3" *ngFor='let item of superpowerArray | keyvalue'>
               <div class="row">
-                <div class="col-2">
+                <div class="{{item.value.showchecked ? 'switchprop':''}} col-2">
                   <img src="{{item.value.showchecked ? item.value.imgcheck : item.value.img}}">
                 </div>
                 <div class="col-6 pt-4">
