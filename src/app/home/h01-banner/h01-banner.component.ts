@@ -15,7 +15,7 @@ export class H01BannerComponent implements OnInit {
   }
 
   clicked(){
-    this.ds.allData.home = { name: `Content`, price: 2}
+    this.ds.allData.home = { name: '', price: ''}
     this.ds.changepage()
   }
 

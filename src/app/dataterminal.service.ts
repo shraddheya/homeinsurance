@@ -54,7 +54,7 @@ export class DataterminalService {
   pageAdd = this.pageAddress.asObservable();
 
   constructor(private route: Router, private sanitizer: DomSanitizer) {
-    this.route.navigate([window.location.pathname]);
+    // this.route.navigate([window.location.pathname]);
     this.dtblank.c06security = [];
     this.dtblank.c10loading = '';
     this.dtblank["c13quote-detail"].q05deductibles = [];
@@ -73,13 +73,24 @@ export class DataterminalService {
           }
         }
         localStorage.setItem('currPage', idx.toString());
-        if (gotoPageIdx !== idx) this.gotopage(gotoPageIdx); 1
+        if (gotoPageIdx !== idx) this.gotopage(gotoPageIdx);
+        console.log(this.testFunction({ mode: 'checkurl', data: this.pageAddress }))
       }
     })
   }
 
+  testFunction(object: any) {
+    var result: any;
+    switch (object.mode) {
+      case 'checkurl':
+        result = object.data.value;
+        break
+    }
+    return result
+  }
+
   changepage(goForward = true) {
-    console.log(goForward)
+    //console.log("Changepage ==> " + goForward)
     if (goForward) this.currPage = parseInt(localStorage.getItem('currPage')) + 1;
     else {
       this.currPage = parseInt(localStorage.getItem('currPage')) - 1;
@@ -89,17 +100,21 @@ export class DataterminalService {
     if (this.currPage > this.pageList.length - 1) this.currPage = this.pageList.length - 1;
     this.gotopage(this.currPage);
   }
+
   gotopage(idx = this.currPage) {
+    //console.log("Index of Page ==> " + idx)
     localStorage.setItem('allData', JSON.stringify(this.allData));
-    console.log(this.pageAdd, this.pageList[idx]);
+    //console.log(this.pageAdd, this.pageList[idx]);
     this.route.navigate([this.pageList[idx]])
   }
+
   homepage(mode: any, data: any) {
     switch (mode) {
       case 'help':
         return
     }
   }
+
   domFunction(mode: any) {
     switch (mode) {
       case 'reset':
