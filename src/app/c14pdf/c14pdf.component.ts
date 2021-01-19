@@ -103,7 +103,7 @@ export class C14pdfComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.payable = this.ds.allData.home.price +
+    this.payable = this.ds.allData[''].price +
       hvi.content_lowvalue.filter((it: any) => {
         return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['CONTENTS']
       })[0].price_month +
@@ -113,9 +113,9 @@ export class C14pdfComponent implements OnInit {
       hvi.temporary_accomodation.filter((it: any) => {
         return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION']
       })[0].price_month +
-      hvi.content_lowvalue.filter((it: any) => {
-        return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION']
-      })[0].price_month +
+      // hvi.content_lowvalue.filter((it: any) => {
+      //   return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION']
+      // })[0].price_month +
       hvi.jewellery.filter((it: any) => {
         return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['JEWLERY']
       })[0].price_month +
@@ -123,6 +123,7 @@ export class C14pdfComponent implements OnInit {
         return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['BICYCLES']
       })[0].price_month +
       hvi.cameras.filter((it: any) => {
+        console.log(it.insurance_value ,this.ds.allData['c13quote-detail'].q02highvalueitems['CAMERAS'])
         return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['CAMERAS']
       })[0].price_month +
       hvi.electronics.filter((it: any) => {

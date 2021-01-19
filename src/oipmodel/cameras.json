@@ -100,7 +100,7 @@
     "yearly_policy_event": 2.9
   },
   {
-    "insurance_value": 1000,
+    "insurance_value": 10000,
     "po_event": 20,
     "lg_event": 20,
     "el_event": 400,

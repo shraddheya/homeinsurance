@@ -20,7 +20,7 @@ export class AppComponent {
     // });
     // ds.pageAdd.subscribe((val: any)=> {
     //   this.thisPage = val;
-    //   // console.log('this.thisPage : ', this.thisPage);
+    // console.log('this.thisPage : ', this.thisPage);
     // });
   }
 }

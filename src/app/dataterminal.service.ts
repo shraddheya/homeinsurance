@@ -50,6 +50,7 @@ export class DataterminalService {
   momentZone = moment()
   totalamount: any = 0
 
+
   // pageAddress = new BehaviorSubject({});
   // pageAdd = this.pageAddress.asObservable();
 
