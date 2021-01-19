@@ -8,10 +8,10 @@ import * as moment from 'moment'
   providedIn: 'root'
 })
 export class DataterminalService {
-  pageList = ["home", "c01name", "c02address", "c03type-home", "c04primaryresidence", "c05size-home", "c06security", "c07members", "c08assets", "c09get-quote", "c10loading", "c11builthome-year", "c12insurance-claim-count", "c13quote-detail", "c14pdf"]
+  pageList = ["", "c01name", "c02address", "c03type-home", "c04primaryresidence", "c05size-home", "c06security", "c07members", "c08assets", "c09get-quote", "c10loading", "c11builthome-year", "c12insurance-claim-count", "c13quote-detail", "c14pdf"]
   navlinks = ['Home', 'FAQ', 'Claims', 'Giveback', 'Policy 2.0'];
   initVals = JSON.stringify({
-    "home": { name: "", price: 0 },
+    "": { name: "", price: 0 },
     "c01name": { firstName: "", lastName: "" },
     "c02address": { housenumber: "", pincode: "", address: "" },
     "c03type-home": "",
@@ -50,31 +50,38 @@ export class DataterminalService {
   momentZone = moment()
   totalamount: any = 0
 
-  pageAddress = new BehaviorSubject({});
-  pageAdd = this.pageAddress.asObservable();
+  // pageAddress = new BehaviorSubject({});
+  // pageAdd = this.pageAddress.asObservable();
 
-  constructor(private route: Router, private sanitizer: DomSanitizer) {
-    // this.route.navigate([window.location.pathname]);
+  constructor(private router: Router, private sanitizer: DomSanitizer) {
+    // this.router.navigate([window.location.pathname]);
     this.dtblank.c06security = [];
     this.dtblank.c10loading = '';
     this.dtblank["c13quote-detail"].q05deductibles = [];
-    route.events.subscribe(val => {
+    router.events.subscribe(val => {
       if (val instanceof NavigationEnd) {
         let uri = val.url.substr(1);
         let idx = this.pageList.indexOf(uri);
-        this.pageAddress.next({ idx, uri });
+        // this.pageAddress.next({ idx, uri });
         this.currPage = idx;
         let gotoPageIdx = idx;
+        console.log('-------------------------------------------------------------------------------------------');
         for (let i = 0; i < idx; i++) {
           let pgnm = this.pageList[i];
+          console.log(i, idx, this.allData[pgnm], this.dtblank[pgnm]);
           if (JSON.stringify(this.allData[pgnm]) === JSON.stringify(this.dtblank[pgnm])) {
+            console.log('equal : ', this.allData[pgnm], this.dtblank[pgnm]);
             gotoPageIdx = i;
             break;
           }
         }
-        localStorage.setItem('currPage', idx.toString());
-        if (gotoPageIdx !== idx) this.gotopage(gotoPageIdx);
-        console.log(this.testFunction({ mode: 'checkurl', data: this.pageAddress }))
+        localStorage.setItem('currPage', gotoPageIdx.toString());
+        console.log('gotoPageIdx', gotoPageIdx, 'idx', idx, 'gotoPageIdx !== idx', gotoPageIdx !== idx);
+        if (gotoPageIdx !== idx) {
+          console.log('changing address after redirection');
+          this.gotopage(gotoPageIdx);
+        }
+        // console.log(this.testFunction({ mode: 'checkurl', data: this.pageAddress }))
       }
     })
   }
@@ -90,7 +97,8 @@ export class DataterminalService {
   }
 
   changepage(goForward = true) {
-    //console.log("Changepage ==> " + goForward)
+    // console.log("Changepage ==> " + goForward)
+    // console.log("val ==> ", this.allData, this.dtblank);
     if (goForward) this.currPage = parseInt(localStorage.getItem('currPage')) + 1;
     else {
       this.currPage = parseInt(localStorage.getItem('currPage')) - 1;
@@ -98,14 +106,15 @@ export class DataterminalService {
     }
     if (this.currPage < 0) this.currPage = 1;
     if (this.currPage > this.pageList.length - 1) this.currPage = this.pageList.length - 1;
+    // console.log(this.currPage);
     this.gotopage(this.currPage);
   }
 
-  gotopage(idx = this.currPage) {
-    //console.log("Index of Page ==> " + idx)
+  gotopage(idx = this.currPage, calledfrom = false) {
+    // console.log("Index of Page ==> " + idx, this.allData);
+    calledfrom && console.log("called From : ", calledfrom);
     localStorage.setItem('allData', JSON.stringify(this.allData));
-    //console.log(this.pageAdd, this.pageList[idx]);
-    this.route.navigate([this.pageList[idx]])
+    this.router.navigate([`/${this.pageList[idx]}/`]);
   }
 
   homepage(mode: any, data: any) {

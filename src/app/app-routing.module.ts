@@ -17,9 +17,9 @@ import { C14pdfComponent } from './c14pdf/c14pdf.component';
 // import { H10ProductoncheckpriceComponent } from './home/h10-productoncheckprice/h10-productoncheckprice.component';
 import { HomeComponent } from './home/home.component';
 const routes: Routes = [
-  // { path: '', component: HomeComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
+  // { path: '', redirectTo: 'home', pathMatch: 'full' },
+  // { path: 'home', component: HomeComponent },
   { path: 'c01name', component: C01nameComponent },
   { path: 'c02address', component: C02adderssComponent },
   { path: 'c03type-home', component: C03typeHomeComponent },

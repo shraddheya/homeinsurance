@@ -14,11 +14,11 @@ export class ButtBackComponent implements OnInit {
   }
 
   constructor( private ds: DataterminalService ) {
-    ds.pageAdd.subscribe((val: any)=> {
-      // console.log(val, this.disp);
-      this.disp = val.idx > 1;
-      // console.log(val, this.disp);
-    });
+    // ds.pageAdd.subscribe((val: any)=> {
+    //   // console.log(val, this.disp);
+    //   this.disp = val.idx > 1;
+    //   // console.log(val, this.disp);
+    // });
   }
   ngOnInit(): void { }
 }
