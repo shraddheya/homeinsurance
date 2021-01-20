@@ -102,40 +102,60 @@ export class C14pdfComponent implements OnInit {
     //ds.totalamount = (sum / (89.80)).toFixed(2);
   }
 
+  private getValue(liabilityTable: string, qField: string, field: string) {
+    return hvi[liabilityTable].filter((it: any) => {
+      return it.insurance_value === this.ds.allData['c13quote-detail'][qField][field];
+    });
+  }
+
   ngOnInit(): void {
-    this.payable = this.ds.allData[''].price +
-      hvi.content_lowvalue.filter((it: any) => {
-        return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['CONTENTS']
-      })[0].price_month +
-      hvi.personalliability.filter((it: any) => {
-        return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['PERSONAL LIABILITY']
-      })[0].price_month +
-      hvi.temporary_accomodation.filter((it: any) => {
-        return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION']
-      })[0].price_month +
-      // hvi.content_lowvalue.filter((it: any) => {
-      //   return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION']
-      // })[0].price_month +
-      hvi.jewellery.filter((it: any) => {
-        return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['JEWLERY']
-      })[0].price_month +
-      hvi.bicycles.filter((it: any) => {
-        return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['BICYCLES']
-      })[0].price_month +
-      hvi.cameras.filter((it: any) => {
-        console.log(it.insurance_value ,this.ds.allData['c13quote-detail'].q02highvalueitems['CAMERAS'])
-        return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['CAMERAS']
-      })[0].price_month +
-      hvi.electronics.filter((it: any) => {
-        return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['ELECTRONICS']
-      })[0].price_month +
-      hvi.music.filter((it: any) => {
-        return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['MUSIC EQUIPMENT']
-      })[0].price_month +
-      hvi.other.filter((it: any) => {
-        return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['OTHER']
-      })[0].price_month +
-      0
+    this.payable = this.ds.allData[''].price;
+    for (const [key, val] of Object.entries({
+      content_lowvalue : {qField: 'q01coverageamount', field: 'CONTENTS'},
+      personalliability : {qField: 'q01coverageamount', field: 'PERSONAL LIABILITY'},
+      temporary_accomodation : {qField: 'q01coverageamount', field: 'TEMP ACCOMMODATION'},
+      jewellery : {qField: 'q02highvalueitems', field: 'JEWLERY'},
+      bicycles : {qField: 'q02highvalueitems', field: 'BICYCLES'},
+      cameras : {qField: 'q02highvalueitems', field: 'CAMERAS'},
+      electronics : {qField: 'q02highvalueitems', field: 'ELECTRONICS'},
+      music : {qField: 'q02highvalueitems', field: 'MUSIC EQUIPMENT'},
+      other : {qField: 'q02highvalueitems', field: 'OTHER'},
+    })) {
+      this.payable += this.getValue(key, val.qField, val.field);
+    }
+    
+    // this.payable = this.ds.allData[''].price +
+    //   hvi.content_lowvalue.filter((it: any) => {
+    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['CONTENTS']
+    //   })[0].price_month +
+    //   hvi.personalliability.filter((it: any) => {
+    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['PERSONAL LIABILITY']
+    //   })[0].price_month +
+    //   hvi.temporary_accomodation.filter((it: any) => {
+    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION']
+    //   })[0].price_month +
+    //   // hvi.content_lowvalue.filter((it: any) => {
+    //   //   return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION']
+    //   // })[0].price_month +
+    //   hvi.jewellery.filter((it: any) => {
+    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['JEWLERY']
+    //   })[0].price_month +
+    //   hvi.bicycles.filter((it: any) => {
+    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['BICYCLES']
+    //   })[0].price_month +
+    //   hvi.cameras.filter((it: any) => {
+    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['CAMERAS']
+    //   })[0].price_month +
+    //   hvi.electronics.filter((it: any) => {
+    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['ELECTRONICS']
+    //   })[0].price_month +
+    //   hvi.music.filter((it: any) => {
+    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['MUSIC EQUIPMENT']
+    //   })[0].price_month +
+    //   hvi.other.filter((it: any) => {
+    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['OTHER']
+    //   })[0].price_month +
+    //   0
   }
 
 }

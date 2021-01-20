@@ -20,7 +20,7 @@ export class C05sizeHomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  clicked(check) {
+  clicked(check: boolean) {
     if (check) {
       this.ds.allData["c05size-home"] = this.sizeForm.value.size;
       this.ds.changepage();
