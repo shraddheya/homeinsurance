@@ -49,13 +49,9 @@ export class DataterminalService {
   scroll = "height:" + screen.height;
   momentZone = moment()
   totalamount: any = 0
-
-
-  // pageAddress = new BehaviorSubject({});
-  // pageAdd = this.pageAddress.asObservable();
+  pageAdd = {idx: 0, uri: ''};
 
   constructor(private router: Router, private sanitizer: DomSanitizer) {
-    // this.router.navigate([window.location.pathname]);
     this.dtblank.c06security = [];
     this.dtblank.c10loading = '';
     this.dtblank["c13quote-detail"].q05deductibles = [];
@@ -63,15 +59,12 @@ export class DataterminalService {
       if (val instanceof NavigationEnd) {
         let uri = val.url.substr(1);
         let idx = this.pageList.indexOf(uri);
-        // this.pageAddress.next({ idx, uri });
+        this.pageAdd = { idx, uri };
         this.currPage = idx;
         let gotoPageIdx = idx;
-        console.log('-------------------------------------------------------------------------------------------');
         for (let i = 0; i < idx; i++) {
           let pgnm = this.pageList[i];
-          console.log(i, idx, this.allData[pgnm], this.dtblank[pgnm]);
           if (JSON.stringify(this.allData[pgnm]) === JSON.stringify(this.dtblank[pgnm])) {
-            console.log('equal : ', this.allData[pgnm], this.dtblank[pgnm]);
             gotoPageIdx = i;
             break;
           }
@@ -79,10 +72,8 @@ export class DataterminalService {
         localStorage.setItem('currPage', gotoPageIdx.toString());
         console.log('gotoPageIdx', gotoPageIdx, 'idx', idx, 'gotoPageIdx !== idx', gotoPageIdx !== idx);
         if (gotoPageIdx !== idx) {
-          console.log('changing address after redirection');
           this.gotopage(gotoPageIdx);
         }
-        // console.log(this.testFunction({ mode: 'checkurl', data: this.pageAddress }))
       }
     })
   }

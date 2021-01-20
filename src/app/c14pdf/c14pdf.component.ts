@@ -123,39 +123,7 @@ export class C14pdfComponent implements OnInit {
     })) {
       this.payable += this.getValue(key, val.qField, val.field);
     }
-    
-    // this.payable = this.ds.allData[''].price +
-    //   hvi.content_lowvalue.filter((it: any) => {
-    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['CONTENTS']
-    //   })[0].price_month +
-    //   hvi.personalliability.filter((it: any) => {
-    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['PERSONAL LIABILITY']
-    //   })[0].price_month +
-    //   hvi.temporary_accomodation.filter((it: any) => {
-    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION']
-    //   })[0].price_month +
-    //   // hvi.content_lowvalue.filter((it: any) => {
-    //   //   return it.insurance_value === this.ds.allData['c13quote-detail'].q01coverageamount['TEMP ACCOMMODATION']
-    //   // })[0].price_month +
-    //   hvi.jewellery.filter((it: any) => {
-    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['JEWLERY']
-    //   })[0].price_month +
-    //   hvi.bicycles.filter((it: any) => {
-    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['BICYCLES']
-    //   })[0].price_month +
-    //   hvi.cameras.filter((it: any) => {
-    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['CAMERAS']
-    //   })[0].price_month +
-    //   hvi.electronics.filter((it: any) => {
-    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['ELECTRONICS']
-    //   })[0].price_month +
-    //   hvi.music.filter((it: any) => {
-    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['MUSIC EQUIPMENT']
-    //   })[0].price_month +
-    //   hvi.other.filter((it: any) => {
-    //     return it.insurance_value === this.ds.allData['c13quote-detail'].q02highvalueitems['OTHER']
-    //   })[0].price_month +
-    //   0
+    window.scrollTo(0, 0);
   }
 
 }

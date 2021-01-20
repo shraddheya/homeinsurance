@@ -265,3 +265,12 @@ input[type='checkbox']:checked:after {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+//bootstrap overrides
+
+.form-check-inline {
+  margin: 0 !important;
+}
+.form-check-inline .form-check-input {
+  margin: 0 !important;
+}

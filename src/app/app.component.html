@@ -1,9 +1,8 @@
-<div class="scrollbar" *ngIf="thisPage.idx !== 0">
+<div class="scrollbar">
   <div class="force-overflow">
-    <app-topbar></app-topbar>
-    <app-butt-back></app-butt-back>
+    <app-topbar *ngIf="ds.pageAdd.idx !== 0"></app-topbar>
+    <app-butt-back *ngIf="ds.pageAdd.idx > 1 && ds.pageAdd.idx < 14"></app-butt-back>
     <router-outlet></router-outlet>
-    <app-helpdesk></app-helpdesk>
+    <app-helpdesk *ngIf="ds.pageAdd.idx !== 0"></app-helpdesk>
   </div>
 </div>
-<router-outlet *ngIf="thisPage.idx === 0"></router-outlet>

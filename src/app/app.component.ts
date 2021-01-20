@@ -9,7 +9,7 @@ import { DataterminalService } from './dataterminal.service';
 })
 export class AppComponent {
   title = 'oursurplus';
-  thisPage = {idx: 0, uri: ''};
+  thisPage = {idx: -1, uri: ''};
   constructor (public ds: DataterminalService, private router: Router) {
     // router.events.subscribe(val => {
     //   if (val instanceof NavigationEnd) {

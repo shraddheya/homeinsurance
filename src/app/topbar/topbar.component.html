@@ -27,21 +27,18 @@
           </a>
         </li>
         <li class="nav-item z-depth-2 linkindex" *ngIf="showbackquote">
-          <a class="nav-link text-white buttonstyle buttstyle2" (click)="clicked()" style="width:auto">BACK TO YOUR
-            QUOTE</a>
+          <a class="nav-link text-white buttonstyle buttstyle2" (click)="clicked()" style="width:auto">BACK TO YOUR QUOTE</a>
         </li>
       </ul>
     </links>
   </mdb-navbar>
   <div class="divcenter iconimgtop">
-    <img *ngIf="router.url !== '/home'" class="{{(centerimg_scroll)? 'iconimgtop_before': 'iconimgtop_after'}}"
-      src="assets/Maya-79af77d3c1e0abe54a4a8f349950ec6b23457716b5361568851546d1cb5c3643.jpg" alt="">
+    <img *ngIf="router.url !== '/home'" class="{{(centerimg_scroll)? 'iconimgtop_before': 'iconimgtop_after'}}" src="assets/Maya-79af77d3c1e0abe54a4a8f349950ec6b23457716b5361568851546d1cb5c3643.jpg" alt="">
   </div>
 </div>
 <div id="hiddenBehind" style="height: 6em; width: 100%;"></div>
 
-<div mdbModal #resetmodal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
-  aria-hidden="true">
+<div mdbModal #resetmodal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-md" role="document">
     <div class="modal-content">
       <div class="modal-header border border-white">
@@ -56,13 +53,11 @@
       <div class="modal-footer border border-white">
         <div class="divcenter">
           <div class="celltable">
-            <button type="button" mdbBtn class="waves-light font-weight-bold startovercancel" aria-label="Close"
-              (click)="resetmodal.hide()" mdbWavesEffect>CANCEL</button>
+            <button type="button" mdbBtn class="waves-light font-weight-bold startovercancel" aria-label="Close" (click)="resetmodal.hide()" mdbWavesEffect>CANCEL</button>
           </div>
 
           <div class="celltable">
-            <button type="button" mdbBtn class="relative text-white waves-light buttonstyle"
-              (click)="ds.domFunction('reset'); resetmodal.hide()" mdbWavesEffect>START OVER</button>
+            <button type="button" mdbBtn class="relative text-white waves-light buttonstyle" (click)="ds.domFunction('reset'); resetmodal.hide()" mdbWavesEffect>START OVER</button>
           </div>
         </div>
       </div>
