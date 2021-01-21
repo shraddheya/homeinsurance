@@ -69,6 +69,7 @@ export class DataterminalService {
             break;
           }
         }
+
         localStorage.setItem('currPage', gotoPageIdx.toString());
         console.log('gotoPageIdx', gotoPageIdx, 'idx', idx, 'gotoPageIdx !== idx', gotoPageIdx !== idx);
         if (gotoPageIdx !== idx) {
