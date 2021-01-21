@@ -61,6 +61,7 @@ export class DataterminalService {
         let idx = this.pageList.indexOf(uri);
         this.pageAdd = { idx, uri };
         this.currPage = idx;
+
         let gotoPageIdx = idx;
         for (let i = 0; i < idx; i++) {
           let pgnm = this.pageList[i];
@@ -69,6 +70,7 @@ export class DataterminalService {
             break;
           }
         }
+
 
         localStorage.setItem('currPage', gotoPageIdx.toString());
         console.log('gotoPageIdx', gotoPageIdx, 'idx', idx, 'gotoPageIdx !== idx', gotoPageIdx !== idx);
