@@ -194,6 +194,9 @@ body {
   color:var(--accent1)
 }
 
+input[type="radio"]{
+  -moz-appearance: none;
+}
 input[type="radio"]:after {
   width: 25px !important;
   height: 25px !important;
@@ -208,7 +211,6 @@ input[type="radio"]:after {
   border: 1px solid gray !important;
   padding: 0.3em;
 }
-
 input[type='radio']:checked:after {
   width: 25px !important;
   height: 25px !important;
@@ -223,6 +225,9 @@ input[type='radio']:checked:after {
   padding:0.3em
 }
 
+input[type='checkbox']{
+  -moz-appearance: none;
+}
 input[type='checkbox']:after {
   width: 1.25em !important;
   height: 1.25em !important;
@@ -238,7 +243,6 @@ input[type='checkbox']:after {
   font-family: bold;
   color:var(--accent1) !important;
 }
-
 input[type='checkbox']:checked:after {
   content: "✔";
 }

@@ -49,7 +49,7 @@ export class DataterminalService {
   scroll = "height:" + screen.height;
   momentZone = moment()
   totalamount: any = 0
-  pageAdd = {idx: 0, uri: ''};
+  pageAdd = { idx: 0, uri: '' };
 
   constructor(private router: Router, private sanitizer: DomSanitizer) {
     this.dtblank.c06security = [];
@@ -122,7 +122,8 @@ export class DataterminalService {
         this.allData = JSON.parse(this.initVals)
         localStorage.setItem('currPage', '1');
         localStorage.setItem('allData', JSON.stringify(this.allData));
-        this.gotopage(1);
+        //this.gotopage(1);
+        this.router.navigate([`/${this.pageList[1]}`])
         return
     }
   }

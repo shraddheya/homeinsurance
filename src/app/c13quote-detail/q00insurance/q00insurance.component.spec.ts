@@ -8,9 +8,9 @@ describe('Q00insuranceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Q00insuranceComponent ]
+      declarations: [Q00insuranceComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

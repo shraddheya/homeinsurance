@@ -53,13 +53,6 @@ export class Q02highvalueitemsComponent implements OnInit {
       price: 5000,
       incrtoggle: 500,
     },
-    // FASHION ITEMS": {
-    //   img:"assets/valuable_items_fashion_items.png",
-    //   text:"What’s the total value of your fashion items worth more than 5.000 € each?",
-    //   maxvalue:50000,
-    //   minvalue:5000,
-    //   price:,
-    //   incrtoggle:5000
     "OTHER": {
       img: "assets/valuable_items_other.png",
       text: "What’s the total value of any other items worth more than 5.000 € each?",

@@ -32,7 +32,7 @@ export class H10ProductoncheckpriceComponent implements OnInit {
   };
   constructor(public ds: DataterminalService, public router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   changed(key: string) {
     this.ds.allData["product"] = key;
     for (let item in this.producttype) this.producttype[item].selectedview = key === item;

@@ -1,20 +1,19 @@
-#progressdivs{
+#progressdivs {
   position: relative;
-
 }
 #myProgress {
   width: 50%;
-    background-color: grey;
-    display: table;
-    margin: auto;
-    border-radius: 29em;
-    position: relative;
-    height: 0.4em;
+  background-color: grey;
+  display: table;
+  margin: auto;
+  border-radius: 29em;
+  position: relative;
+  height: 0.4em;
 }
-.loadingcrunch{
+.loadingcrunch {
   left: 12em;
   position: relative;
-  color:var(--accent2) !important;
+  color: var(--accent2) !important;
 }
 #myBar {
   width: 1%;
@@ -24,11 +23,11 @@
   height: 0.4em;
 }
 
-.textcolor{
-  color:var(--accent1);
+.textcolor {
+  color: var(--accent1);
 }
 
-.loaderprogress{
-    height: 1.1em;
-    width: 1.1em;
+.loaderprogress {
+  height: 1.1em;
+  width: 1.1em;
 }

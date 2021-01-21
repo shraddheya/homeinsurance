@@ -5,14 +5,16 @@
       <div class="col-lg-2 col-xs-4">
         <div class="form-row">
           <form class="col" [formGroup]="yearForm">
-            <input mdbInput type="number" class="form-control p-4" (keydown.enter)="clicked()" placeholder="Enter Year" formControlName="builtyear">
+            <input mdbInput type="number" class="form-control p-4" (keydown.enter)="clicked()" placeholder="Enter Year"
+              formControlName="builtyear">
           </form>
         </div>
       </div>
     </div>
 
     <div class="p-2 mt-4">
-      <button mdbBtn class="{{(!yearForm.valid) ? 'disablestyle':'buttonstyle'}}" mdbWavesEffect (click)="clicked()" [disabled]="! yearForm.valid">Next</button>
+      <button mdbBtn class="{{(!yearForm.valid) ? 'disablestyle':'buttonstyle'}}" mdbWavesEffect (click)="clicked()"
+        [disabled]="! yearForm.valid">Next</button>
     </div>
   </div>
 </div>

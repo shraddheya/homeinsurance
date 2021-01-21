@@ -7,10 +7,5 @@ import { DataterminalService } from '../dataterminal.service';
   styleUrls: ['./butt-back.component.scss']
 })
 export class ButtBackComponent {
-
-  // goBack() {
-  //   this.ds.changepage(false);
-  // }
-
-  constructor( public ds: DataterminalService ) { }
+  constructor(public ds: DataterminalService) { }
 }

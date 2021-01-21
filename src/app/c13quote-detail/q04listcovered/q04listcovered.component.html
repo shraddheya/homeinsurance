@@ -5,7 +5,8 @@
   <div class="row justify-content-center">
     <div class="col-6 p-5 custom-padding" *ngFor="let item of whatscovered | keyvalue: asIs">
       <div class="text-center">
-        <i class="icn-peril" style="background-size: 466px 375px; position: relative; z-index: 1; display: block; overflow: hidden; left: 50%; transform: translateX(-50%); width: 68px; height: 68px; background: transparent url(assets/icn-sprite-perils-68.png) no-repeat {{item.value.x}} {{item.value.y}};"></i>
+        <i class="icn-peril"
+          style="background-size: 466px 375px; position: relative; z-index: 1; display: block; overflow: hidden; left: 50%; transform: translateX(-50%); width: 68px; height: 68px; background: transparent url(assets/icn-sprite-perils-68.png) no-repeat {{item.value.x}} {{item.value.y}};"></i>
       </div>
       <div class="pt-2">
         <h5 class="cardtitle">{{item.key | uppercase}}</h5>

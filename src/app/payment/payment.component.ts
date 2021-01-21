@@ -8,7 +8,7 @@ import { DataterminalService } from '../dataterminal.service';
 })
 export class PaymentComponent implements OnInit {
   @Input() amount: number;
-  amount1:any
+  amount1: any
   companyname = "Oursurplus"
 
   constructor(public ds: DataterminalService) {

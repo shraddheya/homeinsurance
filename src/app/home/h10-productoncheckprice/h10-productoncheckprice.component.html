@@ -3,14 +3,15 @@
     <h1 class="maintitle">Which would you like?</h1>
 
     <div class="contentproduct" *ngFor='let item of producttype | keyvalue: asIs'>
-      <img class="iconimg divcenter" (click)="changed(item.key)" src="{{item.value.selectedview ? item.value.imgactive : item.value.img}}">
-     <div class="">
+      <img class="iconimg divcenter" (click)="changed(item.key)"
+        src="{{item.value.selectedview ? item.value.imgactive : item.value.img}}">
+      <div class="">
         <span style="font-size:0.9em">{{item.key | uppercase}}</span>
       </div>
       <div class="divcenter">
         <div class="form-check form-check-inline p-3">
-        <input class="form-check-input" type="radio" name="typeHomeoption" id={{item.key}} value={{item.key}}
-          [checked]="item.value.selectedview" (change)="changed(item.key)">
+          <input class="form-check-input" type="radio" name="typeHomeoption" id={{item.key}} value={{item.key}}
+            [checked]="item.value.selectedview" (change)="changed(item.key)">
         </div>
       </div>
     </div>

@@ -7,12 +7,6 @@
   <div class="container mt-4">
     <div class="row justify-content-center">
       <div class="col-lg-2 col-xs-12 text-center" *ngFor='let item of hometype | keyvalue: asIs'>
-        <!-- <a class="c03object" (click)="changed(item.key)" style="display:block;">
-          <object *ngIf=item.value.selectedview type="image/svg+xml" [data]="item.value.imgsvg_c | safe"
-            style="pointer-events: none;"></object>
-          <object *ngIf=!item.value.selectedview type="image/svg+xml" [data]="item.value.imgsvg | safe"
-            style="pointer-events: none;"></object>
-        </a> -->
         <img class="iconimg" (click)="changed(item.key)" src="{{item.value.selectedview ? item.value.imgactive : item.value.img}}">
         <p class="font-weight-bold"
           style="color: rgb(74, 74, 74);font-size:0.7em;font-family: Merriweather, Georgia, serif;">{{item.key |

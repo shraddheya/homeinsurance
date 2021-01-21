@@ -8,14 +8,16 @@
       <div class="col-lg-2 col-xs-4">
         <div class="form-row">
           <form class="col" [formGroup]="sizeForm">
-            <input mdbInput type="number" class="form-control p-4" placeholder="SQUARE FEET" formControlName="size" (keydown.enter)="alert = !sizeForm.valid; clicked(sizeForm.valid)">
+            <input mdbInput type="number" class="form-control p-4" placeholder="SQUARE FEET" formControlName="size"
+              (keydown.enter)="alert = !sizeForm.valid; clicked(sizeForm.valid)">
           </form>
         </div>
       </div>
     </div>
 
     <div class="p-2 mt-4">
-      <button mdbBtn class="{{(sizeForm.valid) ? 'buttonstyle':'disablestyle'}}" mdbWavesEffect (click)="clicked(sizeForm.valid)" [disabled]="!sizeForm.valid">Next</button>
+      <button mdbBtn class="{{(sizeForm.valid) ? 'buttonstyle':'disablestyle'}}" mdbWavesEffect
+        (click)="clicked(sizeForm.valid)" [disabled]="!sizeForm.valid">Next</button>
     </div>
   </div>
 </div>

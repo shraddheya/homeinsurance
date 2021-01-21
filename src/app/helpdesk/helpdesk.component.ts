@@ -23,7 +23,7 @@ export class HelpdeskComponent implements OnInit {
   }
   helpClicked() {
     this.formsubmit = false;
-    this.ds.homepage('help',this. helpForm.value)
+    this.ds.homepage('help', this.helpForm.value)
   }
 
 }

@@ -11,29 +11,29 @@ let comp: C10loadingpageComponent
 export class C10loadingpageComponent implements OnInit {
   processicon: any = true;
   processmsg: any = 'Calculating Data ...';
-  asIs(a,b) {
+  asIs(a, b) {
     return a
   }
   progress_star: any = {
-    'title1':{
-      percentage:false,
-      text:'Building Age',
-      img:'assets/oursurplusassetsPNG/5 Star S.png'
+    'title1': {
+      percentage: false,
+      text: 'Building Age',
+      img: 'assets/oursurplusassetsPNG/5 Star S.png'
     },
-    'title2':{
-      percentage:false,
-      text:'Building Durability',
-      img:'assets/oursurplusassetsPNG/5 Star S.png'
+    'title2': {
+      percentage: false,
+      text: 'Building Durability',
+      img: 'assets/oursurplusassetsPNG/5 Star S.png'
     },
-    'title3':{
-      percentage:false,
-      text:'Distance From Coast',
-      img:'assets/oursurplusassetsPNG/5 Star S.png'
+    'title3': {
+      percentage: false,
+      text: 'Distance From Coast',
+      img: 'assets/oursurplusassetsPNG/5 Star S.png'
     },
-    'title4':{
-      percentage:false,
-      text:'Fire Station Proximity',
-      img:'assets/oursurplusassetsPNG/5 Star S.png'
+    'title4': {
+      percentage: false,
+      text: 'Fire Station Proximity',
+      img: 'assets/oursurplusassetsPNG/5 Star S.png'
     }
   }
   constructor(public ds: DataterminalService, public route: Router) {

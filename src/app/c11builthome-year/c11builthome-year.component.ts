@@ -15,7 +15,7 @@ export class C11builthomeYearComponent implements OnInit {
   yearForm = new FormGroup({
     builtyear: new FormControl(this.ds.allData["c11builthome-year"] || '', Validators.compose([Validators.required, Validators.min(this.oldYear), Validators.max(this.thisYear)])),
   })
-  constructor( public ds: DataterminalService ) {
+  constructor(public ds: DataterminalService) {
   }
 
   ngOnInit(): void {
