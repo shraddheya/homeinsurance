@@ -101,8 +101,6 @@ export class DataterminalService {
     // console.log(this.currPage);
     this.gotopage(this.currPage);
   }
-
-
   gotopage(idx = this.currPage, calledfrom = false) {
     // console.log("Index of Page ==> " + idx, this.allData);
     calledfrom && console.log("called From : ", calledfrom);
