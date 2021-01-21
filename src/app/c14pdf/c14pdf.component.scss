@@ -1,39 +1,39 @@
-.watermark{
+.watermark {
   position: relative;
   top: 1em;
   right: -26em;
   height: 11em !important;
   width: 11em !important;
   border-radius: 50% !important;
-  border: 0.1em solid #B7B7B7;
+  border: 0.1em solid #b7b7b7;
   border-style: double;
   border-width: 0.6em;
 }
-.watermarktext{
+.watermarktext {
   position: relative;
   top: 2em;
   left: 0.7em;
-  color: #B7B7B7;
+  color: #b7b7b7;
   transform: rotate(20deg);
   font-size: 2em;
   font-weight: 700;
 }
 
-.quotessections{
+.quotessections {
   position: relative;
   margin: auto;
 }
 
-.centerdiv{
-  margin-left:auto;
-  margin-right:auto;
-  display:table
+.centerdiv {
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
 }
 
-.logo{
+.logo {
   background: transparent url("../../assets/logo.svg") no-repeat 0 0;
 }
-.logo.center{
+.logo.center {
   display: inline-block;
   height: 20px;
   width: 92px;
@@ -44,59 +44,57 @@
   left: calc(50% - 49px);
   z-index: 1;
 }
-.ptdetail{
+.ptdetail {
   font-size: 0.8em;
   text-align: left;
   font-weight: 700;
-  color:rgb(87, 83, 83);
+  color: rgb(87, 83, 83);
 }
-.ptrecord{
+.ptrecord {
   font-size: 1.1em;
-  color:black
+  color: black;
 }
-#belowlogo{
+#belowlogo {
   font-size: 0.8em;
   color: #575353;
   position: relative;
   top: -14em;
-
 }
-#imgstyle{
+#imgstyle {
   height: 11em;
   width: 17em;
 }
 
-.pagecontent{
+.pagecontent {
   position: relative;
   top: -7em;
   left: 2em;
 }
-.page2detail{
+.page2detail {
   position: relative;
   top: -9.8em;
 }
-.pagetitle h1{
-  color:rgb(61, 60, 60);
+.pagetitle h1 {
+  color: rgb(61, 60, 60);
   font-size: 4.5em;
 }
-.pagegape{
+.pagegape {
   position: relative;
   padding: 10em;
 }
-.pagefooter{
+.pagefooter {
   position: relative;
   padding-top: -2em;
   padding: 5em;
 }
-.footertext{
+.footertext {
   font-size: 0.6em;
   color: black;
   font-weight: 600;
-
 }
 
 //need to add
-.datatitle{
+.datatitle {
   position: relative;
   background-color: #cac5c5;
   text-align: center;
@@ -106,21 +104,21 @@
   font-weight: 700;
   font-size: 0.8em;
 }
-.tborderquotes{
+.tborderquotes {
   border-bottom: 1px solid #ccc;
   margin-left: 2.8em;
   margin-right: 2.8em;
 }
-#tableheadfont{
+#tableheadfont {
   font-size: 0.6em;
 }
-#parafont{
-  top:0.7em;
+#parafont {
+  top: 0.7em;
   font-size: 0.8em;
-  margin-left:2.8em;
+  margin-left: 2.8em;
   margin-right: 2.8em;
 }
-.payButt{
+.payButt {
   position: fixed;
   right: 3em;
   bottom: 2em;

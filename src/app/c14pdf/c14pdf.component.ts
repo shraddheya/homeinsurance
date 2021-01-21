@@ -111,15 +111,15 @@ export class C14pdfComponent implements OnInit {
   ngOnInit(): void {
     this.payable = this.ds.allData[''].price;
     for (const [key, val] of Object.entries({
-      content_lowvalue : {qField: 'q01coverageamount', field: 'CONTENTS'},
-      personalliability : {qField: 'q01coverageamount', field: 'PERSONAL LIABILITY'},
-      temporary_accomodation : {qField: 'q01coverageamount', field: 'TEMP ACCOMMODATION'},
-      jewellery : {qField: 'q02highvalueitems', field: 'JEWLERY'},
-      bicycles : {qField: 'q02highvalueitems', field: 'BICYCLES'},
-      cameras : {qField: 'q02highvalueitems', field: 'CAMERAS'},
-      electronics : {qField: 'q02highvalueitems', field: 'ELECTRONICS'},
-      music : {qField: 'q02highvalueitems', field: 'MUSIC EQUIPMENT'},
-      other : {qField: 'q02highvalueitems', field: 'OTHER'},
+      content_lowvalue: { qField: 'q01coverageamount', field: 'CONTENTS' },
+      personalliability: { qField: 'q01coverageamount', field: 'PERSONAL LIABILITY' },
+      temporary_accomodation: { qField: 'q01coverageamount', field: 'TEMP ACCOMMODATION' },
+      jewellery: { qField: 'q02highvalueitems', field: 'JEWLERY' },
+      bicycles: { qField: 'q02highvalueitems', field: 'BICYCLES' },
+      cameras: { qField: 'q02highvalueitems', field: 'CAMERAS' },
+      electronics: { qField: 'q02highvalueitems', field: 'ELECTRONICS' },
+      music: { qField: 'q02highvalueitems', field: 'MUSIC EQUIPMENT' },
+      other: { qField: 'q02highvalueitems', field: 'OTHER' },
     })) {
       this.payable += this.getValue(key, val.qField, val.field);
     }

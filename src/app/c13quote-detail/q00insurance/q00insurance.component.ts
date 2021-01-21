@@ -11,7 +11,7 @@ export class Q00insuranceComponent implements OnInit {
   devicesize: any;
   constructor(public ds: DataterminalService) {
     window.onresize = function () {
-     this.devicesize = document.body.clientWidth
+      this.devicesize = document.body.clientWidth
     }
   }
 

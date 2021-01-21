@@ -15,7 +15,6 @@ export class C03typeHomeComponent implements OnInit {
   imgc03:any
   teststring:any;
   constructor( public ds: DataterminalService ) {
-    //img: 'assets/SVG210106/apartment_unchecked.svg',
     this.hometype = {
       Apartment: {
         img: 'assets/oursurplusassetsPNG/Appartment.png',

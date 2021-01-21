@@ -34,12 +34,11 @@ export class H06PlansubscribeComponent implements OnInit {
   ];
 
   clicked(item: any) {
-    this.ds.allData[''] = { name: `${item.title1} ${item.title1}`, price: item.price}
-    // this.ds.allData.home = { name: `${item.title1} ${item.title1}`, price: item.price}
+    this.ds.allData[''] = { name: `${item.title1} ${item.title1}`, price: item.price }
     this.ds.changepage()
   }
 
-  constructor( public ds: DataterminalService) {
+  constructor(public ds: DataterminalService) {
 
   }
 

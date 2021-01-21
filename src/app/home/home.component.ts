@@ -6,7 +6,7 @@ import { DataterminalService } from '../dataterminal.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor(public ds:DataterminalService) {
+  constructor(public ds: DataterminalService) {
     localStorage.removeItem('allData')
   }
   ngOnInit(): void {

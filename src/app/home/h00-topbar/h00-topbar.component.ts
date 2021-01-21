@@ -16,7 +16,7 @@ export class H00TopbarComponent implements OnInit {
   constructor(public ds: DataterminalService, public router: Router) {
     comp = this
     window.addEventListener('scroll', function () {
-      comp.centerimg_scroll = window.pageYOffset <=10
+      comp.centerimg_scroll = window.pageYOffset <= 10
       comp.navsize = window.pageYOffset <= 112
       comp.showpricebtn = window.pageYOffset >= 400
     });
@@ -30,8 +30,8 @@ export class H00TopbarComponent implements OnInit {
     };
   }
 
-  clicked(){
-    this.ds.allData.home = { name: `Content`, price: 2}
+  clicked() {
+    this.ds.allData[''] = { name: `Content`, price: 2 }
     this.ds.changepage();
   }
 }

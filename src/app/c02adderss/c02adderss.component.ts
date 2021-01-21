@@ -45,7 +45,7 @@ export class C02adderssComponent implements OnInit {
     public ds: DataterminalService,
     private mapsAPILoader: MapsAPILoader,
     private ngZone: NgZone
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     //load Places Autocomplete
@@ -97,7 +97,7 @@ export class C02adderssComponent implements OnInit {
     }
   }
 
-  markerDragEnd($event: MouseEvent) {}
+  markerDragEnd($event: MouseEvent) { }
 
   getAddress(latitude, longitude) {
     this.geoCoder.geocode(
