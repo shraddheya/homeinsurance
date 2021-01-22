@@ -12,24 +12,23 @@
       OurInsurer is on Mobile
     </a>
 
-    <div mdbModal #lemonadeapp="mdbModal" class="modal fade" tabindex="-1" role="dialog"
+    <div mdbModal #lemonadeapp="mdbModal" class="modal fade" tabindex="1" role="dialog"
       aria-labelledby="myBasicModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content tranparent_el">
-          <div class="modal-header">
+      <div class="modal-dialog modal-dialog-centered modal-lg" style=" box-shadow: none;" role="document">
+        <div id="vdomodal" class="modal-content tranparent_el">
+          <div class="modal-header border border-0">
             <button type="button" class="close pull-right" aria-label="Close"
               (click)="lemonadeapp.hide();viewofapp = false">
-              <span aria-hidden="true">×</span>
+              <span aria-hidden="true" class="text-white">×</span>
             </button>
           </div>
           <div class="modal-body text-center">
+
             <div *ngIf=viewofapp>
               <iframe width="744" height="417.5" src="https://player.vimeo.com/video/361237211?autoplay=true"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""
                 alt="Video Review of Lemonade Claims" title="Video Review of Lemonade Claims" class="cvXITO"></iframe>
             </div>
-          </div>
-          <div class="modal-footer tranparent_el">
           </div>
         </div>
       </div>

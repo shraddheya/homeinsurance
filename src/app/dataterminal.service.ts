@@ -51,6 +51,8 @@ export class DataterminalService {
   totalamount: any = 0
   pageAdd = { idx: 0, uri: '' };
 
+  restartcheck: any = false;
+
   constructor(private router: Router, private sanitizer: DomSanitizer) {
     this.dtblank.c06security = [];
     this.dtblank.c10loading = '';
@@ -104,6 +106,7 @@ export class DataterminalService {
     // console.log(this.currPage);
     this.gotopage(this.currPage);
   }
+
   gotopage(idx = this.currPage, calledfrom = false) {
     // console.log("Index of Page ==> " + idx, this.allData);
     calledfrom && console.log("called From : ", calledfrom);
@@ -122,10 +125,10 @@ export class DataterminalService {
     switch (mode) {
       case 'reset':
         this.allData = JSON.parse(this.initVals)
-        localStorage.setItem('currPage', '1');
         localStorage.setItem('allData', JSON.stringify(this.allData));
-        //this.gotopage(1);
-        this.router.navigate([`/${this.pageList[1]}`])
+        localStorage.setItem('currPage', '1');
+        this.restartcheck = true
+        this.gotopage(1);
         return
     }
   }
