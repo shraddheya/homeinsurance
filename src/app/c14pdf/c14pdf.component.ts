@@ -15,10 +15,10 @@ export class C14pdfComponent implements OnInit {
   quotespages: any = {
     watermark: 'quote',
     logo: "assets/logo.svg",
-    footertext: 'Copyright 2017 by LEMONADE INSURANCE COMPANY (a stock company) | 5 Crosby, New York, NY 10013 | help@lemonade.com | LEM-DEC-01',
+    footertext: 'Copyright 2017 by Oursurplus INSURANCE COMPANY (a stock company) | 5 Crosby, New York, NY 10013 | help@Oursurplus.com | LEM-DEC-01',
     tlogotext: "5 Crosby St. 3rd floor, New York, NY 10013 LEM-DEC-01 CO-OP INSURANCE (HO6)",
     footertext1: 'Rating information - Protection Class: 1, Tier: 5, Territory: 5, Construction: Frame',
-    footertext2: 'Copyright 2017 by LEMONADE INSURANCE COMPANY (a stock company) | 5 Crosby St. 3rd floor, New York, NY 10013 | Form LEM-DEC-01',
+    footertext2: 'Copyright 2017 by Oursurplus INSURANCE COMPANY (a stock company) | 5 Crosby St. 3rd floor, New York, NY 10013 | Form LEM-DEC-01',
 
     data: {
       page2: {
@@ -82,10 +82,10 @@ export class C14pdfComponent implements OnInit {
             },
             1: {
               title: "Are wind & hail covered by this policy?",
-              value: "Absolutely. Wind & hail coverage is included in Lemonade Homeowners and Condo/Co-op policies unless otherwise specified."
+              value: "Absolutely. Wind & hail coverage is included in Oursurplus Homeowners and Condo/Co-op policies unless otherwise specified."
             }
           },
-          regards: ["If you have any questions, reach out to help@lemonade.com.", "Thank you"]
+          regards: ["If you have any questions, reach out to help@Oursurplus.com.", "Thank you"]
         },
       }
     }

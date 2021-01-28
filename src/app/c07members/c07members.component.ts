@@ -23,28 +23,28 @@ export class C07membersComponent implements OnInit {
     },
     b: {
       title: 'my partner',
-      message: 'Great, your partner will be covered by your Lemonade policy 🙂 ',
+      message: 'Great, your partner will be covered by your Oursurplus policy 🙂 ',
       img: 'assets/oursurplusassetsPNG/Residents Partner.png',
       imgactive: 'assets/oursurplusassetsPNG/Residents Partner Active.png',
       selectedview: this.ds.allData.c07members === "b"
     },
     c: {
       title: 'partner and kids',
-      message: 'Great, they’ll be covered by your Lemonade policy 🙂',
+      message: 'Great, they’ll be covered by your Oursurplus policy 🙂',
       img: 'assets/oursurplusassetsPNG/Residents Partner Kids.png',
       imgactive: 'assets/oursurplusassetsPNG/Residents Partner Kids Active.png',
       selectedview: this.ds.allData.c07members === "c"
     },
     d: {
       title: 'my kids',
-      message: 'Great, they’ll be covered by your Lemonade policy 🙂',
+      message: 'Great, they’ll be covered by your Oursurplus policy 🙂',
       img: 'assets/oursurplusassetsPNG/Simple Brush.png',
       imgactive:'assets/oursurplusassetsPNG/Coloured Brush.png',
       selectedview: this.ds.allData.c07members === "d"
     },
     e: {
       title: 'other',
-      message: 'FYI - You are the only person covered under this policy. Tell the others to get their own Lemonade 😉',
+      message: 'FYI - You are the only person covered under this policy. Tell the others to get their own Oursurplus 😉',
       img: 'assets/oursurplusassetsPNG/Residents Other.png',
       imgactive: 'assets/oursurplusassetsPNG/Residents Other Active.png',
       selectedview: this.ds.allData.c07members === "e"
