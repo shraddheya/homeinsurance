@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { Address } from 'ngx-google-places-autocomplete/objects/address';
 import { C01nameComponent } from './c01name/c01name.component';
 import { C02adderssComponent } from './c02adderss/c02adderss.component';
 import { C03typeHomeComponent } from './c03type-home/c03type-home.component';
@@ -32,6 +33,7 @@ const routes: Routes = [
   { path: 'c13quote-detail', component: C13quoteDetailComponent },
   { path: 'c14pdf', component: C14pdfComponent },
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

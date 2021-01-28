@@ -15,7 +15,7 @@ export class C01nameComponent implements OnInit {
   constructor(public ds: DataterminalService) { }
   clicked() {
     this.ds.allData.c01name = this.profileForm.value;
-    this.ds.restartcheck = false;
+    //this.ds.restartcheck = false;
     this.ds.changepage();
   }
   ngOnInit(): void { }

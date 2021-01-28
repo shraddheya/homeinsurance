@@ -49,6 +49,9 @@ import { HelpdeskComponent } from './helpdesk/helpdesk.component';
 import { H00TopbarComponent } from './home/h00-topbar/h00-topbar.component';
 import { SafePipe } from './safe.pipe';
 
+// Google autocomplete api
+import { GooglePlaceModule } from 'ngx-google-places-autocomplete';
+
 
 @NgModule({
   declarations: [
@@ -101,9 +104,10 @@ import { SafePipe } from './safe.pipe';
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     ReactiveFormsModule,
+    GooglePlaceModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBjdIEmseyD5iVu8ig03c3CUFM9Yiz2hzA',
-      libraries: ["places"]
+      // apiKey: 'AIzaSyAj7nE9qIBJ2uObQR662W_XVcObTIsUx4Y',
+      // libraries: ['']
     }),
 
   ],

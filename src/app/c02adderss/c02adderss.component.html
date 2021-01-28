@@ -1,11 +1,11 @@
 <div class="text-center pt-5">
+
   <div class="mt-5">
     <h2 class="p-3 maintitle">Great to meet you {{ds.allData.c01name.firstName}}! What's your
       home <br> address?</h2>
     <div class="p-2 mapdiv" *ngIf="mapCalc">
-      <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
-        <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"
-          (dragEnd)="markerDragEnd($event)"></agm-marker>
+      <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
       </agm-map>
     </div>
     <div class="p-4">
@@ -15,13 +15,13 @@
             <div class="form-row">
               <div class="col-lg-8 col-xs-12 m-xs-2">
                 <div class="form-group">
-                  <input type="text" class="form-control" (keydown.enter)="$event.preventDefault()"
-                    placeholder="Search Nearest Location" formControlName="address"  autocorrect="off" autocapitalize="off" spellcheck="off"
-                    type="text" #search>
+                  <input class="form-control" ngx-google-places-autocomplete [options]='options'
+                    formControlName="address" #placesRef="ngx-places" (onAddressChange)="handleAddressChange($event)" />
                 </div>
               </div>
               <div class="col-lg-4 col-xs-12 m-xs-2">
-                <input type="text" class="form-control p-3" formControlName="housenumber" placeholder="House Number" (keydown.enter)="clicked()">
+                <input type="text" class="form-control p-3" formControlName="housenumber" placeholder="House Number"
+                  (keydown.enter)="clicked()">
               </div>
             </div>
           </form>
